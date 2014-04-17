@@ -1,7 +1,7 @@
 Sinicum
 =======
 
-[![Build Status](https://magnum.travis-ci.com/dievision/sinicum.svg?token=gTyheAYAFCcFbV9J8ryk&branch=master)](https://magnum.travis-ci.com/dievision/sinicum) [![Code Climate](https://codeclimate.com/repos/5346b82ce30ba06c4100ea18/badges/e2f48b8dc18965b6ef06/gpa.png)](https://codeclimate.com/repos/5346b82ce30ba06c4100ea18/feed) [![Coverage](https://codeclimate.com/repos/5346b82ce30ba06c4100ea18/badges/e2f48b8dc18965b6ef06/coverage.png)](https://codeclimate.com/repos/5346b82ce30ba06c4100ea18/feed)
+[![Build Status](https://travis-ci.org/dievision/sinicum.svg?branch=master)](https://travis-ci.org/dievision/sinicum) [![Code Climate](https://codeclimate.com/github/dievision/sinicum.png)](https://codeclimate.com/github/dievision/sinicum)
 
 Use content created in Magnolia CMS in your Ruby/Rails application. Sinicum works as a Ruby Client for the REST API provided by [Sinicum Server](http://github.com/dievision/sinicum-server). Basically it is an "Object-Document-Mapper" mapping the JSON-responses to Ruby objects. It is fully integrated into Rails and lets Controller handle the requests to Magnolia CMS.
 
