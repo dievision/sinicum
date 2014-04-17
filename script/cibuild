@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e
+
+eval "$(rbenv init -)"
+
+run_tests () {
+    if [ $BUNDLE_GEMFILE ]; then
+        rm -f "${BUNDLE_GEMFILE}.lock"
+        echo "Testing with Gemfile ${BUNDLE_GEMFILE}"
+    else
+        rm -f "Gemfile.lock"
+        echo "Testing with default Gemfile"
+    fi
+    bundle install --path vendor/bundle
+    bundle exec rake
+}
+
+# run tests
+for rbenv_version in "1.9.3-p545" "2.0.0-p247" "2.1.1"; do
+    rbenv shell $rbenv_version
+    echo "Using Ruby ${rbenv_version}"
+
+    # Run with Rails 3.2
+    export BUNDLE_GEMFILE=gemfiles/Gemfile-3.2
+    run_tests
+
+    # Run with Rails 4
+    unset BUNDLE_GEMFILE
+    run_tests
+done

@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    = render partial: "shared/meta"
+    = stylesheet_link_tag     "application"
+    = javascript_include_tag  "application"
+  
+  %body
+
+    = yield
+    = mgnl_area :content

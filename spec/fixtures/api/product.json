@@ -1,0 +1,2084 @@
+[ {
+  "meta" : {
+    "path" : "/products/microphones/en/pg/PG27",
+    "depth" : 5,
+    "name" : "PG27",
+    "superTypes" : [ "dataBase", "dataItem", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+    "workspace" : "data",
+    "mixinNodeTypes" : [ "mix:lockable" ],
+    "jcr:created" : "2009-11-04T00:47:57.904+01:00",
+    "jcr:uuid" : "aa71a0f0-8bc5-4836-936c-7bcb7c017fcb",
+    "jcr:primaryType" : "microphone"
+  },
+  "properties" : {
+    "name" : "PG27",
+    "detailed_name" : "PG27 Side Address Condenser Microphone",
+    "custom_description_de" : "Das PG27 ist ein Großmembran-Kondensatormikrofon für Einsteiger. Es gibt eine große Bandbreite an unterschiedlichen Klangquellen detailgetreu wieder",
+    "long_description" : "<h2>What is the PG27 best suited to?</h2> <p>The PG27 would be an ideal choice for an amateur/semi-pro musician looking for a versatile mic that can be used for both vocals and instruments in a home recording studio.</p> <h2>What are the characteristics of the PG27?</h2> <p>It has a large diaphragm capsule which provides wide dynamic range for clear highs and strong lows, along with a flat frequency response that allows you to naturally reproduce the sound you are recording. The high SPL handling lets the PG27 withstand the volume associated with raucous sources such as amplifiers and the -20dB switchable attenuator gives this mic even more versatility.&nbsp;</p> <p>&nbsp;</p> <p><strong>The PG27 is also available with a USB connection &ndash; see <a href=\"/products/microphones/pg27usb\">PG27USB</a></strong></p>",
+    "sensitivity_dbvpa" : "-41",
+    "custom_description" : "The PG27 side-address condenser microphone has with a flat frequency response for natural reproduction in instrument and vocal recording applications",
+    "frequency_response_from" : "20",
+    "long_description_de" : "<h2>F&uuml;r welche Anwendungen ist das PG27 das richtige Mikrofon?</h2> <p>Das PG27 ist f&uuml;r eine gro&szlig;e Bandbreite an unterschiedlichen Klangquellen geeignet. Darunter z.B.: Klavier, Blasinstrumente, Gesang, akustische Gitarren und Overheads beim Schlagzeug. Um direkt loslegen zu k&ouml;nnen sind Stativadapter und Mikrofontasche gleich dabei.</p> <h2>Wie klingt das PG27?</h2> <p>Das Gro&szlig;membran-Kondensatormikrofon besitzt einen linearen Frequenzgang. Das hei&szlig;t Klangquellen werden sehr naturgetreu und unverf&auml;lscht wiedergegeben. Es bietet den f&uuml;r Gro&szlig;membraner typischen detailreichen Sound mit klaren H&ouml;hen und satten B&auml;sse.</p> <h2>Was kann das PG27 noch?</h2> <p>Die Nierencharakteristik nimmt nur Schall von vorne auf und vermeidet Nebenger&auml;usche von hinten. Damit vermindert es R&uuml;ckkopplungen. F&uuml;r sehr hohe Schallpegel ist eine schaltbare -20 dB D&auml;mpfung integriert.</p> <h2>Wie bekommst man das Mikrofonsignal deines PG27 auf deinen Mac oder PC?</h2> <p>Wer das PG27 nicht nur im Proberaum oder auf der B&uuml;hne verwenden will kann es mit dem X2u XLR-auf-USB-Interface direkt an seinen Computer anschlie&szlig;en. Mit dem <a href=\"/produkte/mikrofone/pg27usb\">PG27USB</a> ist auch eine USB-Variante speziell f&uuml;r Homerecording verf&uuml;gbar.</p>",
+    "custom_title_de" : "PG27 Großmembran-Kondensatormikrofon für Einsteiger",
+    "demo_1" : "5e30454f-6409-4601-ad43-33903b34280a",
+    "demo_2" : "21f4e2f2-b1a3-4a14-bece-fafdc35cc355",
+    "weight" : "438",
+    "feature_description_de" : "<ul>     <li>Gro&szlig;membran-Kondensatormikrofon mit Nierencharakteristik</li>     <li>Linearer Frequenzgang f&uuml;r originalgetreue Wiedergabe mit klaren H&ouml;hen und satten B&auml;ssen</li>     <li>Geeignet f&uuml;r Instrumenten- und Gesangsabnahmen</li>     <li>Schaltbare -20 dB D&auml;mpfung f&uuml;r sehr hohe Schallpegel<br />     &nbsp;</li> </ul>",
+    "price_de" : "171,36",
+    "product_category" : "Home_PC_recording",
+    "url_path_de" : "pg27",
+    "image_cols_2" : "fa644889-9d5a-4dfa-8346-2abdba839744",
+    "image_cols_1" : "1962f5bf-2af8-4643-9785-ef4923f19e30",
+    "url_path" : "pg27",
+    "main_image" : "39b1f2b7-b368-4d22-bc46-c00a3fb6a9cb",
+    "ad_image" : "2689afd3-1b28-4456-a1b1-edeeb25db68f",
+    "price" : "161.00",
+    "setcard_description_de" : "Preisgünstiges Großmembran-Kondensatormikrofon für Einsteiger. Mit linearem Frequenzgang geeignet für verschiedenste Klangquellen.",
+    "hide_specs_tab" : "false",
+    "custom_title" : "PG27 Large Diaphragm Condenser Microphone",
+    "ad_manual_link" : "http://www.shuresalespoint.com/Mic_Lab/asia/",
+    "product_series" : "PG",
+    "in_the_box" : "<ul>     <li>Padded Zipper Pouch</li>     <li>Stand Adapter</li> </ul> <p>&nbsp;</p>",
+    "pro_audio_equipment" : "false",
+    "ad_manual_height" : "300",
+    "name_de" : "PG27",
+    "feature_description" : "<ul>     <li>Large diaphragm capsule provides wide dynamic range for clear highs and strong lows</li>     <li>Flat, neutral frequency response for natural reproduction of sound sources</li>     <li>High SPL handling of acoustic, amplified and vocal sound sources</li>     <li>-20dB switchable attenuator for additional SPL versatility</li>     <li>Includes a stand adapter and a zippered pouch</li> </ul> <p>&nbsp;</p>",
+    "detailed_name_de" : "PG27 Großmembran-Kondensatormikrofon für Einsteiger",
+    "setcard_description" : "The PG27 side-address cardioid condenser microphone was designed with a flat frequency response for natural reproduction in instrument and vocal recording applications.",
+    "frequency_response_to" : "20",
+    "switchable_low_cut" : "no",
+    "custom_keywords_de" : "Kondensatormikrofon, Großmembran, Großmembraner",
+    "description" : "The PG27 side-address cardioid condenser microphone was designed with a flat frequency response for natural reproduction in instrument and vocal recording applications.",
+    "equivalent_selfnoise" : "<p>20 dB (A)</p>",
+    "in_the_box_de" : "<ul>     <li>1x Gepolsterter Tragebeutel mit Rei&szlig;verschluss</li>     <li>1x Stativadapter (A32M)</li>     <li>1x 5/8&quot; auf 3/8&quot; Gewindeadapter (Art-Nr.: 31A1856)</li> </ul>",
+    "use_videoslider_box" : "false",
+    "demo_3" : "40641553-df6b-4569-a77c-51e3ab91f8a7",
+    "review_1_de" : "<p><b><br /> </b></p>",
+    "frequency_response_curve" : "53283445-1b7d-4c97-b7f5-2fa11a3f7955",
+    "itemtype" : "microphone",
+    "description_de" : "Das PG27 ist ein preisgünstiges Großmembran-Kondensatormikrofon für Einsteiger. Es eignet sich für eine große Bandbreite an unterschiedlichen Klangquellen und verfügt über eine Nierencharakteristik. Stativadapter und Mikrotasche sind gleich mit dabei.",
+    "sound_pressure" : "<ul>     <li>Pad Off: 134 dB</li>     <li>Pad On: 154 dB</li> </ul>",
+    "sensitivity_mvpa" : "8.9",
+    "custom_keywords" : "Condenser Mocrophone, Large Diaphragm, Large Diaphragm Condenser Microphone",
+    "transducer_type" : "condense"
+  },
+  "nodes" : {
+    "MetaData" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/MetaData",
+        "depth" : 6,
+        "name" : "MetaData",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ ],
+        "jcr:created" : "2009-11-04T00:47:57.904+01:00",
+        "jcr:uuid" : "cfd56fe7-3f90-4914-abd8-69a5726622f9",
+        "jcr:primaryType" : "mgnl:metaData"
+      },
+      "properties" : {
+        "mgnl:activatorid" : "superuser",
+        "mgnl:authorid" : "superuser",
+        "mgnl:lastaction" : "2012-09-21T12:26:57.572+08:00",
+        "mgnl:creationdate" : "2009-07-09T11:24:15.129+02:00",
+        "mgnl:template" : "",
+        "mgnl:activated" : true,
+        "mgnl:lastmodified" : "2012-09-21T12:24:25.603+08:00"
+      },
+      "nodes" : { }
+    },
+    "long_description_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/long_description_files",
+        "depth" : 6,
+        "name" : "long_description_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.905+01:00",
+        "jcr:uuid" : "6e93aa67-1a74-4e66-8984-28dc1f9d51af",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/long_description_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.905+01:00",
+            "jcr:uuid" : "76a0d448-9f7d-4979-8a9c-7e44cfee0cfe",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.130+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:08.437+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "long_description_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/long_description_de_files",
+        "depth" : 6,
+        "name" : "long_description_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.906+01:00",
+        "jcr:uuid" : "43e9fd60-7128-4a6f-b8ba-f05d9a5de8d8",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/long_description_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.906+01:00",
+            "jcr:uuid" : "5c87cafe-c196-40e9-a234-5a065a3fe286",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.131+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:08.236+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "feature_description_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/feature_description_files",
+        "depth" : 6,
+        "name" : "feature_description_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.906+01:00",
+        "jcr:uuid" : "1dbf15e3-576c-46c0-a1f8-754cc5b9c9d4",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/feature_description_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.907+01:00",
+            "jcr:uuid" : "e2072ca6-2a06-4fcd-af01-eda9ba0b4f24",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.132+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:07.964+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "feature_description_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/feature_description_de_files",
+        "depth" : 6,
+        "name" : "feature_description_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.907+01:00",
+        "jcr:uuid" : "73e3a66e-e31b-4264-9af3-ff5277667c86",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/feature_description_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.907+01:00",
+            "jcr:uuid" : "aef1037e-32a9-4bd5-bfc2-3b1941dab01f",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.133+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:07.772+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "in_the_box_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/in_the_box_files",
+        "depth" : 6,
+        "name" : "in_the_box_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.908+01:00",
+        "jcr:uuid" : "866c2262-e14e-4978-a6d4-e532aee8444b",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/in_the_box_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.908+01:00",
+            "jcr:uuid" : "491ff625-557f-43ee-86c7-3eb70835b190",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.134+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:07.619+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "in_the_box_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/in_the_box_de_files",
+        "depth" : 6,
+        "name" : "in_the_box_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.908+01:00",
+        "jcr:uuid" : "cfadf5ff-f032-4ae9-ad48-d894ebe67c03",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/in_the_box_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.908+01:00",
+            "jcr:uuid" : "48e6326a-1298-4aa3-b5c3-30701389fe8e",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.135+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:07.355+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_files",
+        "depth" : 6,
+        "name" : "review_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.909+01:00",
+        "jcr:uuid" : "75eef620-a01f-4f4a-8b17-8e3110e96b12",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.909+01:00",
+            "jcr:uuid" : "477b8621-d7a1-4494-8ccb-9404bb7c1a9d",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.177+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:07.102+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_de_files",
+        "depth" : 6,
+        "name" : "review_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.910+01:00",
+        "jcr:uuid" : "9f56eed3-21e2-4d5f-8411-7a6b76c3d2ad",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.910+01:00",
+            "jcr:uuid" : "4d62c3ef-2613-49c3-863c-51715570ee7d",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-07-09T11:24:15.177+02:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:06.854+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "equivalent_selfnoise_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/equivalent_selfnoise_files",
+        "depth" : 6,
+        "name" : "equivalent_selfnoise_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.910+01:00",
+        "jcr:uuid" : "71b6280a-46d6-44cf-aeb1-89598af74d85",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/equivalent_selfnoise_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.910+01:00",
+            "jcr:uuid" : "31afc845-2859-4caa-97c0-29e9ec12ea34",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-27T12:22:34.151+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:06.709+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "sound_pressure_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/sound_pressure_files",
+        "depth" : 6,
+        "name" : "sound_pressure_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.911+01:00",
+        "jcr:uuid" : "e21c01cf-ee29-41d5-b9a2-e592d5b62777",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_pressure_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.911+01:00",
+            "jcr:uuid" : "9986c9c6-95fc-449c-9a86-a05d89712914",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-27T12:22:34.152+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:06.505+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "description_wl_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/description_wl_files",
+        "depth" : 6,
+        "name" : "description_wl_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.912+01:00",
+        "jcr:uuid" : "28eeb49b-c08f-43f4-a167-23969623dc02",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/description_wl_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.912+01:00",
+            "jcr:uuid" : "4038f370-ecb3-41bb-afe8-ea2547a88633",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-28T18:47:36.492+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:06.095+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "description_de_wl_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/description_de_wl_files",
+        "depth" : 6,
+        "name" : "description_de_wl_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.912+01:00",
+        "jcr:uuid" : "6a2a3d5c-a3ff-4efe-8e67-f3a888cd6314",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/description_de_wl_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.912+01:00",
+            "jcr:uuid" : "2bd2cd4d-7463-4200-8b2a-1733393f24f0",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-28T18:47:36.493+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:05.850+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "background_wl_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/background_wl_files",
+        "depth" : 6,
+        "name" : "background_wl_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.913+01:00",
+        "jcr:uuid" : "d3c069d8-677c-416a-826e-90ef1749ab89",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/background_wl_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.913+01:00",
+            "jcr:uuid" : "e26645ca-0495-4353-b3ea-0696421ba31f",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-28T18:47:36.493+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:05.598+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "background_de_wl_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/background_de_wl_files",
+        "depth" : 6,
+        "name" : "background_de_wl_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-11-04T00:47:57.914+01:00",
+        "jcr:uuid" : "878b4aca-7ff0-427e-8c53-60cc8a0e2690",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/background_de_wl_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-11-04T00:47:57.914+01:00",
+            "jcr:uuid" : "66e23f7a-4fc2-4436-8fb0-fa7d6dad022d",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-28T18:47:36.494+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:05.326+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "description_wl_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/description_wl_de_files",
+        "depth" : 6,
+        "name" : "description_wl_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-12-01T14:59:51.566+01:00",
+        "jcr:uuid" : "6563cb27-9aff-4589-a5c8-14d2ee1becf1",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/description_wl_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-12-01T14:59:51.566+01:00",
+            "jcr:uuid" : "b1b26b27-deba-4e92-bc93-4f344faf6c5e",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-12-01T14:59:51.566+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:04.989+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "background_wl_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/background_wl_de_files",
+        "depth" : 6,
+        "name" : "background_wl_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2009-12-01T14:59:51.567+01:00",
+        "jcr:uuid" : "a467e305-6ae2-4977-b731-e451ad0711a3",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/background_wl_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2009-12-01T14:59:51.567+01:00",
+            "jcr:uuid" : "47f3df7e-0010-4c90-9b01-123701a79e06",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-12-01T14:59:51.567+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:04.680+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "optional_accessoires_de" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/optional_accessoires_de",
+        "depth" : 6,
+        "name" : "optional_accessoires_de",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-02-04T15:04:01.183+01:00",
+        "jcr:uuid" : "a4554885-c50e-4982-91c1-53f993594237",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "732df76e-f20a-4b39-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/optional_accessoires_de/732df76e-f20a-4b39-9",
+            "depth" : 7,
+            "name" : "732df76e-f20a-4b39-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-02-04T15:04:01.183+01:00",
+            "jcr:uuid" : "f5d6cd01-2200-474e-8f61-af512fb1e941",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "optional_accessoires_de" : "732df76e-f20a-4b39-95a2-0f9e2ad42bc3"
+          },
+          "nodes" : { }
+        },
+        "884bc0cd-7fe8-41ac-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/optional_accessoires_de/884bc0cd-7fe8-41ac-8",
+            "depth" : 7,
+            "name" : "884bc0cd-7fe8-41ac-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-02-04T15:04:01.184+01:00",
+            "jcr:uuid" : "9259976f-cc84-4f17-a6a3-abcc17aefaa9",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "optional_accessoires_de" : "884bc0cd-7fe8-41ac-8e72-ab2d0ebdfc20"
+          },
+          "nodes" : { }
+        },
+        "7fe1fec6-8c1e-438e-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/optional_accessoires_de/7fe1fec6-8c1e-438e-a",
+            "depth" : 7,
+            "name" : "7fe1fec6-8c1e-438e-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-02-04T15:04:01.184+01:00",
+            "jcr:uuid" : "91413c04-fc98-4477-9559-ddd5e67f80d3",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "optional_accessoires_de" : "7fe1fec6-8c1e-438e-a266-14050e0efb55"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_1_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_1_files",
+        "depth" : 6,
+        "name" : "review_1_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.809+01:00",
+        "jcr:uuid" : "1e2026f0-a50d-44b9-8cae-95c6ce6bd0ad",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_1_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.809+01:00",
+            "jcr:uuid" : "9847cb95-8c4e-4afb-9cf4-6e7dae5f3acf",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.809+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:04.431+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_1_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_1_de_files",
+        "depth" : 6,
+        "name" : "review_1_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.810+01:00",
+        "jcr:uuid" : "dcad8017-483c-48ab-8c1c-a5ca7477c5f0",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_1_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.810+01:00",
+            "jcr:uuid" : "ba02f7e4-163b-4d91-bfa0-68bb2d043414",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.810+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:04.129+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_2_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_2_files",
+        "depth" : 6,
+        "name" : "review_2_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.810+01:00",
+        "jcr:uuid" : "7c136015-3da5-461e-8099-809744758dff",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_2_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.811+01:00",
+            "jcr:uuid" : "6f5ffabf-27a2-41f8-81ff-fa9a054df3b7",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.811+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:03.868+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_2_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_2_de_files",
+        "depth" : 6,
+        "name" : "review_2_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.811+01:00",
+        "jcr:uuid" : "5dfbabab-f572-4ccc-9589-e0d4887d9c2a",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_2_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.811+01:00",
+            "jcr:uuid" : "28b15e42-b9a9-4272-9395-92c5e59cb00b",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.811+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:03.519+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_3_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_3_files",
+        "depth" : 6,
+        "name" : "review_3_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.812+01:00",
+        "jcr:uuid" : "0ea0bc6d-9e05-4379-8428-fa12ed94be25",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_3_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.812+01:00",
+            "jcr:uuid" : "ff35323b-4118-408c-a55d-189daadf11e5",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.812+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:02.166+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_3_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_3_de_files",
+        "depth" : 6,
+        "name" : "review_3_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.812+01:00",
+        "jcr:uuid" : "ee98c2ed-b077-40a4-bbc0-b63b7ecadb7a",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_3_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.812+01:00",
+            "jcr:uuid" : "74ae8ceb-6d6e-44a1-bd4e-368dcf2d4d55",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.813+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:01.848+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_4_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_4_files",
+        "depth" : 6,
+        "name" : "review_4_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.813+01:00",
+        "jcr:uuid" : "94c5a671-2d09-4dab-aaec-b255fee0a296",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_4_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.813+01:00",
+            "jcr:uuid" : "d6f90317-f653-4fde-ba18-98d409e197d9",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.834+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:01.551+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_4_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_4_de_files",
+        "depth" : 6,
+        "name" : "review_4_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.835+01:00",
+        "jcr:uuid" : "2f5b89ee-2e3d-41ba-81ee-40700c578750",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_4_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.835+01:00",
+            "jcr:uuid" : "811a20c1-5b94-4242-95f4-d6c04911c81b",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.835+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:01.239+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_5_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_5_files",
+        "depth" : 6,
+        "name" : "review_5_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.836+01:00",
+        "jcr:uuid" : "07fbc67a-f6b3-416c-af2f-d583eb0b2458",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_5_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.836+01:00",
+            "jcr:uuid" : "c0a0d8f5-158e-4a4a-8a55-b7b64a132cd4",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.837+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:01.025+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "review_5_de_files" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/review_5_de_files",
+        "depth" : 6,
+        "name" : "review_5_de_files",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-03-11T19:03:09.837+01:00",
+        "jcr:uuid" : "bbd76332-5bfe-4378-a6b0-abb5f39a2d01",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/review_5_de_files/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2010-03-11T19:03:09.850+01:00",
+            "jcr:uuid" : "7e9b5164-3056-4956-a228-d35ec63fa850",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2010-03-11T19:03:09.850+01:00",
+            "mgnl:lastaction" : "2012-04-19T20:02:00.554+08:00",
+            "mgnl:activated" : true
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "videos_de" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/videos_de",
+        "depth" : 6,
+        "name" : "videos_de",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-07-30T09:42:07.717+02:00",
+        "jcr:uuid" : "9f86744e-4dab-4f45-a9e3-d3dce94df266",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "5394fa0e-777a-4075-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/videos_de/5394fa0e-777a-4075-b",
+            "depth" : 7,
+            "name" : "5394fa0e-777a-4075-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.717+02:00",
+            "jcr:uuid" : "1ec0d765-6626-4586-bf78-b3a752300cbb",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "videos_de" : "5394fa0e-777a-4075-b1a1-f360710abefe"
+          },
+          "nodes" : { }
+        },
+        "f52d82d8-70f8-4567-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/videos_de/f52d82d8-70f8-4567-9",
+            "depth" : 7,
+            "name" : "f52d82d8-70f8-4567-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.718+02:00",
+            "jcr:uuid" : "4e337e23-544b-414c-835b-bbd32fce665f",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "videos_de" : "f52d82d8-70f8-4567-9525-069407878be2"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "user_guide_de" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/user_guide_de",
+        "depth" : 6,
+        "name" : "user_guide_de",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-07-30T09:42:07.720+02:00",
+        "jcr:uuid" : "58b1a141-d177-4404-b86c-368c203b073a",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "ef2345e6-b616-42ac-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/user_guide_de/ef2345e6-b616-42ac-9",
+            "depth" : 7,
+            "name" : "ef2345e6-b616-42ac-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.721+02:00",
+            "jcr:uuid" : "6fe7d0fc-b597-4430-a3b1-d39c714cb9c3",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "user_guide_de" : "ef2345e6-b616-42ac-9f5a-2e911982c0ee"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "how_to_de" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/how_to_de",
+        "depth" : 6,
+        "name" : "how_to_de",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-07-30T09:42:07.724+02:00",
+        "jcr:uuid" : "7efd421f-d07d-458d-aed8-a1eef42699b2",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "c3e6c7d5-844a-499a-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/how_to_de/c3e6c7d5-844a-499a-8",
+            "depth" : 7,
+            "name" : "c3e6c7d5-844a-499a-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.725+02:00",
+            "jcr:uuid" : "68ec9879-eb0a-4519-9854-17837b4c7e49",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "how_to_de" : "c3e6c7d5-844a-499a-80bf-5b753c8598e5"
+          },
+          "nodes" : { }
+        },
+        "5eb29e09-bd34-4711-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/how_to_de/5eb29e09-bd34-4711-9",
+            "depth" : 7,
+            "name" : "5eb29e09-bd34-4711-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.725+02:00",
+            "jcr:uuid" : "b8798b3d-b8a7-42a5-aecd-7f50b887f930",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "how_to_de" : "5eb29e09-bd34-4711-9b06-cc61c33f3c21"
+          },
+          "nodes" : { }
+        },
+        "4febd8fb-0856-4154-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/how_to_de/4febd8fb-0856-4154-9",
+            "depth" : 7,
+            "name" : "4febd8fb-0856-4154-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.726+02:00",
+            "jcr:uuid" : "719802f8-d158-4bc5-8436-d7f10bcd7ab2",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "how_to_de" : "4febd8fb-0856-4154-950b-400a01b96642"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "testimonials_artists_de" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/testimonials_artists_de",
+        "depth" : 6,
+        "name" : "testimonials_artists_de",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2010-07-30T09:42:07.733+02:00",
+        "jcr:uuid" : "df4bfaf4-e9fa-46c1-bb21-fb413036f4d5",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "de86ea1d-34cb-4fd8-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/testimonials_artists_de/de86ea1d-34cb-4fd8-9",
+            "depth" : 7,
+            "name" : "de86ea1d-34cb-4fd8-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2010-07-30T09:42:07.733+02:00",
+            "jcr:uuid" : "33c1375e-2c06-49fc-a07e-cd1bf59d9b7f",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "testimonials_artists_de" : "de86ea1d-34cb-4fd8-906f-e1852bc2e520"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "image_additionals" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/image_additionals",
+        "depth" : 6,
+        "name" : "image_additionals",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.536+08:00",
+        "jcr:uuid" : "8bb8ce46-57b7-455d-a9f5-4ca62b6bff93",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "4de773e4-7aaf-44c6-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/image_additionals/4de773e4-7aaf-44c6-9",
+            "depth" : 7,
+            "name" : "4de773e4-7aaf-44c6-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.536+08:00",
+            "jcr:uuid" : "9e8ab63c-1274-445f-8cc3-0ab4e06fd299",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "image_additionals" : "4de773e4-7aaf-44c6-9560-cc1731babaf9"
+          },
+          "nodes" : { }
+        },
+        "140bd516-e8b7-4dca-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/image_additionals/140bd516-e8b7-4dca-9",
+            "depth" : 7,
+            "name" : "140bd516-e8b7-4dca-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.537+08:00",
+            "jcr:uuid" : "1cdc688d-2745-44a1-bbe0-8992ad8faf3b",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "image_additionals" : "140bd516-e8b7-4dca-9857-673650b150a6"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "associated_products" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/associated_products",
+        "depth" : 6,
+        "name" : "associated_products",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.539+08:00",
+        "jcr:uuid" : "db86f3be-18ac-4568-8429-87e9b8cf67a6",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "559bd396-4002-41ad-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/associated_products/559bd396-4002-41ad-8",
+            "depth" : 7,
+            "name" : "559bd396-4002-41ad-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.539+08:00",
+            "jcr:uuid" : "320eafb4-623b-4126-9118-d867b896bc63",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "associated_products" : "559bd396-4002-41ad-8445-9cc4faa910e3"
+          },
+          "nodes" : { }
+        },
+        "201a7876-328a-4596-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/associated_products/201a7876-328a-4596-8",
+            "depth" : 7,
+            "name" : "201a7876-328a-4596-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.540+08:00",
+            "jcr:uuid" : "97b7bdda-6e47-4b31-a64a-e8d7a4de9b6f",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "associated_products" : "201a7876-328a-4596-8ff2-985be2175831"
+          },
+          "nodes" : { }
+        },
+        "62462167-d21e-4c10-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/associated_products/62462167-d21e-4c10-9",
+            "depth" : 7,
+            "name" : "62462167-d21e-4c10-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.540+08:00",
+            "jcr:uuid" : "a5e8d2f8-8dde-4a7c-8d29-7a69c22bc328",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "associated_products" : "62462167-d21e-4c10-9839-4fa68d2642cd"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "optional_accessoires" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/optional_accessoires",
+        "depth" : 6,
+        "name" : "optional_accessoires",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.542+08:00",
+        "jcr:uuid" : "9e138dce-ff6e-42c7-9245-988705c35be4",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "732df76e-f20a-4b39-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/optional_accessoires/732df76e-f20a-4b39-9",
+            "depth" : 7,
+            "name" : "732df76e-f20a-4b39-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.542+08:00",
+            "jcr:uuid" : "26106f7c-934f-4704-a601-910c8ca3dc3c",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "optional_accessoires" : "732df76e-f20a-4b39-95a2-0f9e2ad42bc3"
+          },
+          "nodes" : { }
+        },
+        "884bc0cd-7fe8-41ac-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/optional_accessoires/884bc0cd-7fe8-41ac-8",
+            "depth" : 7,
+            "name" : "884bc0cd-7fe8-41ac-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.543+08:00",
+            "jcr:uuid" : "38daa54c-fe10-43e7-869f-4a50ac6f4f91",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "optional_accessoires" : "884bc0cd-7fe8-41ac-8e72-ab2d0ebdfc20"
+          },
+          "nodes" : { }
+        },
+        "7fe1fec6-8c1e-438e-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/optional_accessoires/7fe1fec6-8c1e-438e-a",
+            "depth" : 7,
+            "name" : "7fe1fec6-8c1e-438e-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.544+08:00",
+            "jcr:uuid" : "f75b8387-0be2-4b8f-98a7-274b10e8c572",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "optional_accessoires" : "7fe1fec6-8c1e-438e-a266-14050e0efb55"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "primary_application" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/primary_application",
+        "depth" : 6,
+        "name" : "primary_application",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.546+08:00",
+        "jcr:uuid" : "e37825b2-9cb4-4663-8edf-8924d9952e41",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "470e27ab-5daf-4620-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/primary_application/470e27ab-5daf-4620-b",
+            "depth" : 7,
+            "name" : "470e27ab-5daf-4620-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.546+08:00",
+            "jcr:uuid" : "f976eea7-4c07-4858-ba6a-7594fa489cbb",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "primary_application" : "470e27ab-5daf-4620-bf19-2f839f1cea69"
+          },
+          "nodes" : { }
+        },
+        "48251924-ec67-4262-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/primary_application/48251924-ec67-4262-b",
+            "depth" : 7,
+            "name" : "48251924-ec67-4262-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.547+08:00",
+            "jcr:uuid" : "14e701c4-8a1b-450f-a074-6dfa9ce3321b",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "primary_application" : "48251924-ec67-4262-be9b-a741015f0e7a"
+          },
+          "nodes" : { }
+        },
+        "fbf31317-b899-408c-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/primary_application/fbf31317-b899-408c-b",
+            "depth" : 7,
+            "name" : "fbf31317-b899-408c-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.547+08:00",
+            "jcr:uuid" : "1bbe1e71-da3f-4b19-9367-7b007d3f312d",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "primary_application" : "fbf31317-b899-408c-b47c-b1a978cc74cb"
+          },
+          "nodes" : { }
+        },
+        "74e95ec8-1fcf-486b-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/primary_application/74e95ec8-1fcf-486b-8",
+            "depth" : 7,
+            "name" : "74e95ec8-1fcf-486b-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.548+08:00",
+            "jcr:uuid" : "4aeb8ba0-5f24-48c2-8e8a-03cec5d363cb",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "primary_application" : "74e95ec8-1fcf-486b-84d0-93750c826a6f"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "secondary_application" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/secondary_application",
+        "depth" : 6,
+        "name" : "secondary_application",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.550+08:00",
+        "jcr:uuid" : "f280ed01-1e01-42bb-93c5-2ea311b70605",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "169004d9-afc9-4685-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/secondary_application/169004d9-afc9-4685-8",
+            "depth" : 7,
+            "name" : "169004d9-afc9-4685-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.550+08:00",
+            "jcr:uuid" : "7f9d9282-f698-42d6-8360-19ea85e0e1d4",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "secondary_application" : "169004d9-afc9-4685-876f-d905bb521cff"
+          },
+          "nodes" : { }
+        },
+        "189212fb-2c14-46e3-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/secondary_application/189212fb-2c14-46e3-9",
+            "depth" : 7,
+            "name" : "189212fb-2c14-46e3-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.551+08:00",
+            "jcr:uuid" : "29a8b828-8956-49d2-a3af-ad622340c986",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "secondary_application" : "189212fb-2c14-46e3-97b1-1bb2bc707777"
+          },
+          "nodes" : { }
+        },
+        "48a5c740-4e8b-4055-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/secondary_application/48a5c740-4e8b-4055-b",
+            "depth" : 7,
+            "name" : "48a5c740-4e8b-4055-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.551+08:00",
+            "jcr:uuid" : "8fdb0def-7267-40b5-8efb-15597fcbc0e6",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "secondary_application" : "48a5c740-4e8b-4055-b7a4-50bc156238ee"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "microphone_environments" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/microphone_environments",
+        "depth" : 6,
+        "name" : "microphone_environments",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.552+08:00",
+        "jcr:uuid" : "c0ff43c1-f0ab-4daa-96c2-4a4a4b70b4a7",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "fd50bfde-8e70-4632-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/microphone_environments/fd50bfde-8e70-4632-9",
+            "depth" : 7,
+            "name" : "fd50bfde-8e70-4632-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.553+08:00",
+            "jcr:uuid" : "d69b284c-951b-4b9f-bbec-7681b92bf810",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "microphone_environments" : "fd50bfde-8e70-4632-9ce0-e767949686fb"
+          },
+          "nodes" : { }
+        },
+        "60d491df-e6cb-42c3-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/microphone_environments/60d491df-e6cb-42c3-a",
+            "depth" : 7,
+            "name" : "60d491df-e6cb-42c3-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.553+08:00",
+            "jcr:uuid" : "3f7ce880-3123-43f8-8c53-1a2c5a4c2638",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "microphone_environments" : "60d491df-e6cb-42c3-a1b0-de51e5c3c93a"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "microphone_sounds" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/microphone_sounds",
+        "depth" : 6,
+        "name" : "microphone_sounds",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.554+08:00",
+        "jcr:uuid" : "d62b7570-2703-402a-9e42-46efb03455c8",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "666ef687-a6d7-4403-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/microphone_sounds/666ef687-a6d7-4403-b",
+            "depth" : 7,
+            "name" : "666ef687-a6d7-4403-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.554+08:00",
+            "jcr:uuid" : "aa188705-112c-4302-bb93-501c1b7582b3",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "microphone_sounds" : "666ef687-a6d7-4403-bfdd-ced759c91237"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "polar_pattern" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/polar_pattern",
+        "depth" : 6,
+        "name" : "polar_pattern",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.556+08:00",
+        "jcr:uuid" : "13842264-9a6a-4987-a085-549376a95a5e",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : {
+        "0" : "cardioid"
+      },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/polar_pattern/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2012-09-21T12:24:25.556+08:00",
+            "jcr:uuid" : "00342cd0-fe65-47d1-9de6-b29d210f5b30",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:creationdate" : "2012-09-21T12:24:25.556+08:00"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "adaptors" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/adaptors",
+        "depth" : 6,
+        "name" : "adaptors",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.559+08:00",
+        "jcr:uuid" : "31b8f66c-6d48-4cfb-a04d-2707de45f3b9",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : {
+        "0" : "XLR"
+      },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/adaptors/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2012-09-21T12:24:25.559+08:00",
+            "jcr:uuid" : "deb2b875-e1c6-46e9-a59d-1eb4ea261a9a",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:creationdate" : "2012-09-21T12:24:25.559+08:00"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "attenuator" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/attenuator",
+        "depth" : 6,
+        "name" : "attenuator",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.560+08:00",
+        "jcr:uuid" : "b04c537f-4a3d-47fb-9f0a-46daf55e725a",
+        "jcr:primaryType" : "mgnl:contentNode"
+      },
+      "properties" : {
+        "0" : "true"
+      },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/attenuator/MetaData",
+            "depth" : 7,
+            "name" : "MetaData",
+            "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ ],
+            "jcr:created" : "2012-09-21T12:24:25.560+08:00",
+            "jcr:uuid" : "3a1b08d2-8a9a-4671-97e8-5030257b3dbb",
+            "jcr:primaryType" : "mgnl:metaData"
+          },
+          "properties" : {
+            "mgnl:creationdate" : "2012-09-21T12:24:25.560+08:00"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "sound_demos" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/sound_demos",
+        "depth" : 6,
+        "name" : "sound_demos",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.562+08:00",
+        "jcr:uuid" : "e952bf6a-c56c-4ec5-8d39-95e3fffd7ee6",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "5e30454f-6409-4601-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/5e30454f-6409-4601-a",
+            "depth" : 7,
+            "name" : "5e30454f-6409-4601-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.562+08:00",
+            "jcr:uuid" : "5544bd38-cdc8-499b-888e-d2a7a78632e9",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "5e30454f-6409-4601-ad43-33903b34280a"
+          },
+          "nodes" : { }
+        },
+        "21f4e2f2-b1a3-4a14-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/21f4e2f2-b1a3-4a14-b",
+            "depth" : 7,
+            "name" : "21f4e2f2-b1a3-4a14-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.563+08:00",
+            "jcr:uuid" : "a82fd665-3ce3-4569-8c95-06ab4bfa7c09",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "21f4e2f2-b1a3-4a14-bece-fafdc35cc355"
+          },
+          "nodes" : { }
+        },
+        "40641553-df6b-4569-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/40641553-df6b-4569-a",
+            "depth" : 7,
+            "name" : "40641553-df6b-4569-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.563+08:00",
+            "jcr:uuid" : "418a3803-70f3-4a96-8f20-3b5a0fc9c700",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "40641553-df6b-4569-a77c-51e3ab91f8a7"
+          },
+          "nodes" : { }
+        },
+        "c0989a52-9a39-4ca6-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/c0989a52-9a39-4ca6-a",
+            "depth" : 7,
+            "name" : "c0989a52-9a39-4ca6-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.564+08:00",
+            "jcr:uuid" : "222fd3de-952c-43e3-93f3-62f793da8022",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "c0989a52-9a39-4ca6-a7f5-2994170b6ae1"
+          },
+          "nodes" : { }
+        },
+        "6bd12e9d-a9f9-4030-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/6bd12e9d-a9f9-4030-b",
+            "depth" : 7,
+            "name" : "6bd12e9d-a9f9-4030-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.564+08:00",
+            "jcr:uuid" : "8421a8e6-5b8f-45ef-8f3c-edd251d6328b",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "6bd12e9d-a9f9-4030-bda6-d4a0b75a9bd4"
+          },
+          "nodes" : { }
+        },
+        "ab9392fc-f33b-4dad-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/ab9392fc-f33b-4dad-a",
+            "depth" : 7,
+            "name" : "ab9392fc-f33b-4dad-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.565+08:00",
+            "jcr:uuid" : "1de512d1-db57-4948-b691-d2409e67deb0",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "ab9392fc-f33b-4dad-a632-d739170f32d9"
+          },
+          "nodes" : { }
+        },
+        "8ff079e7-e156-4230-b" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/sound_demos/8ff079e7-e156-4230-b",
+            "depth" : 7,
+            "name" : "8ff079e7-e156-4230-b",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.566+08:00",
+            "jcr:uuid" : "a3f5977f-2a8f-4973-af49-37c57c803454",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "sound_demos" : "8ff079e7-e156-4230-b5c5-1e903bad9210"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "videos" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/videos",
+        "depth" : 6,
+        "name" : "videos",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.567+08:00",
+        "jcr:uuid" : "e2c7cdc0-ae59-4619-8a59-4f226be1cd5e",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "3c9f1700-e0aa-4533-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/videos/3c9f1700-e0aa-4533-a",
+            "depth" : 7,
+            "name" : "3c9f1700-e0aa-4533-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.567+08:00",
+            "jcr:uuid" : "f02553fb-c99a-4b34-b1fd-944ad6dfee75",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "videos" : "3c9f1700-e0aa-4533-ae2d-893457e5147f"
+          },
+          "nodes" : { }
+        },
+        "7054c086-5ce7-4729-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/videos/7054c086-5ce7-4729-9",
+            "depth" : 7,
+            "name" : "7054c086-5ce7-4729-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.568+08:00",
+            "jcr:uuid" : "f3fe12ad-3846-4074-97e9-f7dd22ab2019",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "videos" : "7054c086-5ce7-4729-953f-2acb775ab7e6"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "user_guide" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/user_guide",
+        "depth" : 6,
+        "name" : "user_guide",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.569+08:00",
+        "jcr:uuid" : "6b5388e3-5bcd-4add-8f62-8736de54273a",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "ef2345e6-b616-42ac-9" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/user_guide/ef2345e6-b616-42ac-9",
+            "depth" : 7,
+            "name" : "ef2345e6-b616-42ac-9",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.569+08:00",
+            "jcr:uuid" : "5dfa84e0-e820-48df-8b43-257fa05232a2",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "user_guide" : "ef2345e6-b616-42ac-9f5a-2e911982c0ee"
+          },
+          "nodes" : { }
+        }
+      }
+    },
+    "how_to" : {
+      "meta" : {
+        "path" : "/products/microphones/en/pg/PG27/how_to",
+        "depth" : 6,
+        "name" : "how_to",
+        "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "data",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "jcr:created" : "2012-09-21T12:24:25.570+08:00",
+        "jcr:uuid" : "8f4ae566-7b35-4921-8633-94972657b9ee",
+        "jcr:primaryType" : "dataItemNode"
+      },
+      "properties" : { },
+      "nodes" : {
+        "ac6cda60-2b72-48dd-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/how_to/ac6cda60-2b72-48dd-a",
+            "depth" : 7,
+            "name" : "ac6cda60-2b72-48dd-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.571+08:00",
+            "jcr:uuid" : "f2c634f8-95d2-4b24-a5f9-ab0312011a26",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "how_to" : "ac6cda60-2b72-48dd-ab48-b13d17f61fb1"
+          },
+          "nodes" : { }
+        },
+        "e9e958ab-c4f8-47bb-8" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/how_to/e9e958ab-c4f8-47bb-8",
+            "depth" : 7,
+            "name" : "e9e958ab-c4f8-47bb-8",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.571+08:00",
+            "jcr:uuid" : "9ea1a115-b0a4-4038-b043-68c5fd2b8b94",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "how_to" : "e9e958ab-c4f8-47bb-8b23-10c5d8325779"
+          },
+          "nodes" : { }
+        },
+        "1a15425f-3e3f-4c72-a" : {
+          "meta" : {
+            "path" : "/products/microphones/en/pg/PG27/how_to/1a15425f-3e3f-4c72-a",
+            "depth" : 7,
+            "name" : "1a15425f-3e3f-4c72-a",
+            "superTypes" : [ "dataBase", "dataItemBase", "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "workspace" : "data",
+            "mixinNodeTypes" : [ "mix:lockable" ],
+            "jcr:created" : "2012-09-21T12:24:25.572+08:00",
+            "jcr:uuid" : "9cc19ab5-3398-4c70-a780-54e760964790",
+            "jcr:primaryType" : "dataItemNode"
+          },
+          "properties" : {
+            "how_to" : "1a15425f-3e3f-4c72-a1b2-83c9f6c684ba"
+          },
+          "nodes" : { }
+        }
+      }
+    }
+  }
+} ]

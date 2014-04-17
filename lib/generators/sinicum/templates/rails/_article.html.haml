@@ -1,0 +1,15 @@
+%article.article
+  - if mgnl_value :title
+    %h1
+      = mgnl_out :title
+
+  - if mgnl_value(:image)
+    .img{ class: "col-sm-#{mgnl_out :image_size}" }
+      = mgnl_img :image
+
+  - if mgnl_out( :image_float ) == "no_float"
+    .clearfix
+
+  = mgnl_out :text
+
+  .clearfix

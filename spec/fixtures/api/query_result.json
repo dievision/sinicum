@@ -1,0 +1,61 @@
+[ {
+  "properties" : { },
+  "nodes" : {
+    "MetaData" : {
+      "properties" : { },
+      "nodes" : { },
+      "meta" : {
+        "name" : "MetaData",
+        "path" : "/path/subpage1/MetaData",
+        "workspace" : "website",
+        "depth" : 3,
+        "mixinNodeTypes" : [ ],
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "jcr:uuid" : "f7a6d0b9-e6e9-470b-881d-967bab1e7f76",
+        "jcr:primaryType" : "mgnl:metaData",
+        "jcr:created" : "2013-06-03T10:17:45.260+02:00"
+      }
+    }
+  },
+  "meta" : {
+    "name" : "subpage1",
+    "path" : "/path/subpage1",
+    "workspace" : "website",
+    "depth" : 2,
+    "mixinNodeTypes" : [ ],
+    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode", "mgnl:content" ],
+    "jcr:uuid" : "995a776f-242e-453a-9422-d0b7e8e9c068",
+    "jcr:primaryType" : "mgnl:page",
+    "jcr:created" : "2013-06-03T10:17:45.260+02:00"
+  }
+}, {
+  "properties" : { },
+  "nodes" : {
+    "MetaData" : {
+      "properties" : { },
+      "nodes" : { },
+      "meta" : {
+        "name" : "MetaData",
+        "path" : "/path/subpage2/MetaData",
+        "workspace" : "website",
+        "depth" : 3,
+        "mixinNodeTypes" : [ ],
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "jcr:uuid" : "c37083de-6a57-48fe-95d0-41fe05fb2ac5",
+        "jcr:primaryType" : "mgnl:metaData",
+        "jcr:created" : "2013-06-03T10:17:45.260+02:00"
+      }
+    }
+  },
+  "meta" : {
+    "name" : "subpage2",
+    "path" : "/path/subpage2",
+    "workspace" : "website",
+    "depth" : 2,
+    "mixinNodeTypes" : [ ],
+    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode", "mgnl:content" ],
+    "jcr:uuid" : "bba4bfcd-8347-40d0-9bb6-504ddde1c5a1",
+    "jcr:primaryType" : "mgnl:page",
+    "jcr:created" : "2013-06-03T10:17:45.260+02:00"
+  }
+} ]

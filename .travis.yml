@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - "1.9.3"
+  - "2.0.0"
+  - "2.1.0"
+  - "jruby-19mode"
+script: bundle exec rake
+gemfile:
+  - Gemfile
+  - gemfiles/Gemfile-3.2
+  - gemfiles/Gemfile-4.0
+addons:
+  code_climate:
+    repo_token: 97304c6d5e6017ffcf39bb7220a40d37062205ae6b8989a712ac0631b9122111

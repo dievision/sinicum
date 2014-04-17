@@ -1,0 +1,8 @@
+renderer:
+
+  default:
+    render_type: resize_crop
+    format: jpeg
+    x: 307
+    y: 202
+    hires_factor: 2

@@ -1,0 +1,50 @@
+[ {
+  "meta" : {
+    "path" : "/shure/homepage/twitter",
+    "depth" : 3,
+    "name" : "twitter",
+    "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+    "workspace" : "dam",
+    "mixinNodeTypes" : [ "mix:lockable" ],
+    "jcr:created" : "2011-01-31T15:13:15.540+08:00",
+    "jcr:uuid" : "d2ba49f9-8850-44b3-a7d3-985c60ef6b20",
+    "jcr:primaryType" : "mgnl:asset"
+  },
+  "properties" : {
+    "title" : "twitter",
+    "name" : "twitter",
+    "creator" : "dennis_yuen",
+    "type" : "png",
+    "modificationDate" : "2011-02-09T12:24:48.281+08:00",
+    "modifier" : "dennis_yuen",
+    "creationDate" : "2011-01-31T15:13:15.540+08:00",
+    "language" : "English",
+	"subject" : "A subject"
+  },
+  "nodes" : {
+    "jcr:content" : {
+      "meta" : {
+        "path" : "/shure/homepage/twitter/document",
+        "depth" : 4,
+        "name" : "document",
+        "superTypes" : [ "mix:lastModified", "mix:mimeType", "mix:referenceable", "nt:base", "nt:resource" ],
+        "workspace" : "dam",
+        "mixinNodeTypes" : [ ],
+        "jcr:uuid" : "bdf06968-bc8c-4284-a4c7-75685717a7b4",
+        "jcr:primaryType" : "mgnl:resource"
+      },
+      "properties" : {
+        "size" : "6911",
+        "extension" : "png",
+        "jcr:data" : "Binary Data Type not supported",
+        "width" : "300",
+        "height" : "110",
+        "jcr:mimeType" : "image/png",
+        "jcr:lastModified" : "2011-02-09T12:24:48.279+08:00",
+        "nodeDataTemplate" : "",
+        "fileName" : "twitter"
+      },
+      "nodes" : { }
+    }
+  }
+} ]

@@ -1,0 +1,22 @@
+[ {
+  "meta" : {
+    "name" : "home",
+    "path" : "/home",
+    "mixinNodeTypes" : [ ],
+    "depth" : 1,
+    "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode", "mgnl:activatable", "mgnl:content", "mgnl:created", "mgnl:lastModified", "mgnl:renderable", "mgnl:versionable" ],
+    "workspace" : "website",
+    "mgnl:lastModifiedBy" : "superuser",
+    "mgnl:template" : "themodule:pages/appplication",
+    "mgnl:created" : "2014-03-16T14:06:17.666+01:00",
+    "mgnl:createdBy" : "superuser",
+    "mgnl:lastModified" : "2014-03-18T15:57:51.329+01:00",
+    "jcr:uuid" : "684af75b-0504-467e-92ce-bea998cc8d8b",
+    "jcr:primaryType" : "mgnl:page",
+    "jcr:created" : "2014-03-16T14:06:17.666+01:00"
+  },
+  "properties" : {
+    "title" : "Page Title"
+  },
+  "nodes" : { }
+} ]

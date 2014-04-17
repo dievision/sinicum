@@ -1,0 +1,30 @@
+AllCops:
+  Exclude:
+    - spec/dummy/**
+    - lib/generators/**
+  RunRailsCops: true
+
+ClassLength:
+  Max: 125
+
+HandleExceptions:
+  Enabled: False
+
+LineLength:
+  Max: 100
+
+CyclomaticComplexity:
+  Max: 10
+
+DoubleNegation:
+  Enabled: False
+
+MethodLength:
+  Max: 15
+
+Documentation:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+

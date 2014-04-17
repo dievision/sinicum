@@ -1,0 +1,1497 @@
+[ {
+  "meta" : {
+    "workspace" : "website",
+    "jcr:uuid" : "21cbc762-bdcd-4520-9eff-1928986fb419",
+    "path" : "/home",
+    "name" : "home",
+    "jcr:primaryType" : "mgnl:content",
+    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+    "depth" : 1,
+    "jcr:created" : "2010-04-13T09:35:01.000+02:00",
+    "mixinNodeTypes" : [ "mix:lockable" ]
+  },
+  "properties" : {
+    "title" : "Shure: Mikrofone, Funkmikrofone, Ohrhörer",
+    "meta_keywords" : "spitzen sound, extrem robust, profi musiker, tontechniker, bühnen, shure equipment",
+    "meta_title" : "Shure: Mikrofone, Funkmikrofone, Ohrhörer, Kopfhörer und In-Ear Monitoring Systeme",
+    "meta_description" : "Spitzen Sound und extrem robust: Seit 1925 entscheiden sich Profi Musiker und Tontechniker auf Bühnen weltweit für Shure Equipment.",
+    "boolean_true_test" : "true",
+    "boolean_false_test" : "false"
+  },
+  "nodes" : {
+    "MetaData" : {
+      "meta" : {
+        "workspace" : "website",
+        "jcr:uuid" : "f082dc7a-c23c-42bf-8338-60a6bd5a777b",
+        "path" : "/home/MetaData",
+        "name" : "MetaData",
+        "jcr:primaryType" : "mgnl:metaData",
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "depth" : 2,
+        "jcr:created" : "2010-04-13T09:35:01.322+02:00",
+        "mixinNodeTypes" : [ ]
+      },
+      "properties" : {
+        "mgnl:activatorid" : "superuser",
+        "mgnl:authorid" : "superuser",
+        "mgnl:creationdate" : "2009-10-12T18:27:58.000+02:00",
+        "mgnl:lastaction" : "2012-10-05T15:25:05.000+02:00",
+        "mgnl:template" : "homepage",
+        "mgnl:activated" : true,
+        "mgnl:lastmodified" : "2012-10-05T15:23:50.000+02:00"
+      },
+      "nodes" : { }
+    },
+    "orc_13" : {
+      "meta" : {
+        "workspace" : "website",
+        "jcr:uuid" : "900985a3-319c-41c6-b327-b46d7fb56d23",
+        "path" : "/home/orc_13",
+        "name" : "orc_13",
+        "jcr:primaryType" : "mgnl:contentNode",
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "depth" : 2,
+        "jcr:created" : "2010-04-13T09:35:01.995+02:00",
+        "mixinNodeTypes" : [ "mix:lockable" ]
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "7f94dafd-6462-4356-8dd4-3c1cf3614dc9",
+            "path" : "/home/orc_13/MetaData",
+            "name" : "MetaData",
+            "jcr:primaryType" : "mgnl:metaData",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:01.995+02:00",
+            "mixinNodeTypes" : [ ]
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:authorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-13T13:56:44.219+02:00",
+            "mgnl:lastaction" : "2012-10-05T15:25:05.885+02:00",
+            "mgnl:activated" : true,
+            "mgnl:lastmodified" : "2009-10-26T16:50:45.120+01:00"
+          },
+          "nodes" : { }
+        },
+        "0" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "300b64c6-741a-44ce-acd8-e5d475fc5e4a",
+            "path" : "/home/orc_13/0",
+            "name" : "0",
+            "jcr:primaryType" : "mgnl:contentNode",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:01.996+02:00",
+            "mixinNodeTypes" : [ "mix:lockable" ]
+          },
+          "properties" : {
+            "title" : "NEWS"
+          },
+          "nodes" : {
+            "MetaData" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "49634e0f-9be0-4996-afd5-4a8cf798a371",
+                "path" : "/home/orc_13/0/MetaData",
+                "name" : "MetaData",
+                "jcr:primaryType" : "mgnl:metaData",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:01.996+02:00",
+                "mixinNodeTypes" : [ ]
+              },
+              "properties" : {
+                "mgnl:authorid" : "superuser",
+                "mgnl:activatorid" : "superuser",
+                "mgnl:creationdate" : "2009-10-14T13:30:41.362+02:00",
+                "mgnl:lastaction" : "2012-10-05T15:25:05.886+02:00",
+                "mgnl:template" : "box_picture_teaser",
+                "mgnl:activated" : true,
+                "mgnl:lastmodified" : "2009-10-26T16:50:45.120+01:00"
+              },
+              "nodes" : { }
+            },
+            "picture_teaser_items" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "68581193-5dcc-43a0-a88e-81fd09eb932f",
+                "path" : "/home/orc_13/0/picture_teaser_items",
+                "name" : "picture_teaser_items",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:01.996+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "26491b12-ca3a-4e20-ad09-a62f683a1d1e",
+                    "path" : "/home/orc_13/0/picture_teaser_items/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:01.996+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:creationdate" : "2009-10-14T13:32:19.751+02:00",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.886+02:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2009-10-26T16:50:45.121+01:00"
+                  },
+                  "nodes" : { }
+                },
+                "0" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "57728e65-bf14-4965-aa96-e9ce217364f9",
+                    "path" : "/home/orc_13/0/picture_teaser_items/0",
+                    "name" : "0",
+                    "jcr:primaryType" : "mgnl:contentNode",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:01.996+02:00",
+                    "mixinNodeTypes" : [ "mix:lockable" ]
+                  },
+                  "properties" : {
+                    "title" : "PRODUCTS",
+                    "image" : "f45b504f-6449-46ab-b0cd-e0f275646db3",
+                    "sub_text" : "<p><a href=\"#\">Show all product-news<br /> </a></p>",
+                    "link" : "/en",
+                    "text" : "<p><strong>09-06-04</strong> Microphone legends go digital: Do you want to connect your SM58 or SM57 to your PC or MAC?</p>",
+                    "link_text" : "more"
+                  },
+                  "nodes" : {
+                    "MetaData" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "cad133fa-f3ab-4d1c-86bb-4d31f964ce47",
+                        "path" : "/home/orc_13/0/picture_teaser_items/0/MetaData",
+                        "name" : "MetaData",
+                        "jcr:primaryType" : "mgnl:metaData",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.996+02:00",
+                        "mixinNodeTypes" : [ ]
+                      },
+                      "properties" : {
+                        "mgnl:activatorid" : "superuser",
+                        "mgnl:authorid" : "superuser",
+                        "mgnl:lastaction" : "2012-10-05T15:25:05.887+02:00",
+                        "mgnl:creationdate" : "2009-10-14T13:32:19.752+02:00",
+                        "mgnl:template" : "box_picture_teaser_item",
+                        "mgnl:activated" : true,
+                        "mgnl:lastmodified" : "2009-10-26T16:50:45.121+01:00"
+                      },
+                      "nodes" : { }
+                    },
+                    "text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "2bc4e9cd-dfc1-4e91-b0e5-978b40bb899c",
+                        "path" : "/home/orc_13/0/picture_teaser_items/0/text_files",
+                        "name" : "text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.997+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "63a49eff-017e-4da0-aa8f-47cdeb03a6d8",
+                            "path" : "/home/orc_13/0/picture_teaser_items/0/text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:01.997+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.887+02:00",
+                            "mgnl:creationdate" : "2009-10-14T13:32:19.753+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-26T16:50:45.122+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "sub_text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "6dfc3271-0e13-43b7-ae67-7a6db9f1fa8b",
+                        "path" : "/home/orc_13/0/picture_teaser_items/0/sub_text_files",
+                        "name" : "sub_text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.997+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "c729811f-5bfb-4811-b2c4-a74e85d3a839",
+                            "path" : "/home/orc_13/0/picture_teaser_items/0/sub_text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:01.997+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:creationdate" : "2009-10-14T13:32:19.755+02:00",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.887+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-26T16:50:45.123+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    }
+                  }
+                },
+                "00" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "03f2e1ec-793f-4224-9b65-6b38b3c6a6a3",
+                    "path" : "/home/orc_13/0/picture_teaser_items/00",
+                    "name" : "00",
+                    "jcr:primaryType" : "mgnl:contentNode",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:01.997+02:00",
+                    "mixinNodeTypes" : [ "mix:lockable" ]
+                  },
+                  "properties" : {
+                    "title" : "HOW-TO",
+                    "image" : "fabd1b49-8272-4347-9751-bf5fe32eec5e",
+                    "sub_text" : "<p><a href=\"#\">Show all how-to guides<br /> </a></p>",
+                    "link" : "/en",
+                    "text" : "<p><strong>09-05-19</strong> Shure Sound Isolating Earphones: Use this interactive demonstration to find tips on the best fit.</p>",
+                    "link_text" : "more"
+                  },
+                  "nodes" : {
+                    "MetaData" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "7377a54e-bf87-45df-b891-0dd7b80c9262",
+                        "path" : "/home/orc_13/0/picture_teaser_items/00/MetaData",
+                        "name" : "MetaData",
+                        "jcr:primaryType" : "mgnl:metaData",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.997+02:00",
+                        "mixinNodeTypes" : [ ]
+                      },
+                      "properties" : {
+                        "mgnl:authorid" : "superuser",
+                        "mgnl:activatorid" : "superuser",
+                        "mgnl:creationdate" : "2009-10-14T13:39:04.407+02:00",
+                        "mgnl:lastaction" : "2012-10-05T15:25:05.888+02:00",
+                        "mgnl:template" : "box_picture_teaser_item",
+                        "mgnl:activated" : true,
+                        "mgnl:lastmodified" : "2009-10-26T16:50:45.123+01:00"
+                      },
+                      "nodes" : { }
+                    },
+                    "text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "787c87ad-8ac4-4db3-8e96-94bd6673ab84",
+                        "path" : "/home/orc_13/0/picture_teaser_items/00/text_files",
+                        "name" : "text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.998+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "0925ec20-13a0-40b9-96c2-c24e101a857d",
+                            "path" : "/home/orc_13/0/picture_teaser_items/00/text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:01.998+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.888+02:00",
+                            "mgnl:creationdate" : "2009-10-14T13:39:04.408+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-26T16:50:45.124+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "sub_text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "2f4cc085-1c98-442a-aed5-8b60c9d30aa5",
+                        "path" : "/home/orc_13/0/picture_teaser_items/00/sub_text_files",
+                        "name" : "sub_text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.998+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "161a5277-93bb-495c-a38d-ffe6b43816a3",
+                            "path" : "/home/orc_13/0/picture_teaser_items/00/sub_text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:01.998+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.888+02:00",
+                            "mgnl:creationdate" : "2009-10-14T13:39:04.410+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-26T16:50:45.124+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    }
+                  }
+                },
+                "01" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "77064f19-d9be-42fa-a507-8534f444c091",
+                    "path" : "/home/orc_13/0/picture_teaser_items/01",
+                    "name" : "01",
+                    "jcr:primaryType" : "mgnl:contentNode",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:01.998+02:00",
+                    "mixinNodeTypes" : [ "mix:lockable" ]
+                  },
+                  "properties" : {
+                    "title" : "STAGE TALK",
+                    "image" : "a3b0d687-4c6d-420b-a6f0-cc7d4415f8ff",
+                    "sub_text" : "<p>Show all of stage talk</p>",
+                    "text" : "<p><strong>09-06-01</strong> Producer Danny Duncan trusts in Shure Products at the legendary Abbey Road Studios.</p> <p>&nbsp;</p>",
+                    "link" : "/en",
+                    "link_text" : "more"
+                  },
+                  "nodes" : {
+                    "MetaData" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "da44bef2-1b25-4b89-bbba-f74da878ff06",
+                        "path" : "/home/orc_13/0/picture_teaser_items/01/MetaData",
+                        "name" : "MetaData",
+                        "jcr:primaryType" : "mgnl:metaData",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.998+02:00",
+                        "mixinNodeTypes" : [ ]
+                      },
+                      "properties" : {
+                        "mgnl:activatorid" : "superuser",
+                        "mgnl:authorid" : "superuser",
+                        "mgnl:creationdate" : "2009-10-14T13:43:19.783+02:00",
+                        "mgnl:lastaction" : "2012-10-05T15:25:05.889+02:00",
+                        "mgnl:template" : "box_picture_teaser_item",
+                        "mgnl:activated" : true,
+                        "mgnl:lastmodified" : "2009-10-26T16:50:45.125+01:00"
+                      },
+                      "nodes" : { }
+                    },
+                    "text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "ac02f204-32f9-4cd8-93cf-051bef6d404f",
+                        "path" : "/home/orc_13/0/picture_teaser_items/01/text_files",
+                        "name" : "text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.999+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "3ae0d782-7d03-4be2-99f7-e57c02c63011",
+                            "path" : "/home/orc_13/0/picture_teaser_items/01/text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:01.999+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.889+02:00",
+                            "mgnl:creationdate" : "2009-10-14T13:43:19.784+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-26T16:50:45.145+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "sub_text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "84cec0e2-ddef-4cb2-8b73-04a97ac7e111",
+                        "path" : "/home/orc_13/0/picture_teaser_items/01/sub_text_files",
+                        "name" : "sub_text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:01.999+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "a845c857-14c1-493c-99bf-711a9d74cd34",
+                            "path" : "/home/orc_13/0/picture_teaser_items/01/sub_text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:01.999+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.889+02:00",
+                            "mgnl:creationdate" : "2009-10-14T13:43:19.786+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-26T16:50:45.146+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "orc_8" : {
+      "meta" : {
+        "workspace" : "website",
+        "jcr:uuid" : "c00f54e8-e290-4b11-81c5-e47af5342f1d",
+        "path" : "/home/orc_8",
+        "name" : "orc_8",
+        "jcr:primaryType" : "mgnl:contentNode",
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "depth" : 2,
+        "jcr:created" : "2010-04-13T09:35:01.999+02:00",
+        "mixinNodeTypes" : [ "mix:lockable" ]
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "835b4d36-7e2b-4635-8cf8-4eb86876adac",
+            "path" : "/home/orc_8/MetaData",
+            "name" : "MetaData",
+            "jcr:primaryType" : "mgnl:metaData",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:01.999+02:00",
+            "mixinNodeTypes" : [ ]
+          },
+          "properties" : {
+            "mgnl:authorid" : "superuser",
+            "mgnl:activatorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-15T18:40:36.622+02:00",
+            "mgnl:lastaction" : "2012-10-05T15:25:05.890+02:00",
+            "mgnl:activated" : true,
+            "mgnl:lastmodified" : "2012-06-28T16:03:48.016+02:00"
+          },
+          "nodes" : { }
+        },
+        "00" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "e6e8b28c-f2d8-422f-9315-82178feb30d0",
+            "path" : "/home/orc_8/00",
+            "name" : "00",
+            "jcr:primaryType" : "mgnl:contentNode",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:02.000+02:00",
+            "mixinNodeTypes" : [ "mix:lockable" ]
+          },
+          "properties" : {
+            "link_3" : "72441e8e-002a-41cd-8550-8e56013d4bca",
+            "image_2" : "1b75ab6c-fbce-4de1-8056-c8f07595b6ab",
+            "link_2" : "7155556e-8eb3-4eb8-8431-0ed38dabd222",
+            "image_1" : "bcf9683f-4375-4c13-ad53-6922f21e0c0a",
+            "link_1" : "385c3259-78e0-490e-8075-8edeed5fbd16",
+            "headline_1" : "FP Kamera-Funksysteme",
+            "image_4" : "0dc61b7f-4f74-4369-8645-1f7fd4744ac0",
+            "link_4" : "/home/produkte/empfaenger/ur5",
+            "image_3" : "f8a0133e-50f5-4fe2-b025-a7cc105ebe79",
+            "text_1" : "Elektr. Berichterstattung, Event-Aufnahmen, Interviews",
+            "text_2" : "Für anspruchsvolle Installationsanwendungen",
+            "text_3" : "SRH1440 und SRH1840",
+            "text_4" : "Jetzt erhältlich",
+            "headline_4" : "UR5 Portabler Diversity Empfänger",
+            "headline_3" : "Kopfhörer in offener Bauweise",
+            "headline_2" : "ULX-D Digitale Funksysteme"
+          },
+          "nodes" : {
+            "MetaData" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "257fe99b-f2c7-425f-a133-d869054248b5",
+                "path" : "/home/orc_8/00/MetaData",
+                "name" : "MetaData",
+                "jcr:primaryType" : "mgnl:metaData",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.000+02:00",
+                "mixinNodeTypes" : [ ]
+              },
+              "properties" : {
+                "mgnl:activatorid" : "superuser",
+                "mgnl:authorid" : "superuser",
+                "mgnl:creationdate" : "2009-10-27T09:00:30.014+01:00",
+                "mgnl:lastaction" : "2012-10-05T15:25:05.890+02:00",
+                "mgnl:template" : "box_title_slideshow",
+                "mgnl:activated" : true,
+                "mgnl:lastmodified" : "2012-06-28T16:03:48.016+02:00"
+              },
+              "nodes" : { }
+            },
+            "long_text_files" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "bcc9f839-c31f-469f-a222-7a45c4bf9376",
+                "path" : "/home/orc_8/00/long_text_files",
+                "name" : "long_text_files",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.000+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "999eb5f5-ca35-495b-833e-ee0485e04f77",
+                    "path" : "/home/orc_8/00/long_text_files/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.000+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:creationdate" : "2009-10-27T09:00:30.016+01:00",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.890+02:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2009-10-28T13:06:14.596+01:00"
+                  },
+                  "nodes" : { }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "orc_4" : {
+      "meta" : {
+        "workspace" : "website",
+        "jcr:uuid" : "dfee8546-7821-4c6f-a42e-3dbeb397761b",
+        "path" : "/home/orc_4",
+        "name" : "orc_4",
+        "jcr:primaryType" : "mgnl:contentNode",
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "depth" : 2,
+        "jcr:created" : "2010-04-13T09:35:02.000+02:00",
+        "mixinNodeTypes" : [ "mix:lockable" ]
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "42d6b33b-af79-4d5e-a6cf-6191a9a1e639",
+            "path" : "/home/orc_4/MetaData",
+            "name" : "MetaData",
+            "jcr:primaryType" : "mgnl:metaData",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:02.000+02:00",
+            "mixinNodeTypes" : [ ]
+          },
+          "properties" : {
+            "mgnl:activatorid" : "superuser",
+            "mgnl:authorid" : "superuser",
+            "mgnl:creationdate" : "2009-10-27T09:07:53.874+01:00",
+            "mgnl:lastaction" : "2012-10-05T15:25:05.891+02:00",
+            "mgnl:activated" : true,
+            "mgnl:lastmodified" : "2012-10-05T15:23:50.207+02:00"
+          },
+          "nodes" : { }
+        },
+        "0" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "c78d6ac4-d7fd-4e4f-a08e-184ff541ba21",
+            "path" : "/home/orc_4/0",
+            "name" : "0",
+            "jcr:primaryType" : "mgnl:contentNode",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:02.001+02:00",
+            "mixinNodeTypes" : [ "mix:lockable" ]
+          },
+          "properties" : {
+            "title" : "FINDE DAS RICHTIGE MIKROFON",
+            "width" : "2",
+            "background" : "dark",
+            "row1" : "<ul>     <li><a href=\"/produkte/mikrofone/gesangsmikrofone\">Gesang</a></li>     <li><a href=\"/produkte/mikrofone/gitarrenmikrofone\">Gitarren</a></li>     <li><a href=\"/produkte/mikrofone/instrumentenmikrofone\">Instrumente</a></li>     <li><a href=\"/produkte/mikrofone/drum-mikrofone\">Drums &amp; Percussion</a></li>     <li><a href=\"/produkte/mikrofone/kamera-mikrofon-broadcasting\">Broadcasting</a></li> </ul>",
+            "row2" : "<ul>     <li><a href=\"/produkte/mikrofone/headset-mikrofone\">Headsets</a></li>     <li><a href=\"/produkte/mikrofone/lavalier-mikrofone\">Lavaliers</a></li>     <li><a href=\"/produkte/mikrofone/homerecording\">Homerecording</a></li>     <li><a href=\"/produkte/mikrofone/studio-mikrofone\">Professionelles Studio</a></li>     <li><a href=\"/produkte/mikrofone/installationsmikrofone\">Installationsmikrofone</a></li> </ul> <p>&nbsp;</p>"
+          },
+          "nodes" : {
+            "MetaData" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "ab4e8b21-97d5-4cdc-af77-b2f23fbf5f3f",
+                "path" : "/home/orc_4/0/MetaData",
+                "name" : "MetaData",
+                "jcr:primaryType" : "mgnl:metaData",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.001+02:00",
+                "mixinNodeTypes" : [ ]
+              },
+              "properties" : {
+                "mgnl:authorid" : "superuser",
+                "mgnl:activatorid" : "superuser",
+                "mgnl:lastaction" : "2012-10-05T15:25:05.891+02:00",
+                "mgnl:creationdate" : "2009-10-27T09:07:53.875+01:00",
+                "mgnl:template" : "box_link",
+                "mgnl:activated" : true,
+                "mgnl:lastmodified" : "2012-10-05T15:22:47.240+02:00"
+              },
+              "nodes" : { }
+            },
+            "row1_files" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "0d943679-3092-49fc-af96-2d7f39e4b12c",
+                "path" : "/home/orc_4/0/row1_files",
+                "name" : "row1_files",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.001+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "e848102c-a9fc-4cb1-8712-6d552be6fd0c",
+                    "path" : "/home/orc_4/0/row1_files/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.001+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.892+02:00",
+                    "mgnl:creationdate" : "2009-10-27T09:07:53.876+01:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2009-10-28T13:06:47.128+01:00"
+                  },
+                  "nodes" : { }
+                }
+              }
+            },
+            "row2_files" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "56141e00-dcd2-47a7-aa51-8ce3432535a1",
+                "path" : "/home/orc_4/0/row2_files",
+                "name" : "row2_files",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.001+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "451ca8f8-a4a4-4a4e-aed3-ba78bcbad552",
+                    "path" : "/home/orc_4/0/row2_files/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.001+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.892+02:00",
+                    "mgnl:creationdate" : "2009-10-27T09:07:53.876+01:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2009-10-28T13:06:47.130+01:00"
+                  },
+                  "nodes" : { }
+                }
+              }
+            }
+          }
+        },
+        "00" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "041bba13-a23d-4cfa-aff6-5e5c9697c6db",
+            "path" : "/home/orc_4/00",
+            "name" : "00",
+            "jcr:primaryType" : "mgnl:contentNode",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:02.002+02:00",
+            "mixinNodeTypes" : [ "mix:lockable" ]
+          },
+          "properties" : {
+            "title" : "SHURE Produkte",
+            "width" : "2",
+            "background" : "dark",
+            "row1" : "<ul>     <li><a href=\"/produkte/mikrofone\">Mikrofone</a></li>     <li><a href=\"/produkte/funkmikrofon_systeme\">Funksysteme</a></li>     <li><a href=\"/produkte/in_ear_monitoring\">In-Ear Monitoring</a></li>     <li><a href=\"/produkte/mixer\">Mischer &amp; DSP</a></li>     <li><a href=\"/news_kuenstler/produktneuheiten\">Neuheiten</a></li> </ul>",
+            "row2" : "<ul>     <li><a href=\"/produkte/ohrhoerer\">Ohrh&ouml;rer</a></li>     <li><a href=\"/produkte/kopfhoerer\">Kopfh&ouml;rer</a></li>     <li><a href=\"/produkte/zubehoer\">Zubeh&ouml;r</a></li>     <li><a href=\"/produkte/dj_phono\">DJ Phono</a></li>     <li><a href=\"/produkte/eingestellte-produkte\">Eingestellt</a></li> </ul>"
+          },
+          "nodes" : {
+            "MetaData" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "30d7f4c6-4f85-4b18-acfe-f3b7df55c339",
+                "path" : "/home/orc_4/00/MetaData",
+                "name" : "MetaData",
+                "jcr:primaryType" : "mgnl:metaData",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.002+02:00",
+                "mixinNodeTypes" : [ ]
+              },
+              "properties" : {
+                "mgnl:activatorid" : "superuser",
+                "mgnl:authorid" : "superuser",
+                "mgnl:lastaction" : "2012-10-05T15:25:05.892+02:00",
+                "mgnl:creationdate" : "2009-10-27T09:09:50.611+01:00",
+                "mgnl:template" : "box_link",
+                "mgnl:activated" : true,
+                "mgnl:lastmodified" : "2012-10-05T15:23:50.207+02:00"
+              },
+              "nodes" : { }
+            },
+            "row1_files" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "7a47f1b7-6ce3-47eb-aba3-09a11e5b187b",
+                "path" : "/home/orc_4/00/row1_files",
+                "name" : "row1_files",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.002+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "ef1d2fb2-3ed8-47c5-b87d-da251459e851",
+                    "path" : "/home/orc_4/00/row1_files/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.002+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:creationdate" : "2009-10-27T09:09:50.612+01:00",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.893+02:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2009-10-28T13:06:47.142+01:00"
+                  },
+                  "nodes" : { }
+                }
+              }
+            },
+            "row2_files" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "4e8503d3-c96d-4d5b-889b-7779ba141955",
+                "path" : "/home/orc_4/00/row2_files",
+                "name" : "row2_files",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.002+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "582fdcf2-75df-4f18-8d4e-bdf270a481ac",
+                    "path" : "/home/orc_4/00/row2_files/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.002+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.893+02:00",
+                    "mgnl:creationdate" : "2009-10-27T09:09:50.613+01:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2009-10-28T13:06:47.143+01:00"
+                  },
+                  "nodes" : { }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "orc_12" : {
+      "meta" : {
+        "workspace" : "website",
+        "jcr:uuid" : "0c968c0f-7fbe-45cf-ba2e-9d2b44478d50",
+        "path" : "/home/orc_12",
+        "name" : "orc_12",
+        "jcr:primaryType" : "mgnl:contentNode",
+        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "depth" : 2,
+        "jcr:created" : "2010-04-13T09:35:02.004+02:00",
+        "mixinNodeTypes" : [ "mix:lockable" ]
+      },
+      "properties" : { },
+      "nodes" : {
+        "MetaData" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "bbb4fd39-8d78-45e0-9693-7746553fb8dc",
+            "path" : "/home/orc_12/MetaData",
+            "name" : "MetaData",
+            "jcr:primaryType" : "mgnl:metaData",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:02.004+02:00",
+            "mixinNodeTypes" : [ ]
+          },
+          "properties" : {
+            "mgnl:authorid" : "superuser",
+            "mgnl:activatorid" : "superuser",
+            "mgnl:lastaction" : "2012-10-05T15:25:05.896+02:00",
+            "mgnl:creationdate" : "2009-10-27T09:12:38.831+01:00",
+            "mgnl:activated" : true,
+            "mgnl:lastmodified" : "2012-09-20T16:40:53.238+02:00"
+          },
+          "nodes" : { }
+        },
+        "0" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "6dc064f5-ac8f-4a80-ae83-eb279d61ac5a",
+            "path" : "/home/orc_12/0",
+            "name" : "0",
+            "jcr:primaryType" : "mgnl:contentNode",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2010-04-13T09:35:02.004+02:00",
+            "mixinNodeTypes" : [ "mix:lockable" ]
+          },
+          "properties" : {
+            "title" : "NEWS",
+            "background" : "dark"
+          },
+          "nodes" : {
+            "MetaData" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "ce434877-6d5a-4455-895c-a00277c4a047",
+                "path" : "/home/orc_12/0/MetaData",
+                "name" : "MetaData",
+                "jcr:primaryType" : "mgnl:metaData",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.004+02:00",
+                "mixinNodeTypes" : [ ]
+              },
+              "properties" : {
+                "mgnl:authorid" : "superuser",
+                "mgnl:activatorid" : "superuser",
+                "mgnl:creationdate" : "2009-10-27T09:12:38.831+01:00",
+                "mgnl:lastaction" : "2012-10-05T15:25:05.898+02:00",
+                "mgnl:template" : "box_picture_teaser",
+                "mgnl:activated" : true,
+                "mgnl:lastmodified" : "2012-09-20T16:40:53.238+02:00"
+              },
+              "nodes" : { }
+            },
+            "picture_teaser_items" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "2ce0dbfa-2d90-4c33-9a3e-24fc1bdedf14",
+                "path" : "/home/orc_12/0/picture_teaser_items",
+                "name" : "picture_teaser_items",
+                "jcr:primaryType" : "mgnl:contentNode",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2010-04-13T09:35:02.004+02:00",
+                "mixinNodeTypes" : [ "mix:lockable" ]
+              },
+              "properties" : { },
+              "nodes" : {
+                "MetaData" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "4ea0889f-899f-4a0a-95d9-24848f3451d6",
+                    "path" : "/home/orc_12/0/picture_teaser_items/MetaData",
+                    "name" : "MetaData",
+                    "jcr:primaryType" : "mgnl:metaData",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.004+02:00",
+                    "mixinNodeTypes" : [ ]
+                  },
+                  "properties" : {
+                    "mgnl:activatorid" : "superuser",
+                    "mgnl:authorid" : "superuser",
+                    "mgnl:creationdate" : "2009-10-28T10:17:15.217+01:00",
+                    "mgnl:lastaction" : "2012-10-05T15:25:05.899+02:00",
+                    "mgnl:activated" : true,
+                    "mgnl:lastmodified" : "2012-09-20T16:40:53.238+02:00"
+                  },
+                  "nodes" : { }
+                },
+                "01" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "39666fce-5e9c-43be-9395-2a37dff30d9d",
+                    "path" : "/home/orc_12/0/picture_teaser_items/01",
+                    "name" : "01",
+                    "jcr:primaryType" : "mgnl:contentNode",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.005+02:00",
+                    "mixinNodeTypes" : [ "mix:lockable" ]
+                  },
+                  "properties" : {
+                    "title" : "light&sound Luzern",
+                    "image" : "b93fc6c8-5937-4baa-987f-4866b950f37c",
+                    "text" : "<p>Vom 21.-23. Oktober sind wir wieder an der light&amp;sound Luzern. Auf der Fachmesse f&uuml;r Veranstaltungstechnik zeigen wir die Funksysteme Axient und ULX-D.</p>",
+                    "link" : "http://lightandsound.ch/htm/home.htm",
+                    "link_text" : "Zur light&sound"
+                  },
+                  "nodes" : {
+                    "MetaData" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "eb04ff55-c279-4c52-801f-482c186f4ea3",
+                        "path" : "/home/orc_12/0/picture_teaser_items/01/MetaData",
+                        "name" : "MetaData",
+                        "jcr:primaryType" : "mgnl:metaData",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:02.005+02:00",
+                        "mixinNodeTypes" : [ ]
+                      },
+                      "properties" : {
+                        "mgnl:activatorid" : "superuser",
+                        "mgnl:authorid" : "superuser",
+                        "mgnl:lastaction" : "2012-10-05T15:25:05.900+02:00",
+                        "mgnl:creationdate" : "2009-10-28T10:48:03.032+01:00",
+                        "mgnl:template" : "box_picture_teaser_item",
+                        "mgnl:activated" : true,
+                        "mgnl:lastmodified" : "2012-09-20T15:39:50.050+02:00"
+                      },
+                      "nodes" : { }
+                    },
+                    "text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "d2f2c46c-639f-43c3-bb07-5a6486b42cb8",
+                        "path" : "/home/orc_12/0/picture_teaser_items/01/text_files",
+                        "name" : "text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:02.005+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "47e05567-6bc3-43dc-95c6-66ad80febf2f",
+                            "path" : "/home/orc_12/0/picture_teaser_items/01/text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:02.005+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:creationdate" : "2009-10-28T10:48:03.033+01:00",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.900+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-28T13:07:02.253+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "sub_text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "afd67ae7-22ab-4059-9dda-ce55edc3f700",
+                        "path" : "/home/orc_12/0/picture_teaser_items/01/sub_text_files",
+                        "name" : "sub_text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:02.005+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "f4ece63b-b2e7-49b7-80e4-d696961c8e78",
+                            "path" : "/home/orc_12/0/picture_teaser_items/01/sub_text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:02.005+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.900+02:00",
+                            "mgnl:creationdate" : "2009-10-28T10:48:03.034+01:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-28T13:07:02.254+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "external_link" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "7476b169-d85a-4683-8d73-db2c01103689",
+                        "path" : "/home/orc_12/0/picture_teaser_items/01/external_link",
+                        "name" : "external_link",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2012-09-20T15:39:50.049+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : {
+                        "0" : "false"
+                      },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "5ba2110b-e209-44bb-b44e-2db281f8951f",
+                            "path" : "/home/orc_12/0/picture_teaser_items/01/external_link/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2012-09-20T15:39:50.049+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:creationdate" : "2012-09-20T15:39:50.050+02:00",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.901+02:00",
+                            "mgnl:activated" : true
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    }
+                  }
+                },
+                "02" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "415b50f6-5b4b-457a-b574-ccbdee44b383",
+                    "path" : "/home/orc_12/0/picture_teaser_items/02",
+                    "name" : "02",
+                    "jcr:primaryType" : "mgnl:contentNode",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-10-13T11:51:45.082+02:00",
+                    "mixinNodeTypes" : [ "mix:lockable" ]
+                  },
+                  "properties" : {
+                    "title" : "Offene Kopfhörer im Test",
+                    "image" : "67f17f9b-85bb-4f9a-81e6-b7b91765f38a",
+                    "text" : "<p>Vom 9. bis 12. September sind wir an der CE Expo 12: Treffen Sie uns in Halle 2, Stand A1.</p>",
+                    "link" : "/home/produkte/test-berichte#kopfhoerer-test",
+                    "link_text" : "Zum Testbericht"
+                  },
+                  "nodes" : {
+                    "MetaData" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "7d102de3-8bf8-47c4-bbf4-e10db6ee62fc",
+                        "path" : "/home/orc_12/0/picture_teaser_items/02/MetaData",
+                        "name" : "MetaData",
+                        "jcr:primaryType" : "mgnl:metaData",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-10-13T11:51:45.082+02:00",
+                        "mixinNodeTypes" : [ ]
+                      },
+                      "properties" : {
+                        "mgnl:authorid" : "superuser",
+                        "mgnl:activatorid" : "superuser",
+                        "mgnl:creationdate" : "2010-10-13T11:51:45.082+02:00",
+                        "mgnl:lastaction" : "2012-10-05T15:25:05.901+02:00",
+                        "mgnl:template" : "box_picture_teaser_item",
+                        "mgnl:activated" : true,
+                        "mgnl:lastmodified" : "2012-09-20T16:40:53.237+02:00"
+                      },
+                      "nodes" : { }
+                    },
+                    "text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "c5975aaf-bafd-4901-905f-9d4e11ef2fc5",
+                        "path" : "/home/orc_12/0/picture_teaser_items/02/text_files",
+                        "name" : "text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-10-13T11:51:45.083+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "d9eb0a2f-14a9-43b8-82c5-085f93279f43",
+                            "path" : "/home/orc_12/0/picture_teaser_items/02/text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-10-13T11:51:45.083+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:creationdate" : "2010-10-13T11:51:45.083+02:00",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.901+02:00",
+                            "mgnl:activated" : true
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "sub_text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "8edff1cd-9c6b-4d35-8ee6-51297fd13c31",
+                        "path" : "/home/orc_12/0/picture_teaser_items/02/sub_text_files",
+                        "name" : "sub_text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-10-13T11:51:45.085+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "4017fbba-cf37-4ba1-b110-50934590c09e",
+                            "path" : "/home/orc_12/0/picture_teaser_items/02/sub_text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-10-13T11:51:45.085+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:creationdate" : "2010-10-13T11:51:45.085+02:00",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.902+02:00",
+                            "mgnl:activated" : true
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    }
+                  }
+                },
+                "00" : {
+                  "meta" : {
+                    "workspace" : "website",
+                    "jcr:uuid" : "b2d25e37-9745-4270-a9b0-32bf8d2b229e",
+                    "path" : "/home/orc_12/0/picture_teaser_items/00",
+                    "name" : "00",
+                    "jcr:primaryType" : "mgnl:contentNode",
+                    "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                    "depth" : 5,
+                    "jcr:created" : "2010-04-13T09:35:02.006+02:00",
+                    "mixinNodeTypes" : [ "mix:lockable" ]
+                  },
+                  "properties" : {
+                    "title" : "Finde einen Händler in deiner Nähe",
+                    "image" : "46a6c53c-0d63-41d3-b0be-bef86eccf138",
+                    "link" : "/meta_ch/bezugsquellen/haendlersuche",
+                    "text" : "<p>Besuche unseren Dealer Locator und erhalte eine &Uuml;bersicht &uuml;ber unsere H&auml;ndler in der Schweiz.</p>",
+                    "link_text" : "Zum Dealer Locator"
+                  },
+                  "nodes" : {
+                    "MetaData" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "c36b752b-166a-4e55-95d2-a3c936b85324",
+                        "path" : "/home/orc_12/0/picture_teaser_items/00/MetaData",
+                        "name" : "MetaData",
+                        "jcr:primaryType" : "mgnl:metaData",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:02.006+02:00",
+                        "mixinNodeTypes" : [ ]
+                      },
+                      "properties" : {
+                        "mgnl:authorid" : "superuser",
+                        "mgnl:activatorid" : "superuser",
+                        "mgnl:lastaction" : "2012-10-05T15:25:05.902+02:00",
+                        "mgnl:creationdate" : "2009-10-28T10:26:58.843+01:00",
+                        "mgnl:template" : "box_picture_teaser_item",
+                        "mgnl:activated" : true,
+                        "mgnl:lastmodified" : "2012-07-16T18:35:38.249+02:00"
+                      },
+                      "nodes" : { }
+                    },
+                    "text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "1162c57b-176c-4e93-935a-4922bf0db96a",
+                        "path" : "/home/orc_12/0/picture_teaser_items/00/text_files",
+                        "name" : "text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:02.006+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "1129be00-eba6-4214-8dec-40916c8efb48",
+                            "path" : "/home/orc_12/0/picture_teaser_items/00/text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:02.006+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:creationdate" : "2009-10-28T10:26:58.844+01:00",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.903+02:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-28T13:07:02.256+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    },
+                    "sub_text_files" : {
+                      "meta" : {
+                        "workspace" : "website",
+                        "jcr:uuid" : "015caee4-8415-48bf-bdfe-65b45f2e4848",
+                        "path" : "/home/orc_12/0/picture_teaser_items/00/sub_text_files",
+                        "name" : "sub_text_files",
+                        "jcr:primaryType" : "mgnl:contentNode",
+                        "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                        "depth" : 6,
+                        "jcr:created" : "2010-04-13T09:35:02.006+02:00",
+                        "mixinNodeTypes" : [ "mix:lockable" ]
+                      },
+                      "properties" : { },
+                      "nodes" : {
+                        "MetaData" : {
+                          "meta" : {
+                            "workspace" : "website",
+                            "jcr:uuid" : "4c526773-ce32-42c9-965c-276b7aac402b",
+                            "path" : "/home/orc_12/0/picture_teaser_items/00/sub_text_files/MetaData",
+                            "name" : "MetaData",
+                            "jcr:primaryType" : "mgnl:metaData",
+                            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                            "depth" : 7,
+                            "jcr:created" : "2010-04-13T09:35:02.006+02:00",
+                            "mixinNodeTypes" : [ ]
+                          },
+                          "properties" : {
+                            "mgnl:activatorid" : "superuser",
+                            "mgnl:authorid" : "superuser",
+                            "mgnl:lastaction" : "2012-10-05T15:25:05.905+02:00",
+                            "mgnl:creationdate" : "2009-10-28T10:26:58.846+01:00",
+                            "mgnl:activated" : true,
+                            "mgnl:lastmodified" : "2009-10-28T13:07:02.267+01:00"
+                          },
+                          "nodes" : { }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "01" : {
+          "meta" : {
+            "workspace" : "website",
+            "jcr:uuid" : "001f4a52-06df-460f-a600-b593589a6f33",
+            "path" : "/home/orc_12/01",
+            "name" : "01",
+            "jcr:primaryType" : "mgnl:contentNode",
+            "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+            "depth" : 3,
+            "jcr:created" : "2012-05-23T09:51:09.906+02:00",
+            "mixinNodeTypes" : [ "mix:lockable" ]
+          },
+          "properties" : {
+            "plain_html" : "<p align=\"center\">\r\n<iframe id='aaf90314' name='aaf90314' src='http://d1.openx.org/afr.php?zoneid=270231&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='752' height='140'><a href='http://d1.openx.org/ck.php?n=a445ec9e&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://d1.openx.org/avw.php?zoneid=270231&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a445ec9e' border='0' alt='' /></a></iframe></p>\r\n"
+          },
+          "nodes" : {
+            "MetaData" : {
+              "meta" : {
+                "workspace" : "website",
+                "jcr:uuid" : "05996052-ec1e-408c-a0b3-242db17c758b",
+                "path" : "/home/orc_12/01/MetaData",
+                "name" : "MetaData",
+                "jcr:primaryType" : "mgnl:metaData",
+                "superTypes" : [ "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+                "depth" : 4,
+                "jcr:created" : "2012-05-23T09:51:09.906+02:00",
+                "mixinNodeTypes" : [ ]
+              },
+              "properties" : {
+                "mgnl:activatorid" : "superuser",
+                "mgnl:authorid" : "superuser",
+                "mgnl:lastaction" : "2012-10-05T15:25:05.905+02:00",
+                "mgnl:creationdate" : "2012-05-23T09:51:09.906+02:00",
+                "mgnl:template" : "box_html",
+                "mgnl:activated" : true,
+                "mgnl:lastmodified" : "2012-05-29T09:07:44.355+02:00"
+              },
+              "nodes" : { }
+            }
+          }
+        }
+      }
+    }
+  }
+} ]

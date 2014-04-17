@@ -1,0 +1,13 @@
+<!DOCTYPE module SYSTEM "module.dtd">
+<module>
+  <name><%= module_name %></name>
+  <displayName>${project.name}</displayName>
+  <description>${project.description}</description>
+  <versionHandler><%= version_handler_fqn %></versionHandler>
+  <version>${project.version}</version>
+  <dependencies>
+    <dependency>
+      <name>sinicum-server</name>
+    </dependency>
+  </dependencies>
+</module>

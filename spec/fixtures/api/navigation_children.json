@@ -1,0 +1,3107 @@
+[ {
+  "properties" : {
+    "nav_hidden" : true,
+    "title" : "Search results"
+  },
+  "children" : [ {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Where to buy",
+      "nav_title" : "Where to buy"
+    },
+    "path" : "/en/meta_en/where_to_buy",
+    "uuid" : "9b3b0e9f-be95-4960-8b49-3589e0a76e41"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "international_sites"
+    },
+    "path" : "/en/meta_en/international_sites",
+    "uuid" : "736a64fb-6ec2-4d2b-9f16-237d322be2eb"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "newsletter"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Many thanks!"
+      },
+      "path" : "/en/meta_en/newsletter/thankyou",
+      "uuid" : "85543b0f-bf8a-4247-adf7-efe3130db666"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Your subscription has been set up"
+      },
+      "path" : "/en/meta_en/newsletter/welcome",
+      "uuid" : "407295bd-499d-4839-b761-c76064062fbf"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Your subscription has been deleted"
+      },
+      "path" : "/en/meta_en/newsletter/goodbye",
+      "uuid" : "5ffc1078-18c6-447c-a64f-3dbe0ce17316"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Your data has been updated"
+      },
+      "path" : "/en/meta_en/newsletter/updated",
+      "uuid" : "2c2d0dcd-57ae-4011-87df-216b23e0a4ae"
+    }, {
+      "properties" : { },
+      "path" : "/en/meta_en/newsletter/test",
+      "uuid" : "d2c03160-1de1-4fb2-bb96-1fe2aacf7201"
+    } ],
+    "path" : "/en/meta_en/newsletter",
+    "uuid" : "da261974-79a5-4a28-81f9-fca6865d553c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Search Result"
+    },
+    "path" : "/en/meta_en/search",
+    "uuid" : "5f716552-d1ec-436b-8183-e180e8276ae3"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Sitemap"
+    },
+    "path" : "/en/meta_en/sitemap",
+    "uuid" : "375a9062-9966-49fd-aea8-2159134d2c55"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Contact us"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Many thanks for your inquiry!"
+      },
+      "path" : "/en/meta_en/contact/thanks",
+      "uuid" : "ed436163-a92d-450e-b5df-0a43e4c5b5af"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure Authorized Distributors in Asia Pacific"
+      },
+      "path" : "/en/meta_en/contact/apac_distributors",
+      "uuid" : "50912df1-b9cc-4102-838a-1f56c5459eac"
+    } ],
+    "path" : "/en/meta_en/contact",
+    "uuid" : "422727a7-2d53-447d-bec2-de7f2f178fb1"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Error Pages"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Page not found",
+        "nav_title" : "Page not found"
+      },
+      "path" : "/en/meta_en/errors/404",
+      "uuid" : "bd51a2ac-f52b-46f0-a480-a1e2a50a4d63"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Error"
+      },
+      "path" : "/en/meta_en/errors/500",
+      "uuid" : "64a98e48-4a58-448a-9e1c-94102e88a227"
+    } ],
+    "path" : "/en/meta_en/errors",
+    "uuid" : "81255e66-f1ac-47b0-9204-a272d1a6dfb9"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : ""
+    },
+    "path" : "/en/meta_en/imprint",
+    "uuid" : "4f926640-3501-4696-8bac-107fb2046555"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Privacy Statement",
+      "nav_title" : "Privacy Statement"
+    },
+    "path" : "/en/meta_en/privacy",
+    "uuid" : "cc44fd03-53c4-49f0-9e58-9b4457c9b0c5"
+  }, {
+    "properties" : {
+      "title" : "Admin Interface"
+    },
+    "path" : "/en/meta_en/admin",
+    "uuid" : "addf6027-e03d-48b4-9ccf-5dab52d35125"
+  }, {
+    "properties" : {
+      "nav_hidden" : true
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure EMEANOTES March 2010",
+        "nav_title" : "EMEANOTES March 2010"
+      },
+      "path" : "/en/meta_en/emea-newsletters/emeanotes-1",
+      "uuid" : "49c2c498-809a-420d-9131-b88dcbff0247"
+    } ],
+    "path" : "/en/meta_en/emea-newsletters",
+    "uuid" : "9ef7a386-d477-4510-bde4-d0d3a8d602b3"
+  }, {
+    "properties" : {
+      "title" : "Product Registration List"
+    },
+    "path" : "/en/meta_en/pr_admin",
+    "uuid" : "4e94eab5-566b-45c8-98c7-ff4adf3803e3"
+  }, {
+    "properties" : {
+      "title" : "Wireless"
+    },
+    "path" : "/en/meta_en/z_test",
+    "uuid" : "2f8ff1a1-6028-4671-98b3-dfdf670b8940"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "newsletter"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Many thanks!"
+      },
+      "path" : "/en/meta_en/newsletter-earphone/thankyou",
+      "uuid" : "1a80aef1-9fda-425d-9608-b9cab5d7e763"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Your subscription has been set up"
+      },
+      "path" : "/en/meta_en/newsletter-earphone/welcome",
+      "uuid" : "5817d4f6-83a7-4f4d-839f-b3a76658e3ce"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Your subscription has been deleted"
+      },
+      "path" : "/en/meta_en/newsletter-earphone/goodbye",
+      "uuid" : "bd9117cb-6e26-413b-898d-1aaa53fead53"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Your data has been updated"
+      },
+      "path" : "/en/meta_en/newsletter-earphone/updated",
+      "uuid" : "ebcd8e52-cde7-411b-80d2-db1d21b732c5"
+    }, {
+      "properties" : { },
+      "path" : "/en/meta_en/newsletter-earphone/test",
+      "uuid" : "9b4f48ab-3c5e-4e00-acf0-d665a417051c"
+    } ],
+    "path" : "/en/meta_en/newsletter-earphone",
+    "uuid" : "b2137ec6-2a64-4664-9a38-cd59415e1f82"
+  } ],
+  "path" : "/en/meta_en",
+  "uuid" : "6df4290b-c54f-4166-a5cf-acae43e757b1"
+}, {
+  "properties" : {
+    "title" : "Products Overview",
+    "nav_title" : "products"
+  },
+  "children" : [ {
+    "properties" : {
+      "title" : "Microphones for almost every application",
+      "nav_title" : "Microphones"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Microphone Product Page"
+      },
+      "path" : "/en/products/microphones/microphone",
+      "uuid" : "540e805f-c533-4a09-bab9-69cdba2aef0c"
+    }, {
+      "properties" : {
+        "title" : "Find the right vocal microphone for you",
+        "nav_title" : "Vocal "
+      },
+      "path" : "/en/products/microphones/vocal_microphones",
+      "uuid" : "7580c958-72eb-44f8-84f6-31122f6d98b8"
+    }, {
+      "properties" : {
+        "title" : "Find the right instrument microphone for you",
+        "nav_title" : "Instrument Microphones"
+      },
+      "path" : "/en/products/microphones/instrument_microphones",
+      "uuid" : "38994662-1233-4d9e-9f42-4b6622228d56"
+    }, {
+      "properties" : {
+        "title" : "Find the right guitar microphone",
+        "nav_title" : "Guitar Microphones"
+      },
+      "path" : "/en/products/microphones/guitar_microphones",
+      "uuid" : "b6158914-6fc5-4a91-961b-9c73eb4383d6"
+    }, {
+      "properties" : {
+        "title" : "Headset Microphones (Wired & Wireless)",
+        "nav_title" : "Headset "
+      },
+      "path" : "/en/products/microphones/headset_microphones",
+      "uuid" : "a5c0df12-0ce5-40f9-88bc-ed7fa0025c0e"
+    }, {
+      "properties" : {
+        "title" : "Lavalier Microphones (Wired & Wireless)",
+        "nav_title" : "Lavalier "
+      },
+      "path" : "/en/products/microphones/lavalier_microphones",
+      "uuid" : "979e846a-27ec-41bd-8728-5a9e93e982e9"
+    }, {
+      "properties" : {
+        "title" : "Broadcasting: Reporter Microphones, Stereo Microphones, Shotgun Microphones, Headsets",
+        "nav_title" : "Broadcasting"
+      },
+      "path" : "/en/products/microphones/broadcasting-microphones",
+      "uuid" : "1012c5ac-e6ee-46de-bbc4-bc39777d0e8d"
+    }, {
+      "properties" : {
+        "title" : "Home Recording",
+        "nav_title" : "Home Recording"
+      },
+      "path" : "/en/products/microphones/home_recording",
+      "uuid" : "01c4901a-ac5f-4d29-938a-ebe792acae5a"
+    }, {
+      "properties" : {
+        "title" : "Find the right drum microphone for you",
+        "nav_title" : "Drum Microphones"
+      },
+      "path" : "/en/products/microphones/drum_microphones",
+      "uuid" : "eb113401-c328-4dcf-8f78-c5d9e0104b1f"
+    }, {
+      "properties" : {
+        "title" : "Installed Microphones",
+        "nav_title" : "Installed"
+      },
+      "path" : "/en/products/microphones/installed",
+      "uuid" : "8375c979-c64e-49e3-9b9b-91709d4c77a7"
+    }, {
+      "properties" : {
+        "title" : "Microflex Microphones",
+        "nav_title" : "Microflex"
+      },
+      "path" : "/en/products/microphones/microflex",
+      "uuid" : "52187b6f-6523-46aa-9527-efc51c877c12"
+    }, {
+      "properties" : {
+        "title" : "Centraverse™ Installed Sound Microphone"
+      },
+      "path" : "/en/products/microphones/centraverse",
+      "uuid" : "af3f909d-62e2-48a9-b3c0-9280c4c5ef2f"
+    }, {
+      "properties" : {
+        "title" : "Karaoke Microphones",
+        "nav_title" : "Karaoke"
+      },
+      "path" : "/en/products/microphones/karaoke_microphones",
+      "uuid" : "9198193f-f42d-4229-af7a-9979b7a4540d"
+    }, {
+      "properties" : {
+        "title" : "Microphone Finder"
+      },
+      "path" : "/en/products/microphones/finder",
+      "uuid" : "de31ec28-29a4-4243-b32a-94337e814039"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Studio Microphones",
+        "nav_title" : "Professional Studio"
+      },
+      "path" : "/en/products/microphones/studio_microphones",
+      "uuid" : "797b73b7-f71e-49da-936b-e6a271967ee4"
+    }, {
+      "properties" : {
+        "title" : "Microphones Series",
+        "nav_title" : "Microphones Series"
+      },
+      "path" : "/en/products/microphones/microphone-series",
+      "uuid" : "93e06a82-78a3-4d3c-b7f8-8ba05181efa3"
+    } ],
+    "path" : "/en/products/microphones",
+    "uuid" : "22a7f64e-a4c6-4660-8932-8127717c706b"
+  }, {
+    "properties" : {
+      "title" : "Wireless Microphone Systems",
+      "nav_title" : "Wireless"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "UHF-R Wireless System"
+      },
+      "path" : "/en/products/wireless_microphones/uhf_r_wireless_systems",
+      "uuid" : "c2921e99-0980-4f68-bcbf-1a125436996e"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Wireless System Product Page"
+      },
+      "path" : "/en/products/wireless_microphones/wireless_system_page",
+      "uuid" : "d220a2c7-7606-4e7a-9e29-2c284f7d56d9"
+    }, {
+      "properties" : {
+        "title" : "Find the right wireless vocal microphone for you",
+        "nav_title" : "Wireless Vocal "
+      },
+      "path" : "/en/products/wireless_microphones/wireless_application_vocal",
+      "uuid" : "f127bbba-f6f9-40ec-a377-8775776ec53c"
+    }, {
+      "properties" : {
+        "title" : "Wireless Systems for brass & wind",
+        "nav_title" : "Wireless Brass & Wind"
+      },
+      "path" : "/en/products/wireless_microphones/wireless_systems_brass",
+      "uuid" : "a1730dbd-ecb9-468a-9ee1-21f58d7a85d3"
+    }, {
+      "properties" : {
+        "title" : "Wireless Systems for guitarists and bassists",
+        "nav_title" : "Wireless Guitar & Bass"
+      },
+      "path" : "/en/products/wireless_microphones/wireless_systems_guitarists",
+      "uuid" : "d00519a6-2ac0-42af-b1f3-7a3b5badaecf"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Receivers"
+      },
+      "path" : "/en/products/wireless_microphones/receivers",
+      "uuid" : "919aeb11-2c43-4602-89dc-64e354ee2340"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Transmitters"
+      },
+      "path" : "/en/products/wireless_microphones/transmitters",
+      "uuid" : "663e873b-1bae-4447-8fc9-85aa3e3473a8"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/wireless_systems",
+      "uuid" : "63ea333d-18d3-42d8-b6ad-d517e8abceb9"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Wireless System Configurations"
+      },
+      "path" : "/en/products/wireless_microphones/wireless_systems_configurations",
+      "uuid" : "1ccf3243-f247-4d73-ba49-6bc173a724f6"
+    }, {
+      "properties" : {
+        "title" : "Lavalier Microphones",
+        "nav_title" : "Lavalier"
+      },
+      "path" : "/en/products/wireless_microphones/lavalier_microphones",
+      "uuid" : "7af980f5-b10c-4b7d-b40d-988cd4f40543"
+    }, {
+      "properties" : {
+        "title" : "Headset Microphones",
+        "nav_title" : "Headsets"
+      },
+      "path" : "/en/products/wireless_microphones/headset_microphones",
+      "uuid" : "f9cd7400-eceb-4e00-bec5-6848f9dd1567"
+    }, {
+      "properties" : {
+        "title" : "BLX Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/blx_wireless",
+      "uuid" : "7acc74cb-28c9-4b3e-8bc7-6980431ea43f"
+    }, {
+      "properties" : {
+        "title" : "Performance Gear Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/pg_wireless",
+      "uuid" : "491fb720-3080-4cc3-b1ef-bbbd1c73c65f"
+    }, {
+      "properties" : {
+        "title" : "PGX  Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/pgx_wireless",
+      "uuid" : "ac7907ca-fe45-4aef-b449-7e462e0864d7"
+    }, {
+      "properties" : {
+        "title" : "PGXD Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/pgxd_wireless",
+      "uuid" : "0bee99b2-5fd2-4214-baca-c31f6fd3a281"
+    }, {
+      "properties" : {
+        "title" : "SLX Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/slx_wireless",
+      "uuid" : "f6ce7da4-53a4-4599-b501-23eb19aa4dc8"
+    }, {
+      "properties" : {
+        "title" : "SVX Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/svx_wireless",
+      "uuid" : "0586b806-4a33-4baf-9551-a2f07c4ddc97"
+    }, {
+      "properties" : {
+        "title" : "FP Wireless Systems",
+        "nav_title" : "FP Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/fp_wireless",
+      "uuid" : "9a9df4ce-1239-47b1-b9b7-c1be1162b10e"
+    }, {
+      "properties" : {
+        "title" : "ULX Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/ulx_wireless",
+      "uuid" : "f9c188e6-389f-44f2-b636-c21ecbd5b972"
+    }, {
+      "properties" : {
+        "title" : "ULX-D Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/ulxd_wireless",
+      "uuid" : "ec8fcc88-bf98-4d55-949f-71cc93008e09"
+    }, {
+      "properties" : {
+        "title" : "UHF-R Wireless Systems"
+      },
+      "path" : "/en/products/wireless_microphones/uhfr_wireless",
+      "uuid" : "8097d6c0-9c1f-4d7b-81d8-5f77929ac10a"
+    }, {
+      "properties" : {
+        "title" : "Axient™ Wireless microphone system",
+        "nav_title" : "Axient™ Wireless microphone system"
+      },
+      "path" : "/en/products/wireless_microphones/axient-wireless-management-network",
+      "uuid" : "2c2e416c-fb8d-4531-ab51-ccdb44fa735f"
+    } ],
+    "path" : "/en/products/wireless_microphones",
+    "uuid" : "ca833293-688a-4174-a427-e511aadb34d7"
+  }, {
+    "properties" : {
+      "title" : "Shure Sound Isolating™ earphones - immerse yourself in the music   ",
+      "nav_title" : "Earphones"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Shure Sound Isolating Earphones: Discontinued Models",
+        "nav_title" : "Discontinued Models"
+      },
+      "path" : "/en/products/earphones/phase-out",
+      "uuid" : "4077fe6f-ca07-4c71-8440-09884481bf10"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Earphone Product Page"
+      },
+      "path" : "/en/products/earphones/earphone",
+      "uuid" : "9c5b6d33-d3eb-4200-b8a7-8e357769c25e"
+    } ],
+    "path" : "/en/products/earphones",
+    "uuid" : "64fdabb1-1f7e-443e-a748-09ecb93e500a"
+  }, {
+    "properties" : {
+      "title" : "Headphones",
+      "nav_title" : "Headphones"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Headphone Product Page"
+      },
+      "path" : "/en/products/headphones/headphone",
+      "uuid" : "449ee890-6798-49e3-bab4-84c261fd082e"
+    } ],
+    "path" : "/en/products/headphones",
+    "uuid" : "6e7b3af4-ca08-4b82-b82a-849d0af95833"
+  }, {
+    "properties" : {
+      "title" : "In-Ear Personal Monitoring",
+      "nav_title" : "Monitoring"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "In Ear Monitoring System Product Page"
+      },
+      "path" : "/en/products/in_ear_monitoring/in_ear_monitoring",
+      "uuid" : "b2da71d7-fb17-442b-9ce3-20921cb4bcbd"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "In Ear Monitoring Receiver"
+      },
+      "path" : "/en/products/in_ear_monitoring/in_ear_monitoring_receivers",
+      "uuid" : "c468d723-999e-4f4b-a74d-1123355d75bf"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "In Ear Monitoring Transmitters"
+      },
+      "path" : "/en/products/in_ear_monitoring/in_ear_monitoring_transmitters",
+      "uuid" : "48b20fc0-d5e9-44f3-bb9b-7a09fbbd6686"
+    }, {
+      "properties" : {
+        "title" : "PSM 200"
+      },
+      "path" : "/en/products/in_ear_monitoring/psm200",
+      "uuid" : "aad78df1-5cdb-488a-bd14-e2f87a647e44"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "PSM 400"
+      },
+      "path" : "/en/products/in_ear_monitoring/psm400",
+      "uuid" : "dadd4db2-18cd-4ae3-b7d7-8b87fa856b64"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "PSM 700"
+      },
+      "path" : "/en/products/in_ear_monitoring/psm700",
+      "uuid" : "3f677577-a0e1-45af-9bc5-7c4e312c6cc4"
+    }, {
+      "properties" : {
+        "title" : "PSM 900"
+      },
+      "path" : "/en/products/in_ear_monitoring/psm900",
+      "uuid" : "3d45548e-06d8-4688-8baf-a0277d8e8534"
+    }, {
+      "properties" : {
+        "title" : "PSM 1000"
+      },
+      "path" : "/en/products/in_ear_monitoring/psm1000",
+      "uuid" : "92a66d01-bb0c-4563-af57-a2de24e23972"
+    } ],
+    "path" : "/en/products/in_ear_monitoring",
+    "uuid" : "f6f07239-2f11-4cf6-84a3-12686e99dd8e"
+  }, {
+    "properties" : {
+      "title" : "DJ & Phono",
+      "nav_title" : "DJ & Phono"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "DJ & Phono Product Page"
+      },
+      "path" : "/en/products/dj_phono/dj_phono",
+      "uuid" : "07007349-3127-40f1-98e2-9da3d300ae25"
+    } ],
+    "path" : "/en/products/dj_phono",
+    "uuid" : "ef39bccd-5884-440e-be08-352799f5399c"
+  }, {
+    "properties" : {
+      "title" : "Mixers & DSP",
+      "nav_title" : "Mixers & DSP"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Mixer Product Page"
+      },
+      "path" : "/en/products/mixers/mixer",
+      "uuid" : "713d95d6-89b9-4c20-bb2a-e4e4c3a08734"
+    } ],
+    "path" : "/en/products/mixers",
+    "uuid" : "64b04920-b511-49a5-8958-70dfd89a5ae1"
+  }, {
+    "properties" : {
+      "title" : "Accessories and Replacement Parts",
+      "nav_title" : "Accessories"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Wireless Accessories and Replacement Parts",
+        "nav_title" : "Wireless"
+      },
+      "path" : "/en/products/accessories/wireless_accessories",
+      "uuid" : "50c7a29a-b37e-4267-a90a-c185624bbdf8"
+    }, {
+      "properties" : {
+        "title" : "Accessories for In-Ear Personal Monitoring",
+        "nav_title" : "In-Ear Personal Monitoring"
+      },
+      "path" : "/en/products/accessories/psm_and_earphones_accessories",
+      "uuid" : "b8b7358f-9b1d-45ea-ba7c-7156f3dbd59e"
+    }, {
+      "properties" : {
+        "title" : "Earphones Accessories",
+        "nav_title" : "Earphones"
+      },
+      "path" : "/en/products/accessories/earphones_accessories",
+      "uuid" : "c8fc48c5-4e9a-4314-9a95-ce2eba8eca2b"
+    }, {
+      "properties" : {
+        "title" : "DJ & Phono Accesories and replacement parts",
+        "nav_title" : "DJ & Phono"
+      },
+      "path" : "/en/products/accessories/dj_phono_accessories",
+      "uuid" : "876e2aa5-b773-43f8-8c84-1f8df224909a"
+    }, {
+      "properties" : {
+        "title" : "Mixers & DSP Accessories",
+        "nav_title" : "Mixers & DSP"
+      },
+      "path" : "/en/products/accessories/mixers_dsp_accessories",
+      "uuid" : "3ce2243e-273d-4afc-97de-45caff661773"
+    }, {
+      "properties" : {
+        "title" : "Headphones Accessories",
+        "nav_title" : "Headphones"
+      },
+      "path" : "/en/products/accessories/headphones_accessories",
+      "uuid" : "e04703ae-8e18-4a80-a788-b3990178a0e6"
+    }, {
+      "properties" : {
+        "title" : "Discussion System Accessories",
+        "nav_title" : "Discussion Systems"
+      },
+      "path" : "/en/products/accessories/discussion_systems",
+      "uuid" : "975954c7-4429-4a09-b7a0-6d538a850d27"
+    }, {
+      "properties" : {
+        "title" : "Problem Solvers",
+        "nav_title" : "Problem Solvers"
+      },
+      "path" : "/en/products/accessories/problem_solvers",
+      "uuid" : "05e678ea-53c3-4c07-a9bf-42d00a10db10"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Accessory Product Page"
+      },
+      "path" : "/en/products/accessories/accessory",
+      "uuid" : "37795012-22d4-47b6-a6e0-47957ad90c15"
+    }, {
+      "properties" : {
+        "title" : "Microphone Accessories and Replacement Parts",
+        "nav_title" : "Microphone Accessories"
+      },
+      "path" : "/en/products/accessories/microphones_accessories",
+      "uuid" : "c937e677-43bb-4bf3-9f53-18eb66854f8f"
+    }, {
+      "properties" : {
+        "title" : "Conferencing Microphones Accessories",
+        "nav_title" : "Conferencing Microphones Accessories"
+      },
+      "path" : "/en/products/accessories/conferencing-accessories",
+      "uuid" : "958eb50e-d88e-46c7-842e-67c897c9a86e"
+    } ],
+    "path" : "/en/products/accessories",
+    "uuid" : "31821d0a-aa98-4578-892e-74248c894426"
+  }, {
+    "properties" : {
+      "title" : "New products from Shure",
+      "nav_title" : "New Products"
+    },
+    "path" : "/en/products/new_products",
+    "uuid" : "a2997493-7d89-478d-88b4-a04ae8247b70"
+  }, {
+    "properties" : {
+      "title" : "Shure Discontinued Products",
+      "nav_title" : "Discontinued"
+    },
+    "path" : "/en/products/discontinued-products",
+    "uuid" : "ea635a97-f978-424b-a277-e423b5596d5b"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Product Comparison Base Page"
+    },
+    "path" : "/en/products/comparison",
+    "uuid" : "867a7480-14d7-4439-be01-8bcbcf030277"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Notepad Base Page"
+    },
+    "path" : "/en/products/notepad",
+    "uuid" : "3a822b7f-3c51-44ec-a3a6-8e3f7f1a2b40"
+  }, {
+    "properties" : {
+      "nav_hidden" : true
+    },
+    "path" : "/en/products/----------------",
+    "uuid" : "3cfaa758-915d-44b8-a871-9ab4d3896b67"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Drum Microphone Sets"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Drum Microphone Set Product Page"
+      },
+      "path" : "/en/products/drum_microphone_sets/drum_microphone_set",
+      "uuid" : "041d2314-26f0-46a7-be77-19865b4ee48d"
+    } ],
+    "path" : "/en/products/drum_microphone_sets",
+    "uuid" : "ad8fb221-0449-4bd4-a753-ecbba49c2be1"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "USB Microphone Sets"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "USB Microphone Set Product Page"
+      },
+      "path" : "/en/products/usb_microphone_sets/usb_microphone_set",
+      "uuid" : "43327eb9-05db-4dd4-8630-705de8e6a9c9"
+    } ],
+    "path" : "/en/products/usb_microphone_sets",
+    "uuid" : "006c19ce-5750-4fde-b7db-ffe226899c58"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Discussion Systems"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Microflex Product Page"
+      },
+      "path" : "/en/products/dis/dis",
+      "uuid" : "7f4f7af2-24a4-4e00-85d9-717a1f9b6a2f"
+    } ],
+    "path" : "/en/products/dis",
+    "uuid" : "9d650998-dcb0-4b17-ba31-7bfc821ce19f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Discussion Systems"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Microflex Product Page"
+      },
+      "path" : "/en/products/centraverse/centraverse",
+      "uuid" : "62e789ba-c55b-4e18-8439-604d588208a3"
+    } ],
+    "path" : "/en/products/centraverse",
+    "uuid" : "003d831d-be3d-431c-aeda-6510f91a1ff7"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Discussion Systems"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Microflex Product Page"
+      },
+      "path" : "/en/products/microflex/microflex",
+      "uuid" : "03055220-d48e-4ba9-bddc-d25984ef2105"
+    } ],
+    "path" : "/en/products/microflex",
+    "uuid" : "99a44699-7ac5-444b-b7ae-bb1563df008e"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Headsets"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Headset Product Page"
+      },
+      "path" : "/en/products/headsets/headset",
+      "uuid" : "9cbbf2fa-194a-40eb-a709-b9090eb55ef2"
+    } ],
+    "path" : "/en/products/headsets",
+    "uuid" : "a7a428c5-cf77-4afb-9eda-6549ab7d2ab0"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Microphone Capsules"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Capsule Product Page"
+      },
+      "path" : "/en/products/capsules/capsule",
+      "uuid" : "fcf9299f-ced6-47e1-8f0b-6a07d0fb9562"
+    } ],
+    "path" : "/en/products/capsules",
+    "uuid" : "163ed573-f630-4401-a3fd-8bf30767e316"
+  } ],
+  "path" : "/en/products",
+  "uuid" : "502ea8d3-70d0-400b-8468-affd4ebf38d4"
+}, {
+  "properties" : {
+    "title" : "News",
+    "nav_title" : "News"
+  },
+  "children" : [ {
+    "properties" : {
+      "title" : "Shure events",
+      "nav_title" : "events"
+    },
+    "path" : "/en/news/events",
+    "uuid" : "8e7df918-38e7-4484-9220-1e4bad478afb"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Sound Engineers",
+      "nav_title" : "Sound Engineers"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer and producer Ken Caillat",
+        "nav_title" : "Interview: Ken Caillat"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-ken-caillat",
+      "uuid" : "c9610265-ddeb-4307-937a-9dd3d5777ff3"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer and producer Thom Panunzio",
+        "nav_title" : "Interview: Thom Panunzio"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-thom-panunzio",
+      "uuid" : "bf618ccf-5b52-464e-a163-da4b91e6e73e"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer and producer Ron Nevison",
+        "nav_title" : "Interview: Ron Nevison"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-ron-nevison",
+      "uuid" : "3758ca58-0532-4c4a-9ff2-dc6573788fb8"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer and producer Mike Frondelli",
+        "nav_title" : "Interview: Mike Frondelli"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-mike-frondelli",
+      "uuid" : "26b3035c-c3a9-45a6-8b5f-e3bd035fdfcf"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer and producer Mike Clinck",
+        "nav_title" : "Interview: Mike Clinck"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-mike-clinck",
+      "uuid" : "7633eea1-bea9-40a8-86d7-d41592254e7a"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer Andy Johns",
+        "nav_title" : "Interview: Andy Johns"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-andy-johns",
+      "uuid" : "1d23b3f2-a677-4300-b9c0-39ca4fae3ae0"
+    }, {
+      "properties" : {
+        "title" : "視頻：採訪錄音師Glen Ballard",
+        "nav_title" : "Interview: Glen Ballard"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-glen-ballard",
+      "uuid" : "55fa97a5-ee76-4c1b-be96-ef31e6117360"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with producer and mixer Simon Gogerly",
+        "nav_title" : "Interview: Simon Gogerly"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-simon-gogerly",
+      "uuid" : "82812b50-b9cd-413a-8450-e31f63dfe8a2"
+    }, {
+      "properties" : {
+        "title" : "Video: Interview with recording engineer and producer Bil Vorndick",
+        "nav_title" : "Interview: Bil Vorndick"
+      },
+      "path" : "/en/news/sound_engineers/stagetalk-bil-vorndick",
+      "uuid" : "e69d3611-e440-4b0b-a6fe-ad1c3b0676af"
+    } ],
+    "path" : "/en/news/sound_engineers",
+    "uuid" : "c6638bc4-08a3-4a1a-a6af-58011e24b463"
+  }, {
+    "properties" : {
+      "title" : "Shure Awards",
+      "nav_title" : "Awards"
+    },
+    "path" : "/en/news/Shure-wins-Product-of-the-Year-and-other-awards-at-NAMM",
+    "uuid" : "51fcbc08-e3a5-4084-8a07-26f2a60c9270"
+  }, {
+    "properties" : {
+      "title" : "Shure News Archive",
+      "nav_title" : "News Archive"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure Asia honours E&E anniversary",
+        "nav_title" : "Shure Asia honours E&E anniversary"
+      },
+      "path" : "/en/news/news-archive/E_E_60th",
+      "uuid" : "8d91b44e-b7ae-4fd2-9376-bfa89f294ea3"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Custom Sleeves",
+        "nav_title" : "Custom Sleeves"
+      },
+      "path" : "/en/news/news-archive/sensaphonics",
+      "uuid" : "f84e4b51-a672-4d10-ab43-6bab94bbaca1"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "700 MHz Update",
+        "nav_title" : "700 MHz Update"
+      },
+      "path" : "/en/news/news-archive/nz_700mhz",
+      "uuid" : "9120ee6f-7277-4ac5-9596-51abaabc7f18"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE AXIENT WIRELESS EXCELS AT LIGHTS FESTIVAL FOR ABC7 CHICAGO",
+        "nav_title" : "SHURE AXIENT WIRELESS EXCELS AT LIGHTS FESTIVAL FOR ABC7 CHICAGO"
+      },
+      "path" : "/en/news/news-archive/SHURE-AXIENT-WIRELESS-EXCELS-AT-LIGHTS-FESTIVAL-FOR-ABC7-CHICAGO",
+      "uuid" : "7df83680-b572-4c85-af1f-8e7b6eff255f"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure Introduces SRH1840 and SRH1440 Open Back Headphones  ",
+        "nav_title" : "SHURE AXIENT WIRELESS EXCELS AT LIGHTS FESTIVAL FOR ABC7 CHICAGO"
+      },
+      "path" : "/en/news/news-archive/Shure-Introduces-SRH1840-and-SRH1440-Open-Back-Headphones--",
+      "uuid" : "a30f9edb-f76a-42bb-83eb-a9317c6083d8"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure Unveils ULX-D™ Digital Wireless System",
+        "nav_title" : "Shure Unveils ULX-D™ Digital Wireless System"
+      },
+      "path" : "/en/news/news-archive/Shure-Unveils-ULXD-Digital-Wireless-System",
+      "uuid" : "ab040154-9b6b-4d4b-936b-258c4b85f92b"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure Adds Lavaliers, Earset to Microflex® Line",
+        "nav_title" : "Shure Adds Lavaliers, Earset to Microflex® Line"
+      },
+      "path" : "/en/news/news-archive/Shure-Adds-Lavaliers-Earset-to-Microflex-Line",
+      "uuid" : "a6450bb1-2802-49a3-9124-ed9762c705a4"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE NAMED ONE OF THE NATION’S “BEST AND BRIGHTEST” COMPANIES ",
+        "nav_title" : "SHURE NAMED ONE OF THE NATION’S “BEST AND BRIGHTEST” COMPANIES"
+      },
+      "path" : "/en/news/news-archive/Shure-Named-One-Of-The-Nation-s-Best-And-Brightest-Companies",
+      "uuid" : "ae4b626e-d372-4a3d-99a7-8d67b151514c"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE PSM®1000 USED EXCLUSIVELY FOR THE 54th ANNUAL GRAMMY® AWARDS",
+        "nav_title" : "SHURE PSM®1000 USED EXCLUSIVELY FOR THE 54th ANNUAL GRAMMY® AWARDS"
+      },
+      "path" : "/en/news/news-archive/SHURE-PSM1000-USED-EXCLUSIVELY-FOR-THE-54th-ANNUAL-GRAMMY-AWARDS",
+      "uuid" : "555e5f65-05bf-4ce5-b851-7842915df548"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure wins product of the year and other awards at NAMM",
+        "nav_title" : "Shure wins Product of the Year and other awards at NAMM"
+      },
+      "path" : "/en/news/news-archive/Shure-wins-Product-of-the-Year-and-other-awards-at-NAMM",
+      "uuid" : "c9bb6aef-dc48-4015-aae0-64991cd919d0"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Dadawa hosted the Dragon TV GRAMMY live in second time, with the upcoming CD release of scintillating sounds of China  "
+      },
+      "path" : "/en/news/news-archive/Dadawa-hosted-the-Dragon-TV-GRAMMY-live-in-second-time",
+      "uuid" : "330c3405-f98e-4f07-ad9b-6987775ec128"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "TAMING THE WILD, WILD WEST OF WIRELESS AT THE 2012 DETROIT AUTO SHOW"
+      },
+      "path" : "/en/news/news-archive/TAMING-THE-WILD,-WILD-WEST-OF-WIRELESS-AT-THE-2012-DETROIT-AUTO-SHOW",
+      "uuid" : "06afc816-adf6-46fc-82dc-af50fd95b7e1"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "GARBAGE USES SHURE RIBBON MICS TO RECORD NEW ALBUM"
+      },
+      "path" : "/en/news/news-archive/GARBAGE-USES-SHURE-RIBBON-MICS-TO-RECORD-NEW-ALBUM",
+      "uuid" : "d9671f51-d126-4836-a5f0-4162ddc6867a"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "BILLBOARD LATIN MUSIC AWARDS USE SHURE GEAR EXCLUSIVELY"
+      },
+      "path" : "/en/news/news-archive/BILLBOARD-LATIN-MUSIC-AWARDS-USE-SHURE-GEAR-EXCLUSIVELY",
+      "uuid" : "999955d1-ded7-40a3-8cbf-b6adc68e2598"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE PSM®1000 SOLVES IN-EAR ISSUES FOR RED HOT CHILI PEPPERS"
+      },
+      "path" : "/en/news/news-archive/SHURE-PSM1000-SOLVES-IN-EAR-ISSUES-FOR-RED-HOT-CHILI-PEPPERS",
+      "uuid" : "b4f1e182-5bb9-4e1a-b696-aaac776c9150"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure Axient Wireless Management Network used for the 98th German Catholic Convention"
+      },
+      "path" : "/en/news/news-archive/Shure-Axient-Wireless-Management-Network-used-for-the-98th-German-Catholic-Convention",
+      "uuid" : "7ef45343-78e0-4d3e-8fdd-45422ef51241"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE PARTNERS WITH AUDINATE"
+      },
+      "path" : "/en/news/news-archive/Shure-Audinate-Partnership-release",
+      "uuid" : "7b61a439-476a-4898-bb4e-e93e5e5ac321"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE ADDS LAVALIERS, EARSET TO MICROFLEX® LINE"
+      },
+      "path" : "/en/news/news-archive/SHURE-ADDS-LAVALIERS-EARSET-TO-MICROFLEX-LINE",
+      "uuid" : "648e1f91-816a-4d78-b503-03191fac5fa9"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE UA874 ACTIVE DIRECTIONAL ANTENNA "
+      },
+      "path" : "/en/news/news-archive/UA874_INFOCOMM-2012",
+      "uuid" : "a65df981-ac6c-42ee-b253-bf90ac356bb5"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "SHURE ADDS DUAL, QUAD RECEIVERS TO ULX-D SERIES"
+      },
+      "path" : "/en/news/news-archive/SHURE-ADDS-DUAL-QUAD-RECEIVERS-TO-ULX-D-SERIES",
+      "uuid" : "e09c84b7-53b4-49d9-ae22-4019da1979c9"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure has been honored as one of \"Chicago's 101 Best and Brightest Companies To Work"
+      },
+      "path" : "/en/news/news-archive/Shure-has-been-honored-as-one-of--Chicago-s-101-Best-and-Brightest-Companies-To-Work",
+      "uuid" : "ba3bafad-2bc1-4a73-aac5-085f1f7f88d3"
+    } ],
+    "path" : "/en/news/news-archive",
+    "uuid" : "b9247979-36ab-456d-aecb-7099a6f02c7b"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure New Wireless Systems",
+      "nav_title" : "Shure New Wireless Systems"
+    },
+    "path" : "/en/news/new-wireless-products",
+    "uuid" : "cbffdef2-eccb-4b6a-b234-ec2ebecb66f6"
+  } ],
+  "path" : "/en/news",
+  "uuid" : "5d7eaa4f-65d9-4173-9341-4a3b0fa838e6"
+}, {
+  "properties" : {
+    "title" : "Artists",
+    "nav_title" : "Artists"
+  },
+  "children" : [ {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: "
+    },
+    "path" : "/en/artists/Artist_template",
+    "uuid" : "0ecf19d8-71d1-45ef-8ecc-f2b603381bbf"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Andrew Chu",
+      "nav_title" : "Andrew Chu"
+    },
+    "path" : "/en/artists/andrew_chu",
+    "uuid" : "3fcea3e5-fae5-4a41-853e-f0ec575ab544"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Angus & Julia Stone"
+    },
+    "path" : "/en/artists/Angus_Julia_Stone",
+    "uuid" : "16bb8a71-9138-4433-b2b0-d4c2f09e84d5"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Anson Hu",
+      "nav_title" : "Anson Hu"
+    },
+    "path" : "/en/artists/anson_hu",
+    "uuid" : "d2908bef-7b68-4611-ae79-c226fc6d34f7"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Dave Dobbyn",
+      "nav_title" : "Dave Dobbyn"
+    },
+    "path" : "/en/artists/dave_dobbyn",
+    "uuid" : "589afc7d-cf69-4afd-9dd6-9660fc7beaf7"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: David Tao"
+    },
+    "path" : "/en/artists/david_tao",
+    "uuid" : "521dfb91-1d4b-4705-b739-ae6ac8a38819"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: DJ CO-MA",
+      "nav_title" : "DJ CO-MA"
+    },
+    "path" : "/en/artists/dj_coma",
+    "uuid" : "37fc6567-0572-4178-992c-3ea2b912d393"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: ELECTRICO",
+      "nav_title" : "ELECTRICO"
+    },
+    "path" : "/en/artists/electrico",
+    "uuid" : "d3e7b187-dbd3-49c9-9e09-faa2458740f2"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists:  Empire Of The Sun"
+    },
+    "path" : "/en/artists/Empire_Of_The_Sun",
+    "uuid" : "8451e4b8-2f42-40cf-9e1d-88ac05cd0a6a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Evermore"
+    },
+    "path" : "/en/artists/Evermore",
+    "uuid" : "31ff31f3-a61d-4f96-aaf4-a35ada74a8a4"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Faker"
+    },
+    "path" : "/en/artists/Faker",
+    "uuid" : "c1c33ab0-f3cc-4522-b30a-e5d3e53a8380"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Hanjin Tan",
+      "nav_title" : "Hanjin Tan"
+    },
+    "path" : "/en/artists/hanjin_tan",
+    "uuid" : "b182d6cd-0d48-481e-8932-8562b1d8b405"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Hee Hyun Kim",
+      "nav_title" : "Hee Hyun Kim"
+    },
+    "path" : "/en/artists/hee_hyun_kim",
+    "uuid" : "f00ff96e-a136-4025-a548-edf7ee1400ad"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: The Hilltop Hoods",
+      "nav_title" : "The Hilltop Hoods"
+    },
+    "path" : "/en/artists/hilltop_hoods",
+    "uuid" : "3a4afe99-1415-4a7e-aa48-04705c46688a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Jim Lee",
+      "nav_title" : "Jim Lee"
+    },
+    "path" : "/en/artists/jim_lee",
+    "uuid" : "f5aefb69-1933-4c6c-b9a8-e47399d212e8"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Jimmy Barnes"
+    },
+    "path" : "/en/artists/Jimmy_Barnes",
+    "uuid" : "5c65f787-1025-421f-a451-6c1310ddb1ff"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: John Butler Trio"
+    },
+    "path" : "/en/artists/John_Butler_Trio",
+    "uuid" : "54c1fbbe-e3e3-44f0-92bd-9b3070527b8a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Kate Miller Heidke"
+    },
+    "path" : "/en/artists/Kate_Miller_Heidke",
+    "uuid" : "d29fa16a-6aa8-4832-b33d-3ed87eb36587"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Kid Kenobi"
+    },
+    "path" : "/en/artists/Kid_Kenobi",
+    "uuid" : "58289d6f-895d-48c0-8a69-e53f1216c618"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Talent Development Project"
+    },
+    "path" : "/en/artists/Talent_Development_Project",
+    "uuid" : "9ca18b24-8174-4a84-9f89-dac8e59c5e32"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Kireek (DJ-HI-C and DJ YASA)",
+      "nav_title" : "Kireek (DJ-HI-C and DJ YASA)"
+    },
+    "path" : "/en/artists/dj_kireek",
+    "uuid" : "37d17da1-8f01-4269-bf57-ac30d5d9c877"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Hit City Studios "
+    },
+    "path" : "/en/artists/Hit_City_Studios",
+    "uuid" : "59c9f033-202f-4372-acfe-490f24842ab9"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: MC Shureshock"
+    },
+    "path" : "/en/artists/MC_Shureshock",
+    "uuid" : "2606cb9b-2dbc-4d7c-be9a-1f5846be15f3"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: McAlister Kemp",
+      "nav_title" : "McAlister Kemp"
+    },
+    "path" : "/en/artists/McAlister_Kemp",
+    "uuid" : "dfed8301-2ea1-4b7b-a437-013a5523d626"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Powder Finger"
+    },
+    "path" : "/en/artists/Powder_Finger",
+    "uuid" : "87f85b99-165b-4040-a726-f49989ed49e5"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Sam Lee",
+      "nav_title" : "Sam Lee"
+    },
+    "path" : "/en/artists/sam_lee",
+    "uuid" : "b45d2d0a-6ca4-447c-888c-b28578463142"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Sneaky Sound System"
+    },
+    "path" : "/en/artists/Sneaky_Sound_System",
+    "uuid" : "391be7c5-3505-47a4-9935-9c438e000ec8"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Tainted",
+      "nav_title" : "Tainted"
+    },
+    "path" : "/en/artists/tainted",
+    "uuid" : "8983a629-72f2-4fa1-8684-0fbe7d50f88f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: The Butterfly Effect"
+    },
+    "path" : "/en/artists/The_Butterfly_Effect",
+    "uuid" : "b4766db3-3dd8-41c1-be1b-d165b78dbd97"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: The Cat Empire"
+    },
+    "path" : "/en/artists/The_Cat_Empire",
+    "uuid" : "9b8fcfff-9b29-4680-ae9c-74ba33b02239"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: The Herd"
+    },
+    "path" : "/en/artists/The_Herd",
+    "uuid" : "5fc3a437-63fe-4685-bd68-37da32119662"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: The Presets",
+      "nav_title" : "The Presets"
+    },
+    "path" : "/en/artists/the_presets",
+    "uuid" : "106d0d2a-d703-4c9d-b554-78646423e57f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Tiki Taane",
+      "nav_title" : "Tiki Taane"
+    },
+    "path" : "/en/artists/tiki_taane",
+    "uuid" : "e5ebae2a-4541-4e11-a076-09caa2199893"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Troy Cassar Daley"
+    },
+    "path" : "/en/artists/Troy_Cassar_Daley",
+    "uuid" : "5ac294a3-b9de-429f-85bb-793c921d3b75"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Unicorn",
+      "nav_title" : "Unicorn"
+    },
+    "path" : "/en/artists/unicorn",
+    "uuid" : "24a35855-67bf-4ba3-9881-f6eff3c9b198"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Urthboy"
+    },
+    "path" : "/en/artists/Urthboy",
+    "uuid" : "1b2e7c3f-b720-4c84-bd31-65a7e580108e"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Artist Relations Overview",
+      "nav_title" : "Artist Relations Overview"
+    },
+    "path" : "/en/artists/artist-engineering_ralation_spots",
+    "uuid" : "c0272065-aa4c-492a-a7b1-9031a66b99a0"
+  }, {
+    "properties" : {
+      "nav_hidden" : true
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Shure Drummers: Dave Weckl",
+        "nav_title" : "Dave Weckl"
+      },
+      "path" : "/en/artists/drummers/dave_weckl",
+      "uuid" : "b6c7262e-991e-4b1c-b3a8-eba926a0199c"
+    }, {
+      "properties" : {
+        "title" : "Shure Drummers: Simon Phillips",
+        "nav_title" : "Simon Phillips"
+      },
+      "path" : "/en/artists/drummers/simon_phillips",
+      "uuid" : "ddcf8f7a-5482-497d-a988-6b30355fe980"
+    }, {
+      "properties" : {
+        "title" : "Shure Drummers: Jim Riley",
+        "nav_title" : "Jim Riley"
+      },
+      "path" : "/en/artists/drummers/jim_riley",
+      "uuid" : "562beeb8-7631-4f06-b367-8cccf30732c7"
+    }, {
+      "properties" : {
+        "title" : "Shure Drummers: Kenny Aronoff",
+        "nav_title" : "Kenny Aronoff"
+      },
+      "path" : "/en/artists/drummers/kenny_aronoff",
+      "uuid" : "736380a2-1182-463f-b661-13990c532c53"
+    } ],
+    "path" : "/en/artists/drummers",
+    "uuid" : "86987f0e-5cdd-4057-8799-90ff4e5b4168"
+  }, {
+    "properties" : {
+      "nav_hidden" : true
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Shure Artists: Henry Rollins",
+        "nav_title" : "Henry Rollins"
+      },
+      "path" : "/en/artists/bands/henry_rollins",
+      "uuid" : "e65dc256-0163-4782-a33e-c738e2254238"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Mastodon",
+        "nav_title" : "Mastodon"
+      },
+      "path" : "/en/artists/bands/mastodon",
+      "uuid" : "8183a973-815f-4f40-8ac9-d5d97bcda553"
+    }, {
+      "properties" : {
+        "title" : "Phoenix",
+        "nav_title" : "Phoenix"
+      },
+      "path" : "/en/artists/bands/phoenix",
+      "uuid" : "795e615a-cdb4-4ca9-a038-f495301e06af"
+    }, {
+      "properties" : {
+        "title" : "Estelle",
+        "nav_title" : "Estelle"
+      },
+      "path" : "/en/artists/bands/estelle",
+      "uuid" : "cf062777-f13f-4810-93e3-58abbd5c3866"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: The Who",
+        "nav_title" : "The Who  "
+      },
+      "path" : "/en/artists/bands/the_who",
+      "uuid" : "f10b5318-cfe1-4e58-a5f3-53ab99e279aa"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Common",
+        "nav_title" : "Common"
+      },
+      "path" : "/en/artists/bands/common",
+      "uuid" : "3176888e-2cab-4901-b90c-c9d388783bff"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: The Presets",
+        "nav_title" : "The Presets"
+      },
+      "path" : "/en/artists/bands/The-Presets",
+      "uuid" : "d125edc2-c658-4283-9132-68afbc8f5190"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Doves",
+        "nav_title" : "Doves"
+      },
+      "path" : "/en/artists/bands/the-doves",
+      "uuid" : "f2197825-6022-44d4-8f34-6996b22e5280"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: White Belt Yellow Tag",
+        "nav_title" : "White Belt Yellow Tag"
+      },
+      "path" : "/en/artists/bands/white-belt-yello-tag",
+      "uuid" : "d0c119f9-1748-4baa-a535-0ae5d0718964"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Hot Chip",
+        "nav_title" : "Hot Chip"
+      },
+      "path" : "/en/artists/bands/hot-chip",
+      "uuid" : "58f189b3-fee8-4be3-ba4d-e24d0eb9c490"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: The Polyphonic Spree",
+        "nav_title" : "The Polyphonic Spree"
+      },
+      "path" : "/en/artists/bands/the-polyphonic-spree",
+      "uuid" : "87f549d9-9e94-42b2-a421-c4c622866232"
+    }, {
+      "properties" : {
+        "title" : "The 69 Eyes",
+        "nav_title" : "The 69 Eyes"
+      },
+      "path" : "/en/artists/bands/69_eyes",
+      "uuid" : "026837c4-cbcb-474e-bebc-e77b3b0f311a"
+    }, {
+      "properties" : {
+        "title" : "Serj Tankian",
+        "nav_title" : "Serj Tankian"
+      },
+      "path" : "/en/artists/bands/serj_tankian",
+      "uuid" : "ea282266-6db2-49e7-820f-f3164b3af816"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Mos Def",
+        "nav_title" : "Mos Def"
+      },
+      "path" : "/en/artists/bands/mos-def",
+      "uuid" : "a698cb10-b858-4cd3-99b0-c42fead9f9f4"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Snow Patrol",
+        "nav_title" : "Snow Patrol"
+      },
+      "path" : "/en/artists/bands/snow_patrol",
+      "uuid" : "bb66119b-4bdc-48fb-a067-13cc67619926"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Jason Mraz",
+        "nav_title" : "Jason Mraz"
+      },
+      "path" : "/en/artists/bands/jason_mraz",
+      "uuid" : "7530da63-ed51-47eb-bf5a-57e3c5481b0d"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Elbow",
+        "nav_title" : "Elbow"
+      },
+      "path" : "/en/artists/bands/elbow",
+      "uuid" : "b68183ce-1784-4e15-9ebf-ad846463103c"
+    }, {
+      "properties" : {
+        "title" : "Shure Artists: Kasabian",
+        "nav_title" : "Kasabian"
+      },
+      "path" : "/en/artists/bands/Kasabian",
+      "uuid" : "f973326a-50cd-4240-9832-0e7532393b4c"
+    } ],
+    "path" : "/en/artists/bands",
+    "uuid" : "7af17ef8-95ca-4159-b34d-614fc9316610"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Valen Hsu",
+      "nav_title" : "Valen Hsu"
+    },
+    "path" : "/en/artists/valen_hsu",
+    "uuid" : "27331cb8-0df5-4054-9a13-cc24fa0ebf55"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Fiona Fung",
+      "nav_title" : "fiona_fung"
+    },
+    "path" : "/en/artists/fiona_fung",
+    "uuid" : "4c0cf7ed-6d56-47db-8a07-cfb692de0044"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Dadawa",
+      "nav_title" : "dadawa"
+    },
+    "path" : "/en/artists/dadawa",
+    "uuid" : "72fe31b4-048e-48db-9bc0-2db709198c64"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Super VC",
+      "nav_title" : "Super VC"
+    },
+    "path" : "/en/artists/super_vc",
+    "uuid" : "2712955b-ce17-44c2-99c2-34da6cff656e"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Hoff Dylan",
+      "nav_title" : "Hoff Dylan"
+    },
+    "path" : "/en/artists/Hoff_Dylan",
+    "uuid" : "6196324e-6dc1-431e-92dd-77e90d6eedce"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Seung Chul Lee",
+      "nav_title" : "Seung Chul Lee"
+    },
+    "path" : "/en/artists/seung_chul_lee",
+    "uuid" : "f5032c30-dd1c-4b77-90c7-ee7452374e1a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Lee Juck",
+      "nav_title" : "Lee Juck"
+    },
+    "path" : "/en/artists/lee_juck",
+    "uuid" : "030f6bad-8ded-499f-b373-475df6bb0782"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Shaan",
+      "nav_title" : "Shaan"
+    },
+    "path" : "/en/artists/shaan",
+    "uuid" : "e0a6e252-57f3-442f-9806-3d384ccc1f28"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Luke Dickens",
+      "nav_title" : "Luke Dickens"
+    },
+    "path" : "/en/artists/luke_dickens",
+    "uuid" : "654f3952-c281-44cd-8052-10c857dafe10"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Guy Sebastian",
+      "nav_title" : "Guy Sebastian"
+    },
+    "path" : "/en/artists/guy_sebastian",
+    "uuid" : "a76c0073-b25e-400c-bec2-8067b557df9d"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: ToR+",
+      "nav_title" : "ToR+"
+    },
+    "path" : "/en/artists/tor",
+    "uuid" : "e2d47c74-5f3c-48da-bc41-a6acd9b2462f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Parikrama",
+      "nav_title" : "Parikrama"
+    },
+    "path" : "/en/artists/parikrama",
+    "uuid" : "1c18aaab-291f-4b2f-87af-46c2e1df1052"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: TKB",
+      "nav_title" : "TKB"
+    },
+    "path" : "/en/artists/tkb",
+    "uuid" : "0cecd9dc-79c6-45b7-ad49-73dba743893a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Artists: Marcus Powell of All My Brothers",
+      "nav_title" : "AMB"
+    },
+    "path" : "/en/artists/all_my_brothers",
+    "uuid" : "38a00c41-3753-4f3b-a3c4-ad4ee87d47ad"
+  } ],
+  "path" : "/en/artists",
+  "uuid" : "90b984dd-1849-4f7f-9503-996722feca1d"
+}, {
+  "properties" : {
+    "title" : "Project Showcases",
+    "nav_title" : "Project Showcases"
+  },
+  "children" : [ {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "showcase_template",
+      "nav_title" : "Shanghai Century Square"
+    },
+    "path" : "/en/project_showcase/showcase_template",
+    "uuid" : "3760b059-3e1e-440e-9dfb-5d34719706e6"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "The Happy Community Church (Korea)",
+      "nav_title" : "The Happy Community Church"
+    },
+    "path" : "/en/project_showcase/Happy_Community_Church_Korea",
+    "uuid" : "692bd26c-b9b6-47be-8347-f62c5d9ea887"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "GwangMyeong Full Gospel Church (Korea)",
+      "nav_title" : "GwangMyeong Full Gospel Church"
+    },
+    "path" : "/en/project_showcase/GwangMyeong_Full_Gospel_Church_Korea",
+    "uuid" : "a8595ab5-874f-4e6e-8afa-bb00b39b754c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Yohnhee Methodist Church",
+      "nav_title" : "Yohnhee Methodist Church"
+    },
+    "path" : "/en/project_showcase/Yohnhee_Methodist_Church_korea",
+    "uuid" : "fffdd0e1-b8f5-42d7-9aaa-8034187b1d28"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Sehan Church (Korea)",
+      "nav_title" : "Sehan Church"
+    },
+    "path" : "/en/project_showcase/Sehan_Church_Korea",
+    "uuid" : "59469311-638d-451b-ba87-4b14b20dce3d"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Whitireia in New Zealand",
+      "nav_title" : "Whitireia"
+    },
+    "path" : "/en/project_showcase/Whitireia-in-New-Zealand",
+    "uuid" : "53b02ebf-0adb-4155-9f09-54310573c537"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shanghai Century Square",
+      "nav_title" : "Shanghai Century Square"
+    },
+    "path" : "/en/project_showcase/Shanghai-Century-Square",
+    "uuid" : "cc55eb1c-a3ae-413e-b03a-b95bbf0b99d0"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shanghai Theatre Academy",
+      "nav_title" : "Shanghai Theatre Academy"
+    },
+    "path" : "/en/project_showcase/Shanghai-Theatre-Academy",
+    "uuid" : "f68fa379-25e4-421a-802a-c72407c3cbc9"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "TC Furlong Unifies Shure RF Mics With IFB for WBBM-TV in Chicago",
+      "nav_title" : "WBBM-TV"
+    },
+    "path" : "/en/project_showcase/WBBM_TV-2_Chicago",
+    "uuid" : "464ba3e8-d361-4d62-a87e-9a678535777c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Family Mart",
+      "nav_title" : "Family Mart"
+    },
+    "path" : "/en/project_showcase/Family-Mart",
+    "uuid" : "8ace8e78-75b3-4dd9-b659-6901decc5c1d"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "GMA-7",
+      "nav_title" : "GMA-7"
+    },
+    "path" : "/en/project_showcase/GMA-7",
+    "uuid" : "8992547b-4f02-42e7-95b4-a9a54fcef37e"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Nissan Motor Company Limited",
+      "nav_title" : "Nissan Motor Company Limited"
+    },
+    "path" : "/en/project_showcase/Nissan-Motor-Company-Limited",
+    "uuid" : "64257ecb-0e38-4367-abcb-9949d080aedc"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "The Japanese police",
+      "nav_title" : "The Japanese police"
+    },
+    "path" : "/en/project_showcase/The-Japanese-police",
+    "uuid" : "a461c4ef-a854-41bc-85e8-4398b94c7ab0"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Maria Kusuma Karmel",
+      "nav_title" : "Maria Kusuma Karmel"
+    },
+    "path" : "/en/project_showcase/Maria-Kusuma-Karmel",
+    "uuid" : "41d17ac5-e8b3-4409-adda-5c4c69f60f80"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Inje Hanulnaerin Center",
+      "nav_title" : "Inje Hanulnaerin Center"
+    },
+    "path" : "/en/project_showcase/Inje-Hanulnaerin-Center",
+    "uuid" : "be8664ab-28db-4e78-9f45-2197f31c0f34"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Asiana Airlines",
+      "nav_title" : "Asiana Airlines"
+    },
+    "path" : "/en/project_showcase/Asiana-Airlines",
+    "uuid" : "459cde36-3d8b-43f8-9353-cee18f62caa4"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SERIM TTC",
+      "nav_title" : "SERIM TTC"
+    },
+    "path" : "/en/project_showcase/SERIM-TTC",
+    "uuid" : "aa23f6c7-94d1-41f1-aea9-6d516241b56a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Korea Exchange",
+      "nav_title" : "Korea Exchange"
+    },
+    "path" : "/en/project_showcase/Korea-Exchange",
+    "uuid" : "ff27ad9d-ccac-471f-a8e7-7788fcec27f7"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Hyundai Steel",
+      "nav_title" : "Hyundai Stee"
+    },
+    "path" : "/en/project_showcase/Hyundai-Stee",
+    "uuid" : "5176a3a2-e691-43a0-a8aa-684ba16b18ac"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Singapore American School",
+      "nav_title" : "Singapore American School"
+    },
+    "path" : "/en/project_showcase/Singapore-American-School",
+    "uuid" : "44d9a1a7-c99f-448b-be8a-f541e8991262"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Exposition in Shanghai",
+      "nav_title" : "Exposition in Shanghai"
+    },
+    "path" : "/en/project_showcase/Expo-2010-Shanghai",
+    "uuid" : "cd98cfd4-da96-4fb5-8be1-be477664e51c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Jilin Television",
+      "nav_title" : "Jilin Television"
+    },
+    "path" : "/en/project_showcase/Jilin-Television",
+    "uuid" : "c1e9d86f-8119-4551-a034-d607dc0aa860"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Michael Waters",
+      "nav_title" : "Michael Waters"
+    },
+    "path" : "/en/project_showcase/Michael-Waters",
+    "uuid" : "f8441720-5e75-4ae0-ba30-663b52cb4bf9"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "National Institute of Dramatic Art in Australia",
+      "nav_title" : "NIDA"
+    },
+    "path" : "/en/project_showcase/National-Institute-of-Dramatic-Art",
+    "uuid" : "ae6f1947-7a41-42bb-afc1-6893541482e3"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Bruhath Bangalore Mahanagara Palike in India",
+      "nav_title" : "bbmp"
+    },
+    "path" : "/en/project_showcase/bbmp",
+    "uuid" : "b3beb3bb-abab-48d0-aae0-ca82f6e869d5"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Singapore Institute of Management",
+      "nav_title" : "sim"
+    },
+    "path" : "/en/project_showcase/singapore-institute-of-management",
+    "uuid" : "9c981efe-3a1b-4d1d-b5e5-b8135cfd851c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "University of Southern California",
+      "nav_title" : "usc"
+    },
+    "path" : "/en/project_showcase/usc",
+    "uuid" : "2c38f115-d6e4-4527-acfc-2783f2c6b45c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure upgrades AV for Corporate Boardroom"
+    },
+    "path" : "/en/project_showcase/corp-boardroom",
+    "uuid" : "e5f61187-c9b9-4cba-a8ea-a7c329c7be46"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Illigals Hotel and Club"
+    },
+    "path" : "/en/project_showcase/illigals",
+    "uuid" : "082e51b7-5c71-47a7-b1c5-db7c816d361f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Hit City Studios"
+    },
+    "path" : "/en/project_showcase/Hit_City_Studios",
+    "uuid" : "07f58ecd-c0b2-4c2f-af19-45b5b5daf2f9"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "TIANJIN TV STATION IN CHINA"
+    },
+    "path" : "/en/project_showcase/China-Tianjin-TV-opts-for-Shure",
+    "uuid" : "a799a68c-ca98-4eb7-af13-53b845dbba0f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Ikeda Hall equipped with Shure UHF-R wireless systems"
+    },
+    "path" : "/en/project_showcase/Ikeda-Hall-equipped-with-Shure-UHF-R-wireless-systems",
+    "uuid" : "c6874ac4-2afe-4b27-9850-a3b81c7a1b22"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AXIENT WIRELESS TACKLES REFEREE MICROPHONES AT SUN LIFE STADIUM"
+    },
+    "path" : "/en/project_showcase/SHURE-AXIENT-WIRELESS-TACKLES-REFEREE-MICROPHONES-AT-SUN-LIFE-STADIUM",
+    "uuid" : "efd38fcf-4139-41cb-96cb-70ab358ce6cb"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AXIENT WIRELESS EXCELS AT LIGHTS FESTIVAL FOR ABC7 CHICAGO"
+    },
+    "path" : "/en/project_showcase/SHURE-AXIENT-WIRELESS-EXCELS-AT-LIGHTS-FESTIVAL-FOR-ABC7-CHICAGO",
+    "uuid" : "1ef62977-0c5f-4239-a1dc-48d418afc191"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SOUTHEAST ASIAN GAMES"
+    },
+    "path" : "/en/project_showcase/SOUTHEAST-ASIAN-GAMES",
+    "uuid" : "021a6a4e-5a06-4775-9813-de4393bcd3ab"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "TELEVISA ADOPTS SHURE AXIENT WIRELESS IN CHAPULTEPEC STUDIOS"
+    },
+    "path" : "/en/project_showcase/TELEVISA-ADOPTS-SHURE-AXIENT-WIRELESS-IN-CHAPULTEPEC-STUDIOS",
+    "uuid" : "be4f4d48-4f7e-4a46-a566-f33ec41432a5"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Point HiFi Sono N°1 equips CAFAT with Shure"
+    },
+    "path" : "/en/project_showcase/Point-HiFi-Sono-N1-equips-CAFAT-with-Shure",
+    "uuid" : "37c09967-33f3-47f8-a0bb-f5bc966a0acb"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "E&E equips Marina Bay Sands with Shure"
+    },
+    "path" : "/en/project_showcase/E-E-equips-Marina-Bay-Sands-with-Shure",
+    "uuid" : "2e9c22de-1457-4b27-b266-fe88be99e107"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "KENNY CHESNEY MOVES TO SHURE AXIENT WITH KSM9/HS FOR STADIUM TOUR"
+    },
+    "path" : "/en/project_showcase/KENNY-CHESNEY-MOVES-TO-SHURE-AXIENT-WITH-KSM9-HS-FOR-STADIUM-TOUR",
+    "uuid" : "ede18c1e-bb68-41d7-9fc5-5453e363be27"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Singapore National Day Parade"
+    },
+    "path" : "/en/project_showcase/Singapore-National-Day-Parade",
+    "uuid" : "7664ad5e-e34a-41fd-8e8e-5d3ca56a4491"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Goshen Electronics and Shure Asia sponsor SSR Jakarta school"
+    },
+    "path" : "/en/project_showcase/Goshen-Electronics-and-Shure-Asia-sponsor-SSR-Jakarta-school",
+    "uuid" : "a4fbafb1-6f6e-458b-b509-32160ca7232b"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AXIENT® WIRELESS TAKES THE STAGE AT THE 46th MONTREUX JAZZ FESTIVAL"
+    },
+    "path" : "/en/project_showcase/SHURE-AXIENT-WIRELESS-TAKES-THE-STAGE-46th-MONTREUX-JAZZ-FESTIVAL",
+    "uuid" : "24327b96-c313-425b-a6fd-a7051573f2b3"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE PSM 900 HELPS POWER NINTENDO ’S ‘THE LEGEND OF ZELDA™: SYMPHONY OF THE GODDESSES’ ORCHESTRA TOUR"
+    },
+    "path" : "/en/project_showcase/SHURE-PSM900-HELPS-POWER-NINTENDOS-THE-LEGEND-OF-ZELDA",
+    "uuid" : "0bbf1384-0b4b-466f-aa76-20e88aed29f7"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AXIENT® RAISES THE CALGARY STAMPEDE TO NEW LEVELS OF EXCELLENCE "
+    },
+    "path" : "/en/project_showcase/SHURE-AXIENT-RAISES-THE-CALGARY-STAMPEDE-TO-NEW-LEVELS-OF-EXCELLENCE",
+    "uuid" : "0337be54-22b5-42e6-b1c7-f9cdb5e3580d"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "TAMING THE WILD, WILD WEST OF WIRELESS AT THE 2012 DETROIT AUTO SHOW"
+    },
+    "path" : "/en/project_showcase/TAMING-THE-WILD,-WILD-WEST-OF-WIRELESS-AT-THE-2012-DETROIT-AUTO-SHOW",
+    "uuid" : "77dacc2a-23f2-43f2-878a-4d1b8ba28955"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE WIRELESS ANSWERS CALL FROM BRUCE SPRINGSTEEN’S WRECKING BALL TOUR"
+    },
+    "path" : "/en/project_showcase/SHURE-WIRELESS-ANSWERS-CALL-FROM-BRUCE-SPRINGSTEENS-WRECKING-BALL-TOUR",
+    "uuid" : "dd462b0f-7c87-4442-bd01-b73d838c2283"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "E&E brings Shure to The Drama Centre"
+    },
+    "path" : "/en/project_showcase/E-E-brings-Shure-to-The-Drama-Centre",
+    "uuid" : "29109752-93f1-42e2-91a5-1d98c3ba1fb5"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE WIRELESS ANCHORS OPENING AND CLOSING CEREMONIES IN LONDON"
+    },
+    "path" : "/en/project_showcase/SHURE-WIRELESS-ANCHORS-OPENING-AND-CLOSING-CEREMONIES-IN-LONDON",
+    "uuid" : "a59db196-e5ac-4498-a024-cc73334f5cf8"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE WIRELESS SYSTEMS RULE “COUNTRY MUSIC’S BIGGEST NIGHT”"
+    },
+    "path" : "/en/project_showcase/SHURE-WIRELESS-SYSTEMS-RULE-COUNTRY-MUSICS-BIGGEST-NIGHT",
+    "uuid" : "e3f9ca11-3cb1-4dd1-9e6a-efd3550cc4fd"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "THE CRACK OF THE BAT – BROUGHT TO YOU BY SHURE"
+    },
+    "path" : "/en/project_showcase/THE-CRACK-OF-THE-BAT-BROUGHT-TO-YOU-BY-SHURE",
+    "uuid" : "f7d44984-45c2-44d0-b65b-32e8c262189f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Wireless Drives Audio For Volkswagen At 2012 International Auto Shows"
+    },
+    "path" : "/en/project_showcase/Shure-Wireless-Drives-Audio-For-Volkswagen-At-2012-International-Auto-Shows",
+    "uuid" : "f49b40f2-7ec5-4739-9ebf-eb4f2d8b67b9"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AXIENT™ WIRELESS TAKES CENTER STAGE AT THE GLOBAL INDIAN MUSIC AWARDS "
+    },
+    "path" : "/en/project_showcase/SHURE-AXIENT-WIRELESS-TAKES-CENTER-STAGE-AT-THE-GLOBAL-INDIAN-MUSIC-AWARDS",
+    "uuid" : "453875be-bf81-4db9-ace6-c186852a5a29"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "JPJ Audio’s Shure PSM 1000 Meeting Demand"
+    },
+    "path" : "/en/project_showcase/JPJ-Audio-Shure-PSM-1000-Meeting-Demand",
+    "uuid" : "13d9e114-d110-49cf-ba10-bfe351fde2f3"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "AV CONCEPTS POWERS CORPORATE EVENTS WITH SHURE ULX-D™ DIGITAL WIRELESS SYSTEMS "
+    },
+    "path" : "/en/project_showcase/AV-CONCEPTS-POWERS-CORPORATE-EVENTS-WITH-SHURE",
+    "uuid" : "2849b486-d44d-4cbc-a71a-ce68065c96e8"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Microphones are a Resounding Success during Folk Music Performance"
+    },
+    "path" : "/en/project_showcase/Shure-Microphones-are-a-Resounding-Success-during-Folk-Music-Performance",
+    "uuid" : "da8ef8f9-a8a4-452f-bbef-72a163819b15"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE BRINGS 124 WIRELESS CHANNELS TO SINGAPORE’S ICONIC NEW LANDMARK: THE STAR PERFORMING ARTS CENTRE "
+    },
+    "path" : "/en/project_showcase/SHURE-BRINGS-124-WIRELESS-CHANNELS-TO-SINGAPORE-ICONIC-NEW-LANDMARK",
+    "uuid" : "b949c354-51a7-4dd9-83c8-13bed4d0df5b"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure Axient™  Wireless Supports Critically Acclaimed Stage Play in Beijing "
+    },
+    "path" : "/en/project_showcase/End-of-Love-Axient",
+    "uuid" : "22009293-d0da-4361-a9ae-34979a02e013"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AND SAMA SOUND BRING ULX-D™ DIGITAL WIRELESS TO A CONGREGATION OF 7,000 MEMBERS"
+    },
+    "path" : "/en/project_showcase/Dongbu-Kwangsung-Church",
+    "uuid" : "9f4fa666-b044-4518-920f-8f19815e04e6"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE PSM®1000 USED EXCLUSIVELY FOR THE GRAMMY® AWARDS, AGAIN"
+    },
+    "path" : "/en/project_showcase/Grammys-2013",
+    "uuid" : "ccb21caf-4bc4-4e8b-8cf1-d635149bd2cc"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE ULX-D™ DIGITAL WIRELESS SYSTEMS PLAY A KEY ROLE IN THE SIBOS INTERNATIONAL FINANCIAL CONFERENCE"
+    },
+    "path" : "/en/project_showcase/Shure-ULX-D-Sibos",
+    "uuid" : "88544070-f512-4922-9237-343d71c78b8a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE AXIENT™ WIRELESS STARS AT JAVA JAZZ"
+    },
+    "path" : "/en/project_showcase/SHURE-AXIENT-WIRELESS-STARS-JAVA-JAZZ",
+    "uuid" : "25dfb02f-3e4a-4a5c-9dc4-c478b0725bfc"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure UHF-R® Emerges as Major Player in Sound For Film"
+    },
+    "path" : "/en/project_showcase/Shure-UHF-R-Emerges-as-Major-Player-in-Sound-For-Film",
+    "uuid" : "c9fde4ba-54b5-4371-8b5d-8551c3c1c6c4"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : " Shure AXIENT® Successfully Used at the Liaoning TV 2013 Spring Festival Gala Program"
+    },
+    "path" : "/en/project_showcase/LiaoningTV-Spring-Festival-Gala-2013",
+    "uuid" : "7414bed2-f990-4c6e-b9d1-53ab741a0baf"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "REYNOLDS SOUND & LIGHTING SERVICES RELIES ON SHURE AXIENT™ WIRELESS TO POWER CORPORATE EVENT "
+    },
+    "path" : "/en/project_showcase/Reynolds-Sound-Lighting-Services-Relies-On-Shure-Axient-Wireless",
+    "uuid" : "83f8a86a-d98f-473f-aaf8-ed9776b4836f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "THE NBA’S PORTLAND TRAIL BLAZERS PRE-GAME BROADCAST GOES WIRELESS WITH SHURE ULX-D™ AND PSM®1000"
+    },
+    "path" : "/en/project_showcase/NBA-Portland-Trail-Blazers",
+    "uuid" : "3e1aed46-a9e3-40e3-8b0a-c700507e5816"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "SHURE WIRELESS SYSTEMS DOMINATE 48th ANNUAL ACMAs"
+    },
+    "path" : "/en/project_showcase/ACMAs-2013",
+    "uuid" : "73e5f11d-6f3e-4be9-abc0-870b096e1a05"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure ULX-D Receiver Discovery and Patching from Yamaha CL Consoles"
+    },
+    "path" : "/en/project_showcase/Yamaha-CL-Consoles-ULXD",
+    "uuid" : "0decf1f5-a946-4482-8716-284b69482828"
+  } ],
+  "path" : "/en/project_showcase",
+  "uuid" : "9f9298c6-15b5-4ea1-b79e-f9143a825198"
+}, {
+  "properties" : {
+    "title" : "Support",
+    "nav_title" : "Support"
+  },
+  "children" : [ {
+    "properties" : {
+      "title" : "Product Registration"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Many thanks for your registration!"
+      },
+      "path" : "/en/support_download/product_registration/thanks",
+      "uuid" : "d88faafd-f1ee-4bd6-939a-8eab324fd1b3"
+    } ],
+    "path" : "/en/support_download/product_registration",
+    "uuid" : "a8ffeb63-038a-4133-a076-47c3f5befe0a"
+  }, {
+    "properties" : {
+      "title" : "Service & Replacement parts",
+      "nav_title" : "Service & Replacement parts"
+    },
+    "path" : "/en/support_download/service_replacement_parts",
+    "uuid" : "800770b1-bba8-47a6-9866-3b30ab5f2aab"
+  }, {
+    "properties" : {
+      "title" : "Shure Downloads",
+      "nav_title" : "Downloads"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "User Guides",
+        "nav_title" : "User Guides"
+      },
+      "path" : "/en/support_download/downloads/user-guides",
+      "uuid" : "5bee3feb-cab3-48a7-9ad8-53ae273d8fa3"
+    }, {
+      "properties" : {
+        "title" : "Product Overviews",
+        "nav_title" : "Product Overviews"
+      },
+      "path" : "/en/support_download/downloads/product-overviews",
+      "uuid" : "6612a3a7-5d16-4156-ae03-b55df2916b21"
+    }, {
+      "properties" : {
+        "title" : "CAD Files",
+        "nav_title" : "CAD Files"
+      },
+      "path" : "/en/support_download/downloads/cad-files",
+      "uuid" : "3e868b2b-a851-43e3-bd6b-8fb87c321e19"
+    }, {
+      "properties" : {
+        "title" : "Architectural Specifications",
+        "nav_title" : "Architectural Specifications"
+      },
+      "path" : "/en/support_download/downloads/architectural-specifications",
+      "uuid" : "8cb775fb-c2c2-4e88-8a39-fdf57b2e1b03"
+    }, {
+      "properties" : {
+        "title" : "Basics PDF Guides",
+        "nav_title" : "Basics PDF Guides"
+      },
+      "path" : "/en/support_download/downloads/pdf-guides",
+      "uuid" : "5c67ffbc-8d4c-4cca-a967-0363c68cf4e9"
+    }, {
+      "properties" : {
+        "title" : "Software Downloads",
+        "nav_title" : "Software Downloads"
+      },
+      "path" : "/en/support_download/downloads/software-drivers",
+      "uuid" : "53870cfc-12c3-4161-ba8c-9d53585cd088"
+    }, {
+      "properties" : {
+        "title" : "Shure Brochures",
+        "nav_title" : "Brochures"
+      },
+      "path" : "/en/support_download/downloads/brochures",
+      "uuid" : "e018dbdc-61e7-4a07-8873-8972ef0d992d"
+    }, {
+      "properties" : {
+        "title" : "Wireless Workbench (Version 5.0.5)",
+        "nav_title" : "Wireless Workbench"
+      },
+      "path" : "/en/support_download/downloads/wireless-workbench0",
+      "uuid" : "025399f9-cadc-419d-84a6-dd971ba8df11"
+    } ],
+    "path" : "/en/support_download/downloads",
+    "uuid" : "39aaa4ff-6142-493c-b0c4-b49af380f050"
+  }, {
+    "properties" : {
+      "title" : "FAQ"
+    },
+    "path" : "/en/support_download/faq",
+    "uuid" : "4cae9989-bf24-4111-98d9-9408ce89eeca"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Shure FAQ",
+      "nav_title" : "FAQ"
+    },
+    "path" : "/en/support_download/faq_",
+    "uuid" : "882daa07-02f2-433e-9aae-edfb6ebf82f7"
+  }, {
+    "properties" : {
+      "title" : "Educational Content",
+      "nav_title" : "Educational Content"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "In-Ear Personal Monitoring",
+        "nav_title" : "In-Ear Personal Monitoring"
+      },
+      "path" : "/en/support_download/educational_content/in-ear-monitoring",
+      "uuid" : "99d106e3-adc4-43d2-9751-dc529524d045"
+    }, {
+      "properties" : {
+        "title" : "Studio & Home Recording: Eduactional Content",
+        "nav_title" : "Studio & Home Recording"
+      },
+      "path" : "/en/support_download/educational_content/studio-home-recording",
+      "uuid" : "a3eaff27-304a-4cbc-8f3a-891610c08ea2"
+    }, {
+      "properties" : {
+        "title" : "Microphones: Educational Content",
+        "nav_title" : "Microphones"
+      },
+      "path" : "/en/support_download/educational_content/microphones-basics",
+      "uuid" : "a4df4a5b-f209-4f42-85ea-aafa40a21ffa"
+    }, {
+      "properties" : {
+        "title" : "Wireless Microphones: Educational Content",
+        "nav_title" : "Wireless Microphones"
+      },
+      "path" : "/en/support_download/educational_content/wireless-microphones-basics",
+      "uuid" : "e059682f-dea3-40d2-b1dd-2c2da2b45479"
+    } ],
+    "path" : "/en/support_download/educational_content",
+    "uuid" : "b8f44204-c6d0-4984-89ec-a56fdac3300d"
+  }, {
+    "properties" : {
+      "title" : "Shure Videos",
+      "nav_title" : "Videos"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Videos: How-To",
+        "nav_title" : "Videos: How-To"
+      },
+      "path" : "/en/support_download/videos/how-to",
+      "uuid" : "9a467af2-6dd0-418d-b1fa-6272282f19fe"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Videos: Products",
+        "nav_title" : "Videos: Products"
+      },
+      "path" : "/en/support_download/videos/products",
+      "uuid" : "2f52b319-e2ae-4480-8231-15f0b5812c73"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Videos: Other",
+        "nav_title" : "Videos: Other"
+      },
+      "path" : "/en/support_download/videos/other",
+      "uuid" : "b50101c7-a9a0-405d-8746-4fb9aa02e0f5"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Shure UK on YouTube",
+        "nav_title" : "Latest YouTube Videos"
+      },
+      "path" : "/en/support_download/videos/youtube",
+      "uuid" : "2ece00e6-f5a0-4fa2-9373-c271cbbd2528"
+    } ],
+    "path" : "/en/support_download/videos",
+    "uuid" : "0db23afd-d947-4951-b411-13401e552fbd"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Warranty",
+      "nav_title" : "Warranty"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "produktregistrierung"
+      },
+      "path" : "/en/support_download/warranty/produktregistrierung",
+      "uuid" : "c2cf4f28-ba39-40b9-bd99-71a96b3d0008"
+    } ],
+    "path" : "/en/support_download/warranty",
+    "uuid" : "51e949a4-1d4d-424c-937e-16b3a9c59a91"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Many thanks for your enquiry!",
+      "nav_title" : "Many thanks for your enquiry!"
+    },
+    "path" : "/en/support_download/thanks",
+    "uuid" : "3f16cafd-4977-41b0-a0fe-64f0a11d9995"
+  }, {
+    "properties" : {
+      "title" : "Glossary"
+    },
+    "path" : "/en/support_download/glossary",
+    "uuid" : "199d68e4-a335-482f-a2f8-8d6ef7dd429b"
+  }, {
+    "properties" : {
+      "title" : "Tools"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Wireless Frequency Finder"
+      },
+      "path" : "/en/support_download/tools/wireless_frequency_finder",
+      "uuid" : "8244ae20-cb7e-43da-b777-803adb15f82f"
+    }, {
+      "properties" : {
+        "title" : "Wireless Accessory Wizard"
+      },
+      "path" : "/en/support_download/tools/wireless_accessory_wizard",
+      "uuid" : "11dcb700-0337-40c7-944e-141b79a4c22f"
+    }, {
+      "properties" : {
+        "title" : "Wireless Remote Antennas"
+      },
+      "path" : "/en/support_download/tools/wireless_remote_antennas",
+      "uuid" : "bf7ae130-f27c-4159-939c-72496213c592"
+    } ],
+    "path" : "/en/support_download/tools",
+    "uuid" : "700e537b-242c-49c0-ba27-20e9bd99651a"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Product Registration"
+    },
+    "path" : "/en/support_download/shure_asia_product_registration",
+    "uuid" : "07409725-1160-41c8-864f-5771e1b5f524"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "service announcement "
+    },
+    "path" : "/en/support_download/service_announcement_hk",
+    "uuid" : "bd718883-022a-4c6a-a8e8-7d3e2795edb6"
+  } ],
+  "path" : "/en/support_download",
+  "uuid" : "ef808655-7012-4f96-8be9-d3b138ad477b"
+}, {
+  "properties" : {
+    "title" : "Company"
+  },
+  "children" : [ {
+    "properties" : {
+      "title" : "Contact Us"
+    },
+    "path" : "/en/company/contact",
+    "uuid" : "5f4143ba-a7cb-4a01-a896-7fa03ce6d94c"
+  }, {
+    "properties" : {
+      "title" : "About Shure"
+    },
+    "path" : "/en/company/about_shure",
+    "uuid" : "fcede5d3-dea8-4143-a810-f156527e7a5f"
+  }, {
+    "properties" : {
+      "title" : "Careers"
+    },
+    "path" : "/en/company/careers",
+    "uuid" : "b579b15d-cf1b-44d8-8bc0-27469f7a727d"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Environment",
+      "nav_title" : "Environment"
+    },
+    "path" : "/en/company/environment",
+    "uuid" : "d3f925bd-c7a4-47c7-b7fc-ab2b68c5b493"
+  }, {
+    "properties" : {
+      "title" : "Shure History",
+      "nav_title" : "History"
+    },
+    "path" : "/en/company/shure_history",
+    "uuid" : "4fa24c6b-ef28-4145-85f3-e4dcb3a57b32"
+  }, {
+    "properties" : {
+      "title" : "Anti-Counterfeiting",
+      "nav_title" : "Anti-Counterfeiting"
+    },
+    "path" : "/en/company/shure_anti_counterfeiting_initiative",
+    "uuid" : "78bf5d36-2822-49bd-9e7e-716415d0d679"
+  }, {
+    "properties" : {
+      "title" : "Press"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Press Release Archive",
+        "nav_title" : "Archive"
+      },
+      "path" : "/en/company/press/press_releases",
+      "uuid" : "7efceff2-d7e3-4494-9120-1b71ff96c32c"
+    } ],
+    "path" : "/en/company/press",
+    "uuid" : "d43f3501-fc1c-448d-aef0-e3d19d361726"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Anti-Counterfeiting",
+      "nav_title" : "Anti-Counterfeiting"
+    },
+    "path" : "/en/company/shure_anti_counterfeiting_initiative0",
+    "uuid" : "3f2491c4-2bb6-4134-bbcd-11c8b496d490"
+  }, {
+    "properties" : {
+      "title" : "Service repair center ",
+      "nav_title" : "Service repair center "
+    },
+    "path" : "/en/company/service-repair-center",
+    "uuid" : "7c93ea96-a8cf-458c-a91c-e6664757767f"
+  } ],
+  "path" : "/en/company",
+  "uuid" : "842a712b-00ea-49e8-bf3a-1252120b6a9a"
+}, {
+  "properties" : {
+    "title" : "Products Overview",
+    "nav_title" : "products"
+  },
+  "children" : [ {
+    "properties" : {
+      "title" : "Microphones for almost every application",
+      "nav_title" : "Microphones"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Microphone Product Page"
+      },
+      "path" : "/en/products-revamp/microphones/microphone",
+      "uuid" : "0bd789a8-1a7f-4991-85c8-457e7bb39d6d"
+    }, {
+      "properties" : {
+        "title" : "Find the right vocal microphone for you",
+        "nav_title" : "Vocal "
+      },
+      "path" : "/en/products-revamp/microphones/vocal_microphones",
+      "uuid" : "6afd1fa7-9c17-4f74-88de-e0b3ec398bad"
+    }, {
+      "properties" : {
+        "title" : "Find the right instrument microphone for you",
+        "nav_title" : "Instrument Microphones"
+      },
+      "path" : "/en/products-revamp/microphones/instrument_microphones",
+      "uuid" : "eaf53854-0e5b-468f-82a5-7099ee63a89c"
+    }, {
+      "properties" : {
+        "title" : "Find the right guitar microphone",
+        "nav_title" : "Guitar Microphones"
+      },
+      "path" : "/en/products-revamp/microphones/guitar_microphones",
+      "uuid" : "06d146e3-8c3c-4233-8f75-5a16b0554724"
+    }, {
+      "properties" : {
+        "title" : "Headset Microphones (Wired & Wireless)",
+        "nav_title" : "Headset "
+      },
+      "path" : "/en/products-revamp/microphones/headset_microphones",
+      "uuid" : "3214209e-7bca-4b06-be50-eff292654183"
+    }, {
+      "properties" : {
+        "title" : "Lavalier Microphones (Wired & Wireless)",
+        "nav_title" : "Lavalier "
+      },
+      "path" : "/en/products-revamp/microphones/lavalier_microphones",
+      "uuid" : "d31b63d5-f64b-4e38-ba38-981e51bc2784"
+    }, {
+      "properties" : {
+        "title" : "Broadcasting: Reporter Microphones, Stereo Microphones, Shotgun Microphones, Headsets",
+        "nav_title" : "Broadcasting"
+      },
+      "path" : "/en/products-revamp/microphones/broadcasting-microphones",
+      "uuid" : "317a6dcf-3d51-4c10-b080-88d64d851be6"
+    }, {
+      "properties" : {
+        "title" : "Home Recording",
+        "nav_title" : "Home Recording"
+      },
+      "path" : "/en/products-revamp/microphones/home_recording",
+      "uuid" : "5d59925c-a39c-4e4c-a662-59e192c380f7"
+    }, {
+      "properties" : {
+        "title" : "Find the right drum microphone for you",
+        "nav_title" : "Drum Microphones"
+      },
+      "path" : "/en/products-revamp/microphones/drum_microphones",
+      "uuid" : "e943c12b-a132-4147-ab64-ab10a006927b"
+    }, {
+      "properties" : {
+        "title" : "Karaoke Microphones",
+        "nav_title" : "Karaoke"
+      },
+      "path" : "/en/products-revamp/microphones/karaoke_microphones",
+      "uuid" : "10d23fce-ceed-4718-b3b5-ce23825bb465"
+    }, {
+      "properties" : {
+        "title" : "Microphone Finder"
+      },
+      "path" : "/en/products-revamp/microphones/finder",
+      "uuid" : "31e48bae-b969-41dc-9dfb-cfc61777b81c"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Studio Microphones",
+        "nav_title" : "Professional Studio"
+      },
+      "path" : "/en/products-revamp/microphones/studio_microphones",
+      "uuid" : "087595d7-511d-403e-ba4b-b072ac1039dd"
+    }, {
+      "properties" : {
+        "title" : "Microphones Series",
+        "nav_title" : "Microphones Series"
+      },
+      "path" : "/en/products-revamp/microphones/microphone-series",
+      "uuid" : "1777e7a3-29b6-467d-8c5d-38ca25d87f54"
+    }, {
+      "properties" : {
+        "title" : "Installed Microphones",
+        "nav_title" : "Installed"
+      },
+      "path" : "/en/products-revamp/microphones/installed",
+      "uuid" : "06078e51-6655-45a6-81a1-2abda68b5734"
+    }, {
+      "properties" : {
+        "title" : "Audio Solutions: Find the best audio system for your environment or application",
+        "nav_title" : "Installed"
+      },
+      "path" : "/en/products-revamp/microphones/installed-revamp",
+      "uuid" : "5fe77f6d-745a-479e-845c-ddaea2ef88d8"
+    }, {
+      "properties" : {
+        "title" : "Centraverse™ Installed Sound Microphone"
+      },
+      "path" : "/en/products-revamp/microphones/centraverse",
+      "uuid" : "560127a2-258d-4a33-8a22-1159fc52f1e6"
+    }, {
+      "properties" : {
+        "title" : "Discussion Microphones",
+        "nav_title" : "Discussion"
+      },
+      "path" : "/en/products-revamp/microphones/discussion",
+      "uuid" : "000b4395-9608-46e8-a880-c96913322890"
+    }, {
+      "properties" : {
+        "title" : "Conferencing Microphones",
+        "nav_title" : "Conferencing"
+      },
+      "path" : "/en/products-revamp/microphones/conferencing",
+      "uuid" : "4ecac1e1-6624-45d7-a911-5c50162b9cfd"
+    } ],
+    "path" : "/en/products-revamp/microphones",
+    "uuid" : "ed980aaf-41a6-427c-94f4-e0457eaa38e7"
+  }, {
+    "properties" : {
+      "title" : "Wireless Microphone Systems",
+      "nav_title" : "Wireless"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "UHF-R Wireless System"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/uhf_r_wireless_systems",
+      "uuid" : "c0cc1628-81b3-47de-a784-15f85e528ad1"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Wireless System Product Page"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/wireless_system_page",
+      "uuid" : "6b725f9a-2c7f-4d8a-93bd-6f8814bfe1a8"
+    }, {
+      "properties" : {
+        "title" : "Find the right wireless vocal microphone for you",
+        "nav_title" : "Wireless Vocal "
+      },
+      "path" : "/en/products-revamp/wireless_microphones/wireless_application_vocal",
+      "uuid" : "a2c603a8-4a8d-48c8-86f5-b29907b73327"
+    }, {
+      "properties" : {
+        "title" : "Wireless Systems for brass & wind",
+        "nav_title" : "Wireless Brass & Wind"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/wireless_systems_brass",
+      "uuid" : "418b63fe-eab2-43d8-b23b-a64b932cf6af"
+    }, {
+      "properties" : {
+        "title" : "Wireless Systems for guitarists and bassists",
+        "nav_title" : "Wireless Guitar & Bass"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/wireless_systems_guitarists",
+      "uuid" : "b8117660-b95b-4527-96a7-8d0a5eb9c8d6"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Receivers"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/receivers",
+      "uuid" : "a4f895ae-0900-44d3-b0d5-4ca8887e0077"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Transmitters"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/transmitters",
+      "uuid" : "10117284-2d1f-4eb9-94a0-0c232f5da397"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/wireless_systems",
+      "uuid" : "2b97da37-15e0-4563-9c53-59bfb413b75b"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Wireless System Configurations"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/wireless_systems_configurations",
+      "uuid" : "e31c564a-3088-4d23-9a4a-56b1936471ec"
+    }, {
+      "properties" : {
+        "title" : "Lavalier Microphones",
+        "nav_title" : "Lavalier"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/lavalier_microphones",
+      "uuid" : "d2d04b08-8ea7-4380-bb24-344c6222d50d"
+    }, {
+      "properties" : {
+        "title" : "Headset Microphones",
+        "nav_title" : "Headsets"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/headset_microphones",
+      "uuid" : "fc28d9dc-7baa-4615-9c1c-b69d31781a00"
+    }, {
+      "properties" : {
+        "title" : "Performance Gear Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/pg_wireless",
+      "uuid" : "8fc6421b-85a9-41d4-a423-eb20645363db"
+    }, {
+      "properties" : {
+        "title" : "PGX  Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/pgx_wireless",
+      "uuid" : "e6f98132-398d-4efa-98f6-95d099f9c821"
+    }, {
+      "properties" : {
+        "title" : "PGXD Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/pgxd_wireless",
+      "uuid" : "b2d70096-23d9-4339-8688-7b08a515b82d"
+    }, {
+      "properties" : {
+        "title" : "SLX Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/slx_wireless",
+      "uuid" : "a4246449-af1b-4278-b428-2c4e2ffdcfa8"
+    }, {
+      "properties" : {
+        "title" : "SVX Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/svx_wireless",
+      "uuid" : "495636c7-bdf0-4bfa-be0b-872ef54b72ea"
+    }, {
+      "properties" : {
+        "title" : "FP Wireless Systems",
+        "nav_title" : "FP Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/fp_wireless",
+      "uuid" : "c7ac3419-8f68-4436-a8ee-52e7ca3c7cae"
+    }, {
+      "properties" : {
+        "title" : "ULX Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/ulx_wireless",
+      "uuid" : "6ac44454-3c61-4f54-b684-848a915b4bc0"
+    }, {
+      "properties" : {
+        "title" : "ULX-D Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/ulxd_wireless",
+      "uuid" : "90fc3b5c-fc3c-4c96-8135-f6f9fc8987bd"
+    }, {
+      "properties" : {
+        "title" : "UHF-R Wireless Systems"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/uhfr_wireless",
+      "uuid" : "7f27645f-8a76-404f-8835-7492c8349bce"
+    }, {
+      "properties" : {
+        "title" : "Axient™ Wireless microphone system",
+        "nav_title" : "Axient™ Wireless microphone system"
+      },
+      "path" : "/en/products-revamp/wireless_microphones/axient-wireless-management-network",
+      "uuid" : "7e832fd6-7e27-4964-aba4-c5b5306cf8d9"
+    } ],
+    "path" : "/en/products-revamp/wireless_microphones",
+    "uuid" : "e1f9c3bd-542c-49da-bcda-3802b2f13ad2"
+  }, {
+    "properties" : {
+      "title" : "Shure Sound Isolating™ earphones - immerse yourself in the music   ",
+      "nav_title" : "Earphones"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Shure Sound Isolating Earphones: Discontinued Models",
+        "nav_title" : "Discontinued Models"
+      },
+      "path" : "/en/products-revamp/earphones/phase-out",
+      "uuid" : "586da838-232c-4f4f-bfad-26746eeb0621"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Earphone Product Page"
+      },
+      "path" : "/en/products-revamp/earphones/earphone",
+      "uuid" : "195fadd4-98ff-4ce9-92c8-7a2c0a0028c9"
+    } ],
+    "path" : "/en/products-revamp/earphones",
+    "uuid" : "c5d4d45e-56f1-44c4-bae3-a9dadefa3508"
+  }, {
+    "properties" : {
+      "title" : "Headphones",
+      "nav_title" : "Headphones"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Headphone Product Page"
+      },
+      "path" : "/en/products-revamp/headphones/headphone",
+      "uuid" : "957dab28-95c4-41f6-b5ff-484d00563eca"
+    } ],
+    "path" : "/en/products-revamp/headphones",
+    "uuid" : "394ccd4a-deb6-4171-a680-46843d865c6e"
+  }, {
+    "properties" : {
+      "title" : "In-Ear Personal Monitoring",
+      "nav_title" : "Monitoring"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "In Ear Monitoring System Product Page"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/in_ear_monitoring",
+      "uuid" : "a229f9a9-dadf-406b-8206-46d52ce2e695"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "In Ear Monitoring Receiver"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/in_ear_monitoring_receivers",
+      "uuid" : "2946b621-658b-4dc2-95e8-cebc01bf671e"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "In Ear Monitoring Transmitters"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/in_ear_monitoring_transmitters",
+      "uuid" : "f0bb7481-b8e4-4ef1-85dd-494affca986c"
+    }, {
+      "properties" : {
+        "title" : "PSM 200"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/psm200",
+      "uuid" : "d06bb2e4-94a5-44dc-9fb3-ffa8d29d93b3"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "PSM 400"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/psm400",
+      "uuid" : "ca0e6e00-fcd1-4879-b1df-47888a06d995"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "PSM 700"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/psm700",
+      "uuid" : "fb407c44-e66d-4cf7-8da4-d186d6da4710"
+    }, {
+      "properties" : {
+        "title" : "PSM 900"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/psm900",
+      "uuid" : "231d38b3-dee1-4720-8ae8-8f096682d018"
+    }, {
+      "properties" : {
+        "title" : "PSM 1000"
+      },
+      "path" : "/en/products-revamp/in_ear_monitoring/psm1000",
+      "uuid" : "7dd8ce83-3b4d-4125-9a76-a469753513a0"
+    } ],
+    "path" : "/en/products-revamp/in_ear_monitoring",
+    "uuid" : "40cfc337-2c46-4de5-ba78-a3cbd7b07f27"
+  }, {
+    "properties" : {
+      "title" : "DJ & Phono",
+      "nav_title" : "DJ & Phono"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "DJ & Phono Product Page"
+      },
+      "path" : "/en/products-revamp/dj_phono/dj_phono",
+      "uuid" : "18709e5f-6e2a-41e8-8043-1a5a93986bee"
+    } ],
+    "path" : "/en/products-revamp/dj_phono",
+    "uuid" : "6c26ac57-e643-4277-ac76-4206bb0d79c8"
+  }, {
+    "properties" : {
+      "title" : "Mixers & DSP",
+      "nav_title" : "Mixers & DSP"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Mixer Product Page"
+      },
+      "path" : "/en/products-revamp/mixers/mixer",
+      "uuid" : "fffeb9b7-bfe8-4336-9c7c-24afad116243"
+    } ],
+    "path" : "/en/products-revamp/mixers",
+    "uuid" : "baeb38cf-0b11-4282-b14d-cc0620ebec88"
+  }, {
+    "properties" : {
+      "title" : "Accessories and Replacement Parts",
+      "nav_title" : "Accessories"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Wireless Accessories and Replacement Parts",
+        "nav_title" : "Wireless"
+      },
+      "path" : "/en/products-revamp/accessories/wireless_accessories",
+      "uuid" : "cc8225b1-c0ed-42bd-a850-cee39a305e59"
+    }, {
+      "properties" : {
+        "title" : "Accessories for In-Ear Personal Monitoring",
+        "nav_title" : "In-Ear Personal Monitoring"
+      },
+      "path" : "/en/products-revamp/accessories/psm_and_earphones_accessories",
+      "uuid" : "7f6f43c7-bfa5-4aac-a0f4-9bf0bdeda3ed"
+    }, {
+      "properties" : {
+        "title" : "Earphones Accessories",
+        "nav_title" : "Earphones"
+      },
+      "path" : "/en/products-revamp/accessories/earphones_accessories",
+      "uuid" : "4005d539-425f-465b-bbfb-c37d431f293f"
+    }, {
+      "properties" : {
+        "title" : "DJ & Phono Accesories and replacement parts",
+        "nav_title" : "DJ & Phono"
+      },
+      "path" : "/en/products-revamp/accessories/dj_phono_accessories",
+      "uuid" : "5c28a417-1fa3-4f24-a24f-3267a9568543"
+    }, {
+      "properties" : {
+        "title" : "Mixers & DSP Accessories",
+        "nav_title" : "Mixers & DSP"
+      },
+      "path" : "/en/products-revamp/accessories/mixers_dsp_accessories",
+      "uuid" : "40fcf891-e358-4b8a-997f-3cb824b0f1d2"
+    }, {
+      "properties" : {
+        "title" : "Headphones Accessories",
+        "nav_title" : "Headphones"
+      },
+      "path" : "/en/products-revamp/accessories/headphones_accessories",
+      "uuid" : "67655ba0-7a4e-4b03-a697-8e1c05818b53"
+    }, {
+      "properties" : {
+        "title" : "Discussion System Accessories",
+        "nav_title" : "Discussion Systems"
+      },
+      "path" : "/en/products-revamp/accessories/discussion_systems",
+      "uuid" : "aa136a14-2744-404d-bf9b-b74dcfcd922e"
+    }, {
+      "properties" : {
+        "title" : "Problem Solvers",
+        "nav_title" : "Problem Solvers"
+      },
+      "path" : "/en/products-revamp/accessories/problem_solvers",
+      "uuid" : "ae685d1f-2e4f-4d88-9873-e299871b75f5"
+    }, {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Accessory Product Page"
+      },
+      "path" : "/en/products-revamp/accessories/accessory",
+      "uuid" : "5b2fcd6c-9118-4901-b8d1-6520226132db"
+    }, {
+      "properties" : {
+        "title" : "Microphone Accessories and Replacement Parts",
+        "nav_title" : "Microphone Accessories"
+      },
+      "path" : "/en/products-revamp/accessories/microphones_accessories",
+      "uuid" : "0d5d5a5c-ca12-46c5-bc66-89787cab9bf6"
+    } ],
+    "path" : "/en/products-revamp/accessories",
+    "uuid" : "262ff9b9-3b26-4487-97f4-1b80a284d068"
+  }, {
+    "properties" : {
+      "title" : "New products from Shure",
+      "nav_title" : "New Products"
+    },
+    "path" : "/en/products-revamp/new_products",
+    "uuid" : "8eeaf7c0-e4ad-4270-bb0e-a62aee6d125c"
+  }, {
+    "properties" : {
+      "title" : "Shure Discontinued Products",
+      "nav_title" : "Discontinued"
+    },
+    "path" : "/en/products-revamp/discontinued-products",
+    "uuid" : "72d45ad4-3760-4b6a-8c88-a31ca6aece25"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Product Comparison Base Page"
+    },
+    "path" : "/en/products-revamp/comparison",
+    "uuid" : "6021fa15-54a7-45d3-b87a-3612fe74746c"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Notepad Base Page"
+    },
+    "path" : "/en/products-revamp/notepad",
+    "uuid" : "2223c15a-848c-4157-84be-731c7ffaaaec"
+  }, {
+    "properties" : {
+      "nav_hidden" : true
+    },
+    "path" : "/en/products-revamp/----------------",
+    "uuid" : "abd4301b-384f-440c-9e28-d0cd1f98c45f"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Drum Microphone Sets"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Drum Microphone Set Product Page"
+      },
+      "path" : "/en/products-revamp/drum_microphone_sets/drum_microphone_set",
+      "uuid" : "5008e7c7-c8e8-4b07-8194-601f056f7071"
+    } ],
+    "path" : "/en/products-revamp/drum_microphone_sets",
+    "uuid" : "e802592f-4161-4e1d-980f-992b1102ac94"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "USB Microphone Sets"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "USB Microphone Set Product Page"
+      },
+      "path" : "/en/products-revamp/usb_microphone_sets/usb_microphone_set",
+      "uuid" : "840dce3d-243f-4afb-8a71-4bdf1cf7ba65"
+    } ],
+    "path" : "/en/products-revamp/usb_microphone_sets",
+    "uuid" : "3a6ba17b-536d-49b7-a482-822c3264cf77"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Discussion Systems"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Microflex Product Page"
+      },
+      "path" : "/en/products-revamp/microflex/microflex",
+      "uuid" : "5c9b63f7-8131-4ee9-af44-2285170ccecf"
+    } ],
+    "path" : "/en/products-revamp/microflex",
+    "uuid" : "296d83d7-6093-45cc-8a6b-f8dcce04c962"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Headsets"
+    },
+    "children" : [ {
+      "properties" : {
+        "nav_hidden" : true,
+        "title" : "Headset Product Page"
+      },
+      "path" : "/en/products-revamp/headsets/headset",
+      "uuid" : "661a75f8-991a-4dc8-869a-4d44cac94fee"
+    } ],
+    "path" : "/en/products-revamp/headsets",
+    "uuid" : "9eb70c18-fed0-4bac-9afc-ce1a95f5b2eb"
+  }, {
+    "properties" : {
+      "nav_hidden" : true,
+      "title" : "Microphone Capsules"
+    },
+    "children" : [ {
+      "properties" : {
+        "title" : "Capsule Product Page"
+      },
+      "path" : "/en/products-revamp/capsules/capsule",
+      "uuid" : "0a1d0df6-bd6a-40d2-a134-dbabf01a474f"
+    } ],
+    "path" : "/en/products-revamp/capsules",
+    "uuid" : "11088832-e2e4-4b15-9eff-58478a5ad5ff"
+  } ],
+  "path" : "/en/products-revamp",
+  "uuid" : "d0dd1ecb-6344-4a31-8f32-b969eea1de30"
+} ]

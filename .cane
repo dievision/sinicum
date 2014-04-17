@@ -1,0 +1,19 @@
+--style-measure 100
+--style-exclude spec/dummy/**/*.*
+--abc-max 23
+
+--abc-exclude Sinicum::Helper::CmsHelper#cms_meta
+--abc-exclude Sinicum::Helper::CmsHelper#cms_img
+--abc-exclude Sinicum::Helper::CmsHelper#cms_out
+--abc-exclude Sinicum::Helper::CmsHelper#cms_navigation
+--abc-exclude Sinicum::Helper::CmsHelper#cms_link
+--abc-exclude Sinicum::Helper::CmsHelper#cms_link_2_uri
+--abc-exclude Sinicum::Helper::CmsHelperJava#edit_bar
+--abc-exclude Sinicum::Helper::CmsHelperJava#new_bar
+--abc-exclude Sinicum::Helper::CmsHelperJava#iterator_resolve_node
+--abc-exclude Sinicum::Helper::CmsHelperJava#main_bar
+--abc-exclude Sinicum::Helper::CmsHelperJava#main_bar
+--abc-exclude Sinicum::Jcr::Content.wrap_jcr_content
+--abc-exclude Sinicum::Jcr::Base.find
+--abc-exclude Sinicum::Jcr::Base#handle_nested_content
+--abc-exclude Sinicum::Jcr::Base#write_attribute

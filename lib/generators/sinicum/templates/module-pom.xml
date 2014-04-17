@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId><%= group_id %></groupId>
+    <artifactId><%= artifact_id %></artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <groupId><%= group_id %></groupId>
+  <artifactId><%= artifact_id %>-website</artifactId>
+  <name><%= project_name %> (Magnolia Website Module)</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <dependencies>
+    <!-- Add your project specific dependencies here: -->
+
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-empty-webapp</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-empty-webapp</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.dievision.sinicum</groupId>
+      <artifactId>sinicum-server-magnolia-45</artifactId>
+      <version>0.9.2-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.3-1101-jdbc41</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <!-- exclude jars copied "physically" from the webapp overlay - -->
+          <!-- so we only get those resolved by Maven's dependency management -->
+          <dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>maven.dievision.de.snapshots</id>
+      <name>Dievision Maven Repository</name>
+      <url>https://mvn-dievision.s3.amazonaws.com/snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+</project>

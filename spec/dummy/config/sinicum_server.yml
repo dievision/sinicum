@@ -1,0 +1,13 @@
+development:
+  host: localhost
+  username: user
+  password: pass
+production:
+  host: localhost
+  username: user_prod
+  password: pass_pass
+test:
+  host: localhost
+  port: 8081
+  username: user_test
+  password: pass_test

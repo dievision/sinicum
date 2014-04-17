@@ -1,0 +1,7 @@
+renderer:
+  teaser:
+    render_type: resize_crop
+    format: jpeg
+    x: 960
+    y: 444
+    hires_factor: 2

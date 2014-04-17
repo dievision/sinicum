@@ -1,0 +1,25 @@
+[ {
+  "properties" : {
+    "title" : "Microphones, Wireless microphones, in-ear monitoring, earphones, headphones",
+    "nav_title" : "Homepage"
+  },
+  "path" : "/en",
+  "depth" : 1,
+  "uuid" : "745efc13-e7da-4717-9153-10fb6472ca73"
+}, {
+  "properties" : {
+    "title" : "Products Overview",
+    "nav_title" : "products"
+  },
+  "path" : "/en/products",
+  "depth" : 2,
+  "uuid" : "502ea8d3-70d0-400b-8468-affd4ebf38d4"
+}, {
+  "properties" : {
+    "title" : "Microphones for almost every application",
+    "nav_title" : "Microphones"
+  },
+  "path" : "/en/products/microphones",
+  "depth" : 3,
+  "uuid" : "22a7f64e-a4c6-4660-8932-8127717c706b"
+} ]
