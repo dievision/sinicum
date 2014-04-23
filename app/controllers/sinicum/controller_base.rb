@@ -100,9 +100,9 @@ module Sinicum
           redirect_target = Sinicum::Jcr::Node.find_by_uuid("website", redirect_target).try(:path)
         end
         redirect_to redirect_target
-        true
+        return true
       end
-      false
+      return false
     end
 
     def redirect_page_44?(page)

@@ -48,6 +48,13 @@ module Sinicum
         get :index
         response.should render_template("my-module/test")
       end
+
+      it "should handle the redirect template" do
+        node.stub(:mgnl_template).and_return("my-module:pages/redirect")
+        node.stub(:[]).with(:redirect_link).and_return("/en/root")
+        get :index
+        response.should redirect_to("/en/root")
+      end
     end
   end
 end
