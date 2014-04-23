@@ -18,5 +18,57 @@
   "properties" : {
     "title" : "Page Title"
   },
-  "nodes" : { }
+  "nodes" : {
+    "photo" : {
+      "meta" : {
+        "path" : "/shure/support_downloads/education/tecnotes/Tecnotes_18_Sommer_10",
+        "depth" : 5,
+        "name" : "Tecnotes_18_Sommer_10",
+        "superTypes" : [ "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode" ],
+        "workspace" : "dam",
+        "mixinNodeTypes" : [ "mix:lockable" ],
+        "mgnl:lastModified" : "2010-07-27T14:41:04.105+02:00",
+        "jcr:created" : "2009-12-07T11:51:17.093+01:00",
+        "jcr:uuid" : "6d0cd10d-0a99-4e93-a3df-4e4574500127",
+        "jcr:primaryType" : "mgnl:asset"
+      },
+      "properties" : {
+        "title" : "Tecnotes_18_Sommer_10",
+        "name" : "Tecnotes_18_Sommer_10",
+        "creator" : "superuser",
+        "type" : "pdf",
+        "subject" : "TecNotes Ausgabe 18, Sommer 2010",
+        "description" : "Some Description",
+        "modificationDate" : "2010-07-27T14:41:04.105+02:00",
+        "creationDate" : "2009-12-07T11:51:17.093+01:00",
+        "modifier" : "superuser",
+        "subject_de" : "TecNotes Ausgabe 18, Sommer 2010",
+        "date1" : "2013-06-05T22:00:00.000Z"
+      },
+      "nodes" : {
+        "jcr:content" : {
+          "meta" : {
+            "path" : "/shure/support_downloads/education/tecnotes/Tecnotes_18_Sommer_10/document",
+            "depth" : 6,
+            "name" : "document",
+            "superTypes" : [ "mix:lastModified", "mix:mimeType", "mix:referenceable", "nt:base", "nt:resource" ],
+            "workspace" : "dam",
+            "mixinNodeTypes" : [ ],
+            "jcr:uuid" : "f78aa183-4beb-4030-8108-3cff37538a64",
+            "jcr:primaryType" : "mgnl:resource"
+          },
+          "properties" : {
+            "size" : "5621165",
+            "extension" : "pdf",
+            "jcr:data" : "Binary Data Type not supported",
+            "jcr:mimeType" : "application/pdf",
+            "nodeDataTemplate" : "",
+            "jcr:lastModified" : "2010-07-27T14:41:04.102+02:00",
+            "fileName" : "Tecnotes_18_Sommer_10"
+          },
+          "nodes" : { }
+        }
+      }
+    }
+  }
 } ]

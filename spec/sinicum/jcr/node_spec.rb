@@ -73,6 +73,10 @@ module Sinicum
 
         its(:mgnl_template) { should eq("themodule:pages/appplication") }
         its(:mgnl_created_by) { should eq("superuser") }
+
+        it "should translate the child nodes" do
+          subject[:photo].should be_a Sinicum::Jcr::Dam::Document
+        end
       end
 
       describe "handling of properties" do
