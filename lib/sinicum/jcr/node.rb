@@ -166,7 +166,7 @@ module Sinicum
           if implicit_array?(node_key)
             value = convert_implicit_array(node_key)
           else
-            value = Node.new(json_response: child_node)
+            value = NodeInitializer.initialize_node_from_json(child_node)
           end
           value
         end
@@ -207,7 +207,7 @@ module Sinicum
         child_node[NODES_KEY].each_key do |key|
           next if key == METADATA_NODE_NAME
           child = child_node[NODES_KEY].delete(key)
-          result << Node.new(json_response: child)
+          result << NodeInitializer.initialize_node_from_json(child)
         end
         result
       end
