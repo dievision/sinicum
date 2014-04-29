@@ -13,7 +13,13 @@ module Sinicum
       end
 
       def format
-        ".#{@document[:document][:extension]}" if @document && @document[:document]
+        if @document
+          if @document[:'jcr:content']
+            ".#{@document[:'jcr:content'][:extension]}"
+          elsif @document[:document]
+            ".#{@document[:document][:extension]}"
+          end
+        end
       end
     end
   end
