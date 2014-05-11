@@ -70,12 +70,15 @@ module Sinicum
         else
           path = @path_info.dup
         end
+        @normalized_request_path, @extension, @fingerprint = extract_fingerprint(path)
         if path =~ /^\/dam/
           @workspace = :dam
+          if @extension.present? && !@fingerprint
+            @normalized_request_path << ".#{@extension}"
+          end
         elsif path =~ /^\/dms/
           @workspace = :dms
         end
-        @normalized_request_path, @extension, @fingerprint = extract_fingerprint(path)
         renderer_image = normalized_request_path[
           ::Sinicum::Imaging.path_prefix.size + 1, normalized_request_path.size]
         @renderer = renderer_image[0, renderer_image.index("/")]
