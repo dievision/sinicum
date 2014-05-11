@@ -6,7 +6,7 @@ module Sinicum
       context "dam" do
         it "should normalize the path" do
           file = ImagingFile.new("/dam/pa.th/to.jpg")
-          file.normalized_request_path.should eq("/damfiles/default/pa.th/to")
+          file.normalized_request_path.should eq("/damfiles/default/pa.th/to.jpg")
           file.extension.should eq("jpg")
           file.fingerprint.should be nil
         end
@@ -28,7 +28,7 @@ module Sinicum
 
         it "should ignore a possible document repetition if the last two path parts do not match" do
           file = ImagingFile.new("/dam/pa.th/to/tu.jpg")
-          file.normalized_request_path.should eq("/damfiles/default/pa.th/to/tu")
+          file.normalized_request_path.should eq("/damfiles/default/pa.th/to/tu.jpg")
           file.extension.should eq("jpg")
           file.fingerprint.should be nil
         end
