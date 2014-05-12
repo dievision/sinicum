@@ -73,9 +73,6 @@ module Sinicum
         @normalized_request_path, @extension, @fingerprint = extract_fingerprint(path)
         if path =~ /^\/dam/
           @workspace = :dam
-          if @extension.present? && !@fingerprint
-            @normalized_request_path << ".#{@extension}"
-          end
         elsif path =~ /^\/dms/
           @workspace = :dms
         end
