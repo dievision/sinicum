@@ -1,0 +1,16 @@
+root_dir: /tmp/imaging
+
+renderer:
+
+  # Renderer name "default" is not allowed
+  default:
+    render_type: resize_crop
+    format: jpeg
+    x: 64
+    y: 50
+
+  margin_column:
+    render_type: resize_max
+    format: jpeg
+    x: 300
+    y: 500
