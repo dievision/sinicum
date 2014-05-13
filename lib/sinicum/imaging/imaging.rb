@@ -7,6 +7,7 @@ module Sinicum
     # functionality.
     class Imaging
       RENDER_MUTEX = Mutex.new
+      DEFAULT_CONVERTER_NAME = "default"
       include Sinicum::Logger
 
       attr_reader :fingerprint
