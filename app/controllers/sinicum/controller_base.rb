@@ -20,7 +20,9 @@ module Sinicum
       find_original_content_for_path(content_path)
       unless redirect_redirect_page
         check_for_content!
-        options[:layout] = layout_file_name_or_fallback unless options[:text]
+        unless options[:text] || options[:layout]
+          options[:layout] = layout_file_name_or_fallback
+        end
         block_given? ? super(options, locals, block) : super(options, locals)
       end
     end
