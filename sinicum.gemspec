@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rspec-rails', '~> 2.14')
   s.add_development_dependency('yard')
   s.add_development_dependency('webmock', '~> 1.8')
-  s.add_development_dependency('rubocop', '~> 0.20')
+  s.add_development_dependency('rubocop', '< 0.22')
   s.add_development_dependency('cane', '~> 2.5.2')
   s.add_development_dependency('codeclimate-test-reporter')
 
