@@ -217,7 +217,7 @@ module Sinicum
         if value && value =~ ISO_8601_REGEX
           result = DateTime.parse(value)
         elsif value && value =~ ISO_8601_DATE_REGEX
-          result = Date.parse(value)
+          result = Time.parse(value).getlocal.to_date
         else
           result = value
         end
