@@ -180,7 +180,17 @@ module Sinicum
             time.should be nil
           end
 
-          it "should convert Magnolia's Date notation: e.g. 2013-06-05T22:00:00.000Z"
+          it "should convert Magnolia's Date notation: e.g. 2013-06-05T22:00:00.000Z" do
+            time = subject.send(:jcr_time_string_to_datetime, "2013-06-05T22:00:00.000Z")
+            time.year.should eq(2013)
+            time.month.should eq(6)
+            time.day.should eq(6)
+          end
+
+          it "should convert Magnolia's Date notation to a date object" do
+            time = subject.send(:jcr_time_string_to_datetime, "2013-06-05T22:00:00.000Z")
+            time.should be_a(Date)
+          end
         end
 
         describe "boolean conversion" do
