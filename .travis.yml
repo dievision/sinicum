@@ -4,6 +4,9 @@ rvm:
   - "2.0.0"
   - "2.1.1"
   - "jruby-19mode"
+before_script:
+  - echo 'Europe/Berlin' | sudo tee /etc/timezone
+  - sudo dpkg-reconfigure --frontend noninteractive tzdata
 script: bundle exec rake
 gemfile:
   - Gemfile

@@ -25,7 +25,7 @@ module Sinicum
 
         describe "date" do
           it "should have the correct date when 'date1' is given" do
-            subject.date.should eq(Date.new(2013, 06, 05))
+            subject.date.should eq(Date.new(2013, 06, 06))
           end
 
           it "should have the correct date when 'date1' is not defined" do
