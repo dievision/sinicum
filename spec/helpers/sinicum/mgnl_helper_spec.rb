@@ -310,6 +310,17 @@ module Sinicum
           elements.size.should eq(2)
         end
       end
+
+      describe "global state cache key" do
+        before(:each) do
+          Sinicum::Jcr::Cache::GlobalCache.stub_chain(:new, :current_key).
+            and_return("the_cache_key")
+        end
+
+        it "should return the cache key" do
+          expect(helper.mgnl_jcr_global_cache_key).to eq("the_cache_key")
+        end
+      end
     end
   end
 end
