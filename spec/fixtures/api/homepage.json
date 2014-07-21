@@ -16,7 +16,8 @@
     "meta_title" : "Shure: Mikrofone, Funkmikrofone, Ohrhörer, Kopfhörer und In-Ear Monitoring Systeme",
     "meta_description" : "Spitzen Sound und extrem robust: Seit 1925 entscheiden sich Profi Musiker und Tontechniker auf Bühnen weltweit für Shure Equipment.",
     "boolean_true_test" : "true",
-    "boolean_false_test" : "false"
+    "boolean_false_test" : "false",
+	"multivalue_test" : [ "Value1", "Value2" ]
   },
   "nodes" : {
     "MetaData" : {
