@@ -18,14 +18,6 @@ module Sinicum
           file.fingerprint.should be nil
         end
 
-        it "should extract the cache key with a suffix" do
-          file = ImagingFile.new(
-            "/damfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85.jpg")
-          file.normalized_request_path.should eq("/damfiles/default/path/to/file")
-          file.extension.should eq("jpg")
-          file.fingerprint.should eq("de89466a9267dccc7712379f44e6cd85")
-        end
-
         it "should ignore a possible document repetition if the last two path parts do not match" do
           file = ImagingFile.new("/dam/pa.th/to/tu.jpg")
           file.normalized_request_path.should eq("/damfiles/default/pa.th/to/tu.jpg")
@@ -34,8 +26,8 @@ module Sinicum
         end
 
         it "should extract the cache key with a suffix" do
-          file = ImagingFile.new("/damfiles/default/path/to/" \
-            "file-de89466a9267dccc7712379f44e6cd85.jpg")
+          file = ImagingFile.new(
+            "/damfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85.jpg")
           file.normalized_request_path.should eq("/damfiles/default/path/to/file")
           file.extension.should eq("jpg")
           file.fingerprint.should eq("de89466a9267dccc7712379f44e6cd85")
