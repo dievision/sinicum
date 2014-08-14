@@ -72,7 +72,7 @@ module Sinicum
       # The "final" file to be sent to the client
       def file_rendered
         @_file_rendered ||= File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "-" + @image.uuid + "." +
+          converter.config_hash + "-" + @image.fingerprint +
           converter.format)
       end
 

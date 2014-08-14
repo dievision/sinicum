@@ -40,8 +40,6 @@ module Sinicum
           self[:date1] || updated_at
         end
 
-        private
-
         def fingerprint
           unless @fingerprint
             attributes = [
