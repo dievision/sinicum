@@ -4,6 +4,7 @@ module Sinicum
   module Imaging
     describe Config do
       test_config = File.join(File.dirname(__FILE__), "imaging.yml")
+      test_config_default = File.join(File.dirname(__FILE__), "imaging_default.yml")
 
       before(:each) do
         @tmpdir = File.join("/", "tmp", "imaging")
@@ -44,6 +45,12 @@ module Sinicum
         config = Config.configure(test_config)
         config.converter(:slideshow_thumbs).should be_a ResizeCropConverter
         config.converter(:margin_column).should be_a MaxSizeConverter
+      end
+
+      it "should raise an error if a configuration file has a renderer named 'default'" do
+        expect do
+           Config.configure(test_config_default)
+        end.to raise_error
       end
     end
   end

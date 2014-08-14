@@ -98,9 +98,17 @@ module Sinicum
 
       def read_config
         config = YAML.load_file(config_file)
+        check_configuration(config)
         @root_dir = config['root_dir'] || File.join(Rails.root, DEFAULT_ROOT_DIR)
         setup_directory_structure(@root_dir)
         config['renderer']
+      end
+
+      def check_configuration(config)
+        renderers = config['renderer']
+        if renderers[Imaging::DEFAULT_CONVERTER_NAME]
+          fail "No renderer with name '#{Imaging::DEFAULT_CONVERTER_NAME}' is allowed"
+        end
       end
 
       def setup_directory_structure(dir)

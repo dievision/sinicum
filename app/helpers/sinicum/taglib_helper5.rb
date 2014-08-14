@@ -3,7 +3,7 @@ module Sinicum
     include Templating::TemplatingUtils
 
     def mgnl_init
-      return unless mgnl_render_bars
+      return unless mgnl_render_bars && mgnl_original_content
       result = "<!-- begin js and css added by @cms.init -->\n"
       result << content_tag(:meta, nil, name: "gwt:property", content: "locale=en") + "\n"
       result << comment_tag(
