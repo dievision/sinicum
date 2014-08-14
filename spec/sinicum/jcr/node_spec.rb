@@ -95,6 +95,10 @@ module Sinicum
           subject[:title].should eq("Shure: Mikrofone, Funkmikrofone, Ohrhörer")
           subject["title"].should eq("Shure: Mikrofone, Funkmikrofone, Ohrhörer")
         end
+
+        it "should resolve mulitvalue properties correctly" do
+          subject[:multivalue_test].should eq(["Value1", "Value2"])
+        end
       end
 
       describe "handling of child nodes" do

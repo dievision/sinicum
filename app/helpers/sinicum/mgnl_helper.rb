@@ -2,7 +2,7 @@
 module Sinicum
   module MgnlHelper
     include HelperUtils
-    
+
     # Public: Returns the path for an object:
     #
     # - If the object is a Node, it returns the path of the node
@@ -140,6 +140,10 @@ module Sinicum
       else
         elements
       end
+    end
+
+    def mgnl_jcr_global_cache_key
+      @mgnl_jcr_global_cache_key ||= Sinicum::Jcr::Cache::GlobalCache.new.current_key
     end
   end
 end
