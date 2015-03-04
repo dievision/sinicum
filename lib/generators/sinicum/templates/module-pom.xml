@@ -29,7 +29,7 @@
     </dependency>
     <dependency>
       <groupId>com.dievision.sinicum</groupId>
-      <artifactId>sinicum-server-magnolia-45</artifactId>
+      <artifactId>sinicum-server-magnolia-5</artifactId>
       <version>0.9.3-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -48,10 +48,77 @@
           <!-- exclude jars copied "physically" from the webapp overlay - -->
           <!-- so we only get those resolved by Maven's dependency management -->
           <dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+          <webappDirectory>${mgnlBuildDir}</webappDirectory>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>development</id>
+      <activation>
+        <property>
+          <name>env.SINICUM_ENV</name>
+          <value>development</value>
+        </property>
+      </activation>
+      <build>
+        <directory>${sinicum.build.basedir}/development</directory>
+      </build>
+      <properties>
+        <mgnlBuildDir>${project.build.directory}/development</mgnlBuildDir>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>test</id>
+      <activation>
+        <property>
+          <name>env.SINICUM_ENV</name>
+          <value>test</value>
+        </property>
+      </activation>
+      <build>
+        <directory>${sinicum.build.basedir}/test</directory>
+      </build>
+      <properties>
+        <mgnlBuildDir>${project.build.directory}/test</mgnlBuildDir>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>author</id>
+      <activation>
+        <property>
+          <name>env.SINICUM_ENV</name>
+          <value>author</value>
+        </property>
+      </activation>
+      <build>
+        <directory>${sinicum.build.basedir}/author</directory>
+      </build>
+      <properties>
+        <mgnlBuildDir>${project.build.directory}/author</mgnlBuildDir>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>public01</id>
+      <activation>
+        <property>
+          <name>env.SINICUM_ENV</name>
+          <value>public01</value>
+        </property>
+      </activation>
+      <build>
+        <directory>${sinicum.build.basedir}/public01</directory>
+      </build>
+      <properties>
+        <mgnlBuildDir>${project.build.directory}/public01</mgnlBuildDir>
+      </properties>
+    </profile>
+  </profiles>
 
   <repositories>
     <repository>

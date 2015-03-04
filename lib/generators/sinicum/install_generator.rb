@@ -57,9 +57,9 @@ module Sinicum
       template "config/default/magnolia.properties",
         "#{config_dir}/default/magnolia.properties"
       template "config/default/magnolia-author.properties",
-        "#{config_dir}/default/magnolia-author.properties"
+        "#{config_dir}/author/magnolia.properties"
       template "config/default/magnolia-public01.properties",
-        "#{config_dir}/default/magnolia-public.properties"
+        "#{config_dir}/public01/magnolia.properties"
 
       template "config/default/log4j-development.xml",
         "#{config_dir}/default/log4j-development.xml"
