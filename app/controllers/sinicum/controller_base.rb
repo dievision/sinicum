@@ -42,7 +42,10 @@ module Sinicum
     def find_original_content_for_path(path = nil)
       path ||= content_path
       original_content = Content::WebsiteContentResolver.find_for_path(path)
-      Content::Aggregator.original_content = original_content
+      if mirror_page?(original_content)
+        original_content = resolve_mirror_page(original_content)
+      end
+      Content::Aggregator.original_content = original_content 
     end
 
     # Constructs the name of the layout file. Per default: Name of the template without special
@@ -113,6 +116,20 @@ module Sinicum
 
     def redirect_page_45?(page)
       template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
+    end
+
+    # check if the page has a mirror link and replace the orginal with the link 
+    def resolve_mirror_page(page)
+      return false if request.headers["HTTP_X_MGNL_ADMIN"].present?
+      mirror_target = page[:mirror_link]
+      if Sinicum::Util.is_a_uuid?(mirror_target)
+        mirror_target = Sinicum::Jcr::Node.find_by_uuid("website", mirror_target)
+      end
+      mirror_target
+    end
+
+    def mirror_page?(page)
+      template_exists?(page) && page.mgnl_template.index("pages/mirror") && page[:mirror_link]
     end
 
     def template_exists?(page)
