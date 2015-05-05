@@ -20,7 +20,7 @@ DoubleNegation:
   Enabled: False
 
 MethodLength:
-  Max: 15
+  Max: 30
 
 Documentation:
   Enabled: false

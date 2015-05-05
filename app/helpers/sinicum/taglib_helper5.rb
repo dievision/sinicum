@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Sinicum
   module TaglibHelper5
     include Templating::TemplatingUtils

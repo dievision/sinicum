@@ -7,7 +7,7 @@ module Sinicum
       options[:workspace] = "dam"
       mgnl_path(key_or_object, options)
     end
-    
+
     def mgnl_img(key_or_object, options = {})
       image = object_from_key_or_object(key_or_object, workspace(options))
       result = nil

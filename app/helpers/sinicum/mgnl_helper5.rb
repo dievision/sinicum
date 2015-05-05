@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Sinicum
   module MgnlHelper5
     include MgnlHelper
