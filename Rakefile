@@ -17,7 +17,7 @@ RSpec::Core::RakeTask.new(:spec)
 #   task.fail_on_error = false
 # end
 
-task default: [:spec, :rubocop]
+task default: [:spec]
 
 desc "Create Sinicum plugin documentation"
 task :doc do |doc|
