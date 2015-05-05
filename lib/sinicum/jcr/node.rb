@@ -256,9 +256,9 @@ module Sinicum
 
       def mgnl_boolean_string_to_boolean(value)
         result = value
-        if value == BOOL_TRUE_STRING_VALUE
+        if BOOL_TRUE_STRING_VALUE == value
           result = true
-        elsif value == BOOL_FALSE_STRING_VALUE
+        elsif BOOL_FALSE_STRING_VALUE == value
           result = false
         end
         result

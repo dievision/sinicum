@@ -14,13 +14,15 @@ module Sinicum
         end
 
         describe "when created from JSON" do
-          it { should be_kind_of Document }
-          its(:name) { should eq("Tecnotes_18_Sommer_10") }
-          its(:subject) { should eq("TecNotes Ausgabe 18, Sommer 2010") }
-          its(:description) { should eq("Some Description") }
-          its(:file_size) { should eq(562_116_5) }
-          its(:file_name) { should eq("Tecnotes_18_Sommer_10.pdf") }
-          its(:mime_type) { should eq("application/pdf") }
+          it "should have correct attributes" do
+            subject.should be_kind_of Document
+            subject.name.should eq("Tecnotes_18_Sommer_10")
+            subject.subject.should eq("TecNotes Ausgabe 18, Sommer 2010")
+            subject.description.should eq("Some Description")
+            subject.file_size.should eq(562_116_5)
+            subject.file_name.should eq("Tecnotes_18_Sommer_10.pdf")
+            subject.mime_type.should eq("application/pdf")
+          end          
         end
 
         describe "date" do
@@ -51,7 +53,9 @@ module Sinicum
         describe "fingerprint" do
           let(:default_fingerprint) { "79209c1a63d7435f3f2179e31c104ef8" }
 
-          its(:fingerprint) { should eq(default_fingerprint) }
+          it "should have a correct fingerprint" do
+            subject.fingerprint.should eq(default_fingerprint)
+          end
 
           it "should depend on the path" do
             subject.stub(:jcr_path).and_return("different")
