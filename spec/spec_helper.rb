@@ -41,3 +41,7 @@ WebMock.disable_net_connect!(allow: 'codeclimate.com')
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
+
+# prevent Test::Unit's AutoRunner from executing during RSpec's rake task
+# Relevant for Rails 3.2 tests in Ruby 1.9.3 and 2.1
+Test::Unit.run = true if defined?(Test::Unit) && Test::Unit.respond_to?(:run=)
