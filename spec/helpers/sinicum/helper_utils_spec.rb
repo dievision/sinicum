@@ -50,6 +50,5 @@ module Sinicum
         ).should be false
       end
     end
-
   end
 end

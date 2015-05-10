@@ -28,7 +28,7 @@ module Sinicum
           basefullpath
           a11cd0d31248427cbadfd8a7bc51e04e96e4de98
           d18187f9016c71e82993c867a90ff9a0554519c9
-          ))
+        ))
       end
     end
   end

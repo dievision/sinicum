@@ -2,6 +2,7 @@
 require 'spec_helper'
 
 module Sinicum
+  # rubocop:disable all
   module Jcr
     describe Node do
       context "should behave like an ActiveModel object" do
@@ -14,19 +15,17 @@ module Sinicum
           @model = Node.new
         end
 
-        #unless Rails.version =~ /^4\.1\./
-          ActiveModel::Lint::Tests.public_instance_methods.map { |m| m.to_s }.grep(/^test/)
-            .each do |m|
-            example m.gsub("_", " ") do
-              send(m)
-            end
+        ActiveModel::Lint::Tests.public_instance_methods.map(&:to_s).grep(/^test/)
+          .each do |m|
+          example m.gsub("_", " ") do
+            send(m)
           end
+        end
 
-          it "should expose a singular and human name" do
-            @model.class.model_name.singular.should eq("sinicum_jcr_node")
-            @model.class.model_name.human.should eq("Node")
-          end
-        #end
+        it "should expose a singular and human name" do
+          @model.class.model_name.singular.should eq("sinicum_jcr_node")
+          @model.class.model_name.human.should eq("Node")
+        end
 
         it "should use i18n for model_name.human" do
           begin
@@ -34,7 +33,9 @@ module Sinicum
               I18n.locale,
               activemodel: {
                 models: {
+                  # rubocop:disable all
                   :'sinicum/jcr/node' => "A node name"
+                  # rubocop:enable all
                 }
               })
             @model.class.model_name.human.should eq("A node name")
@@ -67,8 +68,10 @@ module Sinicum
           subject.jcr_depth.should eq(1)
 
           unless defined?(JRUBY_VERSION)
-            subject.created_at.should eq(DateTime.new(2014, 3, 16, 14, 6, 17.666, "+01:00"))
-            subject.updated_at.should eq(DateTime.new(2014, 3, 18, 15, 57, 51.329, "+01:00"))
+            # rubocop:disable all
+            subject.created_at.should eq(DateTime.new(2014, 3, 16, 14, 6, 17.666, "+1"))
+            subject.updated_at.should eq(DateTime.new(2014, 3, 18, 15, 57, 51.329, "+1"))
+            # rubocop:enable all
           end
 
           subject.mgnl_template.should eq("themodule:pages/appplication")
@@ -98,7 +101,7 @@ module Sinicum
         end
 
         it "should resolve mulitvalue properties correctly" do
-          subject[:multivalue_test].should eq(["Value1", "Value2"])
+          subject[:multivalue_test].should eq(%w(Value1 Value2))
         end
       end
 
@@ -277,4 +280,5 @@ module Sinicum
       end
     end
   end
+  # rubocop:enable all
 end

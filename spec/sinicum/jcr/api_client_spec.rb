@@ -42,7 +42,6 @@ module Sinicum
       end
 
       describe "POST" do
-
         it "should delegate to the ApiQueries post method" do
           path = "/path/to/url"
 

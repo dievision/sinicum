@@ -6,7 +6,7 @@ module Sinicum
       describe ComponentTranslator do
         let(:mock_class) do
           Class.new do
-            def initialize(options)
+            def initialize(*)
             end
           end
         end
