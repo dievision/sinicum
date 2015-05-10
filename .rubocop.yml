@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - spec/dummy/**/*
     - lib/generators/**/*
+    - vendor/bundle/**/*
   RunRailsCops: true
 
 ClassLength:
