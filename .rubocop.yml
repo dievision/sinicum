@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - spec/dummy/**/*
     - lib/generators/**/*
+    - vendor/bundle/**/*
   RunRailsCops: true
 
 ClassLength:
@@ -20,7 +21,7 @@ DoubleNegation:
   Enabled: False
 
 MethodLength:
-  Max: 15
+  Max: 30
 
 Documentation:
   Enabled: false

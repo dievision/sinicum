@@ -58,7 +58,7 @@ module Sinicum
 
       describe "streaming" do
         it "should construct the right url for streaming an attribute and stream the content" do
-          pending "The actual test seems wrong"
+          skip "The actual test seems wrong"
           begin
             image_file = File.join(File.dirname(__FILE__), "..", "..", "fixtures", "mock_image.gif")
             tmp_file = File.join(File.dirname(__FILE__), "..", "..", "fixtures", "tmp.gif")

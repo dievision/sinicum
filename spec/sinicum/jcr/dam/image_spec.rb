@@ -14,10 +14,12 @@ module Sinicum
         end
 
         describe "when created from JSON" do
-          it { should be_kind_of Image }
-          it { should be_kind_of Document }
-          its(:width) { should eq(300) }
-          its(:height) { should eq(110) }
+          it "should have correct attributes" do
+            subject.should be_kind_of Image
+            subject.should be_kind_of Document
+            subject.width.should eq(300)
+            subject.height.should eq(110)
+          end
         end
 
         describe "alt tag" do

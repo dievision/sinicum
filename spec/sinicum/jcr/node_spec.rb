@@ -14,7 +14,7 @@ module Sinicum
           @model = Node.new
         end
 
-        unless Rails.version =~ /^4\.1\./
+        #unless Rails.version =~ /^4\.1\./
           ActiveModel::Lint::Tests.public_instance_methods.map { |m| m.to_s }.grep(/^test/)
             .each do |m|
             example m.gsub("_", " ") do
@@ -26,7 +26,7 @@ module Sinicum
             @model.class.model_name.singular.should eq("sinicum_jcr_node")
             @model.class.model_name.human.should eq("Node")
           end
-        end
+        #end
 
         it "should use i18n for model_name.human" do
           begin
@@ -51,28 +51,29 @@ module Sinicum
         let(:json_response) { MultiJson.load(api_response) }
         let(:subject) { Node.new(json_response: json_response.first) }
 
-        its(:uuid) { should eq("684af75b-0504-467e-92ce-bea998cc8d8b") }
-        its(:jcr_path) { should eq("/home") }
-        its(:jcr_name) { should eq("home") }
-        its(:jcr_primary_type) { should eq("mgnl:page") }
-        its(:jcr_super_types) do should eq(
-          [
-            "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode",
-            "mgnl:activatable", "mgnl:content", "mgnl:created", "mgnl:lastModified",
-            "mgnl:renderable", "mgnl:versionable"
-          ])
-        end
-        its(:jcr_mixin_node_types) { should eq([]) }
-        its(:jcr_workspace) { should eq("website") }
-        its(:jcr_depth) { should eq(1) }
+        it "should have correct attributes" do
+          subject.uuid.should eq("684af75b-0504-467e-92ce-bea998cc8d8b")
+          subject.jcr_path.should eq("/home")
+          subject.jcr_name.should eq("home")
+          subject.jcr_primary_type.should eq("mgnl:page")
+          subject.jcr_super_types.should eq(
+            [
+              "mix:created", "mix:referenceable", "nt:base", "nt:hierarchyNode",
+              "mgnl:activatable", "mgnl:content", "mgnl:created", "mgnl:lastModified",
+              "mgnl:renderable", "mgnl:versionable"
+            ])
+          subject.jcr_mixin_node_types.should eq([])
+          subject.jcr_workspace.should eq("website")
+          subject.jcr_depth.should eq(1)
 
-        unless defined?(JRUBY_VERSION)
-          its(:created_at) { should eq(DateTime.new(2014, 3, 16, 14, 6, 17.666, "+01:00")) }
-          its(:updated_at) { should eq(DateTime.new(2014, 3, 18, 15, 57, 51.329, "+01:00")) }
-        end
+          unless defined?(JRUBY_VERSION)
+            subject.created_at.should eq(DateTime.new(2014, 3, 16, 14, 6, 17.666, "+01:00"))
+            subject.updated_at.should eq(DateTime.new(2014, 3, 18, 15, 57, 51.329, "+01:00"))
+          end
 
-        its(:mgnl_template) { should eq("themodule:pages/appplication") }
-        its(:mgnl_created_by) { should eq("superuser") }
+          subject.mgnl_template.should eq("themodule:pages/appplication")
+          subject.mgnl_created_by.should eq("superuser")
+        end
 
         it "should translate the child nodes" do
           subject[:photo].should be_a Sinicum::Jcr::Dam::Document

@@ -44,7 +44,7 @@ module Sinicum
             in_block = true
           end
           Aggregator.content_data.should eq("original")
-          in_block.should be_true
+          in_block.should be_truthy
         end
       end
 
