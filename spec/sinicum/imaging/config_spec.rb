@@ -31,9 +31,9 @@ module Sinicum
 
       it "should store all files under the root dir" do
         config = Config.configure(test_config)
-        config.file_dir.should =~ %r{#{config.root_dir}\/.+}
-        config.tmp_dir.should =~ %r{#{config.root_dir}\/.+}
-        config.version_file.should =~ %r{#{config.root_dir}\/.+}
+        config.file_dir.should =~ /#{config.root_dir}\/.+/
+        config.tmp_dir.should =~ /#{config.root_dir}\/.+/
+        config.version_file.should =~ /#{config.root_dir}\/.+/
       end
 
       it "should return the default converter if no valid renderer is given" do

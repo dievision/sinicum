@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "sinicum/version"
 
 Gem::Specification.new do |s|
@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.authors     = ["Dievision GmbH"]
   s.email       = ["info@dievision.de"]
   s.homepage    = "http://github.com/dievision/sinicum"
-  s.summary     = %q{Use Magnolia as a CMS backend in a Rails application}
-  s.description = %q{Provides the necessary functionality to work with Magnolia-managed content in a Rails application.}
+  s.summary     = %q(Use Magnolia as a CMS backend in a Rails app)
+  s.description = %q(Provides the necessary functionality to
+    work with Magnolia-managed content in a Rails app.)
 
   s.add_dependency('rails', '>= 3.2')
   s.add_dependency('httpclient', '~> 2.3')
@@ -24,6 +25,6 @@ Gem::Specification.new do |s|
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ["lib"]
 end
