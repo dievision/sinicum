@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <magnoliaVersion>5.3.7</magnoliaVersion>
+    <magnoliaVersion>5.3.8</magnoliaVersion>
     <javaVersion>1.7</javaVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -77,7 +77,7 @@
   <repositories>
     <repository>
       <id>magnolia.public</id>
-      <url>http://nexus.magnolia-cms.com/content/groups/public</url>
+      <url>https://nexus.magnolia-cms.com/content/groups/public</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>

@@ -14,6 +14,11 @@
   <name><%= project_name %> (Magnolia Website Module)</name>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+
+  <properties>
+    <sinicum.build.basedir>${project.basedir}/../tmp/magnolia</sinicum.build.basedir>
+  </properties>
+
   <dependencies>
     <!-- Add your project specific dependencies here: -->
 
