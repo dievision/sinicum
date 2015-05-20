@@ -34,7 +34,7 @@ module Sinicum
       # @param [String, Fixnum] x the x size of an image
       # @param [String, Fixnum] y the y size of an image
       # @return [String] the command line option to interlace an image or an empty String
-      def interlace_option(x, y, extension=nil)
+      def interlace_option(x, y, extension = nil)
         return "" if extension == 'gif'
         x.to_i * y.to_i > 80 * 80 ? "-interlace plane" : ""
       end
