@@ -12,15 +12,19 @@ module Sinicum
         @format = configuration['format'] || 'jpeg'
       end
 
-      def convert(infile_path, outfile_path)
+      def convert(infile_path, outfile_path, extension)
         x = device_pixel_size(@x)
         y = device_pixel_size(@y)
-        special = '-background transparent' if @format == 'png'
-        command = "convert #{infile_path} #{interlace_option(x, y)} #{special} " \
+        
+        special = '-background transparent' if extension == 'png'
+        special = '-coalesce -layers Optimize' if extension == 'gif'
+
+        command = "convert #{infile_path} #{interlace_option(x, y, extension)} #{special} " \
           "#{quality_option} " +
           "-resize #{x}x#{y} #{outfile_path}"
         `#{command}`
-        optimize_png_outfile(outfile_path)
+        
+        optimize_png_outfile(outfile_path, extension)
       end
 
       def converted_size

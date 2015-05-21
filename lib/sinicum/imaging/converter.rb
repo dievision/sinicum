@@ -34,7 +34,8 @@ module Sinicum
       # @param [String, Fixnum] x the x size of an image
       # @param [String, Fixnum] y the y size of an image
       # @return [String] the command line option to interlace an image or an empty String
-      def interlace_option(x, y)
+      def interlace_option(x, y, extension = nil)
+        return "" if extension == 'gif'
         x.to_i * y.to_i > 80 * 80 ? "-interlace plane" : ""
       end
 
@@ -57,8 +58,8 @@ module Sinicum
         "-quality 50" if @hires_factor && @hires_factor > 1.5
       end
 
-      def optimize_png_outfile(outfile_path)
-        return unless format == "png"
+      def optimize_png_outfile(outfile_path, extension)
+        return unless extension == "png"
         cmd = "pngquant -- \"#{outfile_path}\""
         exec_command(cmd)
         cmd = "mv \"#{outfile_path}#{PNG_OPTIMIZER_SUFFIX}\" \"#{outfile_path}\""

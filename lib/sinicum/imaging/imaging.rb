@@ -122,7 +122,7 @@ module Sinicum
       end
 
       def convert(infile_path, outfile_path)
-        converter.convert(infile_path, outfile_path)
+        converter.convert(infile_path, outfile_path, @doc[:extension])
       end
 
       def write_doc_to_tempfile(tempfile)
