@@ -8,7 +8,7 @@ module Sinicum
       def initialize(configuration)
       end
 
-      def convert(infile_path, outfile_path)
+      def convert(infile_path, outfile_path, extension = nil)
         `cp #{infile_path} #{outfile_path}`
       end
 
