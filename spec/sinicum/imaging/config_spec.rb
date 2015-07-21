@@ -45,6 +45,8 @@ module Sinicum
         config = Config.configure(test_config)
         config.converter(:slideshow_thumbs).should be_a ResizeCropConverter
         config.converter(:margin_column).should be_a MaxSizeConverter
+        config.converter(:customized).should be_a CustomizeConverter
+        config.converter(:customized_blur).should be_a CustomizeBlurConverter
       end
 
       it "should raise an error if a configuration file has a renderer named 'default'" do

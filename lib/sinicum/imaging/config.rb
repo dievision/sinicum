@@ -92,6 +92,8 @@ module Sinicum
           Sinicum::Imaging::ResizeCropConverter.new(renderer_config)
         when "resize_max" then
           Sinicum::Imaging::MaxSizeConverter.new(renderer_config)
+        when "resize_customized" then
+          renderer_config["customized_converter"].classify.constantize.new(renderer_config) 
         else nil
         end
       end
