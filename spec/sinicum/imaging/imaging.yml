@@ -15,16 +15,16 @@ renderer:
     y: 500
 
   customized:
-    render_type: resize_customized
-    customized_converter: customize_converter
+    render_type: render_class_name
+    render_class_name: CustomizeConverter
     format: jpeg
     x: 960
     y: 444
     hires_factor: 2
 
   customized_blur:
-    render_type: resize_customized
-    customized_converter: customize_blur_converter
+    render_type: render_class_name
+    render_class_name: CustomizeBlurConverter
     format: jpeg
     x: 960
     y: 444
