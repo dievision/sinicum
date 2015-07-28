@@ -5,6 +5,7 @@ require 'codeclimate-test-reporter'
 CodeClimate::TestReporter.start
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+require File.expand_path("../sinicum/imaging/customize_converter.rb",  __FILE__)
 require "rspec/rails"
 require "webmock/rspec"
 

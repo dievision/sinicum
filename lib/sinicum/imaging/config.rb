@@ -85,14 +85,14 @@ module Sinicum
       attr_reader :config_file
 
       def render_type(renderer_config)
-        case renderer_config["render_type"]
-        when "default" then
+        case
+        when renderer_config["render_type"] == "default" then
           Sinicum::Imaging::DefaultConverter.new(renderer_config)
-        when "resize_crop" then
+        when renderer_config["render_type"] == "resize_crop" then
           Sinicum::Imaging::ResizeCropConverter.new(renderer_config)
-        when "resize_max" then
+        when renderer_config["render_type"] == "resize_max" then
           Sinicum::Imaging::MaxSizeConverter.new(renderer_config)
-        when "render_class_name" then
+        when renderer_config["render_class_name"] then
           renderer_config["render_class_name"].classify.constantize.new(renderer_config) 
         else nil
         end
