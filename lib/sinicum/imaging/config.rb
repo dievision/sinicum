@@ -86,15 +86,16 @@ module Sinicum
 
       def render_type(renderer_config)
         case
-        when renderer_config["render_type"] == "default" then
+        when renderer_config["render_type"] == "default"
           Sinicum::Imaging::DefaultConverter.new(renderer_config)
-        when renderer_config["render_type"] == "resize_crop" then
+        when renderer_config["render_type"] == "resize_crop"
           Sinicum::Imaging::ResizeCropConverter.new(renderer_config)
-        when renderer_config["render_type"] == "resize_max" then
+        when renderer_config["render_type"] == "resize_max"
           Sinicum::Imaging::MaxSizeConverter.new(renderer_config)
-        when renderer_config["render_class_name"] then
+        when renderer_config["render_class_name"]
           renderer_config["render_class_name"].classify.constantize.new(renderer_config) 
-        else nil
+        else 
+          nil
         end
       end
 
