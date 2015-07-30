@@ -93,8 +93,8 @@ module Sinicum
         when renderer_config["render_type"] == "resize_max"
           Sinicum::Imaging::MaxSizeConverter.new(renderer_config)
         when renderer_config["render_class_name"]
-          renderer_config["render_class_name"].classify.constantize.new(renderer_config) 
-        else 
+          renderer_config["render_class_name"].classify.constantize.new(renderer_config)
+        else
           nil
         end
       end
