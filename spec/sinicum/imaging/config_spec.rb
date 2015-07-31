@@ -5,6 +5,7 @@ module Sinicum
     describe Config do
       test_config = File.join(File.dirname(__FILE__), "imaging.yml")
       test_config_default = File.join(File.dirname(__FILE__), "imaging_default.yml")
+      let(:config) { Config.configure(test_config) }
 
       before(:each) do
         @tmpdir = File.join("/", "tmp", "imaging")
@@ -20,37 +21,57 @@ module Sinicum
       end
 
       it "should use the correct configuration file" do
-        config = Config.configure(test_config)
-        config.send(:config_file).should == test_config
+        expect(config.send(:config_file)).to eq(test_config)
       end
 
       it "should set the right root directory" do
-        config = Config.configure(test_config)
-        config.root_dir.should == @tmpdir.to_s
+        expect(config.root_dir).to eq(@tmpdir.to_s)
       end
 
       it "should store all files under the root dir" do
-        config = Config.configure(test_config)
-        config.file_dir.should =~ /#{config.root_dir}\/.+/
-        config.tmp_dir.should =~ /#{config.root_dir}\/.+/
-        config.version_file.should =~ /#{config.root_dir}\/.+/
+        expect(config.file_dir).to match(/#{config.root_dir}\/.+/)
+        expect(config.tmp_dir).to match(/#{config.root_dir}\/.+/)
+        expect(config.version_file).to match(/#{config.root_dir}\/.+/)
       end
 
       it "should return the default converter if no valid renderer is given" do
-        config = Config.configure(test_config)
-        config.converter(:inexistent).should be_a DefaultConverter
+        expect(config.converter(:inexistent)).to be_a(DefaultConverter)
       end
 
       it "should return the right converter" do
-        config = Config.configure(test_config)
-        config.converter(:slideshow_thumbs).should be_a ResizeCropConverter
-        config.converter(:margin_column).should be_a MaxSizeConverter
+        expect(config.converter(:slideshow_thumbs)).to be_a(ResizeCropConverter)
+        expect(config.converter(:margin_column)).to be_a(MaxSizeConverter)
       end
 
       it "should raise an error if a configuration file has a renderer named 'default'" do
         expect do
-           Config.configure(test_config_default)
+          Config.configure(test_config_default)
         end.to raise_error
+      end
+
+      context "render_class_name option" do
+        let(:custom_converter) do
+          Class.new do
+            attr_reader :config
+
+            def initialize(config)
+              @config = config
+            end
+          end
+        end
+
+        it "should return a custom renderer class if defined" do
+          stub_const("CustomizeConverter", custom_converter)
+
+          expect(config.converter(:customized)).to be_a(CustomizeConverter)
+        end
+
+        it "should initialize a custom renderer class with the configuration" do
+          stub_const("CustomizeConverter", custom_converter)
+
+          converter = config.converter(:customized)
+          expect(converter.config["x"]).to eq(960)
+        end
       end
     end
   end
