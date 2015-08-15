@@ -35,20 +35,18 @@ module Sinicum
           url,
           "depth" => depth,
           "properties" => @navigation_element_class.navigation_properties.join(";"))
-        if result.ok?
-          json = MultiJson.load(result.body)
-          initialize_from_json(json)
-        end
+        return unless result.ok?
+        json = MultiJson.load(result.body)
+        initialize_from_json(json)
       end
 
       def fetch_parents(base_node)
         url = "/_navigation/parents#{base_node_url_part(base_node)}"
         result = api_get(
           url, "properties" => @navigation_element_class.navigation_properties.join(";"))
-        if result.ok?
-          json = MultiJson.load(result.body)
-          initialize_from_json(json)
-        end
+        return unless result.ok?
+        json = MultiJson.load(result.body)
+        initialize_from_json(json)
       end
 
       def initialize_from_json(json)

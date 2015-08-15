@@ -3,6 +3,7 @@ AllCops:
     - spec/dummy/**/*
     - lib/generators/**/*
     - vendor/bundle/**/*
+    - Rakefile
   RunRailsCops: true
 
 ClassLength:

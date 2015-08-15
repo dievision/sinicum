@@ -6,7 +6,7 @@ module Sinicum
       describe ComponentTranslator do
         let(:mock_class) do
           Class.new do
-            def initialize(options)
+            def initialize(*)
             end
           end
         end
@@ -20,10 +20,10 @@ module Sinicum
 
           it "should return a page for a page instance in #{mgnl_version}" do
             json = read_default_node_json(
-                      "website",
-                      "mgnl:page",
-                      "myModule:pages/homepage",
-                      mgnl_version)
+              "website",
+              "mgnl:page",
+              "myModule:pages/homepage",
+              mgnl_version)
             stub_const("MyModule::Pages::Homepage", mock_class)
 
             result = ComponentTranslator.initialize_node(json)
@@ -32,10 +32,10 @@ module Sinicum
 
           it "should handle module names with dashes in #{mgnl_version}" do
             json = read_default_node_json(
-                      "website",
-                      "mgnl:page",
-                      "myModule:pages/homepage",
-                      mgnl_version)
+              "website",
+              "mgnl:page",
+              "myModule:pages/homepage",
+              mgnl_version)
             stub_const("MyModule::Pages::Homepage", mock_class)
 
             result = ComponentTranslator.initialize_node(json)
@@ -44,10 +44,10 @@ module Sinicum
 
           it "should return nothing if a page class is not defined in #{mgnl_version}" do
             json = read_default_node_json(
-                      "website",
-                      "mgnl:page",
-                      "myModule:pages/homepage",
-                      mgnl_version)
+              "website",
+              "mgnl:page",
+              "myModule:pages/homepage",
+              mgnl_version)
 
             result = ComponentTranslator.initialize_node(json)
             result.should be nil
@@ -55,10 +55,10 @@ module Sinicum
 
           it "should return a page for a component instance in #{mgnl_version}" do
             json = read_default_node_json(
-                      "website",
-                      "mgnl:component",
-                      "myModule:components/path/teaser",
-                      mgnl_version)
+              "website",
+              "mgnl:component",
+              "myModule:components/path/teaser",
+              mgnl_version)
             stub_const("MyModule::Components::Path::Teaser", mock_class)
 
             result = ComponentTranslator.initialize_node(json)

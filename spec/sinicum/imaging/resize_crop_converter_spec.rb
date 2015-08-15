@@ -1,8 +1,8 @@
 require "spec_helper"
+
 module Sinicum
   module Imaging
     describe ResizeCropConverter do
-
       it "should require the arguments format, x, y" do
         config = { "format" => "jpeg", "x" => "200", "y" => "300" }
         conv = ResizeCropConverter.new(config)

@@ -2,6 +2,7 @@
 require 'spec_helper'
 require 'rexml/document'
 
+# rubocop:disable Metrics/ModuleLength
 module Sinicum
   describe MgnlHelper do
     describe "#mgnl_path" do
@@ -266,7 +267,7 @@ module Sinicum
 
         it "should yield the block" do
           expect { |arg|  elements.each(&arg) }.to yield_successive_args(el1, el2)
-          helper.mgnl_navigation("/de", :children, depth: 3) { |nav| }
+          helper.mgnl_navigation("/de", :children, depth: 3) { |_nav| }
         end
 
         it "should retun the elements if no block given" do
@@ -302,7 +303,7 @@ module Sinicum
 
         it "should yield the block" do
           expect { |arg|  elements.each(&arg) }.to yield_successive_args(el1, el2)
-          helper.mgnl_navigation("/de", :parents) { |nav| }
+          helper.mgnl_navigation("/de", :parents) { |_nav| }
         end
 
         it "should return the elements if no block given" do
@@ -313,8 +314,8 @@ module Sinicum
 
       describe "global state cache key" do
         before(:each) do
-          Sinicum::Jcr::Cache::GlobalCache.stub_chain(:new, :current_key).
-            and_return("the_cache_key")
+          Sinicum::Jcr::Cache::GlobalCache.stub_chain(:new, :current_key)
+            .and_return("the_cache_key")
         end
 
         it "should return the cache key" do

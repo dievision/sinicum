@@ -20,7 +20,7 @@ module Sinicum
 
       def to_s
         self.class.to_s + ": " +
-          { size: @size, count: @count, :first? => first?, :last? => last? }.inspect
+          { size: @size, count: @count, first?: first?, last?: last? }.inspect
       end
     end
   end

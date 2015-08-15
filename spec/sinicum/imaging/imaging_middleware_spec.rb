@@ -6,7 +6,7 @@ module Sinicum
       include Rack::Test::Methods
 
       let(:inner_app) do
-        ->(env) { [200, { "Content-Type" => "text/plain" }, "Downstream Response"] }
+        ->(_env) { [200, { "Content-Type" => "text/plain" }, "Downstream Response"] }
       end
       let(:app) { ImagingMiddleware.new(inner_app) }
 

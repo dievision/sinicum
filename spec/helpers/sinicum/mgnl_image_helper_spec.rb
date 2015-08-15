@@ -78,8 +78,8 @@ module Sinicum
       end
 
       it "should allow for custom height and width attributes" do
-        doc = REXML::Document.new(helper.mgnl_img(
-          uuid, renderer: "title", width: "85%", height: "33%"))
+        doc = REXML::Document.new(helper
+          .mgnl_img(uuid, renderer: "title", width: "85%", height: "33%"))
         doc.elements["img"].attributes["width"].should eq("85%")
         doc.elements["img"].attributes["height"].should eq("33%")
       end
@@ -90,7 +90,9 @@ module Sinicum
       end
 
       it "should be possible to add a any random attribute attribute" do
+        # rubocop:disable all
         doc = REXML::Document.new(helper.mgnl_img(uuid, :'data-something' => "data"))
+        # rubocop:enable all
         doc.elements["img"].attributes["data-something"].should eq("data")
       end
     end

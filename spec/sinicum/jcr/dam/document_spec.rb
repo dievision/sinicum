@@ -22,7 +22,7 @@ module Sinicum
             subject.file_size.should eq(562_116_5)
             subject.file_name.should eq("Tecnotes_18_Sommer_10.pdf")
             subject.mime_type.should eq("application/pdf")
-          end          
+          end
         end
 
         describe "date" do
@@ -33,7 +33,9 @@ module Sinicum
           it "should have the correct date when 'date1' is not defined" do
             subject.stub(:[]).with(:date1).and_return(nil)
             unless defined?(JRUBY_VERSION)
-              subject.date.should eq(DateTime.new(2010, 7, 27, 14, 41, 4.105, "+0200"))
+              # rubocop:disable all
+              subject.date.should eq(DateTime.new(2010, 7, 27, 14, 41, 4.105, "+2"))
+              # rubocop:enable all
             end
           end
         end
