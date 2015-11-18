@@ -232,6 +232,10 @@ To make it as easy as possible for you to navigate your way around the Magnolia 
 
 You can always access the current node pushed by the Controller by calling `mgnl_content_data`.
 
+#### mgnl_original_content
+
+You can access the the content object that represents the "base" of the request by calling `mgnl_original_content`
+
 #### mgnl_value(key)
 
 This method will access a property of the node that sits on top of the node stack.
