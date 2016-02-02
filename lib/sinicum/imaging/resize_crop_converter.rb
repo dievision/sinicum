@@ -29,7 +29,7 @@ module Sinicum
 
         cmd = "convert #{infile_path} #{interlace_option(x, y, extension)} #{special} " \
           "#{quality_option} " +
-          "-resize #{x}x#{y} -gravity center -extent #{x}x#{y} #{layers} #{outfile_path}"
+          "-resize #{x}x#{y}^ -gravity center -extent #{x}x#{y} #{layers} #{outfile_path}"
         `#{cmd}`
 
         optimize_png_outfile(outfile_path, extension)

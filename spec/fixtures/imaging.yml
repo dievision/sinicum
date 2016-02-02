@@ -26,3 +26,9 @@ renderer:
     format: jpeg
     x: 300
     y: 500
+
+  customized:
+    render_class_name: CustomizeConverter
+    format: jpeg
+    x: 960
+    y: 444
