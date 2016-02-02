@@ -10,7 +10,7 @@ module Sinicum
     class TypeTranslator
       DEFAULT_TRANSLATORS = [
         Sinicum::Jcr::TypeTranslators::DataTranslator,
-        Sinicum::Jcr::TypeTranslators::DamTranslator,
+        Sinicum::Jcr::TypeTranslators::ImagingAppTranslator,
         Sinicum::Jcr::TypeTranslators::ComponentTranslator,
         Sinicum::Jcr::TypeTranslators::DefaultTranslator]
 

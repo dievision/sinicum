@@ -14,45 +14,45 @@ module Sinicum
 
       it "should be ok" do
         get "/"
-        last_response.should =~ /Downstream Response/
+        expect(last_response).to match(/Downstream Response/)
       end
 
       it "should return 404 if the file requested does not exist" do
-        ::Sinicum::Imaging::Imaging.stub(:rendered_resource).and_return(nil)
+        allow(::Sinicum::Imaging::Imaging).to receive(:rendered_resource).and_return(nil)
         get "/damfiles/default/path/to/file"
-        last_response.status.should eq(404)
+        expect(last_response.status).to eq(404)
       end
 
       describe "request to an existing file" do
         before(:each) do
           mock_resource = double("resource")
-          mock_resource.stub(:path) { mock_file }
-          mock_resource.stub(:filename) { "mock_image.gif" }
-          mock_resource.stub(:fingerprint) { "de89466a9267dccc7712379f44e6cd85" }
-          ::Sinicum::Imaging::Imaging.stub(:rendered_resource).and_return(mock_resource)
+          allow(mock_resource).to receive(:path) { mock_file }
+          allow(mock_resource).to receive(:filename) { "mock_image.gif" }
+          allow(mock_resource).to receive(:fingerprint) { "de89466a9267dccc7712379f44e6cd85" }
+          allow(::Sinicum::Imaging::Imaging).to receive(:rendered_resource).and_return(mock_resource)
         end
 
         it "should be successful" do
           get "/damfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85"
-          last_response.status.should eq(200)
+          expect(last_response.status).to eq(200)
           get "/dmsfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85"
-          last_response.status.should eq(200)
+          expect(last_response.status).to eq(200)
         end
 
         it "should set the filename header" do
           get "/damfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85"
           cd_header = last_response.headers["Content-Disposition"]
-          cd_header.should =~ /inline; filename="mock_image.gif"/
+          expect(cd_header).to match(/inline; filename="mock_image.gif"/)
           get "/dmsfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85"
           cd_header = last_response.headers["Content-Disposition"]
-          cd_header.should =~ /inline; filename="mock_image.gif"/
+          expect(cd_header).to match(/inline; filename="mock_image.gif"/)
         end
 
         it "should set the cache header to one week" do
           Rails.configuration.action_controller.perform_caching = true
           get "/damfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85"
           cd_header = last_response.headers["Cache-Control"]
-          cd_header.should =~ /max-age=604800, public/
+          expect(cd_header).to match(/max-age=604800, public/)
           Rails.configuration.action_controller.perform_caching = false
         end
 
@@ -60,18 +60,18 @@ module Sinicum
           Rails.configuration.action_controller.perform_caching = true
           get "/dmsfiles/default/path/to/file-de89466a9267dccc7712379f44e6cd85"
           cd_header = last_response.headers["Cache-Control"]
-          cd_header.should =~ /max-age=604800, public/
+          expect(cd_header).to match(/max-age=604800, public/)
           Rails.configuration.action_controller.perform_caching = false
         end
       end
 
       describe "request images whith the original prefix" do
         it "should be successful" do
-          ::Sinicum::Imaging::Imaging.stub(:rendered_resource).and_return(nil)
+          allow(::Sinicum::Imaging::Imaging).to receive(:rendered_resource).and_return(nil)
           get "/dam/path/to/file"
-          last_response.body.should_not =~ /Downstream Response/
+          expect(last_response.body).to_not match(/Downstream Response/)
           get "/dms/path/to/file"
-          last_response.body.should_not =~ /Downstream Response/
+          expect(last_response.body).to_not match(/Downstream Response/)
         end
       end
     end

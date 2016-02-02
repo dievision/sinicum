@@ -1,3 +1,5 @@
+root_dir: /tmp/imaging
+
 apps:
   videos:
     imaging_prefix: "/videofiles"
@@ -9,16 +11,17 @@ apps:
     magnolia_prefix: "/dam"
     workspace: "dam"
     node_type: "mgnl:asset"
-  dms:
-    imaging_prefix: "/dmsfiles"
-    magnolia_prefix: "/dms"
-    workspace: "dms"
-    node_type: "mgnl:asset"
 
 renderer:
-  teaser:
+  # Renderer name "default" is not allowed
+  default:
     render_type: resize_crop
     format: jpeg
-    x: 960
-    y: 444
-    hires_factor: 2
+    x: 64
+    y: 50
+
+  margin_column:
+    render_type: resize_max
+    format: jpeg
+    x: 300
+    y: 500

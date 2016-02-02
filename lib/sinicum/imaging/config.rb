@@ -18,7 +18,7 @@ module Sinicum
       @@dir_setup = false
 
       # The root directory under which all files are stored
-      attr_reader :root_dir
+      attr_reader :root_dir, :renderer, :apps
 
       # The directory to store all rendered files in
       #
@@ -65,7 +65,7 @@ module Sinicum
       # @return [Sinicum::Imaging::Converter] the converter to use for this renderer
       def converter(renderer)
         result = nil
-        renderer_config = read_config[renderer.to_s]
+        renderer_config = @renderer[renderer.to_s]
         result = render_type(renderer_config) if renderer_config
         result ||= DefaultConverter.new(nil)
         result
@@ -81,8 +81,12 @@ module Sinicum
       end
 
       private
-
       attr_reader :config_file
+
+      def initialize(configfile)
+        @config_file = configfile
+        read_config
+      end
 
       def render_type(renderer_config)
         case renderer_config["render_type"]
@@ -101,13 +105,18 @@ module Sinicum
         check_configuration(config)
         @root_dir = config['root_dir'] || File.join(Rails.root, DEFAULT_ROOT_DIR)
         setup_directory_structure(@root_dir)
-        config['renderer']
+        @renderer = config['renderer']
+        @apps = config['apps']
       end
 
       def check_configuration(config)
         renderers = config['renderer']
+        apps = config['apps']
         if renderers[Imaging::DEFAULT_CONVERTER_NAME]
           fail "No renderer with name '#{Imaging::DEFAULT_CONVERTER_NAME}' is allowed"
+        end
+        if apps.blank?
+          fail "No apps are configured. Please check the README for an example."
         end
       end
 
@@ -122,11 +131,6 @@ module Sinicum
           FileUtils.mkdir_p(tmp_dir) unless File.exist?(tmp_dir)
           FileUtils.mkdir_p(file_dir) unless File.exist?(file_dir)
         end
-      end
-
-      def initialize(configfile)
-        @config_file = configfile
-        read_config
       end
 
       def self.new(*args)

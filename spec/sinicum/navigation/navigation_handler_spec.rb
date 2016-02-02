@@ -13,7 +13,7 @@ module Sinicum
 
         let(:base_node) do
           node = double("base_node")
-          node.stub(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
+          allow(node).to receive(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
           node
         end
 
@@ -27,17 +27,17 @@ module Sinicum
 
         it "should retrieve the children for a node and filter elements" do
           handler = NavigationHandler.children(base_node, 3)
-          handler.elements.size.should eq(7)
+          expect(handler.elements.size).to eq(7)
         end
 
         it "should return the navigation elements for the node" do
           handler = NavigationHandler.children(base_node, 3)
-          handler.elements.first.should be_kind_of(NavigationElement)
+          expect(handler.elements.first).to be_kind_of(NavigationElement)
         end
 
         it "should initialize the children of the elements" do
           handler = NavigationHandler.children(base_node, 3)
-          handler.elements.first.children.size.should eq(10)
+          expect(handler.elements.first.children.size).to eq(10)
         end
       end
 
@@ -49,7 +49,7 @@ module Sinicum
 
         let(:base_node) do
           node = double("base_node")
-          node.stub(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
+          allow(node).to receive(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
           node
         end
 
@@ -63,7 +63,7 @@ module Sinicum
 
         it "should retrieve the children for a node and filter elements" do
           handler = NavigationHandler.parents(base_node)
-          handler.elements.size.should eq(3)
+          expect(handler.elements.size).to eq(3)
         end
       end
     end

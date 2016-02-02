@@ -4,7 +4,7 @@ module Sinicum
     include HelperUtils
 
     def mgnl_asset_path(key_or_object = nil, options = {})
-      options[:workspace] = "dam"
+      options[:workspace] = "dam" if options[:workspace].nil?
       mgnl_path(key_or_object, options)
     end
 

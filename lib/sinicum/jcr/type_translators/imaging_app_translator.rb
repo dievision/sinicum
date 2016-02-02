@@ -3,7 +3,7 @@ module Sinicum
     module TypeTranslators
       # Public: Identifies files stored in Magnolia's DAM workspace as Dam::Document
       # or Dam::Image types.
-      class DamTranslator
+      class ImagingAppTranslator
         include TranslatorBase
 
         DOCUMENT_NODE = "jcr:content"
@@ -14,8 +14,9 @@ module Sinicum
         NODE_TYPE = "mgnl:asset"
 
         def self.initialize_node(json)
-          if jcr_primary_type(json) && workspace(json) == WORKSPACE &&
-              jcr_primary_type(json) == NODE_TYPE
+          app = ::Sinicum::Imaging.app_from_workspace(workspace(json))
+          if app && jcr_primary_type(json) && workspace(json) == app['workspace'] &&
+            jcr_primary_type(json) == app['node_type']
             if json[NODES][DOCUMENT_NODE]
               if json[NODES][DOCUMENT_NODE][PROPERTIES] &&
                   json[NODES][DOCUMENT_NODE][PROPERTIES][MIME_TYPE] &&

@@ -22,8 +22,8 @@ module Sinicum
         it "should delegate to the ApiQueries get method" do
           path = "/path/to/url"
 
-          ApiQueries.should_receive(:http_client).and_return(http_client)
-          http_client.should_receive(:get).with(
+          expect(ApiQueries).to receive(:http_client).and_return(http_client)
+          expect(http_client).to receive(:get).with(
             client_base_url + path).and_return(response)
 
           subject.api_get(path)
@@ -33,8 +33,8 @@ module Sinicum
           path = "/path/to/url"
           query = { query: { param: "value" } }
 
-          ApiQueries.should_receive(:http_client).and_return(http_client)
-          http_client.should_receive(:get).with(
+          expect(ApiQueries).to receive(:http_client).and_return(http_client)
+          expect(http_client).to receive(:get).with(
             client_base_url + path, query).and_return(response)
 
           subject.api_get(path, query)
@@ -46,8 +46,8 @@ module Sinicum
         it "should delegate to the ApiQueries post method" do
           path = "/path/to/url"
 
-          ApiQueries.should_receive(:http_client).and_return(http_client)
-          http_client.should_receive(:post).with(
+          expect(ApiQueries).to receive(:http_client).and_return(http_client)
+          expect(http_client).to receive(:post).with(
             client_base_url + path).and_return(response)
 
           subject.api_post(path)
@@ -57,8 +57,8 @@ module Sinicum
           path = "/path/to/url"
           query = { query: { param: "value" } }
 
-          ApiQueries.should_receive(:http_client).and_return(http_client)
-          http_client.should_receive(:post).with(
+          expect(ApiQueries).to receive(:http_client).and_return(http_client)
+          expect(http_client).to receive(:post).with(
             client_base_url + path, query).and_return(response)
 
           subject.api_post(path, query)

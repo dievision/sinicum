@@ -19,18 +19,18 @@ module Sinicum
 
         it "should return nothing for a default node" do
           result = DataTranslator.initialize_node(read_default_node_json)
-          result.should be nil
+          expect(result).to be nil
         end
 
         it "should return a default node when no matching class exists" do
           result = DataTranslator.initialize_node(json)
-          result.should be nil
+          expect(result).to be nil
         end
 
         it "should initialize a new class based on the node's primary type" do
           stub_const("Microphone", mock_class)
           result = DataTranslator.initialize_node(json)
-          result.should be_kind_of(mock_class)
+          expect(result).to be_kind_of(mock_class)
         end
       end
     end

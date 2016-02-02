@@ -105,7 +105,7 @@ module Sinicum
 
       def jcr_nodes
         @__json_response[NODES_KEY] if @__json_response
-      end
+      end      
 
       private
 
@@ -145,8 +145,8 @@ module Sinicum
         key_sym = key.to_sym
         if PROHIBITED_JCR_PROPERTIES.include?(key_sym) ||
             PROHIBITED_MGNL_PROPERTIES.include?(key_sym)
-          fail Error.new("Property '#{key_sym}' cannot be set manually. It has to be generated " +
-            "when fetching a node from the JCR repository")
+          fail "Property '#{key_sym}' cannot be set manually. It has to be generated " +
+            "when fetching a node from the JCR repository"
         end
       end
 

@@ -17,23 +17,23 @@ module Sinicum
       describe "#device_pixel_size" do
         it "should work without a hires_factor" do
           converter = conv.new("x" => 57)
-          converter.send(:device_pixel_size, 57).should eq(57)
+          expect(converter.send(:device_pixel_size, 57)).to eq(57)
         end
 
         it "should consider a hires_factor if given" do
           converter = conv.new("x" => 57, "hires_factor" => 2)
-          converter.send(:device_pixel_size, 57).should eq(114)
+          expect(converter.send(:device_pixel_size, 57)).to eq(114)
         end
 
         it "should consider round a result and always return an integer" do
           converter = conv.new("x" => 57, "hires_factor" => 1.4)
-          converter.send(:device_pixel_size, 57).should eq(80)
-          converter.send(:device_pixel_size, 57).should be_kind_of(Integer)
+          expect(converter.send(:device_pixel_size, 57)).to eq(80)
+          expect(converter.send(:device_pixel_size, 57)).to be_kind_of(Integer)
         end
 
         it "should work with an empty string" do
           converter = conv.new("x" => 57, "hires_factor" => 2)
-          converter.send(:device_pixel_size, '').should eq('')
+          expect(converter.send(:device_pixel_size, '')).to eq('')
         end
       end
     end

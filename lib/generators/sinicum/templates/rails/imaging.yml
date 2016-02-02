@@ -1,3 +1,10 @@
+apps:
+  dam:
+    imaging_prefix: "/damfiles"
+    magnolia_prefix: "/dam"
+    workspace: "dam"
+    node_type: "mgnl:asset"
+
 renderer:
 
   default:

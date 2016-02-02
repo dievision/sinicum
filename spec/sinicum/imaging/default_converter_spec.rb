@@ -4,7 +4,7 @@ module Sinicum::Imaging
   describe DefaultConverter do
     let(:document) {
       doc = double("document")
-      doc.stub(:'[]').and_return(nil)
+      allow(doc).to receive(:'[]').and_return(nil)
       doc
     }
     let(:metadata) { double("metadata") }
@@ -15,17 +15,17 @@ module Sinicum::Imaging
     end
 
     it "should return the file extension for a Magnolia 5 document" do
-      document.stub(:'[]').with(:'jcr:content').and_return(metadata)
-      metadata.stub(:'[]').with(:extension).and_return("jpeg")
+      allow(document).to receive(:'[]').with(:'jcr:content').and_return(metadata)
+      allow(metadata).to receive(:'[]').with(:extension).and_return("jpeg")
 
-      subject.format.should eq(".jpeg")
+      expect(subject.format).to eq(".jpeg")
     end
 
     it "should return the file extension for a Magnolia 4 document" do
-      document.stub(:'[]').with(:'document').and_return(metadata)
-      metadata.stub(:'[]').with(:extension).and_return("png")
+      allow(document).to receive(:'[]').with(:'document').and_return(metadata)
+      allow(metadata).to receive(:'[]').with(:extension).and_return("png")
 
-      subject.format.should eq(".png")
+      expect(subject.format).to eq(".png")
     end
   end
 end

@@ -3,22 +3,18 @@ module Sinicum
   module Imaging
     # Representation of a DAM file as seen by the imaging middleware.
     class ImagingFile
-      ORIGINAL_DAM_PATH_START = ::Sinicum::Imaging.dam_path_prefix + "/"
-      ORIGINAL_DAM_PATH_REPLACEMENT = ::Sinicum::Imaging.path_prefix + "/" +
-        ::Sinicum::Imaging.default_converter_name + "/"
-      ORIGINAL_DMS_PATH_START = ::Sinicum::Imaging.dms_path_prefix + "/"
-      ORIGINAL_DMS_PATH_REPLACEMENT = ::Sinicum::Imaging.path_prefix_mgnl4 + "/" +
-        ::Sinicum::Imaging.default_converter_name + "/"
       DEFAULT_CACHE_TIME = 24 * 60 * 60
       FINGERPRINT_CACHE_TIME = 7 * 24 * 60 * 60
 
-      attr_reader :normalized_request_path, :extension, :fingerprint, :workspace
+      attr_reader :normalized_request_path, :extension, :fingerprint, :app,
+        :workspace
 
       # Public: Create a new instance
       #
       # path_info - The request's path_info
       def initialize(path_info)
         @path_info = path_info
+        @app = ::Sinicum::Imaging.app_from_path(path_info)
         set_up
       end
 
@@ -61,24 +57,18 @@ module Sinicum
       # Then it extracts the fingerprint and extension, if any of them
       # exist.
       def set_up
-        if @path_info.index(ORIGINAL_DAM_PATH_START) == 0
-          path = @path_info.sub(ORIGINAL_DAM_PATH_START, ORIGINAL_DAM_PATH_REPLACEMENT)
-          path = cutoff_document_path_repetition(path)
-        elsif @path_info.index(ORIGINAL_DMS_PATH_START) == 0
-          path = @path_info.sub(ORIGINAL_DMS_PATH_START, ORIGINAL_DMS_PATH_REPLACEMENT)
+        if @path_info.index(@app['magnolia_prefix'] + '/') == 0
+          path = @path_info.sub(@app['magnolia_prefix'] + '/',
+            @app['imaging_prefix'] + '/' + ::Sinicum::Imaging.default_converter_name + "/")
           path = cutoff_document_path_repetition(path)
         else
           path = @path_info.dup
         end
         @normalized_request_path, @extension, @fingerprint = extract_fingerprint(path)
-        if path =~ /^\/dam/
-          @workspace = :dam
-        elsif path =~ /^\/dms/
-          @workspace = :dms
-        end
         renderer_image = normalized_request_path[
-          ::Sinicum::Imaging.path_prefix.size + 1, normalized_request_path.size]
+          @app['imaging_prefix'].size + 1, normalized_request_path.size]
         @renderer = renderer_image[0, renderer_image.index("/")]
+        @workspace = @app['workspace']
         @file_asset_path = renderer_image[@renderer.size, renderer_image.size]
         nil
       end

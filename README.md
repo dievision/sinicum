@@ -220,6 +220,27 @@ The render_type can be
 - resize_max - Resizes an image to a predefined maximum size
 - default - Simple converter that simply serves a copy of the original file
 
+A new feature (available since v0.9.0) introduces the configuration of the Imaging Module via apps. You have to define a few values in the `imaging.yml` (default values for DAM are already generated) and you can basically use Imaging for the asset handling of all you content apps.
+
+    apps:
+      videos:
+        imaging_prefix: "/videofiles"
+        magnolia_prefix: "/videos"
+        workspace: "videos"
+        node_type: "mgnl:video"
+      dam:
+        imaging_prefix: "/damfiles"
+        magnolia_prefix: "/dam"
+        workspace: "dam"
+        node_type: "mgnl:asset"
+
+In this example, we have configured two apps that will be able to serve assets via the Imaging Module.
+
+- imaging_prefix - Is the prefix that the imaging path will have
+- magnolia_prefix - Is the prefix that the original path from magnolia has
+- workspace - The workspace of the content app
+- node_type - The node_type that has been configured for nodes from the content app
+
 This is all you need to know for a quick start. More details will be added soon.
 
 ## Helpers

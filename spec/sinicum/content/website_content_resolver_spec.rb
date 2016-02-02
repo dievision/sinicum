@@ -5,9 +5,9 @@ module Sinicum
     describe WebsiteContentResolver do
       it "should fetch the content matching the path" do
         node = double(:node)
-        Sinicum::Jcr::Node.should_receive(:find_by_path).with(:website, "/home").and_return(node)
+        expect(Sinicum::Jcr::Node).to receive(:find_by_path).with(:website, "/home").and_return(node)
         result = WebsiteContentResolver.find_for_path("/home")
-        result.should eq(node)
+        expect(result).to eq(node)
       end
     end
   end

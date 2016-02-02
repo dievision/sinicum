@@ -35,7 +35,7 @@ module Sinicum
   require 'sinicum/jcr/type_translators/translator_base'
   require 'sinicum/jcr/type_translators/default_translator'
   require 'sinicum/jcr/type_translators/component_translator'
-  require 'sinicum/jcr/type_translators/dam_translator'
+  require 'sinicum/jcr/type_translators/imaging_app_translator'
   require 'sinicum/jcr/type_translators/data_translator'
   require 'sinicum/jcr/type_translator'
 
