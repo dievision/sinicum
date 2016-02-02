@@ -10,7 +10,7 @@ module Sinicum
       end
 
       def call(env)
-        if on_imaging_path?(env['PATH_INFO'])
+        if ::Sinicum::Imaging.on_imaging_path?(env['PATH_INFO'])
           dup._call(env)
         else
           @app.call(env)
@@ -41,15 +41,6 @@ module Sinicum
         else
           fail(404, "File not found: #{request.path_info}")
         end
-      end
-
-      private
-
-      def on_imaging_path?(path)
-        path && (path.index(::Sinicum::Imaging.path_prefix) == 0 ||
-          path.index(ImagingFile::ORIGINAL_DAM_PATH_START) == 0 ||
-          path.index(::Sinicum::Imaging.path_prefix_mgnl4) == 0 ||
-          path.index(ImagingFile::ORIGINAL_DMS_PATH_START) == 0)
       end
     end
   end

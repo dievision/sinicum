@@ -82,13 +82,7 @@ module Sinicum
       # @return [Array] An `Array` in the form `[Image, Document]`
       def find_image_objects_by_path(original_path)
         result = [nil, nil]
-        if @workspace == :dam
-          image_node_path = original_path.gsub(/^\/dam/, "")
-          image = Sinicum::Jcr::Node.find_by_path("dam", image_node_path)
-        elsif @workspace == :dms
-          image_node_path = original_path.gsub(/^\/dms/, "")
-          image = Sinicum::Jcr::Node.find_by_path("dms", image_node_path)
-        end
+        image = Sinicum::Jcr::Node.find_by_path(@workspace, original_path)
         if image
           doc = image.properties
           result = [image, doc]

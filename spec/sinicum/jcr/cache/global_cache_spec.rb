@@ -21,7 +21,7 @@ module Sinicum
         end
 
         it "should return the current key" do
-          GlobalCache.new.current_key.should eq("a11cd0d31248427cbadfd8a7bc51e04e96e4de98")
+          expect(GlobalCache.new.current_key).to eq("a11cd0d31248427cbadfd8a7bc51e04e96e4de98")
         end
       end
     end

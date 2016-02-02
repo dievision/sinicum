@@ -7,80 +7,81 @@ module Sinicum
     describe "#mgnl_path" do
       let(:node) do
         node = Jcr::Node.new
-        node.stub(:jcr_path).and_return("/the/path")
+        allow(node).to receive(:jcr_path).and_return("/the/path")
         node
       end
 
       let(:document) do
         node = Jcr::Dam::Document.new
-        node.stub(:jcr_path).and_return("/the/path")
+        allow(node).to receive(:jcr_path).and_return("/the/path")
         doc = double("document")
-        node.stub(:[]).and_return(nil)
-        node.stub(:[]).with(:'jcr:content').and_return(doc)
-        doc.stub(:[]).and_return(nil)
+        allow(node).to receive(:[]).and_return(nil)
+        allow(node).to receive(:[]).with(:'jcr:content').and_return(doc)
+        allow(node).to receive(:jcr_workspace).and_return("dam")
+        allow(doc).to receive(:[]).and_return(nil)
         node
       end
 
       it "should return a node's path" do
-        helper.mgnl_path(node).should eq("/the/path")
+        expect(helper.mgnl_path(node)).to eq("/the/path")
       end
 
       it "should return the right path for a UUID string" do
-        Jcr::Node.should_receive(:find_by_uuid)
+        expect(Jcr::Node).to receive(:find_by_uuid)
           .with("website", "900985a3-319c-41c6-b327-b46d7fb56d23")
           .and_return(node)
 
-        helper.mgnl_path("900985a3-319c-41c6-b327-b46d7fb56d23").should eq("/the/path")
+        expect(helper.mgnl_path("900985a3-319c-41c6-b327-b46d7fb56d23")).to eq("/the/path")
       end
 
       it "should handle other repositories than the website" do
-        Jcr::Node.should_receive(:find_by_uuid)
+        expect(Jcr::Node).to receive(:find_by_uuid)
           .with("dam", "900985a3-319c-41c6-b327-b46d7fb56d23")
           .and_return(node)
 
-        helper.mgnl_path("900985a3-319c-41c6-b327-b46d7fb56d23", workspace: "dam")
-          .should eq("/the/path")
+        expect(helper.mgnl_path("900985a3-319c-41c6-b327-b46d7fb56d23", workspace: "dam"))
+          .to eq("/the/path")
       end
 
       it "should ignore the renderer when the node is not a document" do
-        helper.mgnl_path(node, renderer: "video").should eq("/the/path")
+        expect(helper.mgnl_path(node, renderer: "video")).to eq("/the/path")
       end
 
       it "should work with the renderer when the node is a document" do
-        helper.mgnl_path(document, renderer: "video").should eq(
+        expect(helper.mgnl_path(document, renderer: "video")).to eq(
           "/damfiles/video/the/path-fc308f85a906fce1be5ff58fd2853af5")
       end
 
       it "should return a string if the path given is a string" do
-        helper.mgnl_path("/some/path").should eq("/some/path")
+        expect(helper.mgnl_path("/some/path")).to eq("/some/path")
       end
 
       it "should return a string if the property that defines the link returns a string" do
-        Jcr::Node.should_receive(:find_by_uuid)
+        expect(Jcr::Node).to receive(:find_by_uuid)
           .with("website", "900985a3-319c-41c6-b327-b46d7fb56d23")
           .and_return("/some/path")
-        helper.mgnl_path("900985a3-319c-41c6-b327-b46d7fb56d23", workspace: "website")
-          .should eq("/some/path")
+        expect(helper.mgnl_path("900985a3-319c-41c6-b327-b46d7fb56d23", workspace: "website"))
+          .to eq("/some/path")
       end
     end
 
     describe "#mgnl_content_data" do
       it "should return the current content data from the aggregator" do
         content = double(:content)
-        Content::Aggregator.should_receive(:content_data).and_return(content)
-        helper.mgnl_content_data.should eq(content)
+        expect(Content::Aggregator).to receive(:content_data).and_return(content)
+        expect(helper.mgnl_content_data).to eq(content)
       end
     end
 
     describe "#mgnl_link" do
       it "should pass through a string as a link" do
         doc = REXML::Document.new(helper.mgnl_link("/path/to/link"))
-        doc.elements["a"].attributes["href"].should eq("/path/to/link")
+        expect(doc.elements["a"].attributes["href"]).to eq("/path/to/link")
       end
 
       it "should pass through a string as a link when a block is given" do
         doc = REXML::Document.new(helper.mgnl_link("/path/to/link") { "something" })
-        doc.elements["a"].attributes["href"].should eq("/path/to/link")
+        expect(doc.elements["a"].attributes["href"]).to eq("/path/to/link")
       end
     end
 
@@ -94,10 +95,10 @@ module Sinicum
         block_called = false
         helper.mgnl_push(node) do
           block_called = true
-          Content::Aggregator.content_data.should eq(node)
+          expect(Content::Aggregator.content_data).to eq(node)
         end
-        block_called.should be true
-        Content::Aggregator.content_data.should be nil
+        expect(block_called).to be true
+        expect(Content::Aggregator.content_data).to be nil
       end
 
       it "should not yield if no content is found"
@@ -112,20 +113,20 @@ module Sinicum
     describe "#mgnl_out" do
       let(:node) do
         node = Jcr::Node.new
-        node.stub(:title).and_return("The title")
+        allow(node).to receive(:title).and_return("The title")
         node
       end
 
       before(:each) do
-        Content::Aggregator.stub(:original_content).and_return(node)
+        allow(Content::Aggregator).to receive(:original_content).and_return(node)
       end
 
       it "should output a property" do
-        helper.mgnl_out(:title).should eq("The title")
+        expect(helper.mgnl_out(:title)).to eq("The title")
       end
 
       it "should output an empty string if the property does not exist" do
-        helper.mgnl_out(:some_unknown_attribute).should eq("")
+        expect(helper.mgnl_out(:some_unknown_attribute)).to eq("")
       end
     end
 
@@ -133,22 +134,22 @@ module Sinicum
       it "should display a title" do
         Sinicum::Content::Aggregator.push(title: "My Headline") do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements['title'].size.should eq(1)
+          expect(result.root.elements['title'].size).to eq(1)
         end
       end
 
       it "should remove tags from the title" do
         Sinicum::Content::Aggregator.push(title: "my <b>bold</b> title") do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements['title'].size.should eq(1)
-          result.root.elements['title'].first.to_s.should eq("my bold title")
+          expect(result.root.elements['title'].size).to eq(1)
+          expect(result.root.elements['title'].first.to_s).to eq("my bold title")
         end
       end
 
       it "should prefer meta_title for the title" do
         Sinicum::Content::Aggregator.push(meta_title: "Preferred title") do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements['title'].first.to_s.should eq("Preferred title")
+          expect(result.root.elements['title'].first.to_s).to eq("Preferred title")
         end
       end
 
@@ -156,7 +157,7 @@ module Sinicum
         Sinicum::Content::Aggregator.push(title: "My Headline") do
           result = REXML::Document.new("<div>" +
             helper.mgnl_meta(title_prefix: "The Prefix") + "</div>")
-          result.root.elements['title'].first.to_s.should eq("The Prefix – My Headline")
+          expect(result.root.elements['title'].first.to_s).to eq("The Prefix – My Headline")
         end
       end
 
@@ -164,7 +165,7 @@ module Sinicum
         Sinicum::Content::Aggregator.push(title: "My Headline") do
           result = REXML::Document.new("<div>" +
             helper.mgnl_meta(title_suffix: "The Suffix") + "</div>")
-          result.root.elements['title'].first.to_s.should eq("My Headline – The Suffix")
+          expect(result.root.elements['title'].first.to_s).to eq("My Headline – The Suffix")
         end
       end
 
@@ -172,7 +173,7 @@ module Sinicum
         Sinicum::Content::Aggregator.push({}) do
           result = REXML::Document.new("<div>" +
             helper.mgnl_meta(title_prefix: "The Prefix") + "</div>")
-          result.root.elements['title'].first.to_s.should eq("The Prefix")
+          expect(result.root.elements['title'].first.to_s).to eq("The Prefix")
         end
       end
 
@@ -180,70 +181,70 @@ module Sinicum
         Sinicum::Content::Aggregator.push({}) do
           result = REXML::Document.new("<div>" +
             helper.mgnl_meta(title_prefix: "The Suffix") + "</div>")
-          result.root.elements['title'].first.to_s.should eq("The Suffix")
+          expect(result.root.elements['title'].first.to_s).to eq("The Suffix")
         end
       end
 
       it "should not add an emtpy title attribute if no title is defined" do
         Sinicum::Content::Aggregator.push({}) do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements['title'].first.to_s.should eq("")
+          expect(result.root.elements['title'].first.to_s).to eq("")
         end
       end
 
       it "should display a desciption tag" do
         Sinicum::Content::Aggregator.push(meta_description: "A Description") do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements["meta[@name = 'description']"].attributes["content"]
-            .should eq("A Description")
+          expect(result.root.elements["meta[@name = 'description']"].attributes["content"])
+            .to eq("A Description")
         end
       end
 
       it "should not display a desciption tag if no description is given" do
         result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-        result.root.elements["meta[@name = 'description']"].should be nil
+        expect(result.root.elements["meta[@name = 'description']"]).to be nil
       end
 
       it "should display a keywords tag" do
         Sinicum::Content::Aggregator.push(meta_keywords: "some keyowrds") do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements["meta[@name = 'keywords']"].attributes["content"]
-            .should eq("some keyowrds")
+          expect(result.root.elements["meta[@name = 'keywords']"].attributes["content"])
+            .to eq("some keyowrds")
         end
       end
 
       it "should not display a keywords tag if no description is given" do
         result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-        result.root.elements["meta[@name = 'keywords']"].should be nil
+        expect(result.root.elements["meta[@name = 'keywords']"]).to be nil
       end
 
       it "should display 'robots: noindex,nofollow' tag" do
         Sinicum::Content::Aggregator.push(meta_noindex: true) do
           result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-          result.root.elements["meta[@name = 'robots']"].attributes["content"].should =~ /noindex/
-          result.root.elements["meta[@name = 'robots']"].attributes["content"].should =~ /nofollow/
+          expect(result.root.elements["meta[@name = 'robots']"].attributes["content"]).to match(/noindex/)
+          expect(result.root.elements["meta[@name = 'robots']"].attributes["content"]).to match(/nofollow/)
         end
       end
 
       it "should display no 'robots' tag by default" do
         result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-        result.root.elements["meta[@name = 'robots']"].should be nil
+        expect(result.root.elements["meta[@name = 'robots']"]).to be nil
       end
 
       it "should display a language tag" do
         result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-        result.root.elements["meta[@name = 'language']"].attributes["content"]
-          .should eq(I18n.locale.to_s)
+        expect(result.root.elements["meta[@name = 'language']"].attributes["content"])
+          .to eq(I18n.locale.to_s)
       end
 
       it "should display the content type tag" do
         result = REXML::Document.new("<div>" + helper.mgnl_meta + "</div>")
-        result.root.elements["meta[@http-equiv = 'content-type']"].attributes["content"]
-          .should eq("text/html; charset=utf-8")
+        expect(result.root.elements["meta[@http-equiv = 'content-type']"].attributes["content"])
+          .to eq("text/html; charset=utf-8")
       end
 
       it "should be html_safe" do
-        helper.mgnl_meta.should be_html_safe
+        expect(helper.mgnl_meta).to be_html_safe
       end
     end
 
@@ -255,9 +256,9 @@ module Sinicum
 
       describe "path based" do
         before(:each) do
-          Navigation::NavigationHandler.should_receive(:children).with("/de", 3)
+          expect(Navigation::NavigationHandler).to receive(:children).with("/de", 3)
             .and_return(handler)
-          handler.should_receive(:elements).and_return(elements)
+          expect(handler).to receive(:elements).and_return(elements)
         end
 
         it "should the children navigation handler" do
@@ -271,7 +272,7 @@ module Sinicum
 
         it "should retun the elements if no block given" do
           result = helper.mgnl_navigation("/de", :children, depth: 3)
-          result.size.should eq(2)
+          expect(result.size).to eq(2)
         end
       end
 
@@ -279,9 +280,9 @@ module Sinicum
         let(:node) { double("node") }
 
         before(:each) do
-          Navigation::NavigationHandler.should_receive(:children).with(node, 3)
+          expect(Navigation::NavigationHandler).to receive(:children).with(node, 3)
             .and_return(handler)
-          handler.should_receive(:elements).and_return(elements)
+          expect(handler).to receive(:elements).and_return(elements)
         end
 
         it "should the children navigation handler" do
@@ -291,9 +292,9 @@ module Sinicum
 
       describe "path based parents" do
         before(:each) do
-          Navigation::NavigationHandler.should_receive(:parents).with("/de")
+          expect(Navigation::NavigationHandler).to receive(:parents).with("/de")
             .and_return(handler)
-          handler.should_receive(:elements).and_return(elements)
+          expect(handler).to receive(:elements).and_return(elements)
         end
 
         it "should the children navigation handler" do
@@ -307,13 +308,13 @@ module Sinicum
 
         it "should return the elements if no block given" do
           elements = helper.mgnl_navigation("/de", :parents)
-          elements.size.should eq(2)
+          expect(elements.size).to eq(2)
         end
       end
 
       describe "global state cache key" do
         before(:each) do
-          Sinicum::Jcr::Cache::GlobalCache.stub_chain(:new, :current_key).
+          allow(Sinicum::Jcr::Cache::GlobalCache).to receive_message_chain(:new, :current_key).
             and_return("the_cache_key")
         end
 

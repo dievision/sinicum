@@ -1,29 +1,31 @@
 module Sinicum
   module Imaging
     DEFAULT_CONVERTER_NAME = "default"
-    DEFAULT_IMAGING_PREFIX = "/damfiles"
-    DEFAULT_IMAGING_DMS_PREFIX = "/dmsfiles"
-    DEFAULT_DAM_PREFIX = "/dam"
-    DEFAULT_DMS_PREFIX = "/dms"
 
     def self.default_converter_name
       DEFAULT_CONVERTER_NAME
     end
 
-    def self.path_prefix_mgnl4
-      DEFAULT_IMAGING_DMS_PREFIX
+    def self.on_imaging_path?(path)
+      app_from_path(path) ? true : false
     end
 
-    def self.path_prefix
-      DEFAULT_IMAGING_PREFIX
+    def self.app_from_path(path)
+      if path
+        Config.read_configuration.apps.each do |app_name, app_details|
+          return app_details if path.start_with?(app_details['imaging_prefix'], app_details['magnolia_prefix'])
+        end
+      end
+      return nil
     end
 
-    def self.dam_path_prefix
-      DEFAULT_DAM_PREFIX
-    end
-
-    def self.dms_path_prefix
-      DEFAULT_DMS_PREFIX
+    def self.app_from_workspace(workspace)
+      if workspace
+        Config.read_configuration.apps.each do |app_name, app_details|
+          return app_details if app_details['workspace'] == workspace
+        end
+      end
+      return nil
     end
   end
 end

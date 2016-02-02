@@ -14,13 +14,13 @@ module Sinicum
       it "should add a new translator to the translator stack" do
         TypeTranslator.use(first_translator)
         TypeTranslator.use(second_translator)
-        TypeTranslator.list.should eq([second_translator, first_translator])
+        expect(TypeTranslator.list).to eq([second_translator, first_translator])
       end
 
       it "should reset the stack" do
         TypeTranslator.clear
         TypeTranslator.reset
-        TypeTranslator.list.should eq(TypeTranslator::DEFAULT_TRANSLATORS)
+        expect(TypeTranslator.list).to eq(TypeTranslator::DEFAULT_TRANSLATORS)
       end
 
       describe "swapping" do
@@ -34,7 +34,7 @@ module Sinicum
 
         it "should clear the stack" do
           TypeTranslator.clear
-          TypeTranslator.list.should eq([])
+          expect(TypeTranslator.list).to eq([])
         end
       end
     end

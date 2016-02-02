@@ -15,9 +15,10 @@ module Sinicum
         end
 
         def path(options = {})
+          app = ::Sinicum::Imaging.app_from_workspace(jcr_workspace)
           converter_name = options[:converter].presence ||
             ::Sinicum::Imaging.default_converter_name
-          path = "#{::Sinicum::Imaging.path_prefix}/#{converter_name}#{super}-#{fingerprint}"
+          path = "#{app['imaging_prefix']}/#{converter_name}#{super}-#{fingerprint}"
           if properties && properties[:extension].present?
             path << ".#{properties[:extension]}"
           end

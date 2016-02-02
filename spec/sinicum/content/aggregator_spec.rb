@@ -5,18 +5,18 @@ module Sinicum
     describe "Content Thread local functionality" do
       it "should return the original content as content data" do
         Aggregator.original_content = "content"
-        Aggregator.content_data.should == "content"
+        expect(Aggregator.content_data).to  eq("content")
       end
 
       it "should implicitly reset all stacks if original content is called" do
-        Aggregator.should_receive(:clean)
+        expect(Aggregator).to receive(:clean)
         Aggregator.original_content = "original_content"
       end
 
       it "should return an empty hash if no content node with the respective name exists" do
         Aggregator.original_content = {}
         Aggregator.push_content_node(:no_valid_name) do
-          Aggregator.content_data.should == {}
+          expect(Aggregator.content_data).to eq({})
         end
         Aggregator.clean
       end
@@ -25,13 +25,13 @@ module Sinicum
         Aggregator.original_content = "content"
         Thread.current[:__cms_stack] = "other content"
         Aggregator.clean
-        Aggregator.original_content.should.nil?
-        Thread.current[:__cms_stack].should.nil?
+        expect(Aggregator.original_content).to be_nil
+        expect(Thread.current[:__cms_stack]).to be_nil
       end
 
       it "should push a paragraph name" do
         Aggregator.push_content_node("some_name") do
-          Aggregator.content_node.should eq("some_name")
+          expect(Aggregator.content_node).to eq("some_name")
         end
       end
 
@@ -40,11 +40,11 @@ module Sinicum
           Aggregator.original_content = "original"
           in_block = false
           Aggregator.push_current_content("local") do
-            Aggregator.content_data.should eq("local")
+            expect(Aggregator.content_data).to eq("local")
             in_block = true
           end
-          Aggregator.content_data.should eq("original")
-          in_block.should be_truthy
+          expect(Aggregator.content_data).to eq("original")
+          expect(in_block).to be_truthy
         end
       end
 
@@ -57,12 +57,12 @@ module Sinicum
         end
 
         it "should return the original page if no active page has been set explicitly" do
-          Aggregator.active_page.should == @original_page
+          expect(Aggregator.active_page).to eq(@original_page)
         end
 
         it "should push the new content on top of the active page stack" do
           Aggregator.push_active_page(@new_page) do
-            Aggregator.active_page.should == @new_page
+            expect(Aggregator.active_page).to eq(@new_page)
           end
         end
 
@@ -70,12 +70,12 @@ module Sinicum
           Aggregator.push_active_page(@new_page) do
             # nothing
           end
-          Aggregator.active_page.should == @original_page
+          expect(Aggregator.active_page).to eq(@original_page)
         end
 
         it "should make the new active page the current content_data object" do
           Aggregator.push_active_page(@new_page) do
-            Aggregator.content_data.should == @new_page
+            expect(Aggregator.content_data).to eq(@new_page)
           end
         end
 
@@ -83,7 +83,7 @@ module Sinicum
           Aggregator.push_active_page(@new_page) do
             # nothing
           end
-          Aggregator.content_data.should == @original_page
+          expect(Aggregator.content_data).to eq(@original_page)
         end
       end
     end

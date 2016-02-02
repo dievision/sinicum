@@ -23,13 +23,13 @@ module Sinicum
         xit "should query for a node by path" do
           Node.should_receive(:new).with(json_response: json_response.first)
           result = Node.find_by_path("website", "home")
-          result.should be_a(Sinicum::Jcr::Node)
+          expect(result).to be_a(Sinicum::Jcr::Node)
         end
 
         xit "should query for a node by uuid" do
           Node.should_receive(:new).with(json_response: json_response.first)
           result = Node.find_by_uuid("website", "21cbc762-bdcd-4520-9eff-1928986fb419")
-          result.should be_a(Sinicum::Jcr::Node)
+          expect(result).to be_a(Sinicum::Jcr::Node)
         end
       end
 
@@ -37,7 +37,7 @@ module Sinicum
         it "should use no authentication if no user and password is configured" do
           stub_request(:get, "#{prefix}/website/home")
             .to_return(body: api_response, headers: { "Content-Type" => "application/json" })
-          Node.should_receive(:new).with(json_response: json_response.first)
+          expect(Node).to receive(:new).with(json_response: json_response.first)
 
           Node.find_by_path("website", "home")
         end
@@ -50,7 +50,7 @@ module Sinicum
             username: "user",
             password: "pass"
           }
-          Node.should_receive(:new).with(json_response: json_response.first)
+          expect(Node).to receive(:new).with(json_response: json_response.first)
 
           Node.find_by_path("website", "home")
         end
@@ -75,7 +75,7 @@ module Sinicum
             ).with(query: { "property" => "jcr:data" })
             target.close
 
-            Digest::MD5.hexdigest(File.read(tmp_file)).should eq(
+            expect(Digest::MD5.hexdigest(File.read(tmp_file))).to eq(
               Digest::MD5.hexdigest(File.read(tmp_file)))
           ensure
             File.delete(tmp_file) if File.exist?(tmp_file)
@@ -102,10 +102,10 @@ module Sinicum
         end
 
         it "should return results based on a query" do
-          Node.should_receive(:new).with(json_response: json_response.first)
-          Node.should_receive(:new).with(json_response: json_response.last)
+          expect(Node).to receive(:new).with(json_response: json_response.first)
+          expect(Node).to receive(:new).with(json_response: json_response.last)
           result = Node.query("website", :xpath, "/jcr:root/path//element(*, mgnl:page)")
-          result.should be_kind_of(Array)
+          expect(result).to be_kind_of(Array)
         end
       end
     end
