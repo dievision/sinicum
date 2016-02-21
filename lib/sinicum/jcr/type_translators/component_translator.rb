@@ -17,7 +17,7 @@ module Sinicum
         end
 
         def self.instance_from_template_name(json)
-          class_name = split_template_parts(json).join("/").classify
+          class_name = split_template_parts(json).join("/").gsub("-", "_").classify
           class_name.constantize.new(json_response: json)
         rescue NameError
           nil
