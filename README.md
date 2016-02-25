@@ -124,7 +124,7 @@ Valid options are:
 
 Valid languages are:
 - xpath
-- jcr-sql2
+- JCR-SQL2
 - sql
 
 You can get a quick overview at the [JCR-Query cheat sheet](http://wiki.magnolia-cms.com/display/WIKI/JCR+Query+Cheat+Sheet)
