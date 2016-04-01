@@ -1,10 +1,9 @@
 sudo: false
 language: ruby
 rvm:
-  - "1.9.3"
   - "2.1"
   - "2.2"
-  - "jruby-19mode"
+  - "2.3.0"
 before_script:
   - export TZ='Europe/Berlin'
 script: bundle exec rake
@@ -13,6 +12,7 @@ gemfile:
   - gemfiles/Gemfile-3.2
   - gemfiles/Gemfile-4.0
   - gemfiles/Gemfile-4.1
+  - gemfiles/Gemfile-4.2
 addons:
   code_climate:
     repo_token: 97304c6d5e6017ffcf39bb7220a40d37062205ae6b8989a712ac0631b9122111

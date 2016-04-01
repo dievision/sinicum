@@ -47,7 +47,7 @@ In order to use the Sinicum Imaging functionality, you will need to install [Ima
 
     $ brew install imagemagick
 
-##### Please note: Sinicum works with Rails >= 3.2, but we recommend Rails 4. 
+##### Please note: Sinicum works with Rails >= 3.2, but we recommend Rails 4. We also only support Ruby versions >= 2.1.
 
 ### Installation
 In order to set up Sinicum in a Rails project, you need to add `sinicum-runner` to your Gemfile:
