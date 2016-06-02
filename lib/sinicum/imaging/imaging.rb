@@ -38,20 +38,8 @@ module Sinicum
           if convert_file?
             result = perform_conversion
           else
-            format = converter.format
-            mime_type =
-              case format
-              when "gif" then "image/gif"
-              when "png" then "image/png"
-              when "ogv" then "video/ogg"
-              when "mp4" then "video/mp4"
-              when "m4a" then "audio/mp4"
-              when "ogg" then "audio/ogg"
-              when "webm" then "audio/webm"
-              else "image/jpeg"
-              end
             result = RenderResult.new(
-              file_rendered, mime_type,
+              file_rendered, mime_type_for_document,
               "#{@doc[:fileName]}.#{@doc[:extension]}", fingerprint)
           end
         end
@@ -124,6 +112,23 @@ module Sinicum
           Sinicum::Jcr::Node.stream_attribute(@doc.jcr_workspace, @doc.path, "jcr:data", tempfile)
         rescue => e
           logger.error("Cannot write to tempfile: " + e.to_s)
+        end
+      end
+
+      def mime_type_for_document
+        if @image.is_a? Sinicum::Jcr::Dam::Document
+          @doc["jcr:mimeType"]
+        else
+          case converter.format
+          when "gif" then "image/gif"
+          when "png" then "image/png"
+          when "ogv" then "video/ogg"
+          when "mp4" then "video/mp4"
+          when "m4a" then "audio/mp4"
+          when "ogg" then "audio/ogg"
+          when "webm" then "audio/webm"
+          else "image/jpeg"
+          end
         end
       end
 
