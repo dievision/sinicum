@@ -116,20 +116,7 @@ module Sinicum
       end
 
       def mime_type_for_document
-        if @image.is_a? Sinicum::Jcr::Dam::Document
-          @doc["jcr:mimeType"]
-        else
-          case converter.format
-          when "gif" then "image/gif"
-          when "png" then "image/png"
-          when "ogv" then "video/ogg"
-          when "mp4" then "video/mp4"
-          when "m4a" then "audio/mp4"
-          when "ogg" then "audio/ogg"
-          when "webm" then "audio/webm"
-          else "image/jpeg"
-          end
-        end
+        Rack::Mime.mime_type("." + @image.extension)
       end
 
       def convert_file?
