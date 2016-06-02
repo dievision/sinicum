@@ -104,8 +104,7 @@ module Sinicum
             FileUtils.mv(out_file.path, file_rendered)
             FileUtils.chmod(0644, file_rendered)
             RenderResult.new(
-              file_rendered, @doc["jcr:mimeType"],
-              "#{@doc[:fileName]}.#{@doc[:extension]}", fingerprint)
+              file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
           rescue => e
             FileUtils.rm(out_file.path) if File.exist?(out_file.path)
             raise e
