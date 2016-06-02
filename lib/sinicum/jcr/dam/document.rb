@@ -33,6 +33,10 @@ module Sinicum
           [properties[:fileName], properties[:extension]].join(".") if properties
         end
 
+        def extension
+          properties[:extension] if properties
+        end
+
         def mime_type
           properties[:'jcr:mimeType'] if properties
         end

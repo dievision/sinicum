@@ -43,7 +43,7 @@ module Sinicum
         end
 
         it "should use no authentication if no user and password is configured" do
-          stub_request(:get, "user:pass@content.dievision.de/sinicum-rest/website/home")
+          stub_request(:get, "content.dievision.de/sinicum-rest/website/home")
             .to_return(body: api_response, headers: { "Content-Type" => "application/json" })
           ApiQueries.configure_jcr = {
             host: "content.dievision.de",
