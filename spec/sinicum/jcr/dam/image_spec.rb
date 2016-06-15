@@ -28,8 +28,29 @@ module Sinicum
           end
 
           it "should return an empty string if no subject is given" do
-            allow(subject).to receive(:[]).with(:subject).and_return(nil)
+            allow(subject).to receive(:[]).and_return(nil)
             expect(subject.alt).to eq("")
+          end
+
+          context "localized tags" do
+            before(:example) {
+              allow(subject).to receive(:localized_tags?).and_return(true)
+            }
+
+            it "should take the localized alt attribute from the subject" do
+              I18n.locale = :de
+              expect(subject.alt).to eq("Ein Subjekt")
+            end
+
+            it "should return the caption if no subject is given" do
+              I18n.locale = :fr
+              expect(subject.alt).to eq("Caption in french")
+            end
+
+            it "should return an empty string if no subject is given" do
+              I18n.locale = :ch
+              expect(subject.alt).to eq("")
+            end
           end
         end
 

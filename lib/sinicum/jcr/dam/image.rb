@@ -12,7 +12,11 @@ module Sinicum
         end
 
         def alt
-          self[:subject] || ""
+          if localized_tags?
+            self[:"subject_#{I18n.locale}"] || self[:"caption_#{I18n.locale}"] || ""
+          else
+            self[:subject] || self[:caption] || ""
+          end
         end
 
         private
@@ -33,6 +37,10 @@ module Sinicum
             value = image_size_converter(converter_name).send(dimension) if converter_name
           end
           value
+        end
+
+        def localized_tags?
+          !!(Sinicum::Imaging.app_from_workspace("dam")['localized_image_tags'])
         end
       end
     end
