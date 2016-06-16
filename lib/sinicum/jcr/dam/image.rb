@@ -13,9 +13,10 @@ module Sinicum
 
         def alt
           if localized_tags?
-            self[:"subject_#{I18n.locale}"] || self[:"caption_#{I18n.locale}"] || ""
+            self[:"subject_#{I18n.locale}"].presence ||
+              self[:"caption_#{I18n.locale}"].presence || ""
           else
-            self[:subject] || self[:caption] || ""
+            self[:subject].presence || self[:caption].presence || ""
           end
         end
 
