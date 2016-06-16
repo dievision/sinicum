@@ -107,7 +107,7 @@ module Sinicum
     def image_attributes(image, options)
       attributes = {}
       attributes[:src] = adjust_to_asset_host(image.path(converter: options[:renderer]))
-      attributes[:alt] = image[:subject].present? ? image[:subject] : ""
+      attributes[:alt] = image.alt
       [:width, :height].each do |key|
         if options[key]
           attributes[key] = options[key]
