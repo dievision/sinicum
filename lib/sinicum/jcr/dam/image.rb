@@ -12,7 +12,7 @@ module Sinicum
         end
 
         def alt
-          if localized_tags?
+          if localized_tags? && I18n.locale != :en
             self[:"subject_#{I18n.locale}"].presence ||
               self[:"caption_#{I18n.locale}"].presence || ""
           else

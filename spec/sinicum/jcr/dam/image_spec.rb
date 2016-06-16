@@ -37,6 +37,10 @@ module Sinicum
               allow(subject).to receive(:localized_tags?).and_return(true)
             }
 
+            it "should use the default subject field for en" do
+              expect(subject.alt).to eq("A subject")
+            end
+
             it "should take the localized alt attribute from the subject" do
               I18n.locale = :de
               expect(subject.alt).to eq("Ein Subjekt")
