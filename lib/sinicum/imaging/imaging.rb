@@ -39,8 +39,7 @@ module Sinicum
             result = perform_conversion
           else
             result = RenderResult.new(
-              file_rendered, mime_type_for_document,
-              "#{@doc[:fileName]}.#{@doc[:extension]}", fingerprint)
+              file_rendered, mime_type_for_document, @doc[:fileName], fingerprint)
           end
         end
         result
