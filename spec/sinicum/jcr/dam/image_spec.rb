@@ -51,6 +51,11 @@ module Sinicum
               expect(subject.alt).to eq("Caption in french")
             end
 
+            it "should only take the language - not the country" do
+              I18n.locale = :'fr-BE'
+              expect(subject.alt).to eq("Caption in french")
+            end
+
             it "should return an empty string if no subject is given" do
               I18n.locale = :ch
               expect(subject.alt).to eq("")
