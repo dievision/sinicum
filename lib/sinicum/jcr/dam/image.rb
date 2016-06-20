@@ -12,9 +12,9 @@ module Sinicum
         end
 
         def alt
-          if localized_tags? && I18n.locale != :en
-            self[:"subject_#{I18n.locale}"].presence ||
-              self[:"caption_#{I18n.locale}"].presence || ""
+          if localized_tags? && language != 'en'
+            self[:"subject_#{language}"].presence ||
+              self[:"caption_#{language}"].presence || ""
           else
             self[:subject].presence || self[:caption].presence || ""
           end
@@ -42,6 +42,10 @@ module Sinicum
 
         def localized_tags?
           !!(Sinicum::Imaging.app_from_workspace("dam")['localized_image_tags'])
+        end
+
+        def language
+          @language ||= I18n.locale.to_s[0,2]
         end
       end
     end
