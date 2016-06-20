@@ -45,7 +45,7 @@ module Sinicum
         end
 
         def language
-          I18n.locale.to_s[0,2]
+          @language ||= I18n.locale.to_s[0,2]
         end
       end
     end
