@@ -18,13 +18,13 @@ module Sinicum
         NavigationElementList.new(@elements)
       end
 
-      def self.children(base_node_or_path, depth,
-          navigation_element_class = DefaultNavigationElement)
-        new(:children, base_node_or_path, navigation_element_class, depth: depth)
+      def self.children(base_node_or_path, depth, navigation_element_class = nil)
+        new(:children, base_node_or_path,
+          navigation_element_class || DefaultNavigationElement, depth: depth)
       end
 
-      def self.parents(base_node_or_path, navigation_element_class = DefaultNavigationElement)
-        new(:parents, base_node_or_path, navigation_element_class)
+      def self.parents(base_node_or_path, navigation_element_class = nil)
+        new(:parents, base_node_or_path, navigation_element_class || DefaultNavigationElement)
       end
 
       private
