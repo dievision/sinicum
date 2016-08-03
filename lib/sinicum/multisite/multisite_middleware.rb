@@ -14,7 +14,7 @@ module Sinicum
             node = node_from_primary_domain(request.host)
             if node.nil?
               node = node_from_alias_domains(request.host)
-              return redirect("http://#{node[:primary_domain]}#{request.fullpath}") if node
+              return redirect("#{node[:primary_domain]}#{request.fullpath}") if node
             else
               env['rack.session'][:multisite_root] = node[:root_node]
             end

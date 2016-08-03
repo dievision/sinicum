@@ -250,7 +250,7 @@ In order to deliver as many websites as you want from one Magnolia/Sinicum insta
 A site-definition consists of 3 attributes:
 
     root_node: The node on the root level of magnolia, that should be the base for the website.
-    primary_domain: The domain, that this website should be accessible from.
+    primary_domain: The domain, that this website should be accessible from. (complete with http(s)://)
     alias_domains: An array of domains, that will result in a redirect to the primary_domain.
 
 These site-definitions are then matched against the current request path or the domain, depending on which environment you are using and saved into the session.
