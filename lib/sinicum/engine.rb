@@ -18,6 +18,7 @@ module Sinicum
 
     initializer "sinicum.add_middleware" do |app|
       app.middleware.insert_after ActionDispatch::Callbacks, Sinicum::Imaging::ImagingMiddleware
+      app.middleware.use Sinicum::Multisite::MultisiteMiddleware
     end
   end
 end
