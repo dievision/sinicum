@@ -28,6 +28,8 @@ Or install it yourself as:
 
 # Installation for Rails
 
+#### Please note: Sinicum works with Rails >= 4.2. We also only support Ruby versions >= 2.1.
+
 ### Requirements
 Please make sure to have [Maven 3.x](http://maven.apache.org) and PostgreSQL installed
 on your system. If you are using OS X and Homebrew, run
@@ -46,8 +48,6 @@ to your Gemfile.
 In order to use the Sinicum Imaging functionality, you will need to install [Imagemagick](http://www.imagemagick.org/) on your machine. If you are using OS X and Homebrew you can do this with
 
     $ brew install imagemagick
-
-##### Please note: Sinicum works with Rails >= 3.2, but we recommend Rails 4. We also only support Ruby versions >= 2.1.
 
 ### Installation
 In order to set up Sinicum in a Rails project, you need to add `sinicum-runner` to your Gemfile:
