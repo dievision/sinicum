@@ -5,7 +5,7 @@
             "sinicum.example.de",
             "sinicum.example.com"
          ],
-         "primary_domain":"magnolia.example.de",
+         "primary_domain":"http://magnolia.example.de",
          "root_node":"/dievision"
       },
       "nodes":{
