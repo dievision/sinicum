@@ -1,0 +1,39 @@
+[  
+   {  
+      "properties":{  
+         "primary_domain":"http://test.com",
+         "root_node":"/sinicum"
+      },
+      "nodes":{  
+
+      },
+      "meta":{  
+         "name":"0",
+         "path":"/0",
+         "superTypes":[  
+            "mix:created",
+            "mix:referenceable",
+            "nt:base",
+            "nt:hierarchyNode",
+            "mgnl:activatable",
+            "mgnl:content",
+            "mgnl:created",
+            "mgnl:lastModified",
+            "mgnl:renderable",
+            "mgnl:versionable"
+         ],
+         "mixinNodeTypes":[  
+
+         ],
+         "workspace":"multisite",
+         "depth":1,
+         "mgnl:lastModified":"2016-08-01T15:37:03.042+02:00",
+         "mgnl:lastModifiedBy":"superuser",
+         "mgnl:created":"2016-08-01T14:46:43.759+02:00",
+         "mgnl:createdBy":"superuser",
+         "jcr:primaryType":"mgnl:multisite",
+         "jcr:created":"2016-08-01T14:46:43.759+02:00",
+         "jcr:uuid":"76a8a6ce-25a6-4a05-8e23-2a6679777a81"
+      }
+   }
+]

@@ -1,17 +1,13 @@
 sudo: false
 language: ruby
 rvm:
-  - "2.1"
-  - "2.2"
+  - "2.2.2"
   - "2.3.0"
 before_script:
   - export TZ='Europe/Berlin'
 script: bundle exec rake
 gemfile:
   - Gemfile
-  - gemfiles/Gemfile-3.2
-  - gemfiles/Gemfile-4.0
-  - gemfiles/Gemfile-4.1
   - gemfiles/Gemfile-4.2
 addons:
   code_climate:

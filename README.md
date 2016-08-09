@@ -28,6 +28,8 @@ Or install it yourself as:
 
 # Installation for Rails
 
+#### Please note: Sinicum works with Rails 4.2. We also only support Ruby versions >= 2.2.
+
 ### Requirements
 Please make sure to have [Maven 3.x](http://maven.apache.org) and PostgreSQL installed
 on your system. If you are using OS X and Homebrew, run
@@ -46,8 +48,6 @@ to your Gemfile.
 In order to use the Sinicum Imaging functionality, you will need to install [Imagemagick](http://www.imagemagick.org/) on your machine. If you are using OS X and Homebrew you can do this with
 
     $ brew install imagemagick
-
-##### Please note: Sinicum works with Rails >= 3.2, but we recommend Rails 4. We also only support Ruby versions >= 2.1.
 
 ### Installation
 In order to set up Sinicum in a Rails project, you need to add `sinicum-runner` to your Gemfile:
@@ -242,6 +242,33 @@ In this example, we have configured two apps that will be able to serve assets v
 - node_type - The node_type that has been configured for nodes from the content app
 
 This is all you need to know for a quick start. More details will be added soon.
+
+## Multisite
+
+In order to deliver as many websites as you want from one Magnolia/Sinicum installation, we introduced the multisite feature. Basically it's a content app, which lets you define `site-definitions`, representing one website.
+
+A site-definition consists of 3 attributes:
+
+    root_node: The node on the root level of magnolia, that should be the base for the website.
+    primary_domain: The domain, that this website should be accessible from. (complete with http(s)://)
+    alias_domains: An array of domains, that will result in a redirect to the primary_domain.
+
+These site-definitions are then matched against the current request path or the domain, depending on which environment you are using and saved into the session.
+
+To enable the domain matching, you will have to add
+    Rails.configuration.x.multisite_production = true
+to your `production.rb` environment file.
+
+Also you will have to add the Multisite Content App to your Magnolia Project.
+
+    <dependency>
+      <groupId>com.dievision</groupId>
+      <artifactId>multisite-app</artifactId>
+      <version>1.5.3</version>
+    </dependency>
+
+Now you should be ready to use Multisite.
+For more details on how the matching process is working, have a look in the actual [MultisiteMiddleware](https://github.com/dievision/sinicum/blob/master/lib/sinicum/multisite/multisite_middleware.rb).
 
 ## Helpers
 
