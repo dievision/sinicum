@@ -44,12 +44,12 @@ module Sinicum
 
       private
       def node_from_alias_domains(domain)
-        query = "select * from mgnl:multisite where alias_domains = '#{domain}'"
+        query = "select * from mgnl:multisite where alias_domains LIKE '%//#{domain}%'"
         Sinicum::Jcr::Node.query(:multisite, :sql, query).first
       end
 
       def node_from_primary_domain(domain)
-        query = "select * from mgnl:multisite where primary_domain = '#{domain}'"
+        query = "select * from mgnl:multisite where primary_domain LIKE '%//#{domain}%'"
         Sinicum::Jcr::Node.query(:multisite, :sql, query).first
       end
 
