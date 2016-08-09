@@ -62,7 +62,7 @@ module Sinicum
       end
 
       def root_from_path(path)
-        path.gsub(/(^\/.*?)\/.*/, '\1')
+        path.gsub(/(^\/.*?)\/.*/, '\1').gsub(".html", "")
       end
 
       def rails_path?(env)
