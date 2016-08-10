@@ -67,19 +67,13 @@ module Sinicum
       end
 
       def multisite_ignored_path?(env)
-        multisite_ignored_paths
+        Rails.configuration.x.multisite_ignored_paths
           .collect{ |x| !!(x.match(env['PATH_INFO'])) }
           .include?(true)
       end
 
       def redirect(location)
         [301, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
-      end
-
-      def multisite_ignored_paths
-        Rails.configuration.x.multisite_ignored_paths.is_a?(Array) ?
-          Rails.configuration.x.multisite_ignored_paths :
-          [/^\/assets/]
       end
     end
   end

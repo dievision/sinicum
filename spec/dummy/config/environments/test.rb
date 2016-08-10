@@ -32,5 +32,5 @@ Dummy::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
-  Rails.configuration.x.multisite_ignored_paths = [/^\/assets/, /^\/sidekiq/]
+  Rails.configuration.x.multisite_ignored_paths = [/^\/sidekiq/]
 end
