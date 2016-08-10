@@ -108,6 +108,33 @@ module Sinicum
           expect(response).to have_http_status(:ok)
           expect(request.path).to eq("/home")
         end
+
+        it "should be bypassed because of the path" do
+          host! "magnolia.example.de"
+          stub_request(:get, /.*sinicum-rest\/multisite.*/)
+            .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
+
+          get '/sidekiq'
+          expect(response).to have_http_status(:ok)
+          expect(request.path).to eq("/sidekiq")
+          get '/home'
+          expect(response).to have_http_status(:ok)
+          expect(request.path).to eq("/dievision/home")
+        end
+
+        it "should still bypass assets if config is not set" do
+          host! "magnolia.example.de"
+          Rails.configuration.x.multisite_ignored_paths = [Regexp.quote(Rails.configuration.assets.prefix)]
+          stub_request(:get, /.*sinicum-rest\/multisite.*/)
+            .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
+
+          get '/sidekiq'
+          expect(response).to have_http_status(:ok)
+          expect(request.path).to eq("/dievision/sidekiq")
+          get '/assets'
+          expect(response).to have_http_status(:ok)
+          expect(request.path).to eq("/assets")
+        end
       end
     end
 

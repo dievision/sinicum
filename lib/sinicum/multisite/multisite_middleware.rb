@@ -9,7 +9,7 @@ module Sinicum
       def call(env)
         request = Rack::Request.new(env)
         path = request.path
-        unless rails_path?(env)
+        unless multisite_ignored_path?(env)
           if Rails.configuration.x.multisite_production == true
             node = node_from_primary_domain(request.host)
             if node.nil?
@@ -54,7 +54,7 @@ module Sinicum
       end
 
       def adjust_paths(env, root_path)
-        return env if rails_path?(env) || root_path.nil?
+        return env if multisite_ignored_path?(env) || root_path.nil?
         return env if env['PATH_INFO'].start_with?(root_path) && Rails.configuration.x.multisite_production != true
         %w(REQUEST_PATH PATH_INFO REQUEST_URI ORIGINAL_FULLPATH).each do |env_path|
           env[env_path] = "#{root_path}#{env['PATH_INFO']}"
@@ -66,9 +66,9 @@ module Sinicum
         path.gsub(/(^\/.*?)\/.*/, '\1').gsub(".html", "")
       end
 
-      def rails_path?(env)
-        %w(assets)
-          .collect{ |x| env['PATH_INFO'].start_with?("/#{x}") }
+      def multisite_ignored_path?(env)
+        Rails.configuration.x.multisite_ignored_paths
+          .collect{ |x| !!(x.match(env['PATH_INFO'])) }
           .include?(true)
       end
 

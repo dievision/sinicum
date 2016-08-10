@@ -19,6 +19,12 @@ module Sinicum
     initializer "sinicum.add_middleware" do |app|
       app.middleware.insert_after ActionDispatch::Callbacks, Sinicum::Imaging::ImagingMiddleware
       app.middleware.use Sinicum::Multisite::MultisiteMiddleware
+      if app.config.x.multisite_ignored_paths.is_a?(Array)
+        app.config.x.multisite_ignored_paths << Regexp.quote(Rails.configuration.assets.prefix)
+      else
+        app.config.x.multisite_ignored_paths = [Regexp.quote(Rails.configuration.assets.prefix)]
+      end
     end
+
   end
 end
