@@ -67,13 +67,17 @@ module Sinicum
       end
 
       def rails_path?(env)
-        %w(assets)
+        bypass_paths
           .collect{ |x| env['PATH_INFO'].start_with?("/#{x}") }
           .include?(true)
       end
 
       def redirect(location)
         [301, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
+      end
+
+      def bypass_paths
+        Rails.configuration.x.multisite_bypass_paths.is_a?(Array) ? Rails.configuration.x.multisite_bypass_paths : %w(assets)
       end
     end
   end

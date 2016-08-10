@@ -31,4 +31,6 @@ Dummy::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  Rails.configuration.x.multisite_bypass_paths = %w(assets sidekiq)
 end
