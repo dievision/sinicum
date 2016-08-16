@@ -42,7 +42,7 @@ module Sinicum
             end
             if env['rack.session'][:multisite_root] && on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
               # Redirect to the fullpath without the root_path for consistency
-              return redirect(request.fullpath.gsub(env['rack.session'][:multisite_root], ''))
+              return redirect(gsub_root_path(env['rack.session'][:multisite_root], request.fullpath))
             end
           end
         end
@@ -63,6 +63,11 @@ module Sinicum
 
       def on_root_path?(root_path, path)
         path.start_with?(root_path) if root_path
+      end
+
+      def gsub_root_path(root_path, path)
+        clean_path = path.gsub(root_path, '')
+        clean_path.empty? ? '/' : clean_path
       end
 
       def adjust_paths(env, root_path)
