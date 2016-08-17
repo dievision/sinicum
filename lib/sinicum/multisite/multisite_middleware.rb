@@ -62,7 +62,7 @@ module Sinicum
       end
 
       def on_root_path?(root_path, path)
-        path.start_with?("#{root_path}/") if root_path
+        path.match(/^(#{root_path})\//) if root_path
       end
 
       def gsub_root_path(root_path, path)

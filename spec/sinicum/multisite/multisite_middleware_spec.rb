@@ -35,6 +35,10 @@ module Sinicum
           get '/dievision'
           expect(request.path).to eq("/dievision")
           expect(request.session[:multisite_root]).to eq("/dievision")
+
+          get '/dievision/'
+          expect(request.path).to eq("/dievision/")
+          expect(request.session[:multisite_root]).to eq("/dievision")
         end
 
         it "should trigger multisite for a rootnode and a subnode and redirect" do
