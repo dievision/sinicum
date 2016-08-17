@@ -31,10 +31,13 @@ module Sinicum
           expect(request.session[:multisite_root]).to eq("/dievision")
         end
 
-        it "should trigger multisite for a rootnode and redirect" do
+        it "should trigger multisite for a rootnode and not redirect" do
           get '/dievision'
           expect(request.path).to eq("/dievision")
-          expect(response).to redirect_to("/")
+          expect(request.session[:multisite_root]).to eq("/dievision")
+
+          get '/dievision/'
+          expect(request.path).to eq("/dievision/")
           expect(request.session[:multisite_root]).to eq("/dievision")
         end
 
