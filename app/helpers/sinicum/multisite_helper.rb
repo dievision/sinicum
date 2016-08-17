@@ -9,7 +9,7 @@ module Sinicum
     def url_for(options = nil)
       url = sincum_url_for(options)
       if session[:multisite_root]
-        url.sub(/^(#{session[:multisite_root]})\//, '/')
+        url.sub(/^(#{session[:multisite_root]})(\/|)/, '/')
       else
         url
       end
