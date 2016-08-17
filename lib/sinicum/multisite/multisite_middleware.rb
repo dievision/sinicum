@@ -62,7 +62,7 @@ module Sinicum
       end
 
       def on_root_path?(root_path, path)
-        path.start_with?(root_path) if root_path
+        path.start_with?("#{root_path}/") if root_path
       end
 
       def gsub_root_path(root_path, path)
@@ -72,6 +72,7 @@ module Sinicum
 
       def adjust_paths(env, root_path)
         return env if multisite_ignored_path?(env) || root_path.nil?
+        return env if env['PATH_INFO'].start_with?(root_path) && Rails.configuration.x.multisite_production != true
         %w(REQUEST_PATH PATH_INFO REQUEST_URI ORIGINAL_FULLPATH).each do |env_path|
           env[env_path] = "#{root_path}#{env['PATH_INFO']}"
         end
