@@ -84,7 +84,7 @@ module Sinicum
         title << title_delimiter if options[:title_suffix].present?
       end
       title << options[:title_suffix] if options[:title_suffix].present?
-      title
+      title.html_safe
     end
 
     def meta_simple_meta_tag(attribute_name, key)
