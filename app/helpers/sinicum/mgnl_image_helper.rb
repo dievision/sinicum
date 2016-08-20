@@ -5,7 +5,7 @@ module Sinicum
 
     def mgnl_asset_path(key_or_object = nil, options = {})
       options[:workspace] = "dam" if options[:workspace].nil?
-      mgnl_path(key_or_object, options)
+      adjust_to_asset_host(mgnl_path(key_or_object, options))
     end
 
     def mgnl_img(key_or_object, options = {})
