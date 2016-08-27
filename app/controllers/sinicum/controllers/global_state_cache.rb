@@ -55,9 +55,6 @@ module Sinicum
           if @controller.respond_to?(:global_state_cache_expiration_time)
             expiration_time = @controller.global_state_cache_expiration_time
           end
-          Rails.logger.info "=" * 80
-          Rails.logger.info "Expiration Time: #{expiration_time}"
-          Rails.logger.info "=" * 80
           Rails.cache.write(cache_key, cache_content, expires_in: expiration_time)
         end
       end
