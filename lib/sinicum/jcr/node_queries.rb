@@ -14,13 +14,17 @@ module Sinicum
         include QuerySanitizer
 
         def find_by_path(workspace, path)
-          url = construct_url(workspace, nil, path)
-          return_first_item(url)
+          Sinicum::Cache::ThreadLocalCache.fetch(["node-path", workspace, path].join("-")) do
+            url = construct_url(workspace, nil, path)
+            return_first_item(url)
+          end
         end
 
         def find_by_uuid(workspace, uuid)
-          url = construct_url(workspace, UUID_PREFIX, uuid)
-          return_first_item(url)
+          Sinicum::Cache::ThreadLocalCache.fetch(["node-uuid", workspace, uuid].join("-")) do
+            url = construct_url(workspace, UUID_PREFIX, uuid)
+            return_first_item(url)
+          end
         end
 
         def query(workspace, language, query, parameters = nil, options = {})
