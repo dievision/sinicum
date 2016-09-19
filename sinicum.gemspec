@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 require "sinicum/version"
 
@@ -12,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Use Magnolia as a CMS backend in a Rails application}
   s.description = %q{Provides the necessary functionality to work with Magnolia-managed content in a Rails application.}
 
-  s.add_dependency('rails', '~> 4.2')
+  s.add_dependency('rails', '< 6')
   s.add_dependency('httpclient', '~> 2.7')
   s.add_dependency('multi_json', '~> 1.11')
   s.add_development_dependency('rspec-rails', '~> 3.4')
@@ -21,6 +20,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency('webmock')
   s.add_development_dependency('rubocop')
   s.add_development_dependency('codeclimate-test-reporter')
+  s.add_development_dependency('rails-controller-testing')
+  s.add_development_dependency('sass-rails')
+  s.add_development_dependency('uglifier')
+  s.add_development_dependency('jquery-rails')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
