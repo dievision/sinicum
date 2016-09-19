@@ -26,7 +26,7 @@ module Sinicum
         if imaging_file.result?
           @path = imaging_file.path
           available = begin
-                        F.file?(@path) && F.readable?(@path)
+                        ::File.file?(@path) && ::File.readable?(@path)
                       rescue SystemCallError
                         false
                       end
