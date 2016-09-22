@@ -27,6 +27,12 @@ module Sinicum
           end
         end
 
+        # Supports comma separated uuids at the moment
+        def find_by_uuids(workspace, uuids)
+          uuid_array = uuids.is_a?(Array) ? uuids : uuids.split(',').map(&:strip)
+          query(workspace, :'JCR-SQL2', construct_query_for_uuids(uuid_array))
+        end
+
         def query(workspace, language, query, parameters = nil, options = {})
           url = "/#{workspace}/_query"
           sanitized = sanitize_query(language, query, parameters)
@@ -98,6 +104,14 @@ module Sinicum
           action = PATH_DELIMITER + action if action && action[0] && action[0] != PATH_DELIMITER
           path = PATH_DELIMITER + path if path && path[0] && path[0] != PATH_DELIMITER
           "/#{workspace}#{action}#{path}"
+        end
+
+        def construct_query_for_uuids(uuids)
+          query_string = "SELECT * FROM [nt:base] WHERE " #[jcr:uuid] = '4374582d-6e38-492f-8d02-ec104cef731b' OR [jcr:uuid] = '382a97fa-b587-41c8-b61e-fb554dc4a7c9'"
+          uuids.each do |uuid|
+            query_string << "[jcr:uuid] = '#{uuid}' OR "
+          end
+          query_string[0, -5]
         end
       end
     end
