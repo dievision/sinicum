@@ -107,16 +107,8 @@ module Sinicum
           expect(result).to be_kind_of(Array)
         end
 
-        it "should query for multiple uuids separated by comma" do
-          result = Node.find_by_uuids("website", "995a776f-242e-453a-9422-d0b7e8e9c068,
-            bba4bfcd-8347-40d0-9bb6-504ddde1c5a1")
-          expect(result).to be_kind_of(Array)
-          expect(result.first.uuid).to eq("995a776f-242e-453a-9422-d0b7e8e9c068")
-          expect(result.second.uuid).to eq("bba4bfcd-8347-40d0-9bb6-504ddde1c5a1")
-        end
-
         it "should query for multiple uuids in an array" do
-          result = Node.find_by_uuids("website", ["995a776f-242e-453a-9422-d0b7e8e9c068",
+          result = Node.find_by_uuid("website", ["995a776f-242e-453a-9422-d0b7e8e9c068",
             "bba4bfcd-8347-40d0-9bb6-504ddde1c5a1"])
           expect(result).to be_kind_of(Array)
           expect(result.first.uuid).to eq("995a776f-242e-453a-9422-d0b7e8e9c068")

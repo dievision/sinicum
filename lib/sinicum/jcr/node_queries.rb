@@ -21,15 +21,14 @@ module Sinicum
         end
 
         def find_by_uuid(workspace, uuid)
-          Sinicum::Cache::ThreadLocalCache.fetch(["node-uuid", workspace, uuid].join("-")) do
-            url = construct_url(workspace, UUID_PREFIX, uuid)
-            return_first_item(url)
+          if uuid.is_a?(Array)
+            query(workspace, :'JCR-SQL2', construct_query_for_uuids(uuid))
+          else
+            Sinicum::Cache::ThreadLocalCache.fetch(["node-uuid", workspace, uuid].join("-")) do
+              url = construct_url(workspace, UUID_PREFIX, uuid)
+              return_first_item(url)
+            end
           end
-        end
-
-        def find_by_uuids(workspace, uuids)
-          uuid_array = uuids.is_a?(Array) ? uuids : uuids.split(',').map(&:strip)
-          query(workspace, :'JCR-SQL2', construct_query_for_uuids(uuid_array))
         end
 
         def query(workspace, language, query, parameters = nil, options = {})
