@@ -27,7 +27,6 @@ module Sinicum
           end
         end
 
-        # Supports comma separated uuids at the moment
         def find_by_uuids(workspace, uuids)
           uuid_array = uuids.is_a?(Array) ? uuids : uuids.split(',').map(&:strip)
           query(workspace, :'JCR-SQL2', construct_query_for_uuids(uuid_array))
