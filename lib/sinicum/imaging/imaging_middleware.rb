@@ -22,6 +22,7 @@ module Sinicum
           return fail(405, "Method Not Allowed")
         end
         request = Rack::Request.new(env)
+
         imaging_file = ImagingFile.new(request.path_info)
         if imaging_file.result?
           @path = imaging_file.path
@@ -37,7 +38,7 @@ module Sinicum
           if Rails.configuration.action_controller.perform_caching
             @headers["Cache-Control"] = "max-age=#{imaging_file.cache_time}, public"
           end
-          serving(env)
+          serving(request, @path)
         else
           fail(404, "File not found: #{request.path_info}")
         end
