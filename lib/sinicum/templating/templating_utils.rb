@@ -7,7 +7,7 @@ module Sinicum
         result = {}
         parts = path.split(":")
         result[:module] = parts[0]
-        result[:type] = result_type(parts)        
+        result[:type] = result_type(parts)
         result[:name] = parts[1][parts[1].index("/") + 1, parts[1].length]
         result
       end
