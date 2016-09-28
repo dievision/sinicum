@@ -3,7 +3,7 @@ module Sinicum
     class MultisiteMiddleware
 
       def initialize(app)
-        @app = app      
+        @app = app
       end
 
       def call(env)
@@ -20,21 +20,25 @@ module Sinicum
               env['rack.session'][:multisite_root] = node[:root_node]
             end
           else # author/dev
-            if env['rack.session'][:multisite_root] && on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
+            if env['rack.session'][:multisite_root] &&
+                on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
               # Redirect to the fullpath without the root_path for consistency
-              return redirect(gsub_root_path(env['rack.session'][:multisite_root], request.fullpath))
+              return redirect(gsub_root_path(
+                env['rack.session'][:multisite_root], request.fullpath))
             end
             query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
             nodes = Sinicum::Jcr::Node.query(:multisite, :sql, query)
             if nodes.empty?
               if env['rack.session'][:multisite_root].nil?
-                # If the root node has not been found, it will check for a matching child node of any root node
-                # The first one will be taken
+                # If the root node has not been found, it will check
+                # for a matching child node of any root node. The first
+                # one will be taken.
                 query = "select * from mgnl:page where jcr:path LIKE '/%#{path}'"
                 website_nodes = Sinicum::Jcr::Node.query(:website, :sql, query)
                 website_node = website_nodes.select{ |x| x.path =~ /^\/[a-z]*?#{path}$/ }.first
                 if website_node
-                  query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(website_node.path)}'"
+                  query = "select * from mgnl:multisite where root_node " \
+                    "LIKE '#{root_from_path(website_node.path)}'"
                   node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
                   env['rack.session'][:multisite_root] = node[:root_node]
                 end
@@ -46,19 +50,24 @@ module Sinicum
             end
           end
         end
-        status, headers, response = @app.call(adjust_paths(env, env['rack.session'][:multisite_root]))
+        status, headers, response =
+          @app.call(adjust_paths(env, env['rack.session'][:multisite_root]))
         [status, headers, response]
       end
 
       private
       def node_from_alias_domains(domain)
-        query = "select * from mgnl:multisite where alias_domains LIKE '%//#{domain}%'"
-        Sinicum::Jcr::Node.query(:multisite, :sql, query).first
+        Rails.cache.fetch("sinicum-multisite-node-alias-#{domain}", expires: 1.hour) do
+          query = "select * from mgnl:multisite where alias_domains LIKE '%//#{domain}%'"
+          Sinicum::Jcr::Node.query(:multisite, :sql, query).first
+        end
       end
 
       def node_from_primary_domain(domain)
-        query = "select * from mgnl:multisite where primary_domain LIKE '%//#{domain}%'"
-        Sinicum::Jcr::Node.query(:multisite, :sql, query).first
+        Rails.cache.fetch("sinicum-multisite-node-primary-#{domain}", expires: 1.hour) do
+          query = "select * from mgnl:multisite where primary_domain LIKE '%//#{domain}%'"
+          Sinicum::Jcr::Node.query(:multisite, :sql, query).first
+        end
       end
 
       def on_root_path?(root_path, path)
@@ -72,7 +81,8 @@ module Sinicum
 
       def adjust_paths(env, root_path)
         return env if multisite_ignored_path?(env) || root_path.nil?
-        return env if env['PATH_INFO'].start_with?(root_path) && Rails.configuration.x.multisite_production != true
+        return env if env['PATH_INFO'].start_with?(root_path) &&
+          Rails.configuration.x.multisite_production != true
         %w(REQUEST_PATH PATH_INFO REQUEST_URI ORIGINAL_FULLPATH).each do |env_path|
           env[env_path] = "#{root_path}#{env['PATH_INFO']}"
         end
