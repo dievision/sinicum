@@ -57,6 +57,10 @@ module Sinicum
         !!@persisted
       end
 
+      def cache_key
+        [id, updated_at, jcr_workspace].join("-")
+      end
+
       def [](property_name)
         result = nil
         property_key = property_name.to_s
