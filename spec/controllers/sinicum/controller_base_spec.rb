@@ -67,6 +67,10 @@ module Sinicum
       it "should cut when url_for is used" do
         expect(controller.url_for("/dievision/test")).to eq("/test")
       end
+
+      it "should not cut" do
+        expect(asd_path("test")).to eq("/asd/test")
+      end
     end
   end
 end

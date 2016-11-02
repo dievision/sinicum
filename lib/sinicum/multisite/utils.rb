@@ -3,7 +3,11 @@ module Sinicum
     class Utils
       def self.all_root_paths
         nodes = Sinicum::Jcr::Node.query(:multisite, :sql, "select * from mgnl:multisite'")
-        nodes.collect{ |node| node[:root_node] }
+        if !(Rails.application.config.x.multisite_disabled == true)
+          nodes.collect{ |node| node[:root_node] }
+        else
+          []
+        end
       end
     end
   end
@@ -34,6 +38,7 @@ module ActionDispatch
 
       def url_for(options = nil)
         regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+        puts regexp
         sincum_url_for(options).sub(regexp, '/')
       end
     end

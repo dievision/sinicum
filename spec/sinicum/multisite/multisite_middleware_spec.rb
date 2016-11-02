@@ -76,6 +76,18 @@ module Sinicum
           expect(url_for("/labs-test")).to eq("/labs-test")
           expect(url_for("/labs2/home")).to eq("/labs2/home")
           expect(labs_path("test")).to eq("/test")
+          expect(asd_path("test")).to eq("/asd/test")
+        end
+
+        it "should not cut the path/url when disabled" do
+          Rails.application.config.x.multisite_disabled = true
+
+          expect(url_for("/labs/home")).to eq("/labs/home")
+          expect(url_for("/labs")).to eq("/labs")
+          expect(url_for("/labs-test")).to eq("/labs-test")
+          expect(url_for("/labs2/home")).to eq("/labs2/home")
+          expect(labs_path("test")).to eq("/labs/test")
+          expect(asd_path("test")).to eq("/asd/test")
         end
       end
 
