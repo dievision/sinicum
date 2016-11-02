@@ -69,6 +69,14 @@ module Sinicum
           get '/test'
           expect(request.path).to eq("/sinicum/test")
         end
+
+        it "should cut the path/url" do
+          expect(url_for("/labs/home")).to eq("/home")
+          expect(url_for("/labs")).to eq("/")
+          expect(url_for("/labs-test")).to eq("/labs-test")
+          expect(url_for("/labs2/home")).to eq("/labs2/home")
+          expect(labs_path("test")).to eq("/test")
+        end
       end
 
       describe "no change in request paths" do
@@ -143,17 +151,6 @@ module Sinicum
           expect(response).to have_http_status(:ok)
           expect(request.path).to eq("/assets")
         end
-      end
-    end
-
-    describe "MultisiteMiddleware", type: :helper do
-      it "should cut the url" do
-        session[:multisite_root] = "/dievision"
-        expect(helper.url_for "/dievision/home").to eq("/home")
-      end
-
-      it "should not cut the url" do
-        expect(helper.url_for "/dievision/home").to eq("/dievision/home")
       end
     end
   end
