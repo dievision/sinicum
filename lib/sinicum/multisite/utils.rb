@@ -2,7 +2,7 @@ module Sinicum
   module Multisite
     class Utils
       def self.all_root_paths
-        nodes = Sinicum::Jcr::Node.query(:multisite, :sql, "select * from mgnl:multisite'")
+        nodes = Sinicum::Jcr::Node.query(:multisite, :sql, "select * from mgnl:multisite")
         if !(Rails.application.config.x.multisite_disabled == true)
           nodes.collect{ |node| node[:root_node] }
         else
