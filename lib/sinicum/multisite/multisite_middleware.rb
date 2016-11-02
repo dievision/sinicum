@@ -8,7 +8,7 @@ module Sinicum
 
       def call(env)
         request = Rack::Request.new(env)
-        path = request.path
+        path = request.path.gsub(".html", "")
         unless multisite_ignored_path?(env)
           if Rails.configuration.x.multisite_production == true
             node = node_from_primary_domain(request.host)
@@ -20,6 +20,10 @@ module Sinicum
               env['rack.session'][:multisite_root] = node[:root_node]
             end
           else # author/dev
+            if env['rack.session'][:multisite_root] && on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
+              # Redirect to the fullpath without the root_path for consistency
+              return redirect(gsub_root_path(env['rack.session'][:multisite_root], request.fullpath))
+            end
             query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
             nodes = Sinicum::Jcr::Node.query(:multisite, :sql, query)
             if nodes.empty?
@@ -39,10 +43,6 @@ module Sinicum
               # Node has been found, so the session is set
               node = nodes.first
               env['rack.session'][:multisite_root] = node[:root_node]
-            end
-            if env['rack.session'][:multisite_root] && on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
-              # Redirect to the fullpath without the root_path for consistency
-              return redirect(gsub_root_path(env['rack.session'][:multisite_root], request.fullpath))
             end
           end
         end
@@ -80,7 +80,7 @@ module Sinicum
       end
 
       def root_from_path(path)
-        path.gsub(/(^\/.*?)\/.*/, '\1').gsub(".html", "")
+        path.gsub(/(^\/.*?)\/.*/, '\1')
       end
 
       def multisite_ignored_path?(env)
