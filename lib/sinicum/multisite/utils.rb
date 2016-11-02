@@ -38,7 +38,6 @@ module ActionDispatch
 
       def url_for(options = nil)
         regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
-        puts regexp
         sincum_url_for(options).sub(regexp, '/')
       end
     end
