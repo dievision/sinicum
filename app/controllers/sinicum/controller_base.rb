@@ -114,14 +114,14 @@ module Sinicum
     end
 
     def redirect_page_44?(page)
-      template_exists?(page) && page.mgnl_template == "redirect" && page[:redirect_link]
+      magnolia_template_exists?(page) && page.mgnl_template == "redirect" && page[:redirect_link]
     end
 
     def redirect_page_45?(page)
-      template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
+      magnolia_template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
     end
 
-    def template_exists?(page)
+    def magnolia_template_exists?(page)
       page && page.mgnl_template
     end
 
