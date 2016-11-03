@@ -35,14 +35,14 @@ module ActionDispatch
 
   module Routing
     module UrlFor
-      unless method_defined?(:sincum_url_for)
-        alias_method :sincum_url_for, :url_for
+      unless method_defined?(:sincum_routing_url_for)
+        alias_method :sincum_routing_url_for, :url_for
       end
 
       # The url_for in the controller context is modified by this
       def url_for(options = nil)
         regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
-        sincum_url_for(options).sub(regexp, '/')
+        sincum_routing_url_for(options).sub(regexp, '/')
       end
     end
   end
