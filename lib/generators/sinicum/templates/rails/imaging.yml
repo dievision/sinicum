@@ -6,8 +6,7 @@ apps:
     node_type: "mgnl:asset"
 
 renderer:
-
-  default:
+  content:
     render_type: resize_crop
     format: jpeg
     x: 307
