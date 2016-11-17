@@ -132,7 +132,7 @@ module Sinicum
 
         it "should still bypass assets if config is not set" do
           host! "magnolia.example.de"
-          Rails.configuration.x.multisite_ignored_paths = [/#{Regexp.quote(Rails.configuration.assets.prefix)}/]
+          Rails.configuration.x.multisite_ignored_paths = [/#{Regexp.quote("/assets")}/]
           stub_request(:get, /.*sinicum-rest\/multisite.*/)
             .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
 
