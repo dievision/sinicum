@@ -7,6 +7,8 @@ CodeClimate::TestReporter.start
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rspec/rails"
 require "webmock/rspec"
+require 'rails-controller-testing'
+Rails::Controller::Testing.install
 
 RSpec.configure do |config|
   # == Mock Framework
@@ -27,6 +29,12 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   # config.use_transactional_fixtures = true
+
+  [:controller, :view, :request].each do |type|
+    config.include Rails::Controller::Testing::TestProcess, :type => type
+    config.include Rails::Controller::Testing::TemplateAssertions, :type => type
+    config.include Rails::Controller::Testing::Integration, :type => type
+  end
 end
 
 ActionMailer::Base.delivery_method = :test
