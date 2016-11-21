@@ -20,9 +20,11 @@ module Sinicum
               env['rack.session'][:multisite_root] = node[:root_node]
             end
           else # author/dev
+            Rails.logger.info("    Sinicum Multisite: Session => #{env['rack.session'][:multisite_root].inspect}")
             if env['rack.session'][:multisite_root] &&
                 on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
               # Redirect to the fullpath without the root_path for consistency
+              Rails.logger.info("    Sinicum Multisite: Redirect to the fullpath")
               return redirect(gsub_root_path(
                 env['rack.session'][:multisite_root], request.fullpath))
             end
@@ -46,6 +48,7 @@ module Sinicum
             else
               # Node has been found, so the session is set
               node = nodes.first
+              Rails.logger.info("    Sinicum Multisite: Node has been found - Session => #{node[:root_node].inspect}")
               env['rack.session'][:multisite_root] = node[:root_node]
             end
           end
