@@ -20,7 +20,8 @@ module Sinicum
               env['rack.session'][:multisite_root] = node[:root_node]
             end
           else # author/dev
-            Rails.logger.info("    Sinicum Multisite: Session => #{env['rack.session'][:multisite_root].inspect}")
+            Rails.logger.info("    Sinicum Multisite: Session =>" \
+              " #{env['rack.session'][:multisite_root].inspect}")
             if env['rack.session'][:multisite_root] &&
                 on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
               # Redirect to the fullpath without the root_path for consistency
@@ -37,18 +38,21 @@ module Sinicum
                 # one will be taken.
                 query = "select * from mgnl:page where jcr:path LIKE '/%#{path}'"
                 website_nodes = Sinicum::Jcr::Node.query(:website, :sql, query)
-                website_node = website_nodes.select{ |x| x.path =~ /^\/[a-z]*?#{path}$/ }.first
+                website_node = website_nodes.select{ |x| x.path =~ /^\/[a-zA-Z_-]*?#{%r(path)}$/ }.first
                 if website_node
                   query = "select * from mgnl:multisite where root_node " \
                     "LIKE '#{root_from_path(website_node.path)}'"
                   node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
+                  Rails.logger.info("    Sinicum Multisite: SubNode has been found - Session =>" \
+                    " #{node[:root_node].inspect}")
                   env['rack.session'][:multisite_root] = node[:root_node]
                 end
               end
             else
               # Node has been found, so the session is set
               node = nodes.first
-              Rails.logger.info("    Sinicum Multisite: Node has been found - Session => #{node[:root_node].inspect}")
+              Rails.logger.info("    Sinicum Multisite: Node has been found - Session =>" \
+                " #{node[:root_node].inspect}")
               env['rack.session'][:multisite_root] = node[:root_node]
             end
           end
