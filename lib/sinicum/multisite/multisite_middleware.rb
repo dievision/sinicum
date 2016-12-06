@@ -17,22 +17,22 @@ module Sinicum
               node = node_from_alias_domains(request.host)
               return redirect("#{node[:primary_domain]}#{request.fullpath}") if node
             else
-              env['rack.session'][:multisite_root] = node[:root_node]
+              request.session[:multisite_root] = node[:root_node]
             end
           else # author/dev
             Rails.logger.info("    Sinicum Multisite: Session =>" \
-              " #{env['rack.session'][:multisite_root].inspect}")
-            if env['rack.session'][:multisite_root] &&
-                on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
+              " #{request.session[:multisite_root].inspect}")
+            if request.session[:multisite_root] &&
+                on_root_path?(request.session[:multisite_root], request.fullpath)
               # Redirect to the fullpath without the root_path for consistency
               Rails.logger.info("    Sinicum Multisite: Redirect to the fullpath")
               return redirect(gsub_root_path(
-                env['rack.session'][:multisite_root], request.fullpath))
+                request.session[:multisite_root], request.fullpath))
             end
             query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
             nodes = Sinicum::Jcr::Node.query(:multisite, :sql, query)
             if nodes.empty?
-              if env['rack.session'][:multisite_root].nil?
+              if request.session[:multisite_root].nil?
                 # If the root node has not been found, it will check
                 # for a matching child node of any root node. The first
                 # one will be taken.
@@ -45,7 +45,7 @@ module Sinicum
                   node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
                   Rails.logger.info("    Sinicum Multisite: SubNode has been found - Session =>" \
                     " #{node[:root_node].inspect}")
-                  env['rack.session'][:multisite_root] = node[:root_node]
+                  request.session[:multisite_root] = node[:root_node]
                 end
               end
             else
@@ -53,12 +53,12 @@ module Sinicum
               node = nodes.first
               Rails.logger.info("    Sinicum Multisite: Node has been found - Session =>" \
                 " #{node[:root_node].inspect}")
-              env['rack.session'][:multisite_root] = node[:root_node]
+              request.session[:multisite_root] = node[:root_node]
             end
           end
         end
         status, headers, response =
-          @app.call(adjust_paths(env, env['rack.session'][:multisite_root]))
+          @app.call(adjust_paths(env, request.session[:multisite_root]))
         [status, headers, response]
       end
 

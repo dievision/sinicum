@@ -114,6 +114,9 @@ EOF
       template "magnolia/config.modules.myproject.templates.xml",
         "#{bootstrap_dir}/config.modules.#{@module_name}.templates.xml"
       remove_file "app/views/layouts/application.html.erb"
+
+      gsub_file "#{bootstrap_dir}/config.modules.#{@module_name}.dialogs.xml", "myproject", @module_name
+      gsub_file "#{bootstrap_dir}/config.modules.#{@module_name}.templates.xml", "myproject", @module_name
     end
 
     def update_gitignore
@@ -157,6 +160,11 @@ EOF
 
     def db_user
       @db_user.presence || "#{module_name}author"
+    end
+
+    def gsub_file(relative_destination, regexp, substitution)
+      content = File.read(relative_destination).gsub(regexp, substitution)
+      File.open(relative_destination, 'wb') { |file| file.write(content) }
     end
   end
 end
