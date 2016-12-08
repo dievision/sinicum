@@ -8,7 +8,7 @@ before_script:
 script:
   - bundle exec rake
 after_script:
-  - CODECLIMATE_REPO_TOKEN=97304c6d5e6017ffcf39bb7220a40d37062205ae6b8989a712ac0631b9122111 bundle exec codeclimate-test-reporter
+  - CODECLIMATE_REPO_TOKEN=a0a2bb8de1052f04e02943c208909e1ee43feed7 bundle exec codeclimate-test-reporter
 gemfile:
   - Gemfile
   - gemfiles/Gemfile-4.2
