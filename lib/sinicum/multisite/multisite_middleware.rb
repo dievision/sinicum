@@ -10,10 +10,10 @@ module Sinicum
         path = request.path.gsub(".html", "")
         unless multisite_ignored_path?(env)
           if Rails.configuration.x.multisite_production == true
-            node = node_from_primary_domain(request.host)
+            node = node_from_domain(request.host, :primary_domain)
             if node.nil?
               # Alias domain handling - redirect to the primary domain
-              node = node_from_alias_domains(request.host)
+              node = node_from_domain(request.host, :alias_domains)
               return redirect("#{node[:primary_domain]}#{request.fullpath}") if node
             else
               request.session[:multisite_root] = node[:root_node]
@@ -43,16 +43,9 @@ module Sinicum
         Rails.logger.info("  Sinicum Multisite:" + msg) if Rails.configuration.x.multisite_logging
       end
 
-      def node_from_alias_domains(domain)
-        Rails.cache.fetch("sinicum-multisite-node-alias-#{domain}", expires: 1.hour) do
-          query = "select * from mgnl:multisite where alias_domains LIKE '%//#{domain}%'"
-          Sinicum::Jcr::Node.query(:multisite, :sql, query).first
-        end
-      end
-
-      def node_from_primary_domain(domain)
-        Rails.cache.fetch("sinicum-multisite-node-primary-#{domain}", expires: 1.hour) do
-          query = "select * from mgnl:multisite where primary_domain LIKE '%//#{domain}%'"
+      def node_from_domain(domain, type)
+        Rails.cache.fetch("sinicum-multisite-node-#{type}-#{domain}", expires: 1.hour) do
+          query = "select * from mgnl:multisite where #{type} LIKE '%//#{domain}%'"
           Sinicum::Jcr::Node.query(:multisite, :sql, query).first
         end
       end
