@@ -44,11 +44,6 @@ module Sinicum
         it "should trigger multisite for a rootnode and a subnode and redirect" do
           get '/dievision/home'
           expect(request.path).to eq("/dievision/home")
-          expect(response).to have_http_status(:ok)
-          expect(request.session[:multisite_root]).to eq("/dievision")
-
-          get '/dievision/home'
-          expect(request.path).to eq("/dievision/home")
           expect(response).to redirect_to("/home")
           expect(request.session[:multisite_root]).to eq("/dievision")
 
