@@ -20,7 +20,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency('yard')
   s.add_development_dependency('webmock')
   s.add_development_dependency('rubocop')
-  s.add_development_dependency('codeclimate-test-reporter', '~> 0.6')
+  s.add_development_dependency('simplecov')
+  s.add_development_dependency('codeclimate-test-reporter')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
