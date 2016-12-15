@@ -19,17 +19,17 @@ module Sinicum
               request.session[:multisite_root] = node[:root_node]
             end
           else # author/dev
-            if on_root_path?(request.session[:multisite_root], request.fullpath)
-              # Redirect to the fullpath without the root_path for consistency
-              return redirect(gsub_root_path(
-                request.session[:multisite_root], request.fullpath))
-            end
             log("Session => #{request.session[:multisite_root].inspect}")
             query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
               # Node has been found, so the session is set
               log("Node has been found - Session => #{node[:root_node].inspect}")
               request.session[:multisite_root] = node[:root_node]
+            end
+            if on_root_path?(request.session[:multisite_root], request.fullpath)
+              # Redirect to the fullpath without the root_path for consistency
+              return redirect(gsub_root_path(
+                request.session[:multisite_root], request.fullpath))
             end
           end
         end
