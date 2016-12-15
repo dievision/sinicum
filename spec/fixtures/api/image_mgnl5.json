@@ -19,7 +19,9 @@
     "modifier" : "dennis_yuen",
     "creationDate" : "2011-01-31T15:13:15.540+08:00",
     "language" : "English",
-	"subject" : "A subject"
+    "subject" : "A subject",
+    "subject_de" : "Ein Subjekt",
+    "caption_fr" : "Caption in french"
   },
   "nodes" : {
     "jcr:content" : {

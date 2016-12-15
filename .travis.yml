@@ -1,18 +1,14 @@
 sudo: false
 language: ruby
 rvm:
-  - "2.1"
-  - "2.2"
+  - "2.2.2"
   - "2.3.0"
 before_script:
   - export TZ='Europe/Berlin'
-script: bundle exec rake
+script:
+  - bundle exec rake
+after_script:
+  - CODECLIMATE_REPO_TOKEN=a0a2bb8de1052f04e02943c208909e1ee43feed7 bundle exec codeclimate-test-reporter
 gemfile:
   - Gemfile
-  - gemfiles/Gemfile-3.2
-  - gemfiles/Gemfile-4.0
-  - gemfiles/Gemfile-4.1
   - gemfiles/Gemfile-4.2
-addons:
-  code_climate:
-    repo_token: 97304c6d5e6017ffcf39bb7220a40d37062205ae6b8989a712ac0631b9122111

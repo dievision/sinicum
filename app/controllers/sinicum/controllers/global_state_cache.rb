@@ -32,11 +32,11 @@ module Sinicum
 
       def render_or_proceed
         cached = Rails.cache.fetch(cache_key)
-        if cached
+        if cached && cached[:status].to_s != "302"
           @controller.response.cache_control.merge!(cached[:cache_control])
           @controller.response.status = cached[:status]
           @controller.response.headers["X-SCache"] = "true"
-          @controller.render text: cached[:body]
+          @controller.original_rails_render text: cached[:body]
         else
           @controller.response.headers["X-SCache"] = "false"
         end

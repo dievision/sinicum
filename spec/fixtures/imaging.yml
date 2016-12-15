@@ -11,7 +11,7 @@ apps:
     magnolia_prefix: "/dam"
     workspace: "dam"
     node_type: "mgnl:asset"
-
+    localized_image_tags: true
 
 renderer:
 

@@ -14,13 +14,21 @@ module Sinicum
         include QuerySanitizer
 
         def find_by_path(workspace, path)
-          url = construct_url(workspace, nil, path)
-          return_first_item(url)
+          Sinicum::Cache::ThreadLocalCache.fetch(["node-path", workspace, path].join("-")) do
+            url = construct_url(workspace, nil, path)
+            return_first_item(url)
+          end
         end
 
         def find_by_uuid(workspace, uuid)
-          url = construct_url(workspace, UUID_PREFIX, uuid)
-          return_first_item(url)
+          if uuid.is_a?(Array)
+            query(workspace, :'JCR-SQL2', construct_query_for_uuids(uuid))
+          else
+            Sinicum::Cache::ThreadLocalCache.fetch(["node-uuid", workspace, uuid].join("-")) do
+              url = construct_url(workspace, UUID_PREFIX, uuid)
+              return_first_item(url)
+            end
+          end
         end
 
         def query(workspace, language, query, parameters = nil, options = {})
@@ -94,6 +102,15 @@ module Sinicum
           action = PATH_DELIMITER + action if action && action[0] && action[0] != PATH_DELIMITER
           path = PATH_DELIMITER + path if path && path[0] && path[0] != PATH_DELIMITER
           "/#{workspace}#{action}#{path}"
+        end
+
+        def construct_query_for_uuids(uuids)
+          query_string = "SELECT * FROM [nt:base] WHERE " #[jcr:uuid] = '4374582d-6e38-492f-8d02-ec104cef731b' OR [jcr:uuid] = '382a97fa-b587-41c8-b61e-fb554dc4a7c9'"
+          uuids.each do |uuid|
+            next unless Sinicum::Util.is_a_uuid? uuid
+            query_string << "[jcr:uuid] = '#{uuid}' OR "
+          end
+          query_string[0, -5]
         end
       end
     end

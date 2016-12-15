@@ -17,7 +17,20 @@ module Sinicum
     end
 
     initializer "sinicum.add_middleware" do |app|
-      app.middleware.insert_after ActionDispatch::Callbacks, Sinicum::Imaging::ImagingMiddleware
+      app.middleware.insert_after ActionDispatch::Callbacks,
+        Sinicum::Cache::ThreadLocalCacheMiddleware
+      app.middleware.insert_after Sinicum::Cache::ThreadLocalCacheMiddleware,
+        Sinicum::Imaging::ImagingMiddleware
+      unless app.config.x.multisite_disabled == true
+        app.middleware.use Sinicum::Multisite::MultisiteMiddleware
+        if app.config.x.multisite_ignored_paths.is_a?(Array)
+          app.config.x.multisite_ignored_paths <<
+            /#{Regexp.quote(Rails.configuration.assets.prefix)}/
+        else
+          app.config.x.multisite_ignored_paths =
+            [/#{Regexp.quote(Rails.configuration.assets.prefix)}/]
+        end
+      end
     end
   end
 end

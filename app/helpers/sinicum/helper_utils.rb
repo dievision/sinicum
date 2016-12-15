@@ -84,7 +84,7 @@ module Sinicum
         title << title_delimiter if options[:title_suffix].present?
       end
       title << options[:title_suffix] if options[:title_suffix].present?
-      title
+      title.html_safe
     end
 
     def meta_simple_meta_tag(attribute_name, key)
@@ -107,7 +107,7 @@ module Sinicum
     def image_attributes(image, options)
       attributes = {}
       attributes[:src] = adjust_to_asset_host(image.path(converter: options[:renderer]))
-      attributes[:alt] = image[:subject].present? ? image[:subject] : ""
+      attributes[:alt] = image.alt
       [:width, :height].each do |key|
         if options[key]
           attributes[key] = options[key]

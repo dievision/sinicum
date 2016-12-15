@@ -24,6 +24,8 @@ Dummy::Application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+  config.cache_store = :null_store
+
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
@@ -31,4 +33,6 @@ Dummy::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  Rails.configuration.x.multisite_ignored_paths = [/^\/sidekiq/]
 end

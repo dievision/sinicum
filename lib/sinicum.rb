@@ -20,6 +20,8 @@ module Sinicum
   require 'sinicum/imaging/imaging_middleware'
   require 'sinicum/imaging/imaging_file'
 
+  require 'sinicum/multisite/multisite_middleware'
+
   require 'sinicum/jcr/jcr_configuration'
   require 'sinicum/jcr/api_queries'
   require 'sinicum/jcr/api_client'
@@ -50,4 +52,7 @@ module Sinicum
   require 'sinicum/navigation/default_navigation_element'
   require 'sinicum/navigation/navigation_handler'
   require 'sinicum/navigation/navigation_element_list'
+
+  require 'sinicum/cache/thread_local_cache'
+  require 'sinicum/cache/thread_local_cache_middleware'
 end

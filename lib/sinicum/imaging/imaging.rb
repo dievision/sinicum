@@ -38,21 +38,8 @@ module Sinicum
           if convert_file?
             result = perform_conversion
           else
-            format = converter.format
-            mime_type =
-              case format
-              when "gif" then "image/gif"
-              when "png" then "image/png"
-              when "ogv" then "video/ogg"
-              when "mp4" then "video/mp4"
-              when "m4a" then "audio/mp4"
-              when "ogg" then "audio/ogg"
-              when "webm" then "audio/webm"
-              else "image/jpeg"
-              end
             result = RenderResult.new(
-              file_rendered, mime_type,
-              "#{@doc[:fileName]}.#{@doc[:extension]}", fingerprint)
+              file_rendered, mime_type_for_document, @doc[:fileName], fingerprint)
           end
         end
         result
@@ -104,8 +91,7 @@ module Sinicum
             FileUtils.mv(out_file.path, file_rendered)
             FileUtils.chmod(0644, file_rendered)
             RenderResult.new(
-              file_rendered, @doc["jcr:mimeType"],
-              "#{@doc[:fileName]}.#{@doc[:extension]}", fingerprint)
+              file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
           rescue => e
             FileUtils.rm(out_file.path) if File.exist?(out_file.path)
             raise e
@@ -125,6 +111,10 @@ module Sinicum
         rescue => e
           logger.error("Cannot write to tempfile: " + e.to_s)
         end
+      end
+
+      def mime_type_for_document
+        Rack::Mime.mime_type("." + @image.extension)
       end
 
       def convert_file?

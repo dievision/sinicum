@@ -5,13 +5,13 @@ module Sinicum
 
     def mgnl_asset_path(key_or_object = nil, options = {})
       options[:workspace] = "dam" if options[:workspace].nil?
-      mgnl_path(key_or_object, options)
+      adjust_to_asset_host(mgnl_path(key_or_object, options))
     end
 
     def mgnl_img(key_or_object, options = {})
       image = object_from_key_or_object(key_or_object, workspace(options))
       result = nil
-      if image
+      if image && image.is_a?(Sinicum::Jcr::Dam::Image)
         options = options.dup
         attributes = image_attributes(image, options)
         [:workspace, :renderer, :width, :height, :src, :alt].each do |attribute|

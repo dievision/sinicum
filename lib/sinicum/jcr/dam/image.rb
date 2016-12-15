@@ -12,7 +12,12 @@ module Sinicum
         end
 
         def alt
-          self[:subject] || ""
+          if localized_tags? && language != 'en'
+            self[:"subject_#{language}"].presence ||
+              self[:"caption_#{language}"].presence || ""
+          else
+            self[:subject].presence || self[:caption].presence || ""
+          end
         end
 
         private
@@ -33,6 +38,14 @@ module Sinicum
             value = image_size_converter(converter_name).send(dimension) if converter_name
           end
           value
+        end
+
+        def localized_tags?
+          !!(Sinicum::Imaging.app_from_workspace("dam")['localized_image_tags'])
+        end
+
+        def language
+          @language ||= I18n.locale.to_s[0,2]
         end
       end
     end

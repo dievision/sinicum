@@ -10,27 +10,33 @@ module Sinicum
       prepend_before_filter ::Sinicum::Controllers::GlobalStateCache
       prepend_before_filter :remove_html_suffix
       after_filter ::Sinicum::Controllers::GlobalStateCache
+      alias_method :original_rails_render, :render
+      alias_method :render, :render_with_sinicum
     end
 
     def index
       cms_render
     end
 
-    def render(options = {}, locals = {}, &block)
+    def render_with_sinicum(options = {}, locals = {}, &block)
       find_original_content_for_path(content_path)
       unless redirect_redirect_page
         check_for_content!
         if options[:text].nil? && options[:layout].nil?
           options[:layout] = layout_file_name_or_fallback
         end
-        block_given? ? super(options, locals, block) : super(options, locals)
+        if block_given?
+          original_rails_render(options, locals, block)
+        else
+          original_rails_render(options, locals)
+        end
       end
     end
 
     # Deprecated!
     def cms_render
       client_cache_control
-      render inline: "", use_sinicum_template_layout: true
+      render_with_sinicum inline: "", use_sinicum_template_layout: true
     end
 
     protected
@@ -108,14 +114,14 @@ module Sinicum
     end
 
     def redirect_page_44?(page)
-      template_exists?(page) && page.mgnl_template == "redirect" && page[:redirect_link]
+      magnolia_template_exists?(page) && page.mgnl_template == "redirect" && page[:redirect_link]
     end
 
     def redirect_page_45?(page)
-      template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
+      magnolia_template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
     end
 
-    def template_exists?(page)
+    def magnolia_template_exists?(page)
       page && page.mgnl_template
     end
 

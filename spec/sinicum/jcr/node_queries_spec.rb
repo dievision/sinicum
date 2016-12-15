@@ -43,7 +43,7 @@ module Sinicum
         end
 
         it "should use no authentication if no user and password is configured" do
-          stub_request(:get, "user:pass@content.dievision.de/sinicum-rest/website/home")
+          stub_request(:get, "content.dievision.de/sinicum-rest/website/home")
             .to_return(body: api_response, headers: { "Content-Type" => "application/json" })
           ApiQueries.configure_jcr = {
             host: "content.dievision.de",
@@ -92,8 +92,7 @@ module Sinicum
         before(:each) do
           stub_request(
             :get,
-            "http://content.dievision.de/sinicum-rest/website/_query?" \
-            "query=/jcr:root/path//element(*, mgnl:page)&language=xpath"
+            /content\.dievision\.de\/sinicum-rest\/website\/_query/
           ).to_return(
             status: 200,
             body: api_response,
@@ -106,6 +105,14 @@ module Sinicum
           expect(Node).to receive(:new).with(json_response: json_response.last)
           result = Node.query("website", :xpath, "/jcr:root/path//element(*, mgnl:page)")
           expect(result).to be_kind_of(Array)
+        end
+
+        it "should query for multiple uuids in an array" do
+          result = Node.find_by_uuid("website", ["995a776f-242e-453a-9422-d0b7e8e9c068",
+            "bba4bfcd-8347-40d0-9bb6-504ddde1c5a1"])
+          expect(result).to be_kind_of(Array)
+          expect(result.first.uuid).to eq("995a776f-242e-453a-9422-d0b7e8e9c068")
+          expect(result.second.uuid).to eq("bba4bfcd-8347-40d0-9bb6-504ddde1c5a1")
         end
       end
     end
