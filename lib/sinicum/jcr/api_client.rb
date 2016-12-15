@@ -3,7 +3,7 @@ module Sinicum
     module ApiClient
       include ::Sinicum::Logger
       def api_get(path, *args, &block)
-        full_path = api_full_path(path)
+        full_path = api_full_path(URI.escape(path))
         log_get_path(full_path, args)
 
         instrumentation_query = args[0] && args[0]["query"] ? args[0]["query"] : path
