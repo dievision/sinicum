@@ -51,7 +51,11 @@ module Sinicum
             cache_control: response.cache_control,
             status: response.status
           }
-          Rails.cache.write(cache_key, cache_content)
+          cache_options = {}
+          if @controller.respond_to?(:global_state_cache_expiration_time)
+            cache_options = { expires_in: @controller.global_state_cache_expiration_time }
+          end
+          Rails.cache.write(cache_key, cache_content, cache_options)
         end
       end
 
