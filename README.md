@@ -243,6 +243,30 @@ In this example, we have configured two apps that will be able to serve assets v
 
 This is all you need to know for a quick start. More details will be added soon.
 
+## Caching
+
+Sinicum also has some nice caching features, which are located in the [GlobalStateCache](https://github.com/dievision/sinicum/blob/master/app/controllers/sinicum/controllers/global_state_cache.rb).
+Every page which is rendered by a controller that includes `Sinicum::ControllerBase` gets cached by the `GlobalStateCache`. Sinicum-Server provides a cache-key, which is changed everytime a page gets published in the Magnolia CMS. This means, that you will always get the cached page, as long as you don't publish anything. On the other hand, this means, that a cache refresh is only one publication away.
+
+For pages, that - besides rendering components from the CMS - also render dynamic content like social media tiles, the `global_state_cache_expiration_time` controller method has been implemented. With this method, you can control the cache duration from a specific controller.
+
+Let's say you have a homepage, that needs to show some social media contents. Just create a controller for the homepage that inherits from `ContentController` and implements `global_state_cache_expiration_time`. 
+
+```homepage_controller.rb
+class HomepageController < ContentController
+
+  def global_state_cache_expiration_time
+    10.minutes
+  end
+end
+```
+
+```routes.rb
+get '/' => 'homepage#index'
+```
+
+That's it - the cache is refreshed every 10 minutes and you can enjoy your up-to-date social media contents.
+
 ## Helpers
 
 To make it as easy as possible for you to navigate your way around the Magnolia CMS content wrapped in `Sinicum::Jcr::Node`, Sinicum provides you with some neat helper methods. They are split up in two helper modules: `MgnlHelper` and `MgnlImageHelper`. Both are included in `MgnlHelper5` which is automatically included in your ´ApplicationHelper`.
