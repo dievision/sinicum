@@ -58,7 +58,7 @@ module Sinicum
 
             it "should return an empty string if no subject is given" do
               I18n.locale = :ch
-              expect(subject.alt).to eq("twitter")
+              expect(subject.alt).to eq("")
             end
           end
         end
