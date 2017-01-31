@@ -22,6 +22,10 @@ module Sinicum
         !!imaging_result
       end
 
+      def fingerprinted?
+        !!fingerprint
+      end
+
       def path
         imaging_result.path
       end
@@ -35,6 +39,15 @@ module Sinicum
           FINGERPRINT_CACHE_TIME
         else
           DEFAULT_CACHE_TIME
+        end
+      end
+
+      def calculated_asset_path
+        @calculated_asset_path ||= begin
+          doc = Sinicum::Jcr::Node.find_by_path(@workspace, @file_asset_path)
+          if doc && doc.is_a?(Sinicum::Jcr::Dam::Document)
+            doc.path(converter: @renderer)
+          end
         end
       end
 
