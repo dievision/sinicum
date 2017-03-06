@@ -11,7 +11,7 @@ module Sinicum
     def mgnl_img(key_or_object, options = {})
       image = object_from_key_or_object(key_or_object, workspace(options))
       result = nil
-      if image
+      if image && image.is_a?(Sinicum::Jcr::Dam::Image)
         options = options.dup
         attributes = image_attributes(image, options)
         [:workspace, :renderer, :width, :height, :src, :alt].each do |attribute|
