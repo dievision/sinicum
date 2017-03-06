@@ -11,5 +11,4 @@ after_script:
   - CODECLIMATE_REPO_TOKEN=a0a2bb8de1052f04e02943c208909e1ee43feed7 bundle exec codeclimate-test-reporter
 gemfile:
   - Gemfile
-  - gemfiles/Gemfile-4.2
   - gemfiles/Gemfile-5.0
