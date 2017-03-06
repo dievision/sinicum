@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description = %q{Provides the necessary functionality to work with Magnolia-managed content in a Rails application.}
 
   s.add_dependency('rails', '< 6')
-  s.add_dependency('rack', '> 1')
+  s.add_dependency('rack', '~> 2.0')
   s.add_dependency('httpclient', '~> 2.7')
   s.add_dependency('multi_json', '~> 1.11')
   s.add_development_dependency('rspec-rails', '~> 3.5')
