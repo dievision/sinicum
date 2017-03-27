@@ -54,6 +54,16 @@ module Sinicum
         end
       end
 
+      def device_pixel_size_with_srcset(pixel, srcset_option)
+        pixel = pixel.to_f
+        px = pixel*srcset_option[0, srcset_option.length-1].to_f || 0
+        if px == 0
+          ''
+        else
+          px.round
+        end
+      end
+
       def quality_option
         "-quality 50" if @hires_factor && @hires_factor > 1.5
       end

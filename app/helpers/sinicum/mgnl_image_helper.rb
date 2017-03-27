@@ -18,6 +18,7 @@ module Sinicum
           options.delete(attribute)
         end
         add_missing_attributes(attributes, options)
+        add_srcset(attributes)
         result = tag("img", attributes)
       end
       result

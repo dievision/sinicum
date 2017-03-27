@@ -148,5 +148,22 @@ module Sinicum
     def workspace(options)
       options[:workspace] || DEFAULT_DOCUMENT_WORKSPACE
     end
+
+    #srcset optimization, see http://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset
+    def add_srcset(attributes_hash)
+      src = attributes_hash[:src]
+      src_base = src[0, src.rindex('.jpg')]
+      srcset = ''
+      ['_050.jpg 0.5x,', '_150.jpg 1.5x,', '_175.jpg 1.75x,', '_200.jpg 2x'].each do |size_declaration|
+        srcset << src_base+size_declaration
+      end
+      attributes_hash[:srcset] = srcset
+      attributes_hash
+    end
+    #size optimization
+    # def add_sizes(attributes_hash)
+    #   src = attributes_hash[:src]
+    #   attributes_hash[:sizes] = "100vw"
+    # end
   end
 end

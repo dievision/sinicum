@@ -63,7 +63,7 @@ module Sinicum
       #
       # @param [Symbol] the renderer to use
       # @return [Sinicum::Imaging::Converter] the converter to use for this renderer
-      def converter(renderer)
+      def converter(renderer, srcset_options = nil)
         result = nil
         renderer_config = @renderer[renderer.to_s]
         result = render_type(renderer_config) if renderer_config

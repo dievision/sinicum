@@ -16,7 +16,7 @@ module Sinicum
         @format = configuration['format'] || 'jpeg'
       end
 
-      def convert(infile_path, outfile_path, extension)
+      def convert(infile_path, outfile_path, extension, srcset_options = nil)
         x = device_pixel_size(@x)
         y = device_pixel_size(@y)
 
@@ -24,8 +24,8 @@ module Sinicum
 
         if extension == 'gif'
           special = '-coalesce'
-          layers = '-layers Optimize' 
-        end 
+          layers = '-layers Optimize'
+        end
 
         cmd = "convert #{infile_path} #{interlace_option(x, y, extension)} #{special} " \
           "#{quality_option} " +
