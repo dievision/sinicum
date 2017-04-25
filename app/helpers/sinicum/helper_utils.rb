@@ -150,12 +150,18 @@ module Sinicum
     end
 
     #srcset optimization, see http://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset
+    #TODO nicer read for imaging.yml dry it up?
     def add_srcset(attributes_hash)
+      srcset_options = YAML.load_file('config/imaging.yml')["apps"]["dam"]["srcset_options"]
+      puts "add_srcset options are #{srcset_options}"
+
       src = attributes_hash[:src]
-      src_base = src[0, src.rindex('.jpg')]
+      src_base_index = src.index('.jpg')
       srcset = ''
-      ['_050.jpg 0.5x,', '_150.jpg 1.5x,', '_175.jpg 1.75x,', '_200.jpg 2x'].each do |size_declaration|
-        srcset << src_base+size_declaration
+      srcset_options.each_with_index do |size_declaration, index|
+        tmp = src[0..src_base_index-1]+size_declaration[0]+src[src_base_index..src.length]+ " " +size_declaration[1]
+        tmp += "," unless index == srcset_options.size-1
+        srcset << tmp
       end
       attributes_hash[:srcset] = srcset
       attributes_hash

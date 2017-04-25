@@ -10,23 +10,24 @@ module Sinicum
       DEFAULT_CONVERTER_NAME = "default"
       include Sinicum::Logger
 
-      attr_reader :fingerprint
+      attr_reader :fingerprint, :srcset_option
 
       # Render the image from path `original_path` with the renderer `renderer`
       #
       # @param [String] original_path The original path of the image.
       # @param [String] renderer The name of the renderer
       # @return [RenderResult] The result of the conversion
-      def self.rendered_resource(original_path, extension, renderer, fingerprint, workspace = nil)
-        imaging = Imaging.new(original_path, extension, renderer, fingerprint, workspace)
+      def self.rendered_resource(original_path, extension, renderer, fingerprint, srcset_option = "", workspace = nil)
+        imaging = Imaging.new(original_path, extension, renderer, fingerprint, srcset_option, workspace)
         imaging.fetch_image
       end
 
-      def initialize(original_path, extension, renderer, fingerprint, workspace = nil)
+      def initialize(original_path, extension, renderer, fingerprint, srcset_option, workspace = nil)
         @original_path = original_path
         @extension = extension
         @renderer = renderer
         @srcset_options = config_data.apps["dam"]["srcset_options"]
+        @srcset_option = srcset_option
         @fingerprint = fingerprint
         @workspace = workspace
       end
@@ -34,10 +35,14 @@ module Sinicum
       def fetch_image
         result = nil
         @image, @doc = find_image_objects_by_path(@original_path)
+
         if @image && @doc
           #TESTING PURPOSE ONLY, if not remove " || !convert_file?""
-          if convert_file? || !convert_file?
+          if convert_file? #|| !convert_file?
             result = @srcset_options.present? ? perform_srcset_conversion : perform_conversion
+          elsif @srcset_option.present?
+            result = RenderResult.new(
+              file_rendered(@srcset_option), mime_type_for_document, @doc[:fileName], fingerprint)
           else
             result = RenderResult.new(
               file_rendered, mime_type_for_document, @doc[:fileName], fingerprint)
@@ -58,21 +63,12 @@ module Sinicum
       end
 
       # The "final" file to be sent to the client
-      def file_rendered
-        @_file_rendered ||= File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "-" + @image.fingerprint + "." +
-          converter.format)
-      end
-
-      def srcset_file_rendered(srcset_affix)
-        puts "-.-"*23
-        puts "configDataDir "+config_data.file_dir
-        puts "renderer"+@renderer
-        puts "converterConfigHash"+converter.config_hash
-        puts "FingerPrint"+@image.fingerprint
-        puts "-.-"*23
+      #TODO mmemoization
+      def file_rendered(srcset_affix = "")
+        #@_file_rendered ||=
         File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "-" + @image.fingerprint)
+          converter.config_hash + "_" + srcset_affix + "-" + @image.fingerprint + "." +
+          converter.format)
       end
 
       # Finds the image objects by path
@@ -119,20 +115,20 @@ module Sinicum
           out_file = File.open(file_out, "wb")
           out_file.close
           in_file = File.open(file_converted, "wb")
-         # begin
+         #begin
             write_doc_to_tempfile(in_file)
             in_file.close
             convert(in_file.path, out_file.path)
             FileUtils.mv(out_file.path, file_rendered)
             FileUtils.chmod(0644, file_rendered)
             out_index = out_file.path.rindex("-out-")
-            #new
+
             @srcset_options.each do |srcset_option|
-              convert(in_file.path, out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1], nil, srcset_option.second)
-              FileUtils.mv(out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1], srcset_file_rendered(srcset_option.first))
-              FileUtils.chmod(0644, srcset_file_rendered(srcset_option.first))
+              outfile_path = out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1]
+              convert(in_file.path, outfile_path, nil, srcset_option.second)
+              FileUtils.mv(outfile_path, file_rendered(srcset_option.first))
+              FileUtils.chmod(0644, file_rendered(srcset_option.first))
             end
-            #end new
 
             RenderResult.new(
               file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
@@ -141,7 +137,7 @@ module Sinicum
           #   raise e
           # ensure
           #   FileUtils.rm(in_file.path) if File.exist?(in_file.path)
-          # end
+           #end
         }
       end
 
@@ -186,13 +182,15 @@ module Sinicum
 
     # Internal: Simple wrapper around imaging results.
     class RenderResult
-      attr_accessor :path, :mime_type, :filename, :fingerprint
+      attr_accessor :path, :mime_type, :filename, :fingerprint, :srcset_option
 
-      def initialize(path, mime_type, filename, fingerprint = nil)
+      #def initialize(path, mime_type, filename, fingerprint = nil, srcset_option = "")
+      def initialize(path, mime_type, filename, srcset_option = "", fingerprint = nil)
         @path = path
         @mime_type = mime_type
         @filename = filename
         @fingerprint = fingerprint
+        @srcset_option = srcset_option
       end
     end
   end
