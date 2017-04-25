@@ -149,27 +149,26 @@ module Sinicum
       options[:workspace] || DEFAULT_DOCUMENT_WORKSPACE
     end
 
-    #srcset optimization, see http://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset
-    #TODO nicer read for imaging.yml dry it up?
-    def add_srcset(attributes_hash)
-      srcset_options = YAML.load_file('config/imaging.yml')["apps"]["dam"]["srcset_options"]
-      puts "add_srcset options are #{srcset_options}"
 
-      src = attributes_hash[:src]
-      src_base_index = src.index('.jpg')
-      srcset = ''
-      srcset_options.each_with_index do |size_declaration, index|
-        tmp = src[0..src_base_index-1]+size_declaration[0]+src[src_base_index..src.length]+ " " +size_declaration[1]
-        tmp += "," unless index == srcset_options.size-1
-        srcset << tmp
+    def loaded_srcset_options
+      @_loaded_srcset_options ||= YAML.load_file('config/imaging.yml')["apps"]["dam"]["srcset_options"]
+    end
+
+    #srcset optimization, see http://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset
+    def add_srcset(attributes_hash)
+      srcset_options = loaded_srcset_options
+      if srcset_options.present?
+        src = attributes_hash[:src]
+        src_base_index = src.index('.jpg')
+        srcset = ''
+        srcset_options.each_with_index do |size_declaration, index|
+          tmp = src[0..src_base_index-1]+size_declaration[0]+src[src_base_index..src.length]+ " " +size_declaration[1]
+          tmp += "," unless index == srcset_options.size-1
+          srcset << tmp
+        end
+        attributes_hash[:srcset] = srcset
       end
-      attributes_hash[:srcset] = srcset
       attributes_hash
     end
-    #size optimization
-    # def add_sizes(attributes_hash)
-    #   src = attributes_hash[:src]
-    #   attributes_hash[:sizes] = "100vw"
-    # end
   end
 end
