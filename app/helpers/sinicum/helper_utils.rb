@@ -158,11 +158,22 @@ module Sinicum
     def add_srcset(attributes_hash)
       srcset_options = loaded_srcset_options
       if srcset_options.present?
+
+        file_endings = ['jpg', 'jpeg', 'png']
         src = attributes_hash[:src]
-        src_base_index = src.index('.jpg')
+        src_base_index = ""
+        filetype_ending_length = 0
+
+        file_endings.each do |filetype_ending|
+          unless src_base_index.present?
+            src_base_index = src.index(".#{filetype_ending}")
+            filetype_ending_length = filetype_ending.length
+          end
+        end
+
         srcset = ''
         srcset_options.each_with_index do |size_declaration, index|
-          tmp = src[0..src_base_index-1]+size_declaration[0]+src[src_base_index..src.length]+ " " +size_declaration[1]
+          tmp = "#{src[0..src_base_index+filetype_ending_length]}_#{size_declaration[0]}#{src[src_base_index+filetype_ending_length+1..src.length]} #{size_declaration[1]}"
           tmp += "," unless index == srcset_options.size-1
           srcset << tmp
         end
