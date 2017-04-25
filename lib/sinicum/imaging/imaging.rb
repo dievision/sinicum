@@ -160,8 +160,17 @@ module Sinicum
         last_modified = @doc["jcr:lastModified"]
         # File.size == 0 is related to a (temporary?) bug on one server
         # should be possible to remove
-        !File.exist?(file_rendered) || File.mtime(file_rendered) <
-          last_modified || File.size(file_rendered) == 0
+        if @srcset_options.present?
+          result = false
+          @srcset_options.each do |srcset_option|
+            result = result || !File.exist?(file_rendered(srcset_option.first)) ||
+              File.mtime(file_rendered(srcset_option.first)) < last_modified ||
+              File.size(file_rendered(srcset_option.first)) == 0
+          end
+          result
+        else
+          !File.exist?(file_rendered) || File.mtime(file_rendered) < last_modified || File.size(file_rendered) == 0
+        end
       end
 
       def random
