@@ -37,7 +37,7 @@ module Sinicum
         @image, @doc = find_image_objects_by_path(@original_path)
 
         if @image && @doc
-          if convert_file?
+          if convert_file? #|| !convert_file?
             result = @srcset_options.present? ? perform_srcset_conversion : perform_conversion
           elsif @srcset_option.present?
             result = RenderResult.new(
