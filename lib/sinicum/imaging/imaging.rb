@@ -26,7 +26,6 @@ module Sinicum
         @original_path = original_path
         @extension = extension
         @renderer = renderer
-        @srcset_options = config_data.apps["dam"]["srcset_options"]
         @srcset_option = srcset_option.nil? ? "" : srcset_option
         @fingerprint = fingerprint
         @workspace = workspace
@@ -35,16 +34,12 @@ module Sinicum
       def fetch_image
         result = nil
         @image, @doc = find_image_objects_by_path(@original_path)
-
         if @image && @doc
-          if convert_file? #|| !convert_file?
-            result = @srcset_options.present? ? perform_srcset_conversion : perform_conversion
-          elsif @srcset_option.present?
-            result = RenderResult.new(
-              file_rendered(@srcset_option), mime_type_for_document, @doc[:fileName], fingerprint)
+          if convert_file? || !convert_file?
+            result = perform_conversion
           else
             result = RenderResult.new(
-              file_rendered, mime_type_for_document, @doc[:fileName], fingerprint)
+              file_rendered(@srcset_option), mime_type_for_document, @doc[:fileName], fingerprint)
           end
         end
         result
@@ -98,36 +93,14 @@ module Sinicum
             convert(in_file.path, out_file.path)
             FileUtils.mv(out_file.path, file_rendered)
             FileUtils.chmod(0644, file_rendered)
-            RenderResult.new(
-              file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
-          rescue => e
-            FileUtils.rm(out_file.path) if File.exist?(out_file.path)
-            raise e
-          ensure
-            FileUtils.rm(in_file.path) if File.exist?(in_file.path)
-          end
-        }
-      end
-
-      #same as perform_conversion but with scrset images as defined in imaging.yml beeing generated as well
-      def perform_srcset_conversion
-        RENDER_MUTEX.synchronize {
-          out_file = File.open(file_out, "wb")
-          out_file.close
-          in_file = File.open(file_converted, "wb")
-          begin
-            write_doc_to_tempfile(in_file)
-            in_file.close
-            convert(in_file.path, out_file.path)
-            FileUtils.mv(out_file.path, file_rendered)
-            FileUtils.chmod(0644, file_rendered)
             out_index = out_file.path.rindex("-out-")
-
-            @srcset_options.each do |srcset_option|
-              outfile_path = out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1]
-              convert(in_file.path, outfile_path, nil, srcset_option.second)
-              FileUtils.mv(outfile_path, file_rendered(srcset_option.first))
-              FileUtils.chmod(0644, file_rendered(srcset_option.first))
+            if config_data.srcset_options.present?
+              config_data.srcset_options.each do |srcset_option|
+                outfile_path = out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1]
+                convert(in_file.path, outfile_path, nil, srcset_option.second)
+                FileUtils.mv(outfile_path, file_rendered(srcset_option.first))
+                FileUtils.chmod(0644, file_rendered(srcset_option.first))
+              end
             end
             RenderResult.new(
               file_rendered(@srcset_option), @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
@@ -160,9 +133,9 @@ module Sinicum
         last_modified = @doc["jcr:lastModified"]
         # File.size == 0 is related to a (temporary?) bug on one server
         # should be possible to remove
-        if @srcset_options.present?
+        if config_data.srcset_options.present?
           result = false
-          @srcset_options.each do |srcset_option|
+          config_data.srcset_options.each do |srcset_option|
             result = result || !File.exist?(file_rendered(srcset_option.first)) ||
               File.mtime(file_rendered(srcset_option.first)) < last_modified ||
               File.size(file_rendered(srcset_option.first)) == 0
@@ -182,7 +155,7 @@ module Sinicum
       end
 
       def converter
-        conv = config_data.converter(@renderer, @srcset_options)
+        conv = config_data.converter(@renderer)
         conv.document = @image if conv
         conv
       end
