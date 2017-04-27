@@ -127,7 +127,6 @@ module Sinicum
           srcset_options.each do |option|
             unless option.kind_of?(Array) && option[0].is_a?(String) && option[0].match(/[0-9]{3}/) &&
               option[1].is_a?(String) && option[1].match(/([0-4]\.[1-9]{1,2}x)|([2-4]x)/)
-
               fail "Srcset options are not defined correctly."
             end
           end
