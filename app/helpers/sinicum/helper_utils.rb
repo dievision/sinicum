@@ -151,7 +151,6 @@ module Sinicum
 
 
     def loaded_srcset_options
-      # @_loaded_srcset_options ||= YAML.load_file('config/imaging.yml')["apps"]["dam"]["srcset_options"]
       Sinicum::Imaging::Config.read_configuration.srcset_options
     end
 

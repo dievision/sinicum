@@ -123,8 +123,18 @@ module Sinicum
         if apps.blank?
           fail "No apps are configured. Please check the README for an example."
         end
-        if !srcset_options.kind_of?(Array)
-          fail "Srcset options are not defined correctly."
+        if srcset_options.kind_of?(Array)
+          srcset_options.each do |option|
+            unless option.kind_of?(Array) && option[0].is_a?(String) && option[0].match(/[0-9]{3}/) &&
+              option[1].is_a?(String) && option[1].match(/([0-4]\.[1-9]{1,2}x)|([2-4]x)/)
+
+              fail "Srcset options are not defined correctly."
+            end
+          end
+        else
+          unless srcset_options.nil?
+            fail "Srcset options are not defined correctly."
+          end
         end
       end
 
