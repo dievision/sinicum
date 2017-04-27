@@ -17,7 +17,7 @@ module Sinicum
       # @param [String] original_path The original path of the image.
       # @param [String] renderer The name of the renderer
       # @return [RenderResult] The result of the conversion
-      def self.rendered_resource(original_path, extension, renderer, fingerprint, srcset_option = "", workspace = nil)
+      def self.rendered_resource(original_path, extension, renderer, fingerprint, srcset_option = nil, workspace = nil)
         imaging = Imaging.new(original_path, extension, renderer, fingerprint, srcset_option, workspace)
         imaging.fetch_image
       end
@@ -35,7 +35,7 @@ module Sinicum
         result = nil
         @image, @doc = find_image_objects_by_path(@original_path)
         if @image && @doc
-          if convert_file?
+          if convert_file? || !convert_file?
             result = perform_conversion
           else
             result = RenderResult.new(
@@ -57,7 +57,8 @@ module Sinicum
       end
 
       # The "final" file to be sent to the client
-      def file_rendered(srcset_affix = "")
+      def file_rendered(srcset_affix = nil)
+        srcset_affix = "" if srcset_affix.nil?
         @_file_rendered ||= Hash.new do |h, srcset_affix|
           h[srcset_affix] = File.join(config_data.file_dir, "/" + @renderer + "-" +
           converter.config_hash + "_" + srcset_affix + "-" + @image.fingerprint + "." +
