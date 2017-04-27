@@ -35,7 +35,7 @@ module Sinicum
         result = nil
         @image, @doc = find_image_objects_by_path(@original_path)
         if @image && @doc
-          if convert_file? || !convert_file?
+          if convert_file?
             result = perform_conversion
           else
             result = RenderResult.new(
