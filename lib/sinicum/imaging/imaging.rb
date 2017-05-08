@@ -10,23 +10,23 @@ module Sinicum
       DEFAULT_CONVERTER_NAME = "default"
       include Sinicum::Logger
 
-      attr_reader :fingerprint
+      attr_reader :fingerprint, :srcset_option
 
       # Render the image from path `original_path` with the renderer `renderer`
       #
       # @param [String] original_path The original path of the image.
       # @param [String] renderer The name of the renderer
       # @return [RenderResult] The result of the conversion
-      def self.rendered_resource(original_path, extension, renderer, fingerprint, workspace = nil)
-        imaging = Imaging.new(original_path, extension, renderer, fingerprint, workspace)
+      def self.rendered_resource(original_path, extension, renderer, fingerprint, srcset_option = nil, workspace = nil)
+        imaging = Imaging.new(original_path, extension, renderer, fingerprint, srcset_option, workspace)
         imaging.fetch_image
       end
 
-      def initialize(original_path, extension, renderer, fingerprint, workspace = nil)
+      def initialize(original_path, extension, renderer, fingerprint, srcset_option, workspace = nil)
         @original_path = original_path
         @extension = extension
         @renderer = renderer
-        @srcset_options = config_data.apps["dam"]["srcset_options"]
+        @srcset_option = srcset_option.nil? ? "" : srcset_option
         @fingerprint = fingerprint
         @workspace = workspace
       end
@@ -35,12 +35,11 @@ module Sinicum
         result = nil
         @image, @doc = find_image_objects_by_path(@original_path)
         if @image && @doc
-          #TESTING PURPOSE ONLY, if not remove " || !convert_file?""
-          if convert_file? || !convert_file?
-            result = @srcset_options.present? ? perform_srcset_conversion : perform_conversion
+          if convert_file?
+            result = perform_conversion
           else
             result = RenderResult.new(
-              file_rendered, mime_type_for_document, @doc[:fileName], fingerprint)
+              file_rendered(@srcset_option), mime_type_for_document, @doc[:fileName], fingerprint)
           end
         end
         result
@@ -58,21 +57,14 @@ module Sinicum
       end
 
       # The "final" file to be sent to the client
-      def file_rendered
-        @_file_rendered ||= File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "-" + @image.fingerprint + "." +
+      def file_rendered(srcset_affix = nil)
+        srcset_affix = "" if srcset_affix.nil?
+        @_file_rendered ||= Hash.new do |h, srcset_affix|
+          h[srcset_affix] = File.join(config_data.file_dir, "/" + @renderer + "-" +
+          converter.config_hash + "_" + srcset_affix + "-" + @image.fingerprint + "." +
           converter.format)
-      end
-
-      def srcset_file_rendered(srcset_affix)
-        puts "-.-"*23
-        puts "configDataDir "+config_data.file_dir
-        puts "renderer"+@renderer
-        puts "converterConfigHash"+converter.config_hash
-        puts "FingerPrint"+@image.fingerprint
-        puts "-.-"*23
-        File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "-" + @image.fingerprint)
+        end
+        @_file_rendered[srcset_affix]
       end
 
       # Finds the image objects by path
@@ -102,46 +94,23 @@ module Sinicum
             convert(in_file.path, out_file.path)
             FileUtils.mv(out_file.path, file_rendered)
             FileUtils.chmod(0644, file_rendered)
+            out_index = out_file.path.rindex("-out-")
+            if config_data.srcset_options.present?
+              config_data.srcset_options.each do |srcset_option|
+                outfile_path = out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1]
+                convert(in_file.path, outfile_path, nil, srcset_option.second)
+                FileUtils.mv(outfile_path, file_rendered(srcset_option.first))
+                FileUtils.chmod(0644, file_rendered(srcset_option.first))
+              end
+            end
             RenderResult.new(
-              file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
+              file_rendered(@srcset_option), @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
           rescue => e
             FileUtils.rm(out_file.path) if File.exist?(out_file.path)
             raise e
           ensure
             FileUtils.rm(in_file.path) if File.exist?(in_file.path)
           end
-        }
-      end
-
-      #same as perform_conversion but with scrset images as defined in imaging.yml beeing generated as well
-      def perform_srcset_conversion
-        RENDER_MUTEX.synchronize {
-          out_file = File.open(file_out, "wb")
-          out_file.close
-          in_file = File.open(file_converted, "wb")
-         # begin
-            write_doc_to_tempfile(in_file)
-            in_file.close
-            convert(in_file.path, out_file.path)
-            FileUtils.mv(out_file.path, file_rendered)
-            FileUtils.chmod(0644, file_rendered)
-            out_index = out_file.path.rindex("-out-")
-            #new
-            @srcset_options.each do |srcset_option|
-              convert(in_file.path, out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1], nil, srcset_option.second)
-              FileUtils.mv(out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1], srcset_file_rendered(srcset_option.first))
-              FileUtils.chmod(0644, srcset_file_rendered(srcset_option.first))
-            end
-            #end new
-
-            RenderResult.new(
-              file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
-          # rescue => e
-          #   FileUtils.rm(out_file.path) if File.exist?(out_file.path)
-          #   raise e
-          # ensure
-          #   FileUtils.rm(in_file.path) if File.exist?(in_file.path)
-          # end
         }
       end
 
@@ -165,8 +134,17 @@ module Sinicum
         last_modified = @doc["jcr:lastModified"]
         # File.size == 0 is related to a (temporary?) bug on one server
         # should be possible to remove
-        !File.exist?(file_rendered) || File.mtime(file_rendered) <
-          last_modified || File.size(file_rendered) == 0
+        if config_data.srcset_options.present?
+          result = false
+          config_data.srcset_options.each do |srcset_option|
+            result = result || !File.exist?(file_rendered(srcset_option.first)) ||
+              File.mtime(file_rendered(srcset_option.first)) < last_modified ||
+              File.size(file_rendered(srcset_option.first)) == 0
+          end
+          result
+        else
+          !File.exist?(file_rendered) || File.mtime(file_rendered) < last_modified || File.size(file_rendered) == 0
+        end
       end
 
       def random
@@ -178,7 +156,7 @@ module Sinicum
       end
 
       def converter
-        conv = config_data.converter(@renderer, @srcset_options)
+        conv = config_data.converter(@renderer)
         conv.document = @image if conv
         conv
       end
@@ -186,13 +164,14 @@ module Sinicum
 
     # Internal: Simple wrapper around imaging results.
     class RenderResult
-      attr_accessor :path, :mime_type, :filename, :fingerprint
+      attr_accessor :path, :mime_type, :filename, :fingerprint, :srcset_option
 
-      def initialize(path, mime_type, filename, fingerprint = nil)
+      def initialize(path, mime_type, filename, srcset_option = "", fingerprint = nil)
         @path = path
         @mime_type = mime_type
         @filename = filename
         @fingerprint = fingerprint
+        @srcset_option = srcset_option
       end
     end
   end

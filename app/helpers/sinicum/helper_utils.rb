@@ -149,21 +149,27 @@ module Sinicum
       options[:workspace] || DEFAULT_DOCUMENT_WORKSPACE
     end
 
+
+    def loaded_srcset_options
+      Sinicum::Imaging::Config.read_configuration.srcset_options
+    end
+
     #srcset optimization, see http://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset
     def add_srcset(attributes_hash)
-      src = attributes_hash[:src]
-      src_base = src[0, src.rindex('.jpg')]
-      srcset = ''
-      ['_050.jpg 0.5x,', '_150.jpg 1.5x,', '_175.jpg 1.75x,', '_200.jpg 2x'].each do |size_declaration|
-        srcset << src_base+size_declaration
+      srcset_options = loaded_srcset_options
+      if srcset_options.present?
+        src = attributes_hash[:src]
+        if match = src.match(/(.+?)-(\h{32})(\.\w+)?$/)
+          srcset = ''
+          srcset_options.each_with_index do |size_declaration, index|
+            tmp = "#{match[1]}_#{size_declaration[0]}-#{match[2]}#{match[3]} #{size_declaration[1]}"
+            tmp += "," unless index == srcset_options.size-1
+            srcset << tmp
+          end
+          attributes_hash[:srcset] = srcset
+        end
       end
-      attributes_hash[:srcset] = srcset
       attributes_hash
     end
-    #size optimization
-    # def add_sizes(attributes_hash)
-    #   src = attributes_hash[:src]
-    #   attributes_hash[:sizes] = "100vw"
-    # end
   end
 end
