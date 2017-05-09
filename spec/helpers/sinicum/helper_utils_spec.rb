@@ -52,13 +52,15 @@ module Sinicum
     end
 
     describe "#add_srcset" do
+      test_config = File.join(File.dirname(__FILE__), "../../fixtures/imaging.yml")
+      let(:config) { Sinicum::Imaging::Config.configure(test_config) }
       it "should add srcset tags to attributes" do
         tag_with_srcset = {
           :src=>"/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
           :alt=>"hero-teaser-cruises", :width=>1920, :height=>480, :class=>"slide-img",
-          :srcset=>"/damfiles/etc/pp/hero-teaser-cruises_050-1e531d3c7476f916d42215fd2f829839.jpg 0.5x,/damfiles/etc/pp/hero-teaser-cruises_150-1e531d3c7476f916d42215fd2f829839.jpg 1.5x,/damfiles/etc/pp/hero-teaser-cruises_175-1e531d3c7476f916d42215fd2f829839.jpg 1.75x,/damfiles/etc/pp/hero-teaser-cruises_200-1e531d3c7476f916d42215fd2f829839.jpg 2x"
-        }
-        allow(helper).to receive(:loaded_srcset_options).and_return([['050', '0.5x'], ['150', '1.5x'], ['175', '1.75x'], ['200', '2x']])
+          :srcset=>"/damfiles/etc/pp/hero-teaser-cruises_050-1e531d3c7476f916d42215fd2f829839.jpg 0.5x, /damfiles/etc/pp/hero-teaser-cruises_150-1e531d3c7476f916d42215fd2f829839.jpg 1.5x, /damfiles/etc/pp/hero-teaser-cruises_175-1e531d3c7476f916d42215fd2f829839.jpg 1.75x, /damfiles/etc/pp/hero-teaser-cruises_200-1e531d3c7476f916d42215fd2f829839.jpg 2x"}
+        allow(Sinicum::Imaging::Config).to receive(:read_configuration).and_return(config)
+
         expect(helper.send(
           :add_srcset,
           {:src=>"/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg", :alt=>"hero-teaser-cruises", :width=>1920, :height=>480, :class=>"slide-img"}

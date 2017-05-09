@@ -22,11 +22,11 @@ module Sinicum
         imaging.fetch_image
       end
 
-      def initialize(original_path, extension, renderer, fingerprint, srcset_option, workspace = nil)
+      def initialize(original_path, extension, renderer, fingerprint, srcset_option = nil, workspace = nil)
         @original_path = original_path
         @extension = extension
         @renderer = renderer
-        @srcset_option = srcset_option.nil? ? "" : srcset_option
+        @srcset_option = srcset_option
         @fingerprint = fingerprint
         @workspace = workspace
       end
@@ -58,10 +58,11 @@ module Sinicum
 
       # The "final" file to be sent to the client
       def file_rendered(srcset_affix = nil)
-        srcset_affix = "" if srcset_affix.nil?
+
+        srcset_affix = srcset_affix.nil? ? "" : "_#{srcset_affix}"
         @_file_rendered ||= Hash.new do |h, srcset_affix|
           h[srcset_affix] = File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "_" + srcset_affix + "-" + @image.fingerprint + "." +
+          converter.config_hash + srcset_affix + "-" + @image.fingerprint + "." +
           converter.format)
         end
         @_file_rendered[srcset_affix]
@@ -95,13 +96,11 @@ module Sinicum
             FileUtils.mv(out_file.path, file_rendered)
             FileUtils.chmod(0644, file_rendered)
             out_index = out_file.path.rindex("-out-")
-            if config_data.srcset_options.present?
-              config_data.srcset_options.each do |srcset_option|
-                outfile_path = out_file.path[0, out_index]+srcset_option.first+out_file.path[out_index..-1]
-                convert(in_file.path, outfile_path, nil, srcset_option.second)
-                FileUtils.mv(outfile_path, file_rendered(srcset_option.first))
-                FileUtils.chmod(0644, file_rendered(srcset_option.first))
-              end
+            if @srcset_option.present?
+              outfile_path = out_file.path[0, out_index]+@srcset_option+out_file.path[out_index..-1]
+              convert(in_file.path, outfile_path, nil)
+              FileUtils.mv(outfile_path, file_rendered(@srcset_option))
+              FileUtils.chmod(0644, file_rendered(@srcset_option))
             end
             RenderResult.new(
               file_rendered(@srcset_option), @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
@@ -114,8 +113,8 @@ module Sinicum
         }
       end
 
-      def convert(infile_path, outfile_path, extension = nil, srcset_option = nil)
-        converter.convert(infile_path, outfile_path, @doc[:extension], srcset_option)
+      def convert(infile_path, outfile_path, extension = nil)
+        converter.convert(infile_path, outfile_path, @doc[:extension])
       end
 
       def write_doc_to_tempfile(tempfile)
@@ -134,17 +133,9 @@ module Sinicum
         last_modified = @doc["jcr:lastModified"]
         # File.size == 0 is related to a (temporary?) bug on one server
         # should be possible to remove
-        if config_data.srcset_options.present?
-          result = false
-          config_data.srcset_options.each do |srcset_option|
-            result = result || !File.exist?(file_rendered(srcset_option.first)) ||
-              File.mtime(file_rendered(srcset_option.first)) < last_modified ||
-              File.size(file_rendered(srcset_option.first)) == 0
-          end
-          result
-        else
-          !File.exist?(file_rendered) || File.mtime(file_rendered) < last_modified || File.size(file_rendered) == 0
-        end
+        !File.exist?(file_rendered(@srcset_option)) ||
+          File.mtime(file_rendered(@srcset_option)) < last_modified ||
+          File.size(file_rendered(@srcset_option)) == 0
       end
 
       def random
@@ -158,6 +149,7 @@ module Sinicum
       def converter
         conv = config_data.converter(@renderer)
         conv.document = @image if conv
+        conv.hires_factor = @srcset_option.to_f/100 if @srcset_option
         conv
       end
     end
@@ -166,7 +158,7 @@ module Sinicum
     class RenderResult
       attr_accessor :path, :mime_type, :filename, :fingerprint, :srcset_option
 
-      def initialize(path, mime_type, filename, srcset_option = "", fingerprint = nil)
+      def initialize(path, mime_type, filename, srcset_option = nil, fingerprint = nil)
         @path = path
         @mime_type = mime_type
         @filename = filename

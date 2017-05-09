@@ -12,14 +12,9 @@ module Sinicum
         @format = configuration['format'] || 'jpeg'
       end
 
-      def convert(infile_path, outfile_path, extension, srcset_option = nil)
-        if srcset_option.present?
-          x = device_pixel_size_with_srcset(@x, srcset_option)
-          y = device_pixel_size_with_srcset(@y, srcset_option)
-        else
-          x = device_pixel_size(@x)
-          y = device_pixel_size(@y)
-        end
+      def convert(infile_path, outfile_path, extension)
+        x = device_pixel_size(@x)
+        y = device_pixel_size(@y)
 
         special = '-background transparent' if extension == 'png'
 
@@ -28,10 +23,8 @@ module Sinicum
           layers = '-layers Optimize'
         end
 
-        qo = srcset_option.present? ? "" : quality_option
-
         command = "convert #{infile_path} #{interlace_option(x, y, extension)} #{special} " \
-          "#{qo}" +
+          "#{quality_option}" +
           " -resize #{x}x#{y} #{layers} #{outfile_path}"
         `#{command}`
 

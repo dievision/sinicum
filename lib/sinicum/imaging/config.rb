@@ -132,7 +132,7 @@ module Sinicum
           end
         else
           unless srcset_options.nil?
-            fail "Srcset options are not defined correctly."
+            fail "No Srcset options defined."
           end
         end
       end
