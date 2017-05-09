@@ -46,7 +46,7 @@ module Sinicum
       private
 
       def device_pixel_size(pixel)
-        px = pixel.to_f * @hires_factor.to_f || 0
+        px = pixel.to_f * @hires_factor.to_f
         if px == 0
           ''
         else
