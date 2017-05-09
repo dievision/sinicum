@@ -39,7 +39,7 @@ module Sinicum
             result = perform_conversion
           else
             result = RenderResult.new(
-              file_rendered(@srcset_option), mime_type_for_document, @doc[:fileName], fingerprint)
+              file_rendered, mime_type_for_document, @doc[:fileName], fingerprint)
           end
         end
         result
@@ -47,7 +47,8 @@ module Sinicum
 
       # The temporary file as it comes out of the repository
       def file_out
-        @_file_out ||= File.join(config_data.tmp_dir, @renderer + "-" + "out" + "-" + random)
+        @_file_out ||= File.join(config_data.tmp_dir, @renderer + "-" + "out" +
+         srcset_option_if_needed + "-" + random)
       end
 
       # The temporary file the converter writes to
@@ -56,15 +57,15 @@ module Sinicum
           "-" + random + "." + converter.format)
       end
 
+      def srcset_option_if_needed
+        @srcset_option.nil? ? "" : "_#{@srcset_option}"
+      end
+
       # The "final" file to be sent to the client
-      def file_rendered(srcset_affix = nil)
-        srcset_affix = srcset_affix.nil? ? "" : "_#{srcset_affix}"
-        @_file_rendered ||= Hash.new do |h, srcset_affix|
-          h[srcset_affix] = File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + srcset_affix + "-" + @image.fingerprint + "." +
+      def file_rendered
+        @_file_rendered || File.join(config_data.file_dir, "/" + @renderer + "-" +
+          converter.config_hash + srcset_option_if_needed + "-" + @image.fingerprint + "." +
           converter.format)
-        end
-        @_file_rendered[srcset_affix]
       end
 
       # Finds the image objects by path
@@ -93,16 +94,8 @@ module Sinicum
             in_file.close
             convert(in_file.path, out_file.path)
             FileUtils.mv(out_file.path, file_rendered)
-            FileUtils.chmod(0644, file_rendered)
-            out_index = out_file.path.rindex("-out-")
-            if @srcset_option.present?
-              outfile_path = out_file.path[0, out_index]+@srcset_option+out_file.path[out_index..-1]
-              convert(in_file.path, outfile_path, nil)
-              FileUtils.mv(outfile_path, file_rendered(@srcset_option))
-              FileUtils.chmod(0644, file_rendered(@srcset_option))
-            end
             RenderResult.new(
-              file_rendered(@srcset_option), @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
+              file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
           rescue => e
             FileUtils.rm(out_file.path) if File.exist?(out_file.path)
             raise e
@@ -112,7 +105,7 @@ module Sinicum
         }
       end
 
-      def convert(infile_path, outfile_path, extension = nil)
+      def convert(infile_path, outfile_path)
         converter.convert(infile_path, outfile_path, @doc[:extension])
       end
 
@@ -132,9 +125,9 @@ module Sinicum
         last_modified = @doc["jcr:lastModified"]
         # File.size == 0 is related to a (temporary?) bug on one server
         # should be possible to remove
-        !File.exist?(file_rendered(@srcset_option)) ||
-          File.mtime(file_rendered(@srcset_option)) < last_modified ||
-          File.size(file_rendered(@srcset_option)) == 0
+        !File.exist?(file_rendered) ||
+          File.mtime(file_rendered) < last_modified ||
+          File.size(file_rendered) == 0
       end
 
       def random
