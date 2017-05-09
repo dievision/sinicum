@@ -36,7 +36,6 @@ module Sinicum
           expect(converter.send(:device_pixel_size, '')).to eq('')
         end
       end
-
     end
   end
 end

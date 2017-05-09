@@ -58,7 +58,6 @@ module Sinicum
 
       # The "final" file to be sent to the client
       def file_rendered(srcset_affix = nil)
-
         srcset_affix = srcset_affix.nil? ? "" : "_#{srcset_affix}"
         @_file_rendered ||= Hash.new do |h, srcset_affix|
           h[srcset_affix] = File.join(config_data.file_dir, "/" + @renderer + "-" +

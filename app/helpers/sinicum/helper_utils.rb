@@ -149,6 +149,11 @@ module Sinicum
       options[:workspace] || DEFAULT_DOCUMENT_WORKSPACE
     end
 
+
+    def loaded_srcset_options
+      Sinicum::Imaging::Config.read_configuration.srcset_options
+    end
+
     #srcset optimization, see http://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset
     def add_srcset(attributes_hash)
       srcset_options = Sinicum::Imaging::Config.read_configuration.srcset_options
