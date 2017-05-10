@@ -15,19 +15,19 @@ module Sinicum
       def convert(infile_path, outfile_path, extension)
         x = device_pixel_size(@x)
         y = device_pixel_size(@y)
-        
+
         special = '-background transparent' if extension == 'png'
 
         if extension == 'gif'
           special = '-coalesce'
-          layers = '-layers Optimize' 
-        end  
+          layers = '-layers Optimize'
+        end
 
         command = "convert #{infile_path} #{interlace_option(x, y, extension)} #{special} " \
-          "#{quality_option} " +
-          "-resize #{x}x#{y} #{layers} #{outfile_path}"
+          "#{quality_option}" +
+          " -resize #{x}x#{y} #{layers} #{outfile_path}"
         `#{command}`
-        
+
         optimize_png_outfile(outfile_path, extension)
       end
 
@@ -42,6 +42,7 @@ module Sinicum
         end
         [x, y]
       end
+
     end
   end
 end
