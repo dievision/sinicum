@@ -59,7 +59,7 @@ module Sinicum
         it "should add srcset tags to attributes" do
           tag_with_srcset = {
             src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
-            alt: "hero-teaser-cruises", class: "slide-img",
+            alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img",
             srcset: "/damfiles/etc/pp/hero-teaser-cruises_050-1e531d3c7476f916d42215fd2f829839.jpg 150w," \
             " /damfiles/etc/pp/hero-teaser-cruises_150-1e531d3c7476f916d42215fd2f829839.jpg 450w," \
             " /damfiles/etc/pp/hero-teaser-cruises_175-1e531d3c7476f916d42215fd2f829839.jpg 525w," \
@@ -68,7 +68,7 @@ module Sinicum
           allow(Sinicum::Imaging::Config).to receive(:read_configuration).and_return(config)
           expect(helper.send(:configure_for_srcset,
             { src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
-              alt: "hero-teaser-cruises", class: "slide-img" }
+              alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img" }
           )).to eq(tag_with_srcset)
         end
       end
@@ -80,12 +80,12 @@ module Sinicum
         it "should not add srcset tags to attributes" do
           img_tag = {
             src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
-            alt: "hero-teaser-cruises", width: 1920, height: 480, class: "slide-img"
+            alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img"
           }
           allow(helper).to receive(:loaded_srcset_options).and_return([])
           expect(helper.send(
             :configure_for_srcset,
-            {src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg", alt: "hero-teaser-cruises", width: 1920, height: 480, class: "slide-img"}
+            {src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg", alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img"}
           )).to eq(img_tag)
         end
       end
