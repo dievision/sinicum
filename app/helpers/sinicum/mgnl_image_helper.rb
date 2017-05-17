@@ -23,7 +23,7 @@ module Sinicum
           options.delete(attribute)
         end
         add_missing_attributes(attributes, options)
-        add_srcset(attributes)
+        configure_for_srcset(attributes)
         attributes
       end
     end

@@ -32,3 +32,11 @@ renderer:
     format: jpeg
     x: 960
     y: 444
+
+  etc:
+    render_type: resize_max
+    format: jpeg
+    x: 300
+    y: 500
+
+

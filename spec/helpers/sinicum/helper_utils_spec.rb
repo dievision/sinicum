@@ -51,7 +51,7 @@ module Sinicum
       end
     end
 
-    describe "#add_srcset" do
+    describe "#configure_for_srcset" do
       context "with srcset defined" do
         test_config = File.join(File.dirname(__FILE__), "../../fixtures/imaging_with_srcset.yml")
         let(:config) { Sinicum::Imaging::Config.configure(test_config) }
@@ -59,16 +59,16 @@ module Sinicum
         it "should add srcset tags to attributes" do
           tag_with_srcset = {
             src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
-            alt: "hero-teaser-cruises", width: 1920, height: 480, class: "slide-img",
-            srcset: "/damfiles/etc/pp/hero-teaser-cruises_050-1e531d3c7476f916d42215fd2f829839.jpg 0.5x," \
-            " /damfiles/etc/pp/hero-teaser-cruises_150-1e531d3c7476f916d42215fd2f829839.jpg 1.5x," \
-            " /damfiles/etc/pp/hero-teaser-cruises_175-1e531d3c7476f916d42215fd2f829839.jpg 1.75x," \
-            " /damfiles/etc/pp/hero-teaser-cruises_200-1e531d3c7476f916d42215fd2f829839.jpg 2x"
+            alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img",
+            srcset: "/damfiles/etc/pp/hero-teaser-cruises_050-1e531d3c7476f916d42215fd2f829839.jpg 150w," \
+            " /damfiles/etc/pp/hero-teaser-cruises_150-1e531d3c7476f916d42215fd2f829839.jpg 450w," \
+            " /damfiles/etc/pp/hero-teaser-cruises_175-1e531d3c7476f916d42215fd2f829839.jpg 525w," \
+            " /damfiles/etc/pp/hero-teaser-cruises_200-1e531d3c7476f916d42215fd2f829839.jpg 600w"
           }
           allow(Sinicum::Imaging::Config).to receive(:read_configuration).and_return(config)
-          expect(helper.send(:add_srcset,
+          expect(helper.send(:configure_for_srcset,
             { src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
-              alt: "hero-teaser-cruises", width: 1920, height: 480, class: "slide-img" }
+              alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img" }
           )).to eq(tag_with_srcset)
         end
       end
@@ -80,12 +80,12 @@ module Sinicum
         it "should not add srcset tags to attributes" do
           img_tag = {
             src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
-            alt: "hero-teaser-cruises", width: 1920, height: 480, class: "slide-img"
+            alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img"
           }
           allow(helper).to receive(:loaded_srcset_options).and_return([])
           expect(helper.send(
-            :add_srcset,
-            {src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg", alt: "hero-teaser-cruises", width: 1920, height: 480, class: "slide-img"}
+            :configure_for_srcset,
+            {src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg", alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img"}
           )).to eq(img_tag)
         end
       end
