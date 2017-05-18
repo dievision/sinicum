@@ -152,7 +152,7 @@ module Sinicum
     def configure_for_srcset(attributes_hash)
       srcset_options = Sinicum::Imaging::Config.read_configuration.srcset_options
       if srcset_options.present?
-        if match = attributes_hash[:src].match(/(.+?)-(\h{32})(\.\w+)?$/)
+        if (match = attributes_hash[:src].match(/(.+?)-(\h{32})(\.\w+)?$/)) && attributes_hash[:width].is_a?(Numeric)
           attributes_hash[:srcset] = srcset_options.map { |e|  \
             "#{match[1]}_#{e[0]}-#{match[2]}#{match[3]} #{calculate_resulting_width(e[1],
             attributes_hash[:width])}w"}.join(", ")
