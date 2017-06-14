@@ -4,7 +4,7 @@ module Sinicum
   describe ApplicationController do
     let(:node) { Jcr::Node.new }
 
-    before(:each) do
+    before(:example) do
       allow(Content::Aggregator).to receive(:original_content).and_return(node)
       allow(Content::WebsiteContentResolver).to receive(:find_for_path).and_return(node)
       allow(node).to receive(:mgnl_template).and_return("something")
@@ -25,6 +25,41 @@ module Sinicum
     it "should ignore post requests" do
       post :index, format: "html"
       expect(response.status).to eq(200)
+    end
+
+    describe "redirects" do
+      it "should redirect with 302 if no status is set" do
+        redirect_node = Jcr::Node.new({ redirect_link: "http://www.dievision.de/redirect_link" })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("http://www.dievision.de/redirect_link")
+        expect(response.code).to eq("302")
+      end
+
+      it "should redirect with 302 if set" do
+        redirect_node = Jcr::Node.new({ redirect_link: "http://www.dievision.de/redirect_link", redirect_status: "302" })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("http://www.dievision.de/redirect_link")
+        expect(response.code).to eq("302")
+      end
+
+      it "should redirect with 301 if set" do
+        redirect_node = Jcr::Node.new({ redirect_link: "http://www.dievision.de/redirect_link", redirect_status: 301 })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("http://www.dievision.de/redirect_link")
+        expect(response.code).to eq("301")
+      end
     end
 
     describe "layout" do
