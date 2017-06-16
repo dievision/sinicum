@@ -42,6 +42,7 @@ module Sinicum
   require 'sinicum/jcr/type_translator'
 
   require 'sinicum/jcr/cache/global_cache'
+  require 'sinicum/jcr/cache/site_cache'
 
   require 'sinicum/templating/templating_utils'
   require 'sinicum/templating/dialog_resolver'

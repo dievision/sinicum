@@ -8,7 +8,12 @@ module Sinicum
 
       def initialize(controller)
         @controller = controller
-        @global_jcr_cache_key = Sinicum::Jcr::Cache::GlobalCache.new.current_key
+        if use_global_cache?
+          @jcr_cache_key = Sinicum::Jcr::Cache::GlobalCache.new.current_key
+        else
+          @jcr_cache_key = Sinicum::Jcr::Cache::SiteCache.new.
+            current_key_for(@controller.request.path)
+        end
       end
 
       def self.before(controller)
@@ -52,7 +57,7 @@ module Sinicum
             status: response.status
           }
           cache_options = {}
-          if @controller.respond_to?(:global_state_cache_expiration_time)
+          if has_expiration_time?
             cache_options = { expires_in: @controller.global_state_cache_expiration_time }
           end
           Rails.cache.write(cache_key, cache_content, cache_options)
@@ -61,10 +66,18 @@ module Sinicum
 
       private
 
+      def has_expiration_time?
+        !!@controller.respond_to?(:global_state_cache_expiration_time)
+      end
+
+      def use_global_cache?
+        !!@controller.respond_to?(:use_global_cache)
+      end
+
       def cache_key
         @cache_key ||= [
           @controller.request.base_url + @controller.request.fullpath,
-          @global_jcr_cache_key, self.class.deploy_revision
+          @jcr_cache_key, self.class.deploy_revision
         ]
         @cache_key
       end
