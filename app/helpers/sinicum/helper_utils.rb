@@ -166,11 +166,7 @@ module Sinicum
     def calculate_resulting_width(srcset_option, original_picture_width)
       srcset_option = srcset_option[0...-1]
       result = original_picture_width*srcset_option.to_f
-      if (result >= 1)
-        result.to_i
-      else
-        1
-      end
+      result >= 1 ? result.to_i : 1
     end
 
   end
