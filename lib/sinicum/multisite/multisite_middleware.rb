@@ -19,6 +19,10 @@ module Sinicum
               request.session[:multisite_root] = node[:root_node]
             end
           else # author/dev
+            # if env['rack.session'][:multisite_root] && on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
+            #   # Redirect to the fullpath without the root_path for consistency
+            #   return redirect(gsub_root_path(env['rack.session'][:multisite_root], request.fullpath))
+            # end
             log("Session => #{request.session[:multisite_root].inspect}")
             query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
@@ -80,7 +84,7 @@ module Sinicum
       end
 
       def redirect(location)
-        [301, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
+        [307, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
       end
     end
   end
