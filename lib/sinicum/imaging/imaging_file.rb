@@ -7,7 +7,7 @@ module Sinicum
       FINGERPRINT_CACHE_TIME = 7 * 24 * 60 * 60
 
       attr_reader :normalized_request_path, :extension, :fingerprint, :app,
-        :workspace
+        :workspace, :srcset_option
 
       # Public: Create a new instance
       #
@@ -20,6 +20,10 @@ module Sinicum
 
       def result?
         !!imaging_result
+      end
+
+      def fingerprinted?
+        !!fingerprint
       end
 
       def path
@@ -38,6 +42,15 @@ module Sinicum
         end
       end
 
+      def calculated_asset_path
+        @calculated_asset_path ||= begin
+          doc = Sinicum::Jcr::Node.find_by_path(@workspace, @file_asset_path)
+          if doc && doc.is_a?(Sinicum::Jcr::Dam::Document)
+            doc.path(converter: @renderer)
+          end
+        end
+      end
+
       private
 
       def imaging_result
@@ -46,7 +59,7 @@ module Sinicum
 
       def create_imaging_result
         result = ::Sinicum::Imaging::Imaging.rendered_resource(
-          @file_asset_path, extension, @renderer, fingerprint, @workspace)
+          @file_asset_path, extension, @renderer, fingerprint, @srcset_option, @workspace)
         result
       end
 
@@ -64,7 +77,7 @@ module Sinicum
         else
           path = @path_info.dup
         end
-        @normalized_request_path, @extension, @fingerprint = extract_fingerprint(path)
+        @normalized_request_path, @extension, @srcset_option, @fingerprint = extract_fingerprint(path)
         renderer_image = normalized_request_path[
           @app['imaging_prefix'].size + 1, normalized_request_path.size]
         @renderer = renderer_image[0, renderer_image.index("/")]
@@ -74,17 +87,21 @@ module Sinicum
       end
 
       def extract_fingerprint(path)
-        if match = path.match(/(.+?)-(\h{32})(\.\w+)?$/)
+        if match = path.match(/(.+?)_(\d{3})-(\h{32})(\.\w+)?$/)
+          extension = nil
+          extension = match[4][1..match[4].length] if match[4]
+          [match[1], extension, match[2], match[3]]
+        elsif match = path.match(/(.+?)-(\h{32})(\.\w+)?$/)
           extension = nil
           extension = match[3][1..match[3].length] if match[3]
-          [match[1], extension, match[2]]
+          [match[1], extension, nil, match[2]]
         else
           extension = nil
           if match = path.match(/(.+)\.(\w+)$/)
             extension = match[2]
             path = match[1]
           end
-          [path, extension, nil]
+          [path, extension, nil, nil]
         end
       end
 

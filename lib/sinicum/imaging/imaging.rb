@@ -10,23 +10,23 @@ module Sinicum
       DEFAULT_CONVERTER_NAME = "default"
       include Sinicum::Logger
 
-      attr_reader :fingerprint
+      attr_reader :fingerprint, :srcset_option
 
       # Render the image from path `original_path` with the renderer `renderer`
       #
       # @param [String] original_path The original path of the image.
       # @param [String] renderer The name of the renderer
       # @return [RenderResult] The result of the conversion
-      def self.rendered_resource(original_path, extension, renderer, fingerprint, workspace = nil)
-        imaging = Imaging.new(original_path, extension, renderer, fingerprint, workspace)
-        result = imaging.fetch_image
-        result
+      def self.rendered_resource(original_path, extension, renderer, fingerprint, srcset_option = nil, workspace = nil)
+        imaging = Imaging.new(original_path, extension, renderer, fingerprint, srcset_option, workspace)
+        imaging.fetch_image
       end
 
-      def initialize(original_path, extension, renderer, fingerprint, workspace = nil)
+      def initialize(original_path, extension, renderer, fingerprint, srcset_option = nil, workspace = nil)
         @original_path = original_path
         @extension = extension
         @renderer = renderer
+        @srcset_option = srcset_option
         @fingerprint = fingerprint
         @workspace = workspace
       end
@@ -47,7 +47,8 @@ module Sinicum
 
       # The temporary file as it comes out of the repository
       def file_out
-        @_file_out ||= File.join(config_data.tmp_dir, @renderer + "-" + "out" + "-" + random)
+        @_file_out ||= File.join(config_data.tmp_dir, @renderer + "-" + "out" +
+         srcset_option_if_needed + "-" + random)
       end
 
       # The temporary file the converter writes to
@@ -56,10 +57,14 @@ module Sinicum
           "-" + random + "." + converter.format)
       end
 
+      def srcset_option_if_needed
+        @srcset_option.nil? ? "" : "_#{@srcset_option}"
+      end
+
       # The "final" file to be sent to the client
       def file_rendered
-        @_file_rendered ||= File.join(config_data.file_dir, "/" + @renderer + "-" +
-          converter.config_hash + "-" + @image.fingerprint +
+        @_file_rendered || File.join(config_data.file_dir, "/" + @renderer + "-" +
+          converter.config_hash + srcset_option_if_needed + "-" + @image.fingerprint + "." +
           converter.format)
       end
 
@@ -89,7 +94,6 @@ module Sinicum
             in_file.close
             convert(in_file.path, out_file.path)
             FileUtils.mv(out_file.path, file_rendered)
-            FileUtils.chmod(0644, file_rendered)
             RenderResult.new(
               file_rendered, @doc["jcr:mimeType"], @doc[:fileName], fingerprint)
           rescue => e
@@ -121,9 +125,9 @@ module Sinicum
         last_modified = @doc["jcr:lastModified"]
         # File.size == 0 is related to a (temporary?) bug on one server
         # should be possible to remove
-        result = !File.exist?(file_rendered) || File.mtime(file_rendered) <
-          last_modified || File.size(file_rendered) == 0
-        result
+        !File.exist?(file_rendered) ||
+          File.mtime(file_rendered) < last_modified ||
+          File.size(file_rendered) == 0
       end
 
       def random
@@ -137,19 +141,21 @@ module Sinicum
       def converter
         conv = config_data.converter(@renderer)
         conv.document = @image if conv
+        conv.hires_factor = @srcset_option.to_f/100 if @srcset_option
         conv
       end
     end
 
     # Internal: Simple wrapper around imaging results.
     class RenderResult
-      attr_accessor :path, :mime_type, :filename, :fingerprint
+      attr_accessor :path, :mime_type, :filename, :fingerprint, :srcset_option
 
-      def initialize(path, mime_type, filename, fingerprint = nil)
+      def initialize(path, mime_type, filename, srcset_option = nil, fingerprint = nil)
         @path = path
         @mime_type = mime_type
         @filename = filename
         @fingerprint = fingerprint
+        @srcset_option = srcset_option
       end
     end
   end
