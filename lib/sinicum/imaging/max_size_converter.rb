@@ -8,6 +8,9 @@ module Sinicum
       attr_reader :format
 
       def initialize(configuration)
+        if !configuration['format'] || (!configuration['x'] && !configuration['y'])
+          fail ArgumentError.new("Converter requires the arguments: format, x, y")
+        end
         super(configuration)
         @format = configuration['format'] || 'jpeg'
       end
@@ -35,8 +38,8 @@ module Sinicum
         original_ratio = ratio(@document.width, @document.height)
         x = @x.to_f
         y = @y.to_f
-        if @y != '' && x / original_ratio > y
-          x = (y * original_ratio).round
+        if @y != '' && ((x / original_ratio > y) || @x == '')
+          x = (y * original_ratio).round 
         else
           y = (x / original_ratio).round
         end
