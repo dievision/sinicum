@@ -24,8 +24,8 @@ module Sinicum
 
         if extension == 'gif'
           special = '-coalesce'
-          layers = '-layers Optimize' 
-        end 
+          layers = '-layers Optimize'
+        end
 
         cmd = "convert #{infile_path} #{interlace_option(x, y, extension)} #{special} " \
           "#{quality_option} " +

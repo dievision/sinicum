@@ -94,6 +94,11 @@ module Sinicum
         doc = REXML::Document.new(helper.mgnl_img(uuid, :'data-something' => "data"))
         expect(doc.elements["img"].attributes["data-something"]).to eq("data")
       end
+
+      it "should be able to return just the attributes as hash" do
+        expect(helper.mgnl_img_attributes(uuid, :'data-something' => "data")).to be_a(Hash)
+        expect(helper.mgnl_img_attributes(uuid, :'data-something' => "data")[:'data-something']).to eq("data")
+      end
     end
 
     it "should return nil if no image is found" do

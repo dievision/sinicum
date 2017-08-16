@@ -7,7 +7,7 @@ module Sinicum
 
       def call(env)
         request = ActionDispatch::Request.new(env)
-        @path = request.path.gsub(".html", "")
+        path = request.path.gsub(".html", "")
         unless multisite_ignored_path?(env)
           if Rails.configuration.x.multisite_production == true
             node = node_from_domain(request.host, :primary_domain)
@@ -19,9 +19,12 @@ module Sinicum
               request.session[:multisite_root] = node[:root_node]
             end
           else # author/dev
-            log("Session => #{request.session[:multisite_root].inspect} with splitted_path => #{splitted_path.inspect}")
-            query = "select * from mgnl:multisite where root_node LIKE '/#{splitted_path[1]}'"
-            query += " OR root_node LIKE '/#{splitted_path[1]}/#{splitted_path[2]}'" if splitted_path.size > 2
+            # if env['rack.session'][:multisite_root] && on_root_path?(env['rack.session'][:multisite_root], request.fullpath)
+            #   # Redirect to the fullpath without the root_path for consistency
+            #   return redirect(gsub_root_path(env['rack.session'][:multisite_root], request.fullpath))
+            # end
+            log("Session => #{request.session[:multisite_root].inspect}")
+            query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
               log("Node has been found - Session => #{node[:root_node].inspect}")
               request.session[:multisite_root] = node[:root_node]

@@ -163,6 +163,32 @@ module Sinicum
           end
         end
       end
+
+      context "srcset options" do
+        it "should extract the cache key with a suffix" do
+          file = ImagingFile.new("/damfiles/etc/pp/Header-Inhalt-TUI-Presse.jpg2_050-d9a4dc816a85ac55bad73ee5f23c8f9e.jpg")
+          expect(file.normalized_request_path).to eq("/damfiles/etc/pp/Header-Inhalt-TUI-Presse.jpg2")
+          expect(file.extension).to eq("jpg")
+          expect(file.fingerprint).to eq("d9a4dc816a85ac55bad73ee5f23c8f9e")
+          expect(file.srcset_option).to eq("050")
+        end
+
+        it "should extract the cache key without a suffix" do
+          file = ImagingFile.new("/damfiles/etc/pp/Header-Inhalt-TUI-Presse.jpg2_200-d9a4dc816a85ac55bad73ee5f23c8f9e")
+          expect(file.normalized_request_path).to eq("/damfiles/etc/pp/Header-Inhalt-TUI-Presse.jpg2")
+          expect(file.extension).to eq(nil)
+          expect(file.fingerprint).to eq("d9a4dc816a85ac55bad73ee5f23c8f9e")
+          expect(file.srcset_option).to eq("200")
+        end
+
+        it "should extract the cache key with a suffix but no srcset_option" do
+          file = ImagingFile.new("/damfiles/etc/pp/Header-Inhalt-TUI-Presse.jpg2-d9a4dc816a85ac55bad73ee5f23c8f9e.jpg")
+          expect(file.normalized_request_path).to eq("/damfiles/etc/pp/Header-Inhalt-TUI-Presse.jpg2")
+          expect(file.extension).to eq("jpg")
+          expect(file.fingerprint).to eq("d9a4dc816a85ac55bad73ee5f23c8f9e")
+          expect(file.srcset_option).to eq(nil)
+        end
+      end
     end
   end
 end
