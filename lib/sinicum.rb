@@ -21,6 +21,7 @@ module Sinicum
   require 'sinicum/imaging/imaging_file'
 
   require 'sinicum/multisite/multisite_middleware'
+  require 'sinicum/multisite/utils'
 
   require 'sinicum/jcr/jcr_configuration'
   require 'sinicum/jcr/api_queries'
@@ -42,6 +43,7 @@ module Sinicum
   require 'sinicum/jcr/type_translator'
 
   require 'sinicum/jcr/cache/global_cache'
+  require 'sinicum/jcr/cache/site_cache'
 
   require 'sinicum/templating/templating_utils'
   require 'sinicum/templating/dialog_resolver'
