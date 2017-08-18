@@ -25,6 +25,9 @@ module Sinicum
       result = nil
       if area_name.present?
         available_components = initialize_area(mgnl_content_data, area_name)
+        if options[:component_whitelist]
+          available_components = available_components & options[:component_whitelist]
+        end
         if available_components
           result = mgnl_comment_tag(
             :'cms:area',

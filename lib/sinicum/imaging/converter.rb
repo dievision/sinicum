@@ -55,7 +55,7 @@ module Sinicum
       end
 
       def quality_option
-        "-quality 80" if @hires_factor && @hires_factor > 1.5
+        "-quality 80"
       end
 
       def optimize_png_outfile(outfile_path, extension)
