@@ -1,4 +1,5 @@
 root_dir: /tmp/imaging
+srcset_options: [['050', '0.5x'], ['150', '1.5x'], ['175', '1.75x'], ['200', '2x']]
 apps:
   videos:
     imaging_prefix: "/videofiles"
@@ -31,3 +32,11 @@ renderer:
     format: jpeg
     x: 960
     y: 444
+
+  etc:
+    render_type: resize_max
+    format: jpeg
+    x: 300
+    y: 500
+
+

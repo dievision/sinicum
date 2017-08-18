@@ -24,12 +24,16 @@ module Sinicum
         request = Rack::Request.new(env)
         imaging_file = ImagingFile.new(request.path_info)
         if imaging_file.result?
-          @path = imaging_file.path
-          available = begin
-                        F.file?(@path) && F.readable?(@path)
-                      rescue SystemCallError
-                        false
-                      end
+          if imaging_file.fingerprinted?
+            @path = imaging_file.path
+            available = begin
+                          F.file?(@path) && F.readable?(@path)
+                        rescue SystemCallError
+                          false
+                        end
+          elsif imaging_file.calculated_asset_path
+            return redirect(imaging_file.calculated_asset_path)
+          end
         end
         if available
           @headers = {}
@@ -41,6 +45,10 @@ module Sinicum
         else
           fail(404, "File not found: #{request.path_info}")
         end
+      end
+
+      def redirect(location)
+        [302, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Found (Moved Temporarily)']]
       end
     end
   end
