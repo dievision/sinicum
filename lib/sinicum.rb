@@ -21,6 +21,7 @@ module Sinicum
   require 'sinicum/imaging/imaging_file'
 
   require 'sinicum/multisite/multisite_middleware'
+  require 'sinicum/multisite/utils'
 
   require 'sinicum/jcr/jcr_configuration'
   require 'sinicum/jcr/api_queries'

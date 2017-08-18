@@ -108,7 +108,7 @@ module Sinicum
         if Sinicum::Util.is_a_uuid?(redirect_target)
           redirect_target = Sinicum::Jcr::Node.find_by_uuid("website", redirect_target).try(:path)
         end
-        redirect_to redirect_target, status: redirect_status
+        redirect_to url_for(redirect_target), status: redirect_status
         return true
       end
       return false
