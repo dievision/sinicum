@@ -154,7 +154,7 @@ module Sinicum
         if request.query_string && !request.query_string.blank?
           new_path << "?#{request.query_string}"
         end
-        redirect_to new_path
+        redirect_to url_for(new_path)
       end
     end
 
