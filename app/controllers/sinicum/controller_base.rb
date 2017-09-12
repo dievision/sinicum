@@ -19,7 +19,8 @@ module Sinicum
     end
 
     def render_with_sinicum(options = {}, locals = {}, &block)
-      find_original_content_for_path(content_path)
+      path = options[:content_path] ? options[:content_path] : content_path
+      find_original_content_for_path(path)
       unless redirect_redirect_page
         check_for_content!
         if options[:text].nil? && options[:layout].nil?
@@ -45,8 +46,7 @@ module Sinicum
       request.path
     end
 
-    def find_original_content_for_path(path = nil)
-      path ||= content_path
+    def find_original_content_for_path(path = content_path)
       original_content = Content::WebsiteContentResolver.find_for_path(path)
       Content::Aggregator.original_content = original_content
     end
@@ -154,7 +154,7 @@ module Sinicum
         if request.query_string && !request.query_string.blank?
           new_path << "?#{request.query_string}"
         end
-        redirect_to new_path
+        redirect_to url_for(new_path)
       end
     end
 
