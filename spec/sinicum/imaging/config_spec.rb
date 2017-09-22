@@ -6,6 +6,7 @@ module Sinicum
       test_config = File.join(File.dirname(__FILE__), "../../fixtures/imaging.yml")
       test_config_default = File.join(File.dirname(__FILE__), "../../fixtures/imaging_default.yml")
       test_config_faulty = File.join(File.dirname(__FILE__), "../../fixtures/imaging_without_apps.yml")
+      test_config_srcset_faulty = File.join(File.dirname(__FILE__), "../../fixtures/imaging_bad_srcset_options.yml")
       let(:config) { Config.configure(test_config) }
 
       before(:each) do
@@ -53,6 +54,12 @@ module Sinicum
         expect do
            Config.configure(test_config_faulty)
         end.to raise_error(RuntimeError, /No apps are configured/)
+      end
+
+      it "should raise an error if srcset is badly configured" do
+        expect do
+           Config.configure(test_config_srcset_faulty)
+        end.to raise_error(RuntimeError, /Srcset options are not defined correctly./)
       end
 
       context "render_class_name option" do
