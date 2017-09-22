@@ -7,9 +7,9 @@ module Sinicum
     include Controllers::CacheAware
 
     included do
-      prepend_before_filter ::Sinicum::Controllers::GlobalStateCache
-      prepend_before_filter :remove_html_suffix
-      after_filter ::Sinicum::Controllers::GlobalStateCache
+      prepend_before_action ::Sinicum::Controllers::GlobalStateCache
+      prepend_before_action :remove_html_suffix
+      after_action ::Sinicum::Controllers::GlobalStateCache
       alias_method :original_rails_render, :render
       alias_method :render, :render_with_sinicum
     end
@@ -19,7 +19,8 @@ module Sinicum
     end
 
     def render_with_sinicum(options = {}, locals = {}, &block)
-      find_original_content_for_path(content_path)
+      path = options[:content_path] ? options[:content_path] : content_path
+      find_original_content_for_path(path)
       unless redirect_redirect_page
         check_for_content!
         if options[:text].nil? && options[:layout].nil?
@@ -45,8 +46,7 @@ module Sinicum
       request.path
     end
 
-    def find_original_content_for_path(path = nil)
-      path ||= content_path
+    def find_original_content_for_path(path = content_path)
       original_content = Content::WebsiteContentResolver.find_for_path(path)
       Content::Aggregator.original_content = original_content
     end
@@ -104,10 +104,11 @@ module Sinicum
       page = ::Sinicum::Content::Aggregator.content_data
       if redirect_page_45?(page) || redirect_page_44?(page)
         redirect_target = page[:redirect_link]
+        redirect_status = page[:redirect_status] || 302
         if Sinicum::Util.is_a_uuid?(redirect_target)
           redirect_target = Sinicum::Jcr::Node.find_by_uuid("website", redirect_target).try(:path)
         end
-        redirect_to redirect_target
+        redirect_to url_for(redirect_target), status: redirect_status
         return true
       end
       return false
@@ -153,7 +154,7 @@ module Sinicum
         if request.query_string && !request.query_string.blank?
           new_path << "?#{request.query_string}"
         end
-        redirect_to new_path
+        redirect_to url_for(new_path)
       end
     end
 

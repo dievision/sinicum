@@ -18,7 +18,7 @@ module Sinicum
       @@dir_setup = false
 
       # The root directory under which all files are stored
-      attr_reader :root_dir, :renderer, :apps
+      attr_reader :root_dir, :renderer, :apps, :srcset_options
 
       # The directory to store all rendered files in
       #
@@ -110,16 +110,30 @@ module Sinicum
         setup_directory_structure(@root_dir)
         @renderer = config['renderer']
         @apps = config['apps']
+        @srcset_options = config['srcset_options']
       end
 
       def check_configuration(config)
         renderers = config['renderer']
         apps = config['apps']
+        srcset_options = config['srcset_options']
         if renderers[Imaging::DEFAULT_CONVERTER_NAME]
           fail "No renderer with name '#{Imaging::DEFAULT_CONVERTER_NAME}' is allowed"
         end
         if apps.blank?
           fail "No apps are configured. Please check the README for an example."
+        end
+        if srcset_options.kind_of?(Array)
+          srcset_options.each do |option|
+            unless option.kind_of?(Array) && option[0].is_a?(String) && option[0].match(/[0-9]{3}/) &&
+              option[1].is_a?(String) && option[1].match(/([0-4]\.[1-9]{1,2}x)|([2-4]x)/)
+              fail "Srcset options are not defined correctly."
+            end
+          end
+        else
+          unless srcset_options.nil?
+            fail "No Srcset options defined."
+          end
         end
       end
 
