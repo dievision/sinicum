@@ -7,6 +7,8 @@ Dummy::Application.configure do
   # and recreated between test runs.  Don't rely on the data there!
   config.cache_classes = true
 
+  config.cache_store = :null_store
+
   config.eager_load = false
 
   # Show full error reports and disable caching
