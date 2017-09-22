@@ -46,6 +46,11 @@ module Sinicum
           expect(request.path).to eq("/dievision/home")
           expect(response).to redirect_to("/home")
           expect(request.session[:multisite_root]).to eq("/dievision")
+
+          get '/home'
+          expect(request.path).to eq("/dievision/home")
+          expect(response).to have_http_status(:ok)
+          expect(request.session[:multisite_root]).to eq("/dievision")
         end
 
         it "should use the session after a first request" do
