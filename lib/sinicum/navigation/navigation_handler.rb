@@ -38,6 +38,8 @@ module Sinicum
         if result.ok?
           json = MultiJson.load(result.body)
           initialize_from_json(json)
+        else
+          []
         end
       end
 
@@ -48,6 +50,8 @@ module Sinicum
         if result.ok?
           json = MultiJson.load(result.body)
           initialize_from_json(json)
+        else
+          []
         end
       end
 
