@@ -75,7 +75,7 @@ module Sinicum
       def find_image_objects_by_path(original_path)
         result = [nil, nil]
         image = Sinicum::Jcr::Node.find_by_path(@workspace, original_path)
-        if image && image.kind_of? Sinicum::Jcr::Dam::Document
+        if image && image.kind_of?(Sinicum::Jcr::Dam::Document)
           doc = image.properties
           result = [image, doc]
         end
