@@ -169,9 +169,9 @@ It is now accessed in a content area and a the ComponentTranslator tries to cons
     end
     
     
-##### Example: Extending the translator
-It is possible to extend the base functionality by writing an own `translator_type`. 
-To extend the example from before, we create a new file `article_type_translator.rb` under lib/type_translators:
+##### Example: Adding new TypeTranslators
+It is possible to extend the base functionality by writing an own `TypeTranslator`. 
+To use the example from before, we create a new file `article_type_translator.rb` under lib/type_translators:
 
 ```
 module MyProject
@@ -200,7 +200,7 @@ The necessary initializer file `type_translators.rb` contains:
     Sinicum::Jcr::TypeTranslator.use(MyProject::TypeTranslators::FaqTypeTranslator)
     
 
-Now only nodes belonging to the correct workspace and node type are being translated.
+Now nodes belonging to the correct workspace and node type are being translated.
 
  
 
