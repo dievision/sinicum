@@ -157,7 +157,7 @@ This is done . (A good example is the [ComponentTranslator](https://github.com/d
 
 ##### Example:
  
-A component `article` has the template 'my_project:components/article' (generated in the example templates).
+A component `article` has the template `my_project:components/article` (generated in the example templates).
 It is now accessed in a content area and a the ComponentTranslator tries to constantize the templatename. The resulting class would be `MyProject::Components::Article`.
 
     module MyProject
@@ -167,6 +167,42 @@ It is now accessed in a content area and a the ComponentTranslator tries to cons
         end
       end
     end
+    
+    
+##### Example: Adding new TypeTranslators
+It is possible to extend the base functionality by writing an own `TypeTranslator`. 
+To use the example from before, we create a new file `article_type_translator.rb` under lib/type_translators:
+
+```
+module MyProject
+  module Components
+    class ArticleTypeTranslator
+      include Sinicum::Jcr::TypeTranslators::TranslatorBase
+      
+      WORKSPACE = "example"
+      NODE_TYPE = "mgnl:example"
+      
+      
+        def self.initialize_node(json)
+    	    if workspace(json) == WORKSPACE && jcr_primary_type(json) == NODE_TYPE
+              Article.new(:json_response => json)
+            end
+        end
+        
+      end
+    end
+  end
+end 
+```
+
+The necessary initializer file `type_translators.rb` contains:
+
+    Sinicum::Jcr::TypeTranslator.use(MyProject::TypeTranslators::FaqTypeTranslator)
+    
+
+Now nodes belonging to the correct workspace and node type are being translated.
+
+ 
 
 ## Controllers
 
