@@ -8,9 +8,9 @@ module Sinicum
       def initialize(axis, base_node_or_path, navigation_element_class, options = {})
         @navigation_element_class = navigation_element_class
         if axis == :children
-          @elements = fetch_children(base_node_or_path, options[:depth])
+          @elements = fetch_children(base_node_or_path, options[:depth], options[:properties])
         elsif axis == :parents
-          @elements = fetch_parents(base_node_or_path)
+          @elements = fetch_parents(base_node_or_path, options[:properties])
         end
       end
 
@@ -18,23 +18,26 @@ module Sinicum
         NavigationElementList.new(@elements)
       end
 
-      def self.children(base_node_or_path, depth,
+      def self.children(base_node_or_path, depth, properties = [],
           navigation_element_class = DefaultNavigationElement)
-        new(:children, base_node_or_path, navigation_element_class, depth: depth)
+        new(:children, base_node_or_path, navigation_element_class,
+          { depth: depth, properties: properties })
       end
 
-      def self.parents(base_node_or_path, navigation_element_class = DefaultNavigationElement)
-        new(:parents, base_node_or_path, navigation_element_class)
+      def self.parents(base_node_or_path, properties = [],
+          navigation_element_class = DefaultNavigationElement)
+        new(:parents, base_node_or_path, navigation_element_class, properties: properties)
       end
 
       private
 
-      def fetch_children(base_node, depth)
+      def fetch_children(base_node, depth, additional_properties = [])
         url = "/_navigation/children#{base_node_url_part(base_node)}"
+        properties = @navigation_element_class.navigation_properties + additional_properties
         result = api_get(
           url,
           "depth" => depth,
-          "properties" => @navigation_element_class.navigation_properties.join(";"))
+          "properties" => properties.join(";"))
         if result.ok?
           json = MultiJson.load(result.body)
           initialize_from_json(json)
@@ -43,10 +46,11 @@ module Sinicum
         end
       end
 
-      def fetch_parents(base_node)
+      def fetch_parents(base_node, additional_properties = [])
         url = "/_navigation/parents#{base_node_url_part(base_node)}"
+        properties = @navigation_element_class.navigation_properties + additional_properties
         result = api_get(
-          url, "properties" => @navigation_element_class.navigation_properties.join(";"))
+          url, "properties" => properties.join(";"))
         if result.ok?
           json = MultiJson.load(result.body)
           initialize_from_json(json)
