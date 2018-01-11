@@ -119,7 +119,9 @@ module Sinicum
     end
 
     def redirect_page_45?(page)
-      magnolia_template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
+      magnolia_template_exists?(page) &&
+        page.mgnl_template.index("pages/redirect") &&
+        (page[:redirect_link] || page[:external_redirect_link])
     end
 
     def magnolia_template_exists?(page)
