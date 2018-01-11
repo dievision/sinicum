@@ -103,7 +103,7 @@ module Sinicum
       return false if request.headers["HTTP_X_MGNL_ADMIN"].present?
       page = ::Sinicum::Content::Aggregator.content_data
       if redirect_page_45?(page) || redirect_page_44?(page)
-        redirect_target = page[:redirect_link]
+        redirect_target = page[:redirect_link] || page[:external_redirect_link]
         if Sinicum::Util.is_a_uuid?(redirect_target)
           redirect_target = Sinicum::Jcr::Node.find_by_uuid("website", redirect_target).try(:path)
         end
@@ -118,7 +118,9 @@ module Sinicum
     end
 
     def redirect_page_45?(page)
-      magnolia_template_exists?(page) && page.mgnl_template.index("pages/redirect") && page[:redirect_link]
+      magnolia_template_exists?(page) &&
+        page.mgnl_template.index("pages/redirect") &&
+        (page[:redirect_link] || page[:external_redirect_link])
     end
 
     def magnolia_template_exists?(page)
