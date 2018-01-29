@@ -1,9 +1,12 @@
 require 'yaml'
+require 'rack/cors'
 
 module Sinicum
   # Internal: Initialize the Gem in a Rails environment
   class Engine < Rails::Engine
     SINICUM_SERVER_CONFIG_FILE = File.join("config", "sinicum_server.yml")
+
+    isolate_namespace Sinicum
 
     initializer "configure_jcr" do |app|
       config_file = File.join(Rails.root, SINICUM_SERVER_CONFIG_FILE)
@@ -29,6 +32,15 @@ module Sinicum
         else
           app.config.x.multisite_ignored_paths =
             [/#{Regexp.quote(Rails.configuration.assets.prefix)}/]
+        end
+      end
+    end
+
+    initializer "sinicum.add_cors" do |app|
+      app.middleware.insert_before 0, Rails.version.to_i < 5 ? "Rack::Cors" : Rack::Cors do
+        allow do
+          origins '*'
+          resource '/sinicum/*', :headers => :any, :methods => :any
         end
       end
     end

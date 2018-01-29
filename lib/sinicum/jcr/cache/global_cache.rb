@@ -3,22 +3,31 @@ module Sinicum
     module Cache
       # Public: Fetches the global cache key from the JCR server.
       class GlobalCache
-        API_PATH = "/_cache/global"
-        JSON_CACHE_KEY = "cacheKey"
-        include ::Sinicum::Jcr::ApiClient
+        CACHE_KEY = "sinicum_global_cache"
+        MAX_NAMESPACE_SIZE = 4096
 
-        def current_key
-          result = nil
-          response = api_get(API_PATH)
-          if response.ok?
-            begin
-              json = MultiJson.load(response.body)
-              result = json[JSON_CACHE_KEY]
-            rescue => e
-              Rails.logger.error("Cannot load global cache key: " + e.message)
-            end
+        def current_key(namespace = nil)
+          keys = Rails.cache.fetch_multi(key_name(nil), key_name(namespace)) do
+            create_key
           end
-          result
+          Digest::SHA1.hexdigest(keys.values.join("-"))
+        end
+
+        def reset_key(namespace = nil)
+          Rails.cache.write(key_name(namespace), create_key)
+        end
+
+        private
+
+        def create_key
+          SecureRandom.hex
+        end
+
+        def key_name(namespace)
+          if namespace && namespace.length > MAX_NAMESPACE_SIZE
+            raise ArgumentError.new("Cache namespace too long")
+          end
+          [CACHE_KEY, namespace && Digest::SHA1.hexdigest(namespace)].join("-")
         end
       end
     end
