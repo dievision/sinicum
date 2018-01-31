@@ -3,9 +3,12 @@ require 'spec_helper'
 module Sinicum
   module Multisite
     describe MultisiteMiddleware, :type => :request do
-      let(:api_response_multisite) { File.read(File.dirname(__FILE__) + "/../../fixtures/api/dievision_multisite.json") }
-      let(:api_response_multisite2) { File.read(File.dirname(__FILE__) + "/../../fixtures/api/sinicum_multisite.json") }
-      let(:api_response_website) { File.read(File.dirname(__FILE__) + "/../../fixtures/api/multisite_home.json") }
+      let(:api_response_multisite) { File.read(File.dirname(__FILE__) +
+          "/../../fixtures/api/dievision_multisite.json") }
+      let(:api_response_multisite2) { File.read(File.dirname(__FILE__) +
+          "/../../fixtures/api/sinicum_multisite.json") }
+      let(:api_response_website) { File.read(File.dirname(__FILE__) +
+          "/../../fixtures/api/multisite_home.json") }
 
       before(:example) do
         Sinicum::Jcr::ApiQueries.configure_jcr = { host: "content.dievision.de" }
@@ -14,9 +17,11 @@ module Sinicum
       describe "adjust request paths" do
         before(:example) do
           stub_request(:get, /.*sinicum-rest\/website.*/)
-            .to_return(body: api_response_website, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_website,
+            headers: { "Content-Type" => "application/json" })
           stub_request(:get, /.*sinicum-rest\/multisite.*/)
-            .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_multisite,
+            headers: { "Content-Type" => "application/json" })
         end
 
         it "should trigger multisite for a subnode" do
@@ -69,7 +74,8 @@ module Sinicum
           expect(request.path).to eq("/dievision/home")
 
           stub_request(:get, /.*sinicum-rest\/multisite.*/)
-            .to_return(body: api_response_multisite2, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_multisite2,
+            headers: { "Content-Type" => "application/json" })
 
           get '/test'
           expect(request.path).to eq("/sinicum/test")
@@ -79,7 +85,8 @@ module Sinicum
       describe "no change in request paths" do
         before(:example) do
           stub_request(:get, /.*sinicum-rest\/website.*/)
-            .to_return(body: api_response_website, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_website,
+            headers: { "Content-Type" => "application/json" })
           stub_request(:get, /.*sinicum-rest\/multisite.*/)
             .to_return(body: "[]", headers: { "Content-Type" => "application/json" })
         end
@@ -89,21 +96,22 @@ module Sinicum
           expect(request.path).to eq("/unmodified")
         end
       end
-    
 
       context "in production mode" do
         before(:example) do
           Rails.configuration.x.multisite_production = true
           stub_request(:get, /.*sinicum-rest\/website.*/)
-            .to_return(body: api_response_website, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_website,
+            headers: { "Content-Type" => "application/json" })
         end
-        
+
         it "should get redirected" do
           host! "sinicum.example.de"
           stub_request(:get, /.*sinicum-rest\/multisite.*?primary_domain.*/)
             .to_return(body: "[]", headers: { "Content-Type" => "application/json" })
           stub_request(:get, /.*sinicum-rest\/multisite.*?alias_domains.*/)
-            .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_multisite,
+            headers: { "Content-Type" => "application/json" })
 
           get '/home'
           expect(response).to redirect_to("http://magnolia.example.de/home")
@@ -122,7 +130,8 @@ module Sinicum
         it "should be bypassed because of the path" do
           host! "magnolia.example.de"
           stub_request(:get, /.*sinicum-rest\/multisite.*/)
-            .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_multisite,
+            headers: { "Content-Type" => "application/json" })
 
           get '/sidekiq'
           expect(response).to have_http_status(:ok)
@@ -137,9 +146,11 @@ module Sinicum
 
         it "should still bypass assets if config is not set" do
           host! "magnolia.example.de"
-          Rails.configuration.x.multisite_ignored_paths = [/#{Regexp.quote(Rails.configuration.assets.prefix)}/]
+          Rails.configuration.x.multisite_ignored_paths =
+            [/#{Regexp.quote(Rails.configuration.assets.prefix)}/]
           stub_request(:get, /.*sinicum-rest\/multisite.*/)
-            .to_return(body: api_response_multisite, headers: { "Content-Type" => "application/json" })
+          .to_return(body: api_response_multisite,
+            headers: { "Content-Type" => "application/json" })
 
           get '/sidekiq'
           expect(response).to have_http_status(:ok)
