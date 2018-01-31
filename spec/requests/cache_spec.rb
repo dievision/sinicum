@@ -8,7 +8,7 @@ describe "Cache controller" do
 
   context "without authentication" do
     it "should return unauthenticated" do
-      delete "/sinicum/cache"
+      delete "/_sinicum/cache"
 
       expect(response.status).to eq(401)
     end
@@ -17,7 +17,7 @@ describe "Cache controller" do
       cache = Sinicum::Jcr::Cache::GlobalCache.new
       original_cache_key = cache.current_key
 
-      delete "/sinicum/cache", {}, headers
+      delete "/_sinicum/cache", {}, headers
 
       expect(cache.current_key).to eq(original_cache_key)
     end
@@ -37,7 +37,7 @@ describe "Cache controller" do
     end
 
     it "should be a successful request" do
-      delete "/sinicum/cache", {}, headers
+      delete "/_sinicum/cache", {}, headers
 
       expect(response).to be_success
     end
@@ -46,7 +46,7 @@ describe "Cache controller" do
       cache = Sinicum::Jcr::Cache::GlobalCache.new
       original_cache_key = cache.current_key
 
-      delete "/sinicum/cache", {}, headers
+      delete "/_sinicum/cache", {}, headers
 
       expect(cache.current_key).not_to eq(original_cache_key)
     end
@@ -56,15 +56,14 @@ describe "Cache controller" do
       original_cache_key = cache.current_key
       original_namespace_key = cache.current_key("a-name")
 
-      delete "/sinicum/cache", { "namespace" => "a-name" }.to_json, headers
+      delete "/_sinicum/cache", { "namespace" => "a-name" }.to_json, headers
 
       expect(cache.current_key).to eq(original_cache_key)
       expect(cache.current_key("a-name")).not_to eq(original_namespace_key)
     end
 
     it "should return cors headers" do
-      delete "/sinicum/cache", {}, headers
-      puts response.headers.inspect
+      delete "/_sinicum/cache", {}, headers
     end
   end
 end

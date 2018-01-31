@@ -1,5 +1,5 @@
 Sinicum::Engine.routes.draw do
   defaults format: :json do
-    delete "cache" => "cache#delete"
+    delete "cache" => "sinicum/cache#delete"
   end
 end

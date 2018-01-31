@@ -6,8 +6,6 @@ module Sinicum
   class Engine < Rails::Engine
     SINICUM_SERVER_CONFIG_FILE = File.join("config", "sinicum_server.yml")
 
-    isolate_namespace Sinicum
-
     initializer "configure_jcr" do |app|
       config_file = File.join(Rails.root, SINICUM_SERVER_CONFIG_FILE)
       if File.exist?(config_file)
