@@ -99,6 +99,7 @@ module Sinicum
 
       context "in production mode" do
         before(:example) do
+          Rails.cache.clear
           Rails.configuration.x.multisite_production = true
           stub_request(:get, /.*sinicum-rest\/website.*/)
           .to_return(body: api_response_website,
