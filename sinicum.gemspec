@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.add_dependency('rails', '~> 4.2', '< 5.0')
   s.add_dependency('httpclient', '~> 2.7')
   s.add_dependency('multi_json', '~> 1.11')
-  s.add_dependency('rack-cors')
   s.add_development_dependency('rspec-rails', '~> 3.4')
   s.add_development_dependency('test-unit')
   s.add_development_dependency('yard')
