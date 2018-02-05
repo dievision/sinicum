@@ -35,6 +35,10 @@ module Sinicum
         if cached && cached[:status].to_s == "200"
           @controller.response.cache_control.merge!(cached[:cache_control])
           @controller.response.status = cached[:status]
+          @controller.response.content_type = cached[:content_type]
+          if cached[:charset]
+            @content_type.response.charset = cached[:charset]
+          end
           @controller.response.headers["X-SCache"] = "true"
           @controller.original_rails_render text: cached[:body]
         else
@@ -49,7 +53,9 @@ module Sinicum
           cache_content = {
             body: response.body,
             cache_control: response.cache_control,
-            status: response.status
+            status: response.status,
+            content_type: response.content_type,
+            charset: response.charset
           }
           cache_options = {}
           if @controller.respond_to?(:global_state_cache_expiration_time)
