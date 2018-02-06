@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('webmock')
   s.add_development_dependency('rubocop')
   s.add_development_dependency('simplecov')
+  s.add_development_dependency('dalli')
   s.add_development_dependency('codeclimate-test-reporter')
 
   s.files         = `git ls-files`.split("\n")
