@@ -106,6 +106,9 @@ module Sinicum
         redirect_target = page[:redirect_link] || page[:external_redirect_link]
         if Sinicum::Util.is_a_uuid?(redirect_target)
           redirect_target = Sinicum::Jcr::Node.find_by_uuid("website", redirect_target).try(:path)
+          if redirect_target && page[:anchor].present?
+            redirect_target = "#{redirect_target}#{page[:anchor]}"
+          end
         end
         redirect_to url_for(redirect_target)
         return true
