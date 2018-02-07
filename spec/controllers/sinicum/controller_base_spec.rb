@@ -100,5 +100,67 @@ module Sinicum
         expect(asd_path("test")).to eq("/asd/test")
       end
     end
+
+    describe "redirect template" do
+      it "should redirect to the :redirect_link property as an external link" do
+        redirect_node = Jcr::Node.new({ redirect_link: "http://www.web.com" })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("http://www.web.com")
+      end
+
+      it "should redirect to the :redirect_link property as an internal link" do
+        redirect_node = Jcr::Node.new({ redirect_link: "/en/root" })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("/en/root")
+      end
+
+      it "should redirect to the :redirect_link prior to the :external_redirect_link" do
+        redirect_node = Jcr::Node.new({
+          redirect_link: "/en/root",
+          external_redirect_link: "http://www.web.com"
+        })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("/en/root")
+      end
+
+      it "should redirect to the :external_redirect_link property if no :redirect_link" do
+        redirect_node = Jcr::Node.new({
+          redirect_link: nil,
+          external_redirect_link: "http://www.web.com"
+        })
+        allow(redirect_node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("http://www.web.com")
+      end
+
+      it "should ignore the anchor for external link" do
+        redirect_node = Jcr::Node.new({
+          redirect_link: nil,
+          external_redirect_link: "http://www.web.com",
+          anchor: "#123456abcdef"
+        })
+        allow(redirect_node ).to receive(:mgnl_template).and_return("my-module:pages/redirect")
+        allow(Content::Aggregator).to receive(:original_content).and_return(redirect_node)
+
+        get :index
+
+        expect(response).to redirect_to("http://www.web.com")
+      end
+    end
   end
 end
