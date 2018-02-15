@@ -157,7 +157,7 @@ This is done . (A good example is the [ComponentTranslator](https://github.com/d
 
 ##### Example:
  
-A component `article` has the template 'my_project:components/article' (generated in the example templates).
+A component `article` has the template `my_project:components/article` (generated in the example templates).
 It is now accessed in a content area and a the ComponentTranslator tries to constantize the templatename. The resulting class would be `MyProject::Components::Article`.
 
     module MyProject

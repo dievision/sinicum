@@ -1,4 +1,5 @@
 root_dir: /tmp/imaging
+srcset_options: [['050', '0.5x'] , ['150', 1.5x], [200, '1x']]
 apps:
   videos:
     imaging_prefix: "/videofiles"
@@ -10,7 +11,6 @@ apps:
     magnolia_prefix: "/dam"
     workspace: "dam"
     node_type: "mgnl:asset"
-    localized_image_tags: true
 
 renderer:
 
