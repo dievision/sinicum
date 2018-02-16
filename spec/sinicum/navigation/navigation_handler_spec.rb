@@ -4,6 +4,11 @@ module Sinicum
   module Navigation
     describe NavigationHandler do
       let(:prefix) { "http://content.dievision.de:80/sinicum-rest" }
+      let(:base_node) do
+          node = double("base_node")
+          allow(node).to receive(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
+          node
+        end
 
       describe "children" do
         let(:api_response) do
@@ -11,13 +16,7 @@ module Sinicum
             "/../../fixtures/api/navigation_children.json")
         end
 
-        let(:base_node) do
-          node = double("base_node")
-          allow(node).to receive(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
-          node
-        end
-
-        before(:each) do
+        before(:example) do
           ::Sinicum::Jcr::ApiQueries.configure_jcr = { host: "content.dievision.de" }
 
           stub_request(:get, "#{prefix}/_navigation/children/#{base_node.uuid}?depth=3&" \
@@ -47,13 +46,7 @@ module Sinicum
           "/../../fixtures/api/navigation_parents.json")
         end
 
-        let(:base_node) do
-          node = double("base_node")
-          allow(node).to receive(:uuid).and_return("745efc13-e7da-4717-9153-10fb6472ca73")
-          node
-        end
-
-        before(:each) do
+        before(:example) do
           ::Sinicum::Jcr::ApiQueries.configure_jcr = { host: "content.dievision.de" }
 
           stub_request(:get, "#{prefix}/_navigation/parents/#{base_node.uuid}?" \
@@ -64,6 +57,22 @@ module Sinicum
         it "should retrieve the children for a node and filter elements" do
           handler = NavigationHandler.parents(base_node)
           expect(handler.elements.size).to eq(3)
+        end
+      end
+
+      describe "faulty navigation" do
+        before(:example) do
+          ::Sinicum::Jcr::ApiQueries.configure_jcr = { host: "content.dievision.de" }
+
+          stub_request(:get, "#{prefix}/_navigation/children/#{base_node.uuid}?depth=3&" \
+            "properties=title;nav_title;nav_hidden")
+            .to_return(body: "[]", headers: { "Content-Type" => "application/json" })
+        end
+
+        it "should retrieve the children for a node and filter elements" do
+          handler = NavigationHandler.children(base_node, 3)
+          expect(handler.elements.size).to eq(0)
+          expect(handler.elements).to be_empty
         end
       end
     end

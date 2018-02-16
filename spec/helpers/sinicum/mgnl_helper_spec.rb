@@ -256,7 +256,7 @@ module Sinicum
 
       describe "path based" do
         before(:each) do
-          expect(Navigation::NavigationHandler).to receive(:children).with("/de", 3)
+          expect(Navigation::NavigationHandler).to receive(:children).with("/de", 3, nil)
             .and_return(handler)
           expect(handler).to receive(:elements).and_return(elements)
         end
@@ -280,7 +280,7 @@ module Sinicum
         let(:node) { double("node") }
 
         before(:each) do
-          expect(Navigation::NavigationHandler).to receive(:children).with(node, 3)
+          expect(Navigation::NavigationHandler).to receive(:children).with(node, 3, nil)
             .and_return(handler)
           expect(handler).to receive(:elements).and_return(elements)
         end
@@ -292,7 +292,7 @@ module Sinicum
 
       describe "path based parents" do
         before(:each) do
-          expect(Navigation::NavigationHandler).to receive(:parents).with("/de")
+          expect(Navigation::NavigationHandler).to receive(:parents).with("/de", nil)
             .and_return(handler)
           expect(handler).to receive(:elements).and_return(elements)
         end

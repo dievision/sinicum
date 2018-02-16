@@ -7,6 +7,8 @@ Dummy::Application.configure do
   # and recreated between test runs.  Don't rely on the data there!
   config.cache_classes = true
 
+  config.cache_store = :null_store
+
   config.eager_load = false
 
   # Show full error reports and disable caching
@@ -24,7 +26,7 @@ Dummy::Application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
-  config.cache_store = :null_store
+  config.cache_store = :dalli_store
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,

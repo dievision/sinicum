@@ -9,6 +9,7 @@ module Sinicum
         allow(controller).to receive(:request).and_return(request)
         allow(request).to receive(:base_url).and_return("base")
         allow(request).to receive(:fullpath).and_return("fullpath")
+        allow(request).to receive(:host).and_return("www.example.com")
         controller
       end
 

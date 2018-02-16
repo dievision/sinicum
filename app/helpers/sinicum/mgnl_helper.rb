@@ -116,21 +116,25 @@ module Sinicum
 
     # Public: Iterates over an array with NavigationElement instances.
     #
-    # base_node_or_path - The node or the path that should be the base of the
-    #                     navigation
-    # type              - Type of the navigation. Currently supports only
-    #                     `:children`.
-    # options           - Options for the navigation:
-    #                     :depth - The depth of a `children` based navigation.
-    # block             - The block with the content of the navigation. It
-    #                     yields with an instance of a NavigationElement.
-    def mgnl_navigation(base_node_or_path, type, options = {}, &block)
+    # base_node_or_path        - The node or the path that should be the base of the
+    #                            navigation
+    # type                     - Type of the navigation. Currently supports only
+    #                            `:children`.
+    # options                  - Options for the navigation:
+    #                            :depth      - the depth of a `children` based navigation.
+    #                            :nav_hidden - If `true`, shows also hidden elements.
+    # navigation_element_class - An optional class implementing `NavigationElement`.
+    # block                    - The block with the content of the navigation. It
+    #                            yields with an instance of a NavigationElement.
+    def mgnl_navigation(base_node_or_path, type, options = {},
+      navigation_element_class = nil, &block)
       elements = []
       if type == :children
-        handler = Navigation::NavigationHandler.children(base_node_or_path, options[:depth])
+        handler = Navigation::NavigationHandler.children(base_node_or_path,
+          options[:depth], navigation_element_class)
         elements = handler.elements
       elsif type == :parents
-        handler = Navigation::NavigationHandler.parents(base_node_or_path)
+        handler = Navigation::NavigationHandler.parents(base_node_or_path, navigation_element_class)
         elements = handler.elements
       end
       if block_given?

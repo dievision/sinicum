@@ -7,7 +7,7 @@ module Sinicum
 
       def call(env)
         request = ActionDispatch::Request.new(env)
-        path = request.path.gsub(".html", "")
+        @path = request.path.gsub(".html", "")
         unless multisite_ignored_path?(env)
           if Rails.configuration.x.multisite_production == true
             node = node_from_domain(request.host, :primary_domain)
@@ -19,10 +19,11 @@ module Sinicum
               request.session[:multisite_root] = node[:root_node]
             end
           else # author/dev
-            log("Session => #{request.session[:multisite_root].inspect}")
-            query = "select * from mgnl:multisite where root_node LIKE '#{root_from_path(path)}'"
+            query = "select * from mgnl:multisite where root_node LIKE '/#{splitted_path[1]}'"
+            if splitted_path.size > 2
+              query += " OR root_node LIKE '/#{splitted_path[1]}/#{splitted_path[2]}'"
+            end
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
-              # Node has been found, so the session is set
               log("Node has been found - Session => #{node[:root_node].inspect}")
               request.session[:multisite_root] = node[:root_node]
             end
@@ -69,8 +70,8 @@ module Sinicum
         env
       end
 
-      def root_from_path(path)
-        path.gsub(/(^\/.*?)\/.*/, '\1')
+      def splitted_path
+        @path.split('/')
       end
 
       def multisite_ignored_path?(env)
@@ -80,7 +81,7 @@ module Sinicum
       end
 
       def redirect(location)
-        [301, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
+        [307, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
       end
     end
   end

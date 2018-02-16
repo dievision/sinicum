@@ -8,7 +8,7 @@ module Sinicum
 
       def initialize(controller)
         @controller = controller
-        @global_jcr_cache_key = Sinicum::Jcr::Cache::GlobalCache.new.current_key
+        @global_jcr_cache_key = Sinicum::Jcr::Cache::GlobalCache.new.current_key(cache_namespace)
       end
 
       def self.before(controller)
@@ -36,7 +36,7 @@ module Sinicum
           @controller.response.cache_control.merge!(cached[:cache_control])
           @controller.response.status = cached[:status]
           @controller.response.headers["X-SCache"] = "true"
-          @controller.original_rails_render text: cached[:body]
+          @controller.original_rails_render(text: cached[:body])
         else
           @controller.response.headers["X-SCache"] = "false"
         end
@@ -81,6 +81,14 @@ module Sinicum
 
       def self.do_cache?
         Rails.application.config.action_controller.perform_caching
+      end
+
+      def cache_namespace
+        if Rails.configuration.x.multisite_production
+          @controller.request.host
+        else
+          nil
+        end
       end
     end
   end
