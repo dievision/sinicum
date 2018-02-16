@@ -51,5 +51,68 @@ module Sinicum
       end
     end
 
+    describe "#configure_for_srcset" do
+      context "with srcset defined" do
+        test_config = File.join(File.dirname(__FILE__), "../../fixtures/imaging_with_srcset.yml")
+        let(:config) { Sinicum::Imaging::Config.configure(test_config) }
+
+        it "should add srcset tags to attributes" do
+          tag_with_srcset = {
+            src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+            alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img",
+            srcset: "/damfiles/etc/pp/hero-teaser-cruises_050-1e531d3c7476f916d42215fd2f829839.jpg 150w," \
+            " /damfiles/etc/pp/hero-teaser-cruises_150-1e531d3c7476f916d42215fd2f829839.jpg 450w," \
+            " /damfiles/etc/pp/hero-teaser-cruises_175-1e531d3c7476f916d42215fd2f829839.jpg 525w," \
+            " /damfiles/etc/pp/hero-teaser-cruises_200-1e531d3c7476f916d42215fd2f829839.jpg 600w"
+          }
+          allow(Sinicum::Imaging::Config).to receive(:read_configuration).and_return(config)
+          expect(helper.send(:configure_for_srcset,
+            { src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+              alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img" }
+          )).to eq(tag_with_srcset)
+        end
+
+        it "should do nothing if width is missing" do
+          tag_with_srcset = {
+            src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+            alt: "hero-teaser-cruises", height: 500, class: "slide-img",
+          }
+          allow(Sinicum::Imaging::Config).to receive(:read_configuration).and_return(config)
+          expect(helper.send(:configure_for_srcset,
+            { src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+              alt: "hero-teaser-cruises", height: 500, class: "slide-img" }
+          )).to eq(tag_with_srcset)
+        end
+
+        it "should do nothing if width is not a number" do
+          tag_with_srcset = {
+            src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+            alt: "hero-teaser-cruises", width: "300x", height: 500, class: "slide-img",
+          }
+          allow(Sinicum::Imaging::Config).to receive(:read_configuration).and_return(config)
+          expect(helper.send(:configure_for_srcset,
+            { src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+              alt: "hero-teaser-cruises", width: "300x", height: 500, class: "slide-img" }
+          )).to eq(tag_with_srcset)
+        end
+      end
+
+      context "without srcset defined" do
+        test_config = File.join(File.dirname(__FILE__), "../../fixtures/imaging.yml")
+        let(:config) { Sinicum::Imaging::Config.configure(test_config) }
+
+        it "should not add srcset tags to attributes" do
+          img_tag = {
+            src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg",
+            alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img"
+          }
+          allow(helper).to receive(:loaded_srcset_options).and_return([])
+          expect(helper.send(
+            :configure_for_srcset,
+            {src: "/damfiles/etc/pp/hero-teaser-cruises-1e531d3c7476f916d42215fd2f829839.jpg", alt: "hero-teaser-cruises", width: 300, height: 500, class: "slide-img"}
+          )).to eq(img_tag)
+        end
+      end
+    end
   end
 end
