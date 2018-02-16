@@ -8,7 +8,7 @@ module Sinicum
       CONVERTER_VERSION = "1" # change to change Hash signature
       PNG_OPTIMIZER_SUFFIX = "-fs8.png"
 
-      attr_writer :document
+      attr_writer :document, :hires_factor
 
       def initialize(configuration)
         @x = configuration['x'] || ''
@@ -24,7 +24,7 @@ module Sinicum
       # @return [String] A hash based on the current converter's configuration
       def config_hash
         digest = Digest::MD5.hexdigest(
-          "#{@x}-#{@y}-#{@hires_factor}-#{@render_type}-#{@format}-#{CONVERTER_VERSION}")
+          "#{@x}-#{@y}-#{@render_type}-#{@format}-#{CONVERTER_VERSION}")
         digest
       end
 
@@ -55,7 +55,7 @@ module Sinicum
       end
 
       def quality_option
-        "-quality 50" if @hires_factor && @hires_factor > 1.5
+        "-quality 80" if @hires_factor && @hires_factor > 1.5
       end
 
       def optimize_png_outfile(outfile_path, extension)
