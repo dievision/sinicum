@@ -9,6 +9,11 @@ module Sinicum
     end
 
     def mgnl_img(key_or_object, options = {})
+      attributes = mgnl_img_attributes(key_or_object, options)
+      tag("img", attributes) if attributes
+    end
+
+    def mgnl_img_attributes(key_or_object, options = {})
       image = object_from_key_or_object(key_or_object, workspace(options))
       result = nil
       if image && image.is_a?(Sinicum::Jcr::Dam::Image)
@@ -18,9 +23,9 @@ module Sinicum
           options.delete(attribute)
         end
         add_missing_attributes(attributes, options)
-        result = tag("img", attributes)
+        configure_for_srcset(attributes)
+        attributes
       end
-      result
     end
   end
 end

@@ -7,9 +7,9 @@ module Sinicum
     include Controllers::CacheAware
 
     included do
-      prepend_before_filter ::Sinicum::Controllers::GlobalStateCache
-      prepend_before_filter :remove_html_suffix
-      after_filter ::Sinicum::Controllers::GlobalStateCache
+      prepend_before_action ::Sinicum::Controllers::GlobalStateCache
+      prepend_before_action :remove_html_suffix
+      after_action ::Sinicum::Controllers::GlobalStateCache
       alias_method :original_rails_render, :render
       alias_method :render, :render_with_sinicum
     end
