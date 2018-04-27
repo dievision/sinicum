@@ -60,11 +60,15 @@ module Sinicum
       end
 
       def adjust_paths(env, root_path)
+        puts "env['PATH_INFO'] => " + env['PATH_INFO'].inspect
         return env if multisite_ignored_path?(env) || root_path.nil?
+        %w(REQUEST_PATH REQUEST_URI ORIGINAL_FULLPATH PATH_INFO).each do |env_path|
+          env[env_path] = env[env_path].gsub(".html", "")
+        end
         return env if env['PATH_INFO'].start_with?(root_path) &&
           Rails.configuration.x.multisite_production != true
-        %w(REQUEST_PATH PATH_INFO REQUEST_URI ORIGINAL_FULLPATH).each do |env_path|
-          env[env_path] = "#{root_path}#{env['PATH_INFO']}"
+        %w(REQUEST_PATH REQUEST_URI ORIGINAL_FULLPATH PATH_INFO).each do |env_path|
+          env[env_path] = "#{root_path}#{@path}"
         end
         env
       end
