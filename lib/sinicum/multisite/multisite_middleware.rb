@@ -26,11 +26,11 @@ module Sinicum
               log("Node has been found - Session => #{node[:root_node].inspect}")
               request.session[:multisite_root] = node[:root_node]
             end
-            # if on_root_path?(request.session[:multisite_root], request.fullpath)
-            #   # Redirect to the fullpath without the root_path for consistency
-            #   return redirect(gsub_root_path(
-            #     request.session[:multisite_root], request.fullpath))
-            # end
+            if on_root_path?(request.session[:multisite_root], request.fullpath)
+              # Redirect to the fullpath without the root_path for consistency
+              return redirect(gsub_root_path(
+                request.session[:multisite_root], request.fullpath))
+            end
           end
         end
         status, headers, response =
