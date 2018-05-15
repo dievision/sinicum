@@ -36,7 +36,7 @@ module Sinicum
           @controller.response.cache_control.merge!(cached[:cache_control])
           @controller.response.status = cached[:status]
           @controller.response.headers["X-SCache"] = "true"
-          @controller.original_rails_render text: cached[:body]
+          @controller.original_rails_render html: cached[:body]
         else
           @controller.response.headers["X-SCache"] = "false"
         end
