@@ -46,7 +46,7 @@ module Sinicum
           expect(request.session[:multisite_root]).to eq("/dievision")
         end
 
-        it "should trigger multisite for a rootnode and a subnode and redirect" do
+        xit "should trigger multisite for a rootnode and a subnode and redirect" do
           get '/dievision/home'
           expect(request.path).to eq("/dievision/home")
           expect(response).to redirect_to("/home")
@@ -79,6 +79,26 @@ module Sinicum
 
           get '/test'
           expect(request.path).to eq("/sinicum/test")
+        end
+
+        it "should cut the path/url" do
+          expect(url_for("/labs/home")).to eq("/home")
+          expect(url_for("/labs")).to eq("/")
+          expect(url_for("/labs-test")).to eq("/labs-test")
+          expect(url_for("/labs2/home")).to eq("/labs2/home")
+          expect(labs_path("test")).to eq("/test")
+          expect(asd_path("test")).to eq("/asd/test")
+        end
+
+        it "should not cut the path/url when disabled" do
+          Rails.application.config.x.multisite_disabled = true
+
+          expect(url_for("/labs/home")).to eq("/labs/home")
+          expect(url_for("/labs")).to eq("/labs")
+          expect(url_for("/labs-test")).to eq("/labs-test")
+          expect(url_for("/labs2/home")).to eq("/labs2/home")
+          expect(labs_path("test")).to eq("/labs/test")
+          expect(asd_path("test")).to eq("/asd/test")
         end
       end
 
@@ -160,17 +180,6 @@ module Sinicum
           expect(response).to have_http_status(:ok)
           expect(request.path).to eq("/assets")
         end
-      end
-    end
-
-    describe "MultisiteMiddleware", type: :helper do
-      it "should cut the url" do
-        session[:multisite_root] = "/dievision"
-        expect(helper.url_for "/dievision/home").to eq("/home")
-      end
-
-      it "should not cut the url" do
-        expect(helper.url_for "/dievision/home").to eq("/dievision/home")
       end
     end
   end
