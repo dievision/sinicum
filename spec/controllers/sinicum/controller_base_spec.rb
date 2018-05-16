@@ -90,6 +90,7 @@ module Sinicum
         it "should redirect to the :redirect_link property as an external link" do
           allow(node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
           allow(node).to receive(:[]).with(:redirect_link).and_return("/en/root")
+          allow(node).to receive(:[]).with(:redirect_status).and_return(302)
           get :index
           expect(response).to redirect_to("/en/root")
         end
@@ -97,6 +98,7 @@ module Sinicum
         it "should redirect to the :redirect_link property as an internal link" do
           allow(node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
           allow(node).to receive(:[]).with(:redirect_link).and_return("/en/root")
+          allow(node).to receive(:[]).with(:redirect_status).and_return(302)
           get :index
           expect(response).to redirect_to("/en/root")
         end
@@ -104,6 +106,7 @@ module Sinicum
         it "should redirect to the :redirect_link prior to the :external_redirect_link" do
           allow(node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
           allow(node).to receive(:[]).with(:redirect_link).and_return("/en/root")
+          allow(node).to receive(:[]).with(:redirect_status).and_return(302)
           allow(node).to receive(:[]).with(:external_redirect_link).and_return("http://www.web.com")
           get :index
           expect(response).to redirect_to("/en/root")
@@ -112,6 +115,7 @@ module Sinicum
         it "should redirect to the :external_redirect_link property if no :redirect_link" do
           allow(node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
           allow(node).to receive(:[]).with(:redirect_link).and_return(nil)
+          allow(node).to receive(:[]).with(:redirect_status).and_return(302)
           allow(node).to receive(:[]).with(:external_redirect_link).and_return("http://www.web.com")
           get :index
           expect(response).to redirect_to("http://www.web.com")
@@ -120,6 +124,7 @@ module Sinicum
         it "should ignore the anchor for external link" do
           allow(node).to receive(:mgnl_template).and_return("my-module:pages/redirect")
           allow(node).to receive(:[]).with(:redirect_link).and_return(nil)
+          allow(node).to receive(:[]).with(:redirect_status).and_return(302)
           allow(node).to receive(:[]).with(:external_redirect_link).and_return("http://www.web.com")
           allow(node).to receive(:[]).with(:anchor).and_return("#123456abcdef")
           get :index
