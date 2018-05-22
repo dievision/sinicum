@@ -63,9 +63,9 @@ module Sinicum
       content_tag(:title) do
         cms_title = nil
         if defined?(@meta_title) && @meta_title
-          cms_title = @meta_title
+          cms_title = sanitize(@meta_title)
         elsif defined?(@page_title) && @page_title
-          cms_title = @page_title
+          cms_title = sanitize(@page_title)
         else
           cms_title = mgnl_out(:meta_title, format: :strip_tags).presence ||
             mgnl_out(:title, format: :strip_tags)
