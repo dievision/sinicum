@@ -4,6 +4,5 @@ module Sinicum
     include MgnlHelper
     include MgnlImageHelper
     include TaglibHelper5
-    include MultisiteHelper
   end
 end
