@@ -1,0 +1,16 @@
+development: &sinicumconnect
+  host: localhost
+  port: 8080
+  username: superuser
+  password: password
+
+test:
+  <<: *sinicumconnect
+  port: <%= 8080 + 8 %>
+
+author:
+  <<: *sinicumconnect
+
+production:
+  <<: *sinicumconnect
+  host: production.host
