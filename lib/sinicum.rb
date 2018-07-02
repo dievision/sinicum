@@ -24,6 +24,7 @@ module Sinicum
   require 'sinicum/multisite/utils'
 
   require 'sinicum/jcr/jcr_configuration'
+  require 'sinicum/jcr/configuration_reader'
   require 'sinicum/jcr/api_queries'
   require 'sinicum/jcr/api_client'
   require 'sinicum/jcr/query_sanitizer'
