@@ -3,17 +3,12 @@ require 'yaml'
 module Sinicum
   # Internal: Initialize the Gem in a Rails environment
   class Engine < Rails::Engine
-    SINICUM_SERVER_CONFIG_FILE = File.join("config", "sinicum_server.yml")
-
     initializer "configure_jcr" do |app|
-      config_file = File.join(Rails.root, SINICUM_SERVER_CONFIG_FILE)
-      if File.exist?(config_file)
-        jcr_config_file = File.read(config_file)
-        config = YAML.load(jcr_config_file)[Rails.env]
-        ::Sinicum::Jcr::ApiQueries.configure_jcr = config
-      else
-        Rails.logger.warn("Sinicum configuration file not found, Sinicum is not configured.")
-      end
+      config_file = File.join(Rails.root,
+        ::Sinicum::Jcr::ConfigurationReader::SINICUM_SERVER_CONFIG_FILE)
+      config = ::Sinicum::Jcr::ConfigurationReader.read_from_file(config_file)
+
+      ::Sinicum::Jcr::ApiQueries.configure_jcr = config
     end
 
     initializer "sinicum.add_middleware" do |app|

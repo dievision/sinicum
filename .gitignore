@@ -12,3 +12,4 @@ spec/dummy/tmp/
 /.yardoc
 /doc
 /vendor
+/coverage
