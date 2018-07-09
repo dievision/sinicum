@@ -28,7 +28,7 @@ Or install it yourself as:
 
 # Installation for Rails
 
-#### Please note: Sinicum works with Rails 4.2. We also only support Ruby versions >= 2.2.
+#### Please note: Sinicum works with Rails >= 4.2. We also only support Ruby versions >= 2.3.
 
 ### Requirements
 Please make sure to have [Maven 3.x](http://maven.apache.org) and PostgreSQL installed
