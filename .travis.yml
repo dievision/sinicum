@@ -3,6 +3,7 @@ language: ruby
 rvm:
   - "2.2.2"
   - "2.3.0"
+  - "2.4.0"
 before_script:
   - export TZ='Europe/Berlin'
 script:
@@ -12,3 +13,6 @@ after_script:
 gemfile:
   - Gemfile
   - gemfiles/Gemfile-4.2
+  - gemfiles/Gemfile-5.0
+  - gemfiles/Gemfile-5.1
+  - gemfiles/Gemfile-5.2

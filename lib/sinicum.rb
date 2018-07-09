@@ -1,4 +1,5 @@
 require 'active_support/core_ext'
+require 'sprockets/railtie'
 require 'sinicum/engine'
 
 module Sinicum

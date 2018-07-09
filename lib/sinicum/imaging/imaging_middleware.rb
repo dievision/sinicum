@@ -27,7 +27,7 @@ module Sinicum
           if imaging_file.fingerprinted?
             @path = imaging_file.path
             available = begin
-                          F.file?(@path) && F.readable?(@path)
+                          ::File.file?(@path) && ::File.readable?(@path)
                         rescue SystemCallError
                           false
                         end
@@ -41,7 +41,12 @@ module Sinicum
           if Rails.configuration.action_controller.perform_caching
             @headers["Cache-Control"] = "max-age=#{imaging_file.cache_time}, public"
           end
-          serving(env)
+          begin
+            serving(request, @path)
+          rescue ArgumentError
+            # Rack < 2.0
+            serving(env)
+          end
         else
           fail(404, "File not found: #{request.path_info}")
         end

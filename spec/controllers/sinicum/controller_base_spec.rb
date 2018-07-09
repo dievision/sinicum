@@ -18,7 +18,7 @@ module Sinicum
     end
 
     it "should ignore and conserve query strings" do
-      get :index, format: "html", key: "value"
+      get :index, format: "html", params: { key: "value" }
       expect(response).to redirect_to("/home?key=value")
     end
 
