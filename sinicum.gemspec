@@ -12,16 +12,17 @@ Gem::Specification.new do |s|
   s.summary     = %q{Use Magnolia as a CMS backend in a Rails application}
   s.description = %q{Provides the necessary functionality to work with Magnolia-managed content in a Rails application.}
 
-  s.add_dependency('rails', '~> 4.2')
-  s.add_dependency('httpclient', '~> 2.7')
-  s.add_dependency('multi_json', '~> 1.11')
-  s.add_development_dependency('rspec-rails', '~> 3.4')
+  s.add_dependency('rails', '> 4.1')
+  s.add_dependency('httpclient', '~> 2.8')
+  s.add_dependency('multi_json', '~> 1.13')
+  s.add_development_dependency('rspec-rails', '~> 3.7')
   s.add_development_dependency('test-unit')
   s.add_development_dependency('yard')
   s.add_development_dependency('webmock')
   s.add_development_dependency('rubocop')
   s.add_development_dependency('simplecov')
   s.add_development_dependency('codeclimate-test-reporter')
+  s.add_development_dependency('rails-controller-testing')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
