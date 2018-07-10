@@ -19,10 +19,9 @@ module Sinicum
               request.session[:multisite_root] = node[:root_node]
             end
           else # author/dev
+            log("Session => #{request.session[:multisite_root].inspect} with splitted_path => #{splitted_path.inspect}")
             query = "select * from mgnl:multisite where root_node LIKE '/#{splitted_path[1]}'"
-            if splitted_path.size > 2
-              query += " OR root_node LIKE '/#{splitted_path[1]}/#{splitted_path[2]}'"
-            end
+            query += " OR root_node LIKE '/#{splitted_path[1]}/#{splitted_path[2]}'" if splitted_path.size > 2
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
               log("Node has been found - Session => #{node[:root_node].inspect}")
               request.session[:multisite_root] = node[:root_node]
@@ -81,7 +80,7 @@ module Sinicum
       end
 
       def redirect(location)
-        [307, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
+        [302, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
       end
     end
   end

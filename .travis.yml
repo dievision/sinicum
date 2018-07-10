@@ -1,8 +1,9 @@
 sudo: false
 language: ruby
 rvm:
-  - "2.3.4"
-  - "2.4.1"
+  - "2.3.7"
+  - "2.4.4"
+  - "2.5.1"
 services:
   - memcached
 before_script:
@@ -14,3 +15,6 @@ after_script:
 gemfile:
   - Gemfile
   - gemfiles/Gemfile-4.2
+  - gemfiles/Gemfile-5.0
+  - gemfiles/Gemfile-5.1
+  - gemfiles/Gemfile-5.2
