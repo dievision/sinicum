@@ -27,7 +27,7 @@ module Sinicum
           return @http_client if @http_client
           @@http_client_mutex.synchronize do
             return @http_client if @http_client
-            @http_client ||= HTTPClient.new
+            @http_client ||= HTTPClient.new(default_header: {'sinicumInternationalization' => '1'})
           end
           @http_client
         end
