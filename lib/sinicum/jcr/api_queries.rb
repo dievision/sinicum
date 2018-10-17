@@ -34,8 +34,8 @@ module Sinicum
 
         private
         def additional_headers
-          if ENV['SINICUM_INTERNATIONALIZATION']
-            {'sinicumInternationalization' => '1'}
+          if Thread.current["__sinicum_localized_content_api"]
+            {'sinicumLocalizedContentApi' => '1'}
           else
             {}
           end
