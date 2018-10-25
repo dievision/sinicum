@@ -13,7 +13,7 @@ module Sinicum
           query: instrumentation_query,
           context: "Sinicum API GET:") do
           start = Time.now
-          result = ApiQueries.http_client.get(full_path, args, &block)
+          result = ApiQueries.http_client.get(full_path, args, additional_headers, &block)
           elapsed_time = ((Time.now - start).to_f * 1000).round(1)
           logger.debug("      Completed request in #{elapsed_time}ms")
           result
@@ -33,9 +33,17 @@ module Sinicum
       end
 
       private
+      def additional_headers
+        if Thread.current["__sinicum_additional_headers"] &&
+          Thread.current["__sinicum_additional_headers"].is_a?(Hash)
+          Thread.current["__sinicum_additional_headers"]
+        else
+          {}
+        end
+      end
 
       def log_get_path(full_path, args)
-        log = "    Sinicum API GET: " + full_path
+        log = "    Sinicum API GET: Ω" + full_path
         if args && args.respond_to?(:[])
           log << "\n      Parameters (Query): " + args.inspect
         end
