@@ -34,8 +34,9 @@ module Sinicum
 
         private
         def additional_headers
-          if Thread.current["__sinicum_localized_content_api"]
-            {'sinicumLocalizedContentApi' => '1'}
+          if Thread.current["__sinicum_additional_headers"] &&
+            Thread.current["__sinicum_additional_headers"].is_a? Hash
+            Thread.current["__sinicum_additional_headers"]
           else
             {}
           end
