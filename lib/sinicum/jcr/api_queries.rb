@@ -27,18 +27,9 @@ module Sinicum
           return @http_client if @http_client
           @@http_client_mutex.synchronize do
             return @http_client if @http_client
-            @http_client ||= HTTPClient.new(default_header: additional_headers)
+            @http_client ||= HTTPClient.new
           end
           @http_client
-        end
-
-        private
-        def additional_headers
-          if Thread.current["__sinicum_additional_headers"] && Thread.current["__sinicum_additional_headers"].is_a?(Hash)
-            Thread.current["__sinicum_additional_headers"]
-          else
-            {}
-          end
         end
       end
     end
