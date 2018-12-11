@@ -26,7 +26,11 @@ module ActionDispatch
 
         # The path helpers are modified by this
         def path_for(options = nil)
-          regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+          if request.session[:multisite_root]
+            regexp = %r(^#{request.session[:multisite_root]}(/|$))
+          else
+            regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+          end
           sincum_path_for(options).sub(regexp, '/')
         end
       end
@@ -41,7 +45,11 @@ module ActionDispatch
 
       # The url_for in the controller context is modified by this
       def url_for(options = nil)
-        regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+        if request.session[:multisite_root]
+          regexp = %r(^#{request.session[:multisite_root]}(/|$))
+        else
+          regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+        end
         sincum_routing_url_for(options).sub(regexp, '/')
       end
     end
@@ -56,7 +64,11 @@ module ActionView
 
     # The url_for in the view context is modified by this
     def url_for(options = nil)
-      regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+      if request.session[:multisite_root]
+        regexp = %r(^#{request.session[:multisite_root]}(/|$))
+      else
+        regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+      end
       sincum_url_for(options).sub(regexp, '/')
     end
   end
