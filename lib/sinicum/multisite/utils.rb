@@ -11,6 +11,19 @@ module Sinicum
           end
         end
       end
+
+      def self.root_node_for_host(host)
+        puts host.inspect
+        if Rails.application.config.x.multisite_disabled == true
+          ""
+        else
+          Sinicum::Cache::ThreadLocalCache.fetch("multisite_nodes_#{host}") do
+            node = Sinicum::Jcr::Node.query(:multisite, :sql,
+              "select * from mgnl:multisite where primary_domain like '%#{host}%'").first
+            node[:root_node]
+          end
+        end
+      end
     end
   end
 end
@@ -26,8 +39,8 @@ module ActionDispatch
 
         # The path helpers are modified by this
         def path_for(options = nil)
-          if request.session[:multisite_root]
-            regexp = %r(^#{request.session[:multisite_root]}(/|$))
+          if options.is_a?(Hash) && options[:host]
+            regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
           else
             regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
           end
@@ -45,8 +58,8 @@ module ActionDispatch
 
       # The url_for in the controller context is modified by this
       def url_for(options = nil)
-        if request.session[:multisite_root]
-          regexp = %r(^#{request.session[:multisite_root]}(/|$))
+        if options.is_a?(Hash) && options[:host]
+          regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
         else
           regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
         end
@@ -64,8 +77,8 @@ module ActionView
 
     # The url_for in the view context is modified by this
     def url_for(options = nil)
-      if request.session[:multisite_root]
-        regexp = %r(^#{request.session[:multisite_root]}(/|$))
+      if options.is_a?(Hash) && options[:host]
+        regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
       else
         regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
       end
