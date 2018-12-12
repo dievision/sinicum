@@ -71,6 +71,9 @@ module Sinicum
         end
 
         it "should cut the path/url" do
+
+          allow(Sinicum::Multisite::Utils).to receive(:root_node_for_host).and_return("/labs")
+
           expect(url_for("/labs/home")).to eq("/home")
           expect(url_for("/labs")).to eq("/")
           expect(url_for("/labs-test")).to eq("/labs-test")
@@ -104,7 +107,7 @@ module Sinicum
           expect(request.path).to eq("/unmodified")
         end
       end
-    
+
 
       context "in production mode" do
         before(:example) do
@@ -112,7 +115,7 @@ module Sinicum
           stub_request(:get, /.*sinicum-rest\/website.*/)
             .to_return(body: api_response_website, headers: { "Content-Type" => "application/json" })
         end
-        
+
         it "should get redirected" do
           host! "sinicum.example.de"
           stub_request(:get, /.*sinicum-rest\/multisite.*?primary_domain.*/)

@@ -13,7 +13,6 @@ module Sinicum
       end
 
       def self.root_node_for_host(host)
-        puts host.inspect
         if Rails.application.config.x.multisite_disabled == true
           ""
         else
