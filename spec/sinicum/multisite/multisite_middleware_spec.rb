@@ -82,6 +82,8 @@ module Sinicum
         end
 
         it "should cut the path/url" do
+          allow(Sinicum::Multisite::Utils).to receive(:root_node_for_host).and_return("/labs")
+
           expect(url_for("/labs/home")).to eq("/home")
           expect(url_for("/labs")).to eq("/")
           expect(url_for("/labs-test")).to eq("/labs-test")
