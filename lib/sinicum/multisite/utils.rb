@@ -19,7 +19,7 @@ module Sinicum
           Sinicum::Cache::ThreadLocalCache.fetch("multisite_nodes_#{host}") do
             node = Sinicum::Jcr::Node.query(:multisite, :sql,
               "select * from mgnl:multisite where primary_domain like '%#{host}%'").first
-            node[:root_node]
+            node[:root_node] if node
           end
         end
       end
