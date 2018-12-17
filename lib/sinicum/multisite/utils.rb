@@ -11,6 +11,18 @@ module Sinicum
           end
         end
       end
+
+      def self.root_node_for_host(host)
+        if Rails.application.config.x.multisite_disabled == true
+          ""
+        else
+          Sinicum::Cache::ThreadLocalCache.fetch("multisite_nodes_#{host}") do
+            node = Sinicum::Jcr::Node.query(:multisite, :sql,
+              "select * from mgnl:multisite where primary_domain like '%#{host}%'").first
+            node[:root_node]
+          end
+        end
+      end
     end
   end
 end
@@ -26,7 +38,11 @@ module ActionDispatch
 
         # The path helpers are modified by this
         def path_for(options = nil)
-          regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+          if options.is_a?(Hash) && options[:host]
+            regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
+          else
+            regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+          end
           sincum_path_for(options).sub(regexp, '/')
         end
       end
@@ -41,7 +57,11 @@ module ActionDispatch
 
       # The url_for in the controller context is modified by this
       def url_for(options = nil)
-        regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+        if options.is_a?(Hash) && options[:host]
+          regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
+        else
+          regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+        end
         sincum_routing_url_for(options).sub(regexp, '/')
       end
     end
@@ -56,7 +76,11 @@ module ActionView
 
     # The url_for in the view context is modified by this
     def url_for(options = nil)
-      regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+      if options.is_a?(Hash) && options[:host]
+        regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
+      else
+        regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
+      end
       sincum_url_for(options).sub(regexp, '/')
     end
   end
