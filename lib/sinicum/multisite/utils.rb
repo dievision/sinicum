@@ -38,7 +38,7 @@ module ActionDispatch
 
         # The path helpers are modified by this
         def path_for(options = nil)
-          if options.is_a?(Hash) && options[:host]
+          if Rails.application.config.x.multisite_production && options.is_a?(Hash) && options[:host]
             regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
           else
             regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
@@ -57,7 +57,7 @@ module ActionDispatch
 
       # The url_for in the controller context is modified by this
       def url_for(options = nil)
-        if options.is_a?(Hash) && options[:host]
+        if Rails.application.config.x.multisite_production && options.is_a?(Hash) && options[:host]
           regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
         else
           regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
@@ -76,7 +76,7 @@ module ActionView
 
     # The url_for in the view context is modified by this
     def url_for(options = nil)
-      if options.is_a?(Hash) && options[:host]
+      if Rails.application.config.x.multisite_production && options.is_a?(Hash) && options[:host]
         regexp = %r(^#{Sinicum::Multisite::Utils.root_node_for_host(options[:host])}(/|$))
       else
         regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
