@@ -22,6 +22,11 @@ module Sinicum
         node
       end
 
+      before do
+        allow(Sinicum::Multisite::Utils).to receive(:root_node_for_host).and_return("/labs")
+        allow(Sinicum::Multisite::Utils).to receive(:all_root_paths).and_return(["/labs"])
+      end
+
       it "should return a node's path" do
         expect(helper.mgnl_path(node)).to eq("/the/path")
       end
