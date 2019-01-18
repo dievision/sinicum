@@ -21,7 +21,7 @@ module Sinicum
       elsif key_or_object.is_a?(String)
         path = key_or_object.dup
       end
-      url_for(path)
+      path
     end
 
     def mgnl_link(key_or_object, options = {}, &block)
