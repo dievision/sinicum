@@ -8,7 +8,7 @@ module Sinicum
     initializer "configure_jcr" do |app|
       config_file = File.join(Rails.root, SINICUM_SERVER_CONFIG_FILE)
       if File.exist?(config_file)
-        jcr_config_file = File.read(config_file)
+        jcr_config_file = ERB.new(File.read(config_file)).result
         config = YAML.load(jcr_config_file)[Rails.env]
         ::Sinicum::Jcr::ApiQueries.configure_jcr = config
       else
