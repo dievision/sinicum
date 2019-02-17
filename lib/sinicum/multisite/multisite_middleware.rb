@@ -24,7 +24,8 @@ module Sinicum
               query += " OR root_node LIKE '/#{splitted_path[1]}/#{splitted_path[2]}'"
             end
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
-              unless request.session[:multisite_root] == "/b2c/countries" && node[:root_node] == "/en-GB"
+              unless request.session[:multisite_root] == "/b2c/countries" &&
+                  (node[:root_node] == "/en-GB" || node[:root_node] == "/de-DE")
                 log("Node has been found - Session => #{node[:root_node].inspect}")
                 request.session[:multisite_root] = node[:root_node]
               end
