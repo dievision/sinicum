@@ -8,10 +8,10 @@ module Sinicum
         attr_reader :jcr_configuration
 
         def configure_jcr=(config_hash)
-          http_client_reset!
           if config_hash
             @jcr_configuration = JcrConfiguration.new(config_hash.dup.with_indifferent_access)
           end
+          http_client_reset!
         end
 
         def http_client
