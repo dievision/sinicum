@@ -10,6 +10,7 @@ module Sinicum
       end
 
       def each(&block)
+        return unless @navigation_elements
         count = 0
         @navigation_elements.each do |el|
           block.call(el, NavigationStatus.new(@navigation_elements.size, count))
