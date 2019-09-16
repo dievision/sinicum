@@ -7,7 +7,10 @@ module Sinicum
         else
           Sinicum::Cache::ThreadLocalCache.fetch("multisite_nodes") do
             nodes = Sinicum::Jcr::Node.query(:multisite, :sql, "select * from mgnl:multisite")
-            nodes.collect{ |node| node[:root_node] }
+            paths = nodes.collect{ |node| node[:root_node] }
+            paths.select do |path|
+              !localized_content_enabled? || valid_localized_content_prefix_path?(path)
+            end
           end
         end
       end
@@ -22,6 +25,21 @@ module Sinicum
             node[:root_node] if node
           end
         end
+      end
+
+      private
+
+      def self.localized_content_enabled?
+        headers = Thread.current["__sinicum_additional_headers"]
+        if !headers
+          return false
+        end
+
+        headers.respond_to?(:"[]") && headers[:sinicumLocalizedContentApi] == 1
+      end
+
+      def self.valid_localized_content_prefix_path?(path)
+        path.index("/b2c/countries") == 0 || path.index("/b2c/languages") == 0
       end
     end
   end
@@ -62,6 +80,9 @@ module ActionDispatch
         else
           regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
         end
+        puts "#" * 80
+        puts Sinicum::Multisite::Utils.all_root_paths.inspect
+        puts "#" * 80
         sincum_routing_url_for(options).sub(regexp, '/')
       end
     end
