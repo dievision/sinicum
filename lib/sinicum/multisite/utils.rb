@@ -80,9 +80,6 @@ module ActionDispatch
         else
           regexp = %r(^(#{Sinicum::Multisite::Utils.all_root_paths.join("|")})(/|$))
         end
-        puts "#" * 80
-        puts Sinicum::Multisite::Utils.all_root_paths.inspect
-        puts "#" * 80
         sincum_routing_url_for(options).sub(regexp, '/')
       end
     end
