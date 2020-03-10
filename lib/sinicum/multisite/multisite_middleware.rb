@@ -25,8 +25,7 @@ module Sinicum
             end
             if node = Sinicum::Jcr::Node.query(:multisite, :sql, query).first
               unless request.session[:multisite_root] == "/b2c/countries" &&
-                  (node[:root_node] == "/en-GB" || node[:root_node] == "/de-DE" ||
-                    node[:root_node] == "/nl-NL")
+                  multisite_execption_locales.include?(node[:root_node])
                 log("Node has been found - Session => #{node[:root_node].inspect}")
                 request.session[:multisite_root] = node[:root_node]
               end
@@ -86,6 +85,10 @@ module Sinicum
 
       def redirect(location)
         [307, { 'Location' => location, 'Content-Type' => 'text/html' }, ['Moved Permanently']]
+      end
+
+      def multisite_execption_locales
+        []
       end
     end
   end
